@@ -15,6 +15,7 @@
 
     .hero {
       padding: 100px 20px;
+      padding-top: 140px;
       text-align: center;
     }
 
@@ -67,10 +68,57 @@
   color: #cbd5e1;
   line-height: 1.6;
 }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(4, 15, 40, 0.95);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #22c55e;
+}   
   </style>
 </head>
 <body>
 
+<nav class="navbar">
+    <div class="logo">CivicSpan IT Group</div>
+
+    <div class="nav-links">
+        <a href="#top">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+  
 <section class="hero">
   <h1>CivicSpan IT Group</h1>
 
@@ -85,7 +133,7 @@
   </a>
 </section>
   
-<section class="services">
+<section class="services" id="services">
 
   <div class="card">
     <h2>ProjectWise Administration</h2>
