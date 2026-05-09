@@ -41,6 +41,32 @@
       border-radius: 8px;
       font-weight: bold;
     }
+
+    .services {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.card {
+  background: #111827;
+  padding: 30px;
+  border-radius: 14px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+  color: #22c55e;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
   </style>
 </head>
 <body>
@@ -58,6 +84,34 @@
     Contact Us
   </a>
 </section>
+  
+<section class="services">
+
+  <div class="card">
+    <h2>ProjectWise Administration</h2>
+    <p>
+      Support for ProjectWise environments, user permissions,
+      troubleshooting, document workflows, and engineering collaboration systems.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Bentley Environment Support</h2>
+    <p>
+      Assistance with Bentley software environments including OpenRoads,
+      OpenBridge, MicroStation, and engineering technology systems.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Technical & Cloud Solutions</h2>
+    <p>
+      Technical support, workstation setup, cloud-based solutions,
+      process improvement, and business technology consulting services.
+    </p>
+  </div>
+
+</section>  
 
 </body>
 </html>
