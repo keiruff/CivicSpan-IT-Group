@@ -33,18 +33,30 @@
     text-align: center;
     position: relative;
 }
-    .hero::after {
+    .hero::before {
     content: "";
     position: absolute;
-    right: 60px;
-    bottom: 40px;
-    width: 360px;
-    height: 180px;
-    opacity: 0.28;
+    inset: 0;
     background:
-        linear-gradient(135deg, transparent 48%, #0ea5e9 49%, #0ea5e9 51%, transparent 52%),
-        linear-gradient(45deg, transparent 48%, #0ea5e9 49%, #0ea5e9 51%, transparent 52%);
-    border-bottom: 2px solid rgba(14, 165, 233, 0.7);
+        radial-gradient(circle at 10% 40%, rgba(0, 174, 255, 0.28) 1px, transparent 2px),
+        radial-gradient(circle at 30% 65%, rgba(0, 174, 255, 0.22) 1px, transparent 2px),
+        radial-gradient(circle at 70% 35%, rgba(0, 174, 255, 0.25) 1px, transparent 2px);
+    background-size: 90px 90px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.city-bridge {
+    position: absolute;
+    right: 60px;
+    bottom: 35px;
+    width: 420px;
+    height: 180px;
+    opacity: 0.45;
+    background-image: url("https://svgshare.com/i/17yE.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     pointer-events: none;
 }
 
@@ -184,6 +196,9 @@
   <a href="mailto:your@email.com" class="btn">
     Contact Us
   </a>
+
+  <div class="city-bridge"></div>
+  
 </section>
   
 <section class="services" id="services">
