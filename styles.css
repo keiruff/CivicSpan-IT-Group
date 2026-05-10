@@ -28,16 +28,19 @@ body {
 }
 
     .logo {
+    width: 220px;
+    height: 70px;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    gap: 12px;
-}
-   .logo img {
-    height: 58px;
-    width: auto;
-    display: block;
 }
 
+    .logo img {
+    height: 170px;
+    width: auto;
+    transform: translate(-45px, -48px);
+    display: block;
+}
    .hero {
     min-height: 460px;
     padding: 190px 20px 90px;
