@@ -28,17 +28,14 @@ body {
 }
 
     .logo {
-    width: 220px;
-    height: 70px;
-    overflow: hidden;
     display: flex;
     align-items: center;
+    width: 180px;
 }
 
-    .logo img {
-    height: 170px;
-    width: auto;
-    transform: translate(-45px, -48px);
+.logo img {
+    width: 160px;
+    height: auto;
     display: block;
 }
    .hero {
