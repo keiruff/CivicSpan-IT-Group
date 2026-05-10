@@ -30,15 +30,17 @@ body {
     .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-
+    height: 100%; /* Fill navbar height */
+}
     font-size: 1.4rem;
     font-weight: bold;
     color: white;
 }
-    .logo img {
-    width: auto;
-    height: 70px;
+   .logo img {
+    max-height: 40px; /* Control logo size */
+    width: auto;      /* Keep aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+    display: block;
 }
 
    .hero {
@@ -105,6 +107,7 @@ body {
 
   .navbar {
     width: 100%;
+    height: 60px; /* Fixed navbar height */  
     display: flex;
     justify-content: space-between;
     align-items: center;
