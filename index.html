@@ -65,18 +65,47 @@
     pointer-events: none;
 }
 
+    .hero h1,
+.hero p,
+.hero .btn {
+    position: relative;
+    z-index: 2;
+}
+
 .city-bridge {
     position: absolute;
     right: 60px;
     bottom: 35px;
-    width: 420px;
-    height: 180px;
+    width: 460px;
+    height: 220px;
     opacity: 0.45;
-    background-image: url("https://svgshare.com/i/17yE.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
     pointer-events: none;
+    z-index: 1;
+}
+
+.city-bridge::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(120deg, transparent 48%, #0ea5e9 49%, #0ea5e9 51%, transparent 52%),
+        linear-gradient(60deg, transparent 48%, #0ea5e9 49%, #0ea5e9 51%, transparent 52%),
+        linear-gradient(to top, transparent 0 65%, #0ea5e9 66%, transparent 67%);
+    border-bottom: 2px solid #0ea5e9;
+    filter: drop-shadow(0 0 8px rgba(14,165,233,.7));
+}
+
+.city-bridge::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 75px;
+    width: 220px;
+    height: 90px;
+    background:
+        repeating-linear-gradient(90deg, transparent 0 24px, rgba(14,165,233,.7) 25px 26px),
+        repeating-linear-gradient(0deg, transparent 0 20px, rgba(14,165,233,.35) 21px 22px);
+    border-bottom: 2px solid rgba(14,165,233,.7);
 }
 
     h1 {
