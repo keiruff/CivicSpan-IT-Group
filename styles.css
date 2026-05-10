@@ -99,7 +99,6 @@ body {
     .logo {
     display: flex;
     align-items: left;
-    width: 180px;
     height: 100%; /* Fill navbar height */
 }
 
