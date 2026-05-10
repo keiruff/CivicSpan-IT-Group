@@ -74,40 +74,53 @@
 
 .city-bridge {
     position: absolute;
-    right: 55px;
-    bottom: 80px;
-    width: 430px;
-    height: 170px;
-    opacity: 0.38;
+    right: 45px;
+    bottom: 65px;
+    width: 460px;
+    height: 180px;
+    opacity: 0.34;
     pointer-events: none;
     z-index: 1;
 }
 
+/* city skyline */
 .city-bridge::before {
     content: "";
     position: absolute;
-    right: 0;
-    bottom: 20px;
-    width: 430px;
-    height: 120px;
+    right: 20px;
+    bottom: 40px;
+    width: 260px;
+    height: 95px;
     background:
-        repeating-linear-gradient(90deg, transparent 0 26px, rgba(14,165,233,.55) 27px 28px),
-        repeating-linear-gradient(0deg, transparent 0 24px, rgba(14,165,233,.25) 25px 26px);
+        linear-gradient(to top, rgba(14,165,233,.8) 0 2px, transparent 2px),
+        linear-gradient(to right, transparent 0 25px, rgba(14,165,233,.6) 25px 27px, transparent 27px),
+        linear-gradient(to top, transparent 0 40px, rgba(14,165,233,.45) 40px 42px, transparent 42px),
+        linear-gradient(to right, transparent 0 70px, rgba(14,165,233,.5) 70px 72px, transparent 72px),
+        linear-gradient(to top, transparent 0 65px, rgba(14,165,233,.45) 65px 67px, transparent 67px),
+        linear-gradient(to right, transparent 0 120px, rgba(14,165,233,.5) 120px 122px, transparent 122px),
+        linear-gradient(to right, transparent 0 170px, rgba(14,165,233,.5) 170px 172px, transparent 172px);
     border-bottom: 2px solid rgba(14,165,233,.8);
-    filter: drop-shadow(0 0 8px rgba(14,165,233,.35));
+    border-left: 1px solid rgba(14,165,233,.35);
+    border-right: 1px solid rgba(14,165,233,.35);
+    filter: drop-shadow(0 0 8px rgba(14,165,233,.45));
 }
 
+/* bridge sweep */
 .city-bridge::after {
     content: "";
     position: absolute;
-    left: 40px;
-    bottom: 20px;
-    width: 280px;
+    left: 0;
+    bottom: 28px;
+    width: 430px;
     height: 120px;
-    border-left: 3px solid rgba(14,165,233,.75);
-    border-right: 3px solid rgba(14,165,233,.75);
-    transform: skewX(-28deg);
-    filter: drop-shadow(0 0 8px rgba(14,165,233,.4));
+    background:
+        linear-gradient(18deg, transparent 48%, rgba(14,165,233,.75) 49%, rgba(14,165,233,.75) 50%, transparent 51%),
+        linear-gradient(-18deg, transparent 48%, rgba(14,165,233,.55) 49%, rgba(14,165,233,.55) 50%, transparent 51%),
+        linear-gradient(to right, transparent 0 40px, rgba(14,165,233,.55) 41px 42px, transparent 43px),
+        linear-gradient(to right, transparent 0 80px, rgba(14,165,233,.45) 81px 82px, transparent 83px),
+        linear-gradient(to right, transparent 0 120px, rgba(14,165,233,.45) 121px 122px, transparent 123px);
+    border-bottom: 2px solid rgba(14,165,233,.75);
+    filter: drop-shadow(0 0 10px rgba(14,165,233,.35));
 }
 
     h1 {
