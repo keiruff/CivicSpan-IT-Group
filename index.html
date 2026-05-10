@@ -47,37 +47,36 @@
 }
 
    .hero {
-    min-height: 620px;
-
-    padding: 150px 20px 100px;
-
+    min-height: 500px;
+    padding: 120px 20px 80px;
     text-align: center;
-
     position: relative;
-
     overflow: hidden;
 
     background:
-    linear-gradient(rgba(3, 10, 25, 0.20), rgba(3, 10, 25, 0.45)),
-    url("infrastructure-image.jpg");
+        linear-gradient(rgba(3, 10, 25, 0.35),
+        rgba(3, 10, 25, 0.55)),
+        url("infrastructure-image.jpg");
 
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
+    .hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
 
-    p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #cbd5e1;
-    }
+    .hero p {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
 
     .btn {
       display: inline-block;
