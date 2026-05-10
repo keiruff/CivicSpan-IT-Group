@@ -10,12 +10,19 @@
     body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background:
-        linear-gradient(rgba(7, 18, 38, 0.92), rgba(7, 18, 38, 0.96)),
-        linear-gradient(90deg, rgba(0, 140, 255, 0.12) 1px, transparent 1px),
-        linear-gradient(rgba(0, 140, 255, 0.12) 1px, transparent 1px);
-    background-size: auto, 45px 45px, 45px 45px;
     color: white;
+
+    background:
+        linear-gradient(
+            rgba(3, 10, 25, 0.82),
+            rgba(3, 10, 25, 0.88)
+        ),
+        url("infrastructure.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
     body::before {
     content: "";
@@ -51,18 +58,9 @@
     position: relative;
     overflow: hidden;
 
-    background:
-        linear-gradient(
-            rgba(3, 10, 25, 0.58),
-            rgba(3, 10, 25, 0.72)
-        ),
-        url("infrastructure.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: transparent;
 }
-
+    
     .hero h1 {
     font-size: 4rem;
     font-weight: 700;
