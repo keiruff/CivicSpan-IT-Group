@@ -46,30 +46,24 @@
     text-shadow: 0 0 12px rgba(0,230,118,0.6);
 }
 
-    .hero {
-    min-height: 520px;
-    padding: 150px 20px 80px;
-    text-align: center;
-    position: relative;
-}
-    .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(circle at 10% 40%, rgba(0, 174, 255, 0.28) 1px, transparent 2px),
-        radial-gradient(circle at 30% 65%, rgba(0, 174, 255, 0.22) 1px, transparent 2px),
-        radial-gradient(circle at 70% 35%, rgba(0, 174, 255, 0.25) 1px, transparent 2px);
-    background-size: 90px 90px;
-    opacity: 0.6;
-    pointer-events: none;
-}
+   .hero {
+    min-height: 620px;
 
-.hero h1,
-.hero p,
-.hero .btn {
+    padding: 150px 20px 100px;
+
+    text-align: center;
+
     position: relative;
-    z-index: 2;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(3, 10, 25, 0.78), rgba(3, 10, 25, 0.88)),
+        url("infrastructure-image.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .city-bridge {
