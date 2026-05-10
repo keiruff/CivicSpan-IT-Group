@@ -39,7 +39,6 @@ body {
     .logo img {
     width: auto;
     height: 70px;
-    max-width: 400px; /* optional limit */
 }
 
    .hero {
