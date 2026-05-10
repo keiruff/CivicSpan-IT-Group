@@ -38,6 +38,7 @@ body {
     width: 160px;
     height: auto;
     display: block;
+    object-fit: contain; /* Prevent distortion */
 }
    .hero {
     min-height: 460px;
