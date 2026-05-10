@@ -104,7 +104,7 @@ body {
 
 .logo img {
     width: auto;
-    max-height: 40px; /* Control logo size */
+    max-height: 60px; /* Control logo size */
     display: block;
     object-fit: contain; /* Prevent distortion */
 }
