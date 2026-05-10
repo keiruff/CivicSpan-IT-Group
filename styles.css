@@ -35,7 +35,7 @@ body {
 }
 
 .logo img {
-    width: 160px;
+    width: 180px;
     height: auto;
     display: block;
     object-fit: contain; /* Prevent distortion */
