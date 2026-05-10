@@ -30,16 +30,11 @@ body {
     .logo {
     display: flex;
     align-items: center;
-    height: 100%; /* Fill navbar height */
-}
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: white;
+    gap: 12px;
 }
    .logo img {
-    max-height: 40px; /* Control logo size */
-    width: auto;      /* Keep aspect ratio */
-    object-fit: contain; /* Prevent distortion */
+    height: 58px;
+    width: auto;
     display: block;
 }
 
