@@ -65,7 +65,7 @@
     pointer-events: none;
 }
 
-    .hero h1,
+.hero h1,
 .hero p,
 .hero .btn {
     position: relative;
@@ -74,11 +74,11 @@
 
 .city-bridge {
     position: absolute;
-    right: 60px;
-    bottom: 35px;
-    width: 460px;
-    height: 220px;
-    opacity: 0.45;
+    right: 55px;
+    bottom: 80px;
+    width: 430px;
+    height: 170px;
+    opacity: 0.38;
     pointer-events: none;
     z-index: 1;
 }
@@ -86,26 +86,28 @@
 .city-bridge::before {
     content: "";
     position: absolute;
-    inset: 0;
+    right: 0;
+    bottom: 20px;
+    width: 430px;
+    height: 120px;
     background:
-        linear-gradient(120deg, transparent 48%, #0ea5e9 49%, #0ea5e9 51%, transparent 52%),
-        linear-gradient(60deg, transparent 48%, #0ea5e9 49%, #0ea5e9 51%, transparent 52%),
-        linear-gradient(to top, transparent 0 65%, #0ea5e9 66%, transparent 67%);
-    border-bottom: 2px solid #0ea5e9;
-    filter: drop-shadow(0 0 8px rgba(14,165,233,.7));
+        repeating-linear-gradient(90deg, transparent 0 26px, rgba(14,165,233,.55) 27px 28px),
+        repeating-linear-gradient(0deg, transparent 0 24px, rgba(14,165,233,.25) 25px 26px);
+    border-bottom: 2px solid rgba(14,165,233,.8);
+    filter: drop-shadow(0 0 8px rgba(14,165,233,.35));
 }
 
 .city-bridge::after {
     content: "";
     position: absolute;
-    right: 20px;
-    bottom: 75px;
-    width: 220px;
-    height: 90px;
-    background:
-        repeating-linear-gradient(90deg, transparent 0 24px, rgba(14,165,233,.7) 25px 26px),
-        repeating-linear-gradient(0deg, transparent 0 20px, rgba(14,165,233,.35) 21px 22px);
-    border-bottom: 2px solid rgba(14,165,233,.7);
+    left: 40px;
+    bottom: 20px;
+    width: 280px;
+    height: 120px;
+    border-left: 3px solid rgba(14,165,233,.75);
+    border-right: 3px solid rgba(14,165,233,.75);
+    transform: skewX(-28deg);
+    filter: drop-shadow(0 0 8px rgba(14,165,233,.4));
 }
 
     h1 {
