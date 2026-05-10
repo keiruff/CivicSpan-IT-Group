@@ -37,9 +37,9 @@ body {
     color: white;
 }
     .logo img {
-    width: 65%;
-    height: auto;
-    max-width: 300px; /* optional limit */
+    width: 75%;
+    height: 65px;
+    max-width: 400px; /* optional limit */
 }
 
    .hero {
