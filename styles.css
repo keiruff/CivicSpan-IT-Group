@@ -37,8 +37,8 @@ body {
     color: white;
 }
     .logo img {
-    width: 75%;
-    height: 65px;
+    width: auto;
+    height: 70px;
     max-width: 400px; /* optional limit */
 }
 
