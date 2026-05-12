@@ -102,11 +102,10 @@ body {
     height: 100%; /* Fill navbar height */
 }
 
-.logo img {
+   .logo img {
+    height: 70px;
     width: auto;
-    max-height: 60px; /* Control logo size */
     display: block;
-    object-fit: contain; /* Prevent distortion */
 }
    .hero {
     min-height: 460px;
