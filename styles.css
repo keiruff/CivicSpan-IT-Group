@@ -7,11 +7,12 @@ body {
     font-family: Arial, sans-serif;
     color: white;
 
-    linear-gradient(
-    rgba(2, 8, 20, 0.72),
-    rgba(2, 8, 20, 0.78)
-),
-    url("infrastructure.JPG");
+    background:
+        linear-gradient(
+            rgba(2, 8, 20, 0.72),
+            rgba(2, 8, 20, 0.78)
+        ),
+        url("infrastructure.JPG");
 
     background-size: cover;
     background-position: center;
