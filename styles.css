@@ -50,7 +50,7 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(4, 15, 40, 0.95);
+    background: #020617;
     backdrop-filter: blur(6px);
     z-index: 1000;
     box-sizing: border-box;
