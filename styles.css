@@ -345,6 +345,30 @@ body::before {
 }
 
 /* =========================
+   CTA SECTION
+========================= */
+
+.cta-section {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 30px;
+}
+
+/* =========================
    FOOTER
 ========================= */
 
