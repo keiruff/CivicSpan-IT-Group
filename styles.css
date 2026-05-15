@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: Arial, sans-serif;
     color: white;
 
     background:
@@ -150,7 +150,7 @@ html {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    font-weight: 700;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
 
@@ -466,5 +466,88 @@ footer {
     .footer-left,
     .footer-right {
         white-space: normal;
+    }
+}
+
+/* =========================
+   SERVICES PAGE
+========================= */
+
+.services-hero {
+    min-height: 300px;
+    padding: 150px 20px 40px;
+}
+
+.service-details {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.service-block {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.service-block:hover {
+    transform: translateY(-4px);
+    border-color: rgba(34, 197, 94, 0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.service-block h2 {
+    color: #22c55e;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.service-block p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e5e7eb;
+    margin-bottom: 20px;
+}
+
+.service-block ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-block ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.service-block ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #22c55e;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .service-details {
+        padding: 0 20px;
+    }
+    .service-block {
+        padding: 25px;
+    }
+    .service-block h2 {
+        font-size: 1.6rem;
     }
 }
