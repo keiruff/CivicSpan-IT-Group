@@ -417,20 +417,27 @@ footer {
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 12px 18px;
-        min-height: 78px;
+        padding: 10px 12px;
+        min-height: auto;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 8px;
+        justify-content: center;
     }
 
     .logo img {
-        height: 46px;
+        height: 36px;
         width: auto;
     }
 
     .nav-links {
-        gap: 14px;
-        font-size: 0.9rem;
+        gap: 6px;
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 6px 4px;
     }
 
     .hero {
