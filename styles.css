@@ -299,6 +299,19 @@ body::before {
 }
 
 /* =========================
+   TRUST BAR
+========================= */
+
+.trust-bar {
+    text-align: center;
+    padding: 20px;
+    color: #d1d5db;
+    font-size: 1rem;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+/* =========================
    FOOTER
 ========================= */
 
