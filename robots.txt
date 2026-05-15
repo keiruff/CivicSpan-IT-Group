@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://civicspanitgroup.com/sitemap.xml
