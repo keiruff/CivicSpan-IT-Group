@@ -194,6 +194,39 @@ body::before {
 }
 
 /* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #d1d5db;
+}
+
+.contact-section a {
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
    ABOUT
 ========================= */
 
