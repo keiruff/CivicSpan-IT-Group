@@ -42,7 +42,7 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    padding: 10px 55px;
     position: fixed;
     top: 0;
     left: 0;
