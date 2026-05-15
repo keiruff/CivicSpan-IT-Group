@@ -120,6 +120,8 @@ body::before {
     margin-bottom: 20px;
     color: white;
     text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+    max-width: 1200px;
+    margin: 0 auto 20px;
 }
 
 .hero p {
