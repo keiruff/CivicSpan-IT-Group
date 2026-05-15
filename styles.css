@@ -134,7 +134,7 @@ html {
     margin: 0 auto 30px;
     line-height: 1.7;
     font-size: 1.2rem;
-    color: #d1d5db;
+    color: #e5e7eb;
     text-shadow: 0 2px 10px rgba(0,0,0,0.35);
 }
 
@@ -218,7 +218,7 @@ html {
 .contact-section p {
     font-size: 1.1rem;
     line-height: 1.9;
-    color: #d1d5db;
+    color: #e5e7eb;
 }
 
 .contact-section a {
@@ -256,7 +256,7 @@ html {
 .about p {
     font-size: 1.1rem;
     line-height: 1.9;
-    color: #d1d5db;
+    color: #e5e7eb;
     max-width: 650px;
 }
 
@@ -288,7 +288,7 @@ html {
     border: 1px solid rgba(255,255,255,0.06);
     padding: 25px;
     border-radius: 14px;
-    color: #d1d5db;
+    color: #e5e7eb;
     transition: all 0.3s ease;
 }
 
@@ -326,7 +326,7 @@ html {
     border: 1px solid rgba(255,255,255,0.06);
     padding: 25px;
     border-radius: 14px;
-    color: #d1d5db;
+    color: #e5e7eb;
     transition: all 0.3s ease;
 }
 
@@ -343,7 +343,7 @@ html {
 .trust-bar {
     text-align: center;
     padding: 20px;
-    color: #d1d5db;
+    color: #e5e7eb;
     font-size: 1rem;
     max-width: 1000px;
     margin: 0 auto 40px;
@@ -369,7 +369,7 @@ html {
 .cta-section p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #d1d5db;
+    color: #e5e7eb;
     margin-bottom: 30px;
 }
 
