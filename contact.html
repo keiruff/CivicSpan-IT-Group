@@ -69,35 +69,42 @@
 
     <div class="contact-form-container">
       <h2>Send a Message</h2>
-      <!-- Replace "YOUR_FORMSPREE_ENDPOINT" with your actual Formspree endpoint (e.g. https://formspree.io/f/xyz) -->
-      <form action="YOUR_FORMSPREE_ENDPOINT" method="POST">
+      <div data-fs-success style="display:none; color: #22c55e; margin-bottom: 15px; font-weight: bold; background: rgba(34, 197, 94, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(34, 197, 94, 0.2);">Thank you! Your message has been sent.</div>
+      <div data-fs-error style="display:none; color: #ef4444; margin-bottom: 15px; font-weight: bold; background: rgba(239, 68, 68, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2);">There was an error sending your message. Please review the fields and try again.</div>
+
+      <form id="my-form">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="John Doe">
+          <input type="text" id="name" name="name" required placeholder="John Doe" data-fs-field>
+          <span data-fs-error="name" style="color: #ef4444; font-size: 0.85rem; display: block; margin-top: 5px;"></span>
         </div>
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="john@example.com">
+          <input type="email" id="email" name="email" required placeholder="john@example.com" data-fs-field>
+          <span data-fs-error="email" style="color: #ef4444; font-size: 0.85rem; display: block; margin-top: 5px;"></span>
         </div>
 
         <div class="form-group">
           <label for="company">Company</label>
-          <input type="text" id="company" name="company" placeholder="Your Company Name">
+          <input type="text" id="company" name="company" placeholder="Your Company Name" data-fs-field>
+          <span data-fs-error="company" style="color: #ef4444; font-size: 0.85rem; display: block; margin-top: 5px;"></span>
         </div>
 
         <div class="form-group">
           <label for="software">What software/system do you need help with?</label>
           <input type="text" id="software" name="software"
-            placeholder="e.g. ProjectWise, Bentley MicroStation, General IT">
+            placeholder="e.g. ProjectWise, Bentley MicroStation, General IT" data-fs-field>
+          <span data-fs-error="software" style="color: #ef4444; font-size: 0.85rem; display: block; margin-top: 5px;"></span>
         </div>
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+          <textarea id="message" name="message" required placeholder="How can we help you?" data-fs-field></textarea>
+          <span data-fs-error="message" style="color: #ef4444; font-size: 0.85rem; display: block; margin-top: 5px;"></span>
         </div>
 
-        <button type="submit" class="btn">Send Message</button>
+        <button type="submit" class="btn" data-fs-submit-btn>Send Message</button>
       </form>
     </div>
 
@@ -105,7 +112,7 @@
       <!-- Calendly inline widget begin -->
       <!-- Replace this URL with your actual Calendly booking link -->
       <div class="calendly-inline-widget"
-        data-url="https://calendly.com/YOUR_CALENDLY_LINK?hide_event_type_details=1&hide_gdpr_banner=1"
+        data-url="https://calendly.com/civicspanitgroup-info/30min?hide_event_type_details=1&hide_gdpr_banner=1"
         style="min-width:320px;height:650px;"></div>
       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       <!-- Calendly inline widget end -->
@@ -131,6 +138,12 @@
       <a href="cookies.html">Cookie Policy</a>
     </div>
   </footer>
+
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#my-form', formId: 'mwvygzjr' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 
 </html>
