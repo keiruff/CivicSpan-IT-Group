@@ -609,3 +609,105 @@ footer {
         font-size: 1.6rem;
     }
 }
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-hero {
+    min-height: 250px;
+    padding: 150px 20px 40px;
+    text-align: center;
+}
+
+.contact-page-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 0 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 320px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.contact-form-container h2 {
+    color: #22c55e;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.calendly-container {
+    flex: 1;
+    min-width: 320px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 650px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #e5e7eb;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #22c55e;
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+.contact-form-container .btn {
+    width: 100%;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contact-page-layout {
+        padding: 0 20px;
+    }
+    .contact-form-container {
+        padding: 25px;
+    }
+}
