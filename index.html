@@ -146,32 +146,137 @@
   
 <section id="contact" class="cta-section">
   <h2>Need Technical Support or Digital Solutions?</h2>
-  <p>Contact CivicSpan IT Group to discuss your organization’s needs.</p>
+  <p>Contact CivicSpan IT Group to discuss your organization's needs.</p>
 
   <a href="contact.html" class="btn">
     Contact Us
   </a>
 </section>
-  
+
+<!-- Enhanced Footer -->
 <footer>
-  <div class="footer-top">
-  <div class="footer-left">
-    © 2026 CivicSpan IT Group | Connect with Us:
-    <a href="mailto:info@civicspanitgroup.com">info@civicspanitgroup.com</a>
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-section">
+      <img src="logo.webp" alt="CivicSpan IT Group Logo" class="footer-logo">
+      <p>Providing specialized IT support, digital solutions, and technical consulting for infrastructure-focused teams.</p>
+      <div class="social-links">
+        <a href="mailto:info@civicspanitgroup.com" title="Email us" aria-label="Send email">✉</a>
+        <a href="https://www.linkedin.com/company/civicspan-it-group" target="_blank" title="Visit LinkedIn" aria-label="LinkedIn">in</a>
+        <a href="https://twitter.com/civicspanitgroup" target="_blank" title="Visit Twitter" aria-label="Twitter">𝕏</a>
+      </div>
+    </div>
+
+    <!-- Services Links -->
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="services.html#it-support">IT Support</a></li>
+        <li><a href="services.html#digital-solutions">Digital Solutions</a></li>
+        <li><a href="services.html#training">Training & Documentation</a></li>
+        <li><a href="services.html#consulting">Technical Consulting</a></li>
+        <li><a href="contact.html">Schedule Consultation</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html#capabilities">Capabilities</a></li>
+        <li><a href="index.html#clients">Who We Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p><strong>Email:</strong></p>
+      <a href="mailto:info@civicspanitgroup.com">info@civicspanitgroup.com</a>
+      <p style="margin-top: 16px;"><strong>Location:</strong></p>
+      <p>Fredericksburg, Virginia</p>
+      <p><strong>Services:</strong><br>IT Support • Training • Digital Solutions</p>
+    </div>
   </div>
 
-  <div class="footer-right">
-    Fredericksburg, Virginia | IT Support • Training • Digital Solutions
-  </div>
-  </div>
+  <!-- Footer Bottom -->
   <div class="footer-bottom">
-    <a href="disclaimer.html">User Agreement/Disclaimers</a> | 
-    <a href="sitemap.xml">Site Map</a> | 
-    <a href="privacy.html">Privacy Policy</a> | 
-    <a href="cookies.html">Cookie Policy</a>
+    <div>
+      &copy; 2026 CivicSpan IT Group. All rights reserved.
+    </div>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookie Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </div>
+    <div class="footer-bottom-right">
+      Built with care for infrastructure teams.
+    </div>
   </div>
 </footer>
 
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <button class="cookie-close" onclick="rejectCookies()" aria-label="Close cookie banner">×</button>
+  <h3 class="cookie-title">🍪 Cookie Preferences</h3>
+  <p class="cookie-text">
+    We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. 
+    <a href="cookies.html" target="_blank">Learn more about our cookie policy</a>.
+  </p>
+  <div class="cookie-buttons">
+    <button class="cookie-btn cookie-decline" onclick="rejectCookies()">Decline</button>
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept All</button>
+  </div>
+</div>
+
+<script>
+  // Cookie Consent Manager
+  const COOKIE_CONSENT_KEY = 'civicspan_cookie_consent';
+  const COOKIE_BANNER = document.getElementById('cookie-banner');
+  const CONSENT_EXPIRY_DAYS = 365;
+
+  function setCookieConsent(consent) {
+    const expiryDate = new Date();
+    expiryDate.setDate(expiryDate.getDate() + CONSENT_EXPIRY_DAYS);
+    document.cookie = `${COOKIE_CONSENT_KEY}=${consent};path=/;expires=${expiryDate.toUTCString()};SameSite=Strict`;
+  }
+
+  function getCookieConsent() {
+    return document.cookie.split('; ').find(row => row.startsWith(`${COOKIE_CONSENT_KEY}=`));
+  }
+
+  function acceptCookies() {
+    setCookieConsent('accepted');
+    COOKIE_BANNER.classList.remove('show');
+    // Initialize analytics and other tracking
+    initializeAnalytics();
+  }
+
+  function rejectCookies() {
+    setCookieConsent('rejected');
+    COOKIE_BANNER.classList.remove('show');
+  }
+
+  function showCookieBanner() {
+    const consent = getCookieConsent();
+    if (!consent) {
+      COOKIE_BANNER.classList.add('show');
+    }
+  }
+
+  function initializeAnalytics() {
+    // Google Analytics already loads based on cookie consent
+    // This function can be expanded for additional tracking
+    console.log('Analytics initialized');
+  }
+
+  // Show banner on page load if consent not given
+  window.addEventListener('DOMContentLoaded', showCookieBanner);
+</script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHDMJY4DW5"></script>
 <script>
