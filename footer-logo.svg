@@ -1,0 +1,29 @@
+<svg width="400" height="200" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- Circle Background -->
+  <circle cx="260" cy="200" r="180" fill="none" stroke="#0066CC" stroke-width="35"/>
+  <circle cx="260" cy="200" r="150" fill="none" stroke="#0066CC" stroke-width="15" opacity="0.6"/>
+  
+  <!-- Buildings/Skyscrapers -->
+  <rect x="180" y="160" width="35" height="90" fill="#0052A3"/>
+  <rect x="225" y="120" width="35" height="130" fill="#0066CC"/>
+  <rect x="270" y="140" width="35" height="110" fill="#0052A3"/>
+  <rect x="315" y="170" width="35" height="80" fill="#0066CC"/>
+  
+  <!-- Wave/Curve Bottom -->
+  <path d="M 140 220 Q 200 240, 260 220 T 380 220" fill="none" stroke="#0066CC" stroke-width="20" stroke-linecap="round"/>
+  <path d="M 150 255 Q 210 275, 270 255 T 390 255" fill="none" stroke="#0052A3" stroke-width="15" stroke-linecap="round"/>
+  
+  <!-- Eye/Leaf Detail -->
+  <ellipse cx="200" cy="280" rx="25" ry="40" fill="none" stroke="#0066CC" stroke-width="12" transform="rotate(-30 200 280)"/>
+  <path d="M 240 260 Q 260 290, 280 260" fill="none" stroke="#0052A3" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- Text: CIVICSPAN -->
+  <text x="480" y="200" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#001A4D" letter-spacing="8">CIVICSPAN</text>
+  
+  <!-- Text: TECHNOLOGIES LLC -->
+  <text x="480" y="280" font-family="Arial, sans-serif" font-size="50" font-weight="300" fill="#0066CC" letter-spacing="4">TECHNOLOGIES LLC</text>
+  
+  <!-- Decorative lines -->
+  <line x1="480" y1="250" x2="550" y2="250" stroke="#0066CC" stroke-width="3"/>
+  <line x1="880" y1="250" x2="950" y2="250" stroke="#0066CC" stroke-width="3"/>
+</svg>
