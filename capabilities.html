@@ -1,48 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Capabilities | CivicSpan IT Group</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" as="image" href="infrastructure.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Async Google Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  </noscript>
+
   <link rel="stylesheet" href="styles.css">
+  <title>Capabilities | CivicSpan IT Group</title>
+  <meta name="description" content="CivicSpan IT Group capabilities statement - engineering technology support, Bentley systems assistance, and infrastructure-focused IT solutions.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <meta name="keywords" content="IT support, Bentley support, ProjectWise administration, engineering technology, infrastructure technology, technical consulting">
+  <meta name="author" content="CivicSpan IT Group">
+  
+  <meta property="og:title" content="Capabilities | CivicSpan IT Group">
+  <meta property="og:description" content="CivicSpan IT Group capabilities statement and company information.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://civicspanitgroup.com/capabilities.html">
+  <meta property="og:image" content="https://civicspanitgroup.com/social-preview.png">
+  <meta property="og:site_name" content="CivicSpan IT Group">
+  
+  <script type="application/ld+json">
+  {
+    "@context" : "https://schema.org",
+    "@type" : "WebSite",
+    "name" : "CivicSpan IT Group",
+    "url" : "https://civicspanitgroup.com/"
+  }
+  </script>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHDMJY4DW5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DHDMJY4DW5');
+  </script>
 </head>
 
 <body>
-
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">
       <a href="index.html">
-        <img src="logo.png" alt="CivicSpan IT Group Logo">
+        <img src="logo.webp" alt="CivicSpan IT Group Logo" width="250" height="58">
       </a>
     </div>
 
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="capabilities.html">Capabilities</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" aria-label="Go to home page">Home</a>
+      <a href="services.html" aria-label="View services page">Services</a>
+      <a href="capabilities.html" aria-label="View capabilities page" style="color: #22c55e;">Capabilities</a>
+      <a href="index.html#clients" aria-label="View who we support section">Who We Support</a>
+      <a href="contact.html" aria-label="View contact page">Contact</a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero capabilities-hero">
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-      <h1>Capabilities Statement</h1>
-
-      <p>
-        Engineering technology support, Bentley ecosystem assistance,
-        infrastructure-focused IT solutions, and digital support services.
-      </p>
-    </div>
+  <section class="hero services-hero">
+    <h1>Capabilities Statement</h1>
+    <p>
+      Engineering technology support, Bentley ecosystem assistance,
+      infrastructure-focused IT solutions, and digital support services.
+    </p>
   </section>
 
   <!-- MAIN CONTENT -->
   <section class="capabilities-container">
 
     <!-- COMPANY OVERVIEW -->
-    <div class="glass-card">
+    <div class="capabilities-card">
       <h2>Company Overview</h2>
 
       <p>
@@ -69,61 +105,42 @@
     </div>
 
     <!-- CORE CAPABILITIES -->
-    <div class="glass-card">
+    <div class="capabilities-card">
       <h2>Core Capabilities</h2>
 
       <div class="capability-grid">
-
         <div class="capability-box">ProjectWise Administration Support</div>
-
         <div class="capability-box">Bentley Environment Support</div>
-
         <div class="capability-box">Engineering Technology Assistance</div>
-
         <div class="capability-box">Technical Support & Troubleshooting</div>
-
         <div class="capability-box">Software Deployment & Configuration</div>
-
         <div class="capability-box">User Access Administration</div>
-
         <div class="capability-box">Infrastructure Workflow Support</div>
-
         <div class="capability-box">Cloud & Systems Support</div>
-
         <div class="capability-box">Technical Documentation</div>
-
         <div class="capability-box">Training & Onboarding Assistance</div>
-
         <div class="capability-box">Digital & Web Services</div>
-
         <div class="capability-box">Help Desk Operations Support</div>
-
       </div>
     </div>
 
     <!-- DIFFERENTIATORS -->
-    <div class="glass-card">
+    <div class="capabilities-card">
       <h2>Differentiators</h2>
 
       <ul class="styled-list">
         <li>Experience supporting transportation and infrastructure technology environments</li>
-
         <li>Familiarity with Bentley and ProjectWise ecosystems</li>
-
         <li>Strong understanding of technical onboarding and operational workflows</li>
-
         <li>Small-business responsiveness with personalized support</li>
-
         <li>Ability to bridge technical support, systems assistance, and documentation</li>
-
         <li>Focused on scalable solutions for infrastructure and engineering organizations</li>
-
         <li>Woman-owned and minority-owned small business</li>
       </ul>
     </div>
 
     <!-- NAICS -->
-    <div class="glass-card">
+    <div class="capabilities-card">
       <h2>NAICS Codes</h2>
 
       <div class="naics-grid">
@@ -136,7 +153,7 @@
     </div>
 
     <!-- TARGET CLIENTS -->
-    <div class="glass-card">
+    <div class="capabilities-card">
       <h2>Target Clients</h2>
 
       <ul class="styled-list">
@@ -150,25 +167,94 @@
     </div>
 
     <!-- COMPANY INFO -->
-    <div class="glass-card">
+    <div class="capabilities-card">
       <h2>Company Information</h2>
 
       <div class="company-info">
         <p><strong>Legal Name:</strong> CivicSpan Technologies LLC</p>
-
         <p><strong>DBA:</strong> CivicSpan IT Group</p>
-
         <p><strong>Location:</strong> Fredericksburg, Virginia</p>
-
         <p><strong>Website:</strong> civicspanitgroup.com</p>
-
         <p><strong>Email:</strong> info@civicspanitgroup.com</p>
-
         <p><strong>UEI:</strong> PMVWGHNEZYK4</p>
       </div>
     </div>
 
   </section>
 
+  <!-- Enhanced Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- About Section -->
+      <div class="footer-section">
+        <img src="logo.webp" alt="CivicSpan Technologies LLC Logo" class="footer-logo">
+        <p>Providing specialized IT support, digital solutions, and technical consulting for infrastructure-focused teams.</p>
+        <div class="social-links">
+          <a href="mailto:info@civicspanitgroup.com" title="Email us" aria-label="Send email">✉</a>
+          <a href="https://linkedin.com/in/keisha-ruffner-71236240b" target="_blank" title="Visit LinkedIn" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/profile.php?id=61589970300407" target="_blank" title="Visit Facebook" aria-label="Facebook">f</a>
+        </div>
+      </div>
+
+      <!-- Services Links -->
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="services.html#it-support">IT Support</a></li>
+          <li><a href="services.html#digital-solutions">Digital Solutions</a></li>
+          <li><a href="services.html#training">Training & Documentation</a></li>
+          <li><a href="services.html#consulting">Technical Consulting</a></li>
+          <li><a href="contact.html">Schedule Consultation</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html#clients">Who We Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section footer-contact">
+        <h3>Contact</h3>
+        <p>
+          ✉ <a href="mailto:info@civicspanitgroup.com">info@civicspanitgroup.com</a>
+        </p>
+        <p>
+          ☎ <a href="tel:5407602020">(540) 760-2020</a>
+        </p>
+        <p>
+          📍 <a href="https://www.google.com/maps/search/Fredericksburg,+VA" target="_blank">
+            Fredericksburg, Virginia
+          </a>
+        </p>
+        <p>
+          🛠 IT Support • Training • Digital Solutions
+        </p>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 CivicSpan IT Group. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="cookies.html">Cookie Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+        <div class="footer-bottom-right">
+          Built with care for infrastructure teams.
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
