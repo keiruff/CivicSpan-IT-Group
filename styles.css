@@ -726,31 +726,23 @@ footer {
         font-size: 2rem;
     }
 
-    .footer-container {
-        grid-template-columns: 1fr;
-        padding: 30px 20px;
-        gap: 30px;
+    footer {
+        padding: 25px 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
 
     .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
+        line-height: 2;
     }
 
-    .footer-bottom-links {
-        justify-content: center;
-    }
-
-    .footer-bottom-right {
-        text-align: center;
-    }
-
-    .cookie-banner {
-        left: 12px;
-        right: 12px;
-        max-width: calc(100% - 24px);
-        bottom: 12px;
+    .footer-left,
+    .footer-right {
+        white-space: normal;
     }
 }
 
