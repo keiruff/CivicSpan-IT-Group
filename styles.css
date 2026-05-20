@@ -1124,26 +1124,65 @@ footer,
 }
 
 /* =========================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN/MOBILE
 ========================= */
 
 @media (max-width: 768px) {
+  main {
+    margin-top: 0;
+  }
+
   .navbar {
-    padding: 10px 20px;
+    position: static;
+    min-height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo img {
+    display: block;
+    width: auto;
+    max-width: 170px;
+    height: 52px;
+    object-fit: contain;
   }
 
   .nav-links {
-    gap: 16px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
     font-size: 0.9rem;
   }
 
   .nav-links a {
-    padding: 8px 4px;
+    padding: 6px 4px;
+  }
+
+  .hero,
+  .home-hero {
+    min-height: auto;
+    padding: 50px 20px;
   }
 
   .hero h1,
   .home-hero h1 {
     font-size: 2.5rem;
+    line-height: 1.15;
   }
 
   .hero p,
@@ -1153,7 +1192,13 @@ footer,
 
   .services {
     grid-template-columns: 1fr;
+    max-width: 420px;
     padding: 40px 20px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 28px;
   }
 
   .process-grid,
@@ -1161,6 +1206,17 @@ footer,
   .client-grid,
   .support-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-process,
+  .home-why,
+  .expertise,
+  .clients,
+  .contact-section,
+  .cta-section {
+    margin: 80px auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .contact-page-layout {
@@ -1175,6 +1231,20 @@ footer,
   .about {
     flex-direction: column;
     gap: 30px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  footer,
+  .site-footer {
+    margin-top: 80px;
+    padding: 40px 20px 0;
+  }
+
+  .footer-section,
+  .footer-section:first-child {
+    align-items: center;
+    text-align: center;
   }
 }
 
