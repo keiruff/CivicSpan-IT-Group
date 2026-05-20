@@ -517,19 +517,15 @@ footer {
   white-space: nowrap;
 }
 
-.footer-bottom-links {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  flex-wrap: nowrap;
-}
-
+.footer-bottom a {
 .footer-bottom-links a {
     color: #94a3b8;
     text-decoration: none;
+    margin: 0 8px;
     transition: color 0.3s ease;
 }
 
+.footer-bottom a:hover {
 .footer-bottom-links a:hover {
     color: #22c55e;
 }
