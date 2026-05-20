@@ -1203,3 +1203,14 @@ footer,
   white-space: nowrap;
   border: 0;
 }
+
+.hero-actions .btn,
+.hero-actions .secondary-btn {
+  min-width: 212px;
+  min-height: 48px;
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
