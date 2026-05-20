@@ -462,6 +462,18 @@ footer {
     margin-bottom: 8px;
 }
 
+.footer-contact p,
+.footer-contact a {
+  color: #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.footer-contact p:hover,
+.footer-contact a:hover {
+  color: #22c55e;
+  text-shadow: 0 0 8px rgba(34, 197, 94, 0.45);
+}
+
 .social-links {
     display: flex;
     gap: 12px;
