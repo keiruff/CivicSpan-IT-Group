@@ -268,7 +268,7 @@ img {
 }
 
 /* =========================
-   ABOUT / CTA / GENERAL SECTIONS
+   GENERAL SECTIONS
 ========================= */
 
 .contact-section,
@@ -376,7 +376,7 @@ img {
 }
 
 /* =========================
-   CAPABILITIES PAGE
+   LEGACY CAPABILITIES PAGE SUPPORT
 ========================= */
 
 .capabilities-container {
@@ -972,7 +972,8 @@ footer,
 .footer-section a:focus-visible,
 .btn:focus-visible,
 .cookie-btn:focus-visible,
-.cookie-close:focus-visible {
+.cookie-close:focus-visible,
+.secondary-btn:focus-visible {
   outline: 3px solid #22c55e;
   outline-offset: 4px;
 }
@@ -989,204 +990,24 @@ footer,
 }
 
 /* =========================
-   TABLET / MOBILE
-========================= */
-
-@media (max-width: 900px) {
-  .services {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    padding: 40px 20px;
-  }
-
-  .card {
-    min-height: auto;
-    padding: 28px;
-  }
-
-  .services-cta {
-    padding: 0 20px;
-  }
-
-  .services-cta .btn {
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-
-  .navbar {
-    position: static;
-    flex-direction: column;
-    gap: 12px;
-    padding: 14px 16px;
-  }
-
-  .logo img {
-    height: 52px;
-  }
-
-  .nav-links {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px 14px;
-    font-size: 0.95rem;
-  }
-
-  .nav-links a {
-    padding: 6px 4px;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 50px 20px 50px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-
-  .hero p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-  }
-
-  .about {
-    flex-direction: column;
-    text-align: center;
-    padding: 0 20px;
-    gap: 25px;
-  }
-
-  .about h2 {
-    min-width: auto;
-    font-size: 2rem;
-  }
-
-  .expertise,
-  .clients,
-  .contact-section,
-  .cta-section {
-    margin: 80px auto;
-    padding: 0 20px;
-  }
-
-  .expertise h2,
-  .clients h2,
-  .contact-section h2,
-  .cta-section h2 {
-    font-size: 2rem;
-  }
-
-  .capabilities-container {
-    padding: 60px 16px;
-  }
-
-  .glass-card,
-  .capabilities-card {
-    padding: 28px;
-  }
-
-  .glass-card h2,
-  .capabilities-card h2 {
-    font-size: 1.6rem;
-  }
-
-  .capability-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .naics-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .service-details {
-    padding: 0 20px;
-  }
-
-  .service-block {
-    padding: 25px;
-  }
-
-  .service-block h2 {
-    font-size: 1.6rem;
-  }
-
-  .contact-page-layout {
-    padding: 0 20px;
-  }
-
-  .contact-form-container {
-    padding: 25px;
-  }
-
-  .support-section {
-    padding: 0 20px;
-  }
-
-  footer,
-  .site-footer {
-    margin-top: 80px;
-    padding: 40px 20px 0;
-  }
-
-  .footer-container {
-    gap: 32px;
-  }
-
-  .footer-section:first-child {
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-section {
-    text-align: center;
-    align-items: center;
-  }
-
-  .footer-bottom {
-    line-height: 1.8;
-  }
-
-  .cookie-banner {
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 420px) {
-  .nav-links {
-    font-size: 0.9rem;
-  }
-
-  .hero h1 {
-    font-size: 1.75rem;
-  }
-
-  .naics-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cookie-buttons {
-    flex-direction: column;
-  }
-}
-
-/* =========================
    CAPABILITIES MODERN REDESIGN
 ========================= */
 
 .capabilities-page main {
   position: relative;
   overflow: hidden;
+}
+
+.capabilities-page main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(34, 197, 94, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(34, 197, 94, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, black, transparent 70%);
+  pointer-events: none;
 }
 
 .capability-hero-modern,
@@ -1201,21 +1022,26 @@ footer,
 }
 
 .capability-hero-modern {
-  min-height: 760px;
+  min-height: 720px;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 180px 40px 90px;
+  padding: 150px 40px 80px;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-  gap: 56px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.85fr);
+  gap: 72px;
   align-items: center;
 }
 
+.capability-hero-copy {
+  max-width: 680px;
+}
+
 .capability-hero-copy h1 {
-  max-width: 780px;
+  max-width: 680px;
   margin: 0;
-  font-size: clamp(3rem, 6vw, 6.8rem);
-  line-height: 0.95;
+  font-size: clamp(3.4rem, 5.2vw, 5.9rem);
+  line-height: 1;
+  letter-spacing: 0;
   color: #ffffff;
   text-shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
 }
@@ -1266,6 +1092,7 @@ footer,
 
 .capability-command-card {
   min-height: 520px;
+  align-self: center;
   padding: 22px;
   border: 1px solid rgba(34, 197, 94, 0.22);
   border-radius: 28px;
@@ -1399,7 +1226,7 @@ footer,
 
 .capability-stats {
   max-width: 1180px;
-  margin: -40px auto 110px;
+  margin: -10px auto 110px;
   padding: 0 40px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1459,6 +1286,7 @@ footer,
   color: #ffffff;
   font-size: clamp(2rem, 4vw, 3.6rem);
   line-height: 1.05;
+  letter-spacing: 0;
 }
 
 .capability-overview > p {
@@ -1602,6 +1430,38 @@ footer,
   font-weight: 700;
 }
 
+.target-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.target-support-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.target-support-list div {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(2, 8, 20, 0.42);
+  border: 1px solid rgba(226, 232, 240, 0.14);
+}
+
+.target-support-list strong {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.target-support-list span {
+  display: block;
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
 .naics-modern {
   padding: 34px 40px;
   border-radius: 24px;
@@ -1645,12 +1505,30 @@ footer,
   width: 100%;
 }
 
-@media (max-width: 980px) {
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 1180px) {
   .capability-hero-modern {
     grid-template-columns: 1fr;
-    padding: 150px 24px 70px;
+    gap: 42px;
+    padding-top: 140px;
   }
 
+  .capability-hero-copy,
+  .capability-hero-copy h1,
+  .capability-hero-copy p:not(.eyebrow) {
+    max-width: 860px;
+  }
+
+  .capability-command-card {
+    max-width: 620px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 980px) {
   .capability-stats,
   .modern-capability-grid,
   .capability-split,
@@ -1663,14 +1541,79 @@ footer,
   }
 }
 
+@media (max-width: 900px) {
+  .services {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    padding: 40px 20px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .services-cta {
+    padding: 0 20px;
+  }
+
+  .services-cta .btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .navbar {
+    position: static;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .logo img {
+    height: 52px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-size: 0.95rem;
+  }
+
+  .nav-links a {
+    padding: 6px 4px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
   .capability-hero-modern {
     min-height: auto;
     padding: 64px 20px 56px;
   }
 
   .capability-hero-copy h1 {
-    font-size: clamp(2.35rem, 13vw, 4.2rem);
+    font-size: clamp(2.5rem, 13vw, 4.2rem);
+    line-height: 1.02;
   }
 
   .hero-actions {
@@ -1692,35 +1635,176 @@ footer,
   .naics-modern-grid {
     grid-template-columns: 1fr;
   }
-}
-.target-panel {
-  display: flex;
-  flex-direction: column;
+
+  .capability-stats,
+  .capability-overview,
+  .capability-section,
+  .capability-split,
+  .naics-modern,
+  .capability-cta {
+    margin-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .capability-stats {
+    margin-top: 0;
+  }
+
+  .command-metrics div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .signal-ring {
+    min-height: 250px;
+  }
+
+  .signal-ring::before {
+    width: 190px;
+    height: 190px;
+  }
+
+  .signal-ring::after {
+    width: 260px;
+    height: 260px;
+  }
+
+  .node-one {
+    left: 20px;
+  }
+
+  .node-two {
+    right: 20px;
+  }
+
+  .modern-capability-card {
+    min-height: auto;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+    gap: 25px;
+  }
+
+  .about h2 {
+    min-width: auto;
+    font-size: 2rem;
+  }
+
+  .expertise,
+  .clients,
+  .contact-section,
+  .cta-section {
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+
+  .expertise h2,
+  .clients h2,
+  .contact-section h2,
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .capabilities-container {
+    padding: 60px 16px;
+  }
+
+  .glass-card,
+  .capabilities-card {
+    padding: 28px;
+  }
+
+  .glass-card h2,
+  .capabilities-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .naics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-details {
+    padding: 0 20px;
+  }
+
+  .service-block {
+    padding: 25px;
+  }
+
+  .service-block h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-page-layout {
+    padding: 0 20px;
+  }
+
+  .contact-form-container {
+    padding: 25px;
+  }
+
+  .support-section {
+    padding: 0 20px;
+  }
+
+  footer,
+  .site-footer {
+    margin-top: 80px;
+    padding: 40px 20px 0;
+  }
+
+  .footer-container {
+    gap: 32px;
+  }
+
+  .footer-section:first-child {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    line-height: 1.8;
+  }
+
+  .cookie-banner {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 20px;
+  }
 }
 
-.target-support-list {
-  display: grid;
-  gap: 14px;
-  margin-top: 34px;
-}
+@media (max-width: 420px) {
+  .nav-links {
+    font-size: 0.9rem;
+  }
 
-.target-support-list div {
-  padding: 18px;
-  border-radius: 16px;
-  background: rgba(2, 8, 20, 0.42);
-  border: 1px solid rgba(226, 232, 240, 0.14);
-}
+  .hero h1 {
+    font-size: 1.75rem;
+  }
 
-.target-support-list strong {
-  display: block;
-  color: #ffffff;
-  margin-bottom: 8px;
-  font-size: 1rem;
-}
+  .capability-hero-copy h1 {
+    font-size: 2.35rem;
+  }
 
-.target-support-list span {
-  display: block;
-  color: #cbd5e1;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  .naics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+  }
 }
