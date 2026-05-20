@@ -60,14 +60,16 @@
   </section>
   <div class="contact-page-layout">
     <div class="contact-form-container">
-      <h2>Send a Message</h2>
-      <div data-fs-success style="display:none; color: #22c55e; margin-bottom: 15px; font-weight: bold; background: rgba(34, 197, 94, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(34, 197, 94, 0.5);">
+        <h2 id="contact-form-heading">Send a Message</h2>
+
+      <div data-fs-success role="status" aria-live="polite" style="display:none; color: #22c55e; margin-bottom: 15px; font-weight: bold; background: rgba(34, 197, 94, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(34, 197, 94, 0.5);">
         Thank you for your message. We'll get back to you shortly!
       </div>
-      <div data-fs-error style="display:none; color: #ef4444; margin-bottom: 15px; font-weight: bold; background: rgba(239, 68, 68, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.5);">
+      <div data-fs-error role="alert" style="display:none; color: #ef4444; margin-bottom: 15px; font-weight: bold; background: rgba(239, 68, 68, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.5);">
         Sorry, there was an issue sending your message. Please try again.
       </div>
-      <form id="my-form">
+       
+       <form id="my-form" aria-labelledby="contact-form-heading">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required placeholder="John Doe" data-fs-field>
