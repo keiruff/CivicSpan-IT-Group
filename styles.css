@@ -1111,3 +1111,16 @@ img {
         padding: 25px;
     }
 }
+
+/* =========================
+   WHO WE SUPPORT PAGE
+========================= */
+
+.section-subtitle {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+    color: #d1d5db;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
