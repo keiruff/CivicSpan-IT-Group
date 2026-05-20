@@ -187,6 +187,7 @@ html {
     display: flex;
     gap: 20px;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 60px 20px;
     max-width: 1200px;
@@ -198,6 +199,7 @@ html {
     padding: 30px;
     border-radius: 14px;
     width: 300px;
+    height: fit-content;
     box-shadow: 0 0 15px rgba(0,0,0,0.25);
     transition: all 0.3s ease;
 }
@@ -517,6 +519,7 @@ footer {
   color: #94a3b8;
   font-size: 0.85rem;
   gap: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .footer-bottom-links {
