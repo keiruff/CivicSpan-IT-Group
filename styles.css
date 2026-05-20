@@ -692,7 +692,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 1.15;
     }
 
@@ -744,6 +744,41 @@ footer {
     .footer-right {
         white-space: normal;
     }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.footer-section {
+  align-items: center;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+}
+
+.footer-bottom-links {
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* =========================
