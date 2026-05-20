@@ -47,20 +47,28 @@
   
 <body>
 <nav class="navbar">
-  <div class="logo">
-    <a href="index.html">
-      <img src="logo.webp" alt="CivicSpan IT Group Logo" width="250" height="58">
-    </a>
-  </div>
+ <body>
+ <header class="site-header">
+   <nav class="navbar" aria-label="Primary navigation">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.webp" alt="CivicSpan IT Group Logo" width="250" height="58">
+        </a>
+      </div>
 
-  <div class="nav-links">
-    <a href="index.html" aria-label="Go to home page">Home</a>
-    <a href="services.html" aria-label="View services page">Services</a>
-    <a href="capabilities.html" aria-label="View capabilities page">Capabilities</a>
-    <a href="whowesupport.html" aria-label="View who we support section">Who We Support</a>
-    <a href="contact.html" aria-label="View contact page">Contact</a>
-  </div>
-</nav>
+      <div class="nav-links">
+       <a href="index.html" aria-label="Go to home page">Home</a>
+       <a href="index.html" aria-current="page">Home</a>
+        <a href="services.html">Services</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="whowesupport.html">Who We Support</a>
+        <a href="contact.html">Contact</a>
+      </div>
+ </nav>
+   </nav>
+ </header>
+
+ <main id="main-content">
 
 <section class="hero">
   <h1>Technology support built for infrastructure-focused teams.</h1>
@@ -156,7 +164,10 @@
 </section>
 
 <!-- Enhanced Footer -->
-<footer>
+ <footer>
+ </main>
+
+<footer class="site-footer">
   <div class="footer-container">
     <!-- About Section -->
     <div class="footer-section">
