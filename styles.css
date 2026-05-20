@@ -92,6 +92,8 @@ html {
 .nav-links {
     display: flex;
     gap: 24px;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .nav-links a {
@@ -102,6 +104,7 @@ html {
     position: relative;
     padding: 12px 8px;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -673,6 +676,7 @@ footer {
     .nav-links {
         gap: 14px;
         font-size: 0.95rem;
+        flex-wrap: wrap;
     }
 
     .nav-links a {
