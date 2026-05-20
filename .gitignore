@@ -1,0 +1,31 @@
+**New `.gitignore`**
+
+```gitignore
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.vs/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Build / generated output
+dist/
+build/
+.cache/
