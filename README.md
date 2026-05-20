@@ -1,15 +1,26 @@
 # CivicSpan IT Group Website
 
-Static marketing site for CivicSpan IT Group, including service pages, capabilities information, contact options, legal pages, and sitemap metadata.
+Static marketing website for CivicSpan IT Group, a Virginia-based technology support business providing practical IT support, digital solutions, documentation, and workflow assistance for infrastructure-focused teams, small businesses, and nonprofits.
 
 ## Pages
 
-- `index.html` - Homepage
+- `index.html` - Homepage and business overview
 - `services.html` - Service details
 - `capabilities.html` - Capabilities statement
-- `whowesupport.html` - Audience / client types
+- `whowesupport.html` - Audience and client types
 - `contact.html` - Contact form and scheduling
-- `privacy.html`, `cookies.html`, `disclaimer.html` - Legal pages
+- `privacy.html` - Privacy policy
+- `cookies.html` - Cookie policy
+- `disclaimer.html` - Website disclaimer
+- `sitemap.xml` - Search engine sitemap
+- `robots.txt` - Search crawler instructions
+
+## Assets
+
+- `styles.css` - Shared site styling
+- `logo.webp` - Site logo
+- `favicon.png` - Browser favicon
+- `infrastructure.webp` - Main background image
 
 ## Local Development
 
