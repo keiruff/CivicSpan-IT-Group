@@ -505,21 +505,21 @@ footer {
 }
 
 .footer-bottom {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 28px 0;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    color: #94a3b8;
-    font-size: 0.85rem;
+  grid-column: 1 / -1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  gap: 24px;
 }
 
 .footer-bottom-links {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
 }
 
 .footer-bottom-links a {
