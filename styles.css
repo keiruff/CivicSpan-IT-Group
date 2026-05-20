@@ -1693,3 +1693,34 @@ footer,
     grid-template-columns: 1fr;
   }
 }
+.target-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.target-support-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.target-support-list div {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(2, 8, 20, 0.42);
+  border: 1px solid rgba(226, 232, 240, 0.14);
+}
+
+.target-support-list strong {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.target-support-list span {
+  display: block;
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
