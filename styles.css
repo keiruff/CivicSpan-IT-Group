@@ -505,36 +505,29 @@ footer {
 }
 
 .footer-bottom {
-    width: 100%;
-    text-align: center;
-    font-size: 0.85rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 28px 0;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+
     color: #94a3b8;
-    border-top: 1px solid rgba(255,255,255,0.04);
-    padding-top: 20px;
     font-size: 0.85rem;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
 .footer-bottom-links {
     display: flex;
     gap: 24px;
-    flex-wrap: wrap;
 }
 
-.footer-bottom a {
 .footer-bottom-links a {
     color: #94a3b8;
     text-decoration: none;
-    margin: 0 8px;
     transition: color 0.3s ease;
 }
 
-.footer-bottom a:hover {
 .footer-bottom-links a:hover {
     color: #22c55e;
 }
