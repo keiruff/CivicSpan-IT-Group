@@ -1149,3 +1149,26 @@ img {
   font-size: 2rem;
   margin-bottom: 14px;
 }
+
+.support-card {
+    background: rgba(15, 23, 42, 0.82);
+    border: 1px solid rgba(34, 197, 94, 0.15);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    transition: all 0.35s ease;
+    backdrop-filter: blur(8px);
+}
+
+.support-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(34, 197, 94, 0.45);
+    box-shadow: 0 12px 28px rgba(34, 197, 94, 0.18);
+    background: rgba(15, 23, 42, 0.92);
+}
+
+.support-card:hover h2,
+.support-card:hover p,
+.support-card:hover .support-icon {
+    color: #22c55e;
+}
