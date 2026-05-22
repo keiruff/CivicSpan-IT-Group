@@ -18,13 +18,6 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://civicspanitgroup.com/services.html">
   <meta property="og:image" content="https://civicspanitgroup.com/social-preview.png">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHDMJY4DW5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DHDMJY4DW5');
-  </script>
   <meta property="og:site_name" content="CivicSpan IT Group">
   <script type="application/ld+json">
   {
@@ -41,7 +34,7 @@
   <header class="site-header">
     <nav class="navbar" aria-label="Primary navigation">
       <div class="logo">
-        <a href="index.html">
+        <a href="index.html" aria-label="CivicSpan IT Group home">
           <img src="logo.webp" alt="CivicSpan IT Group Logo" width="250" height="58">
         </a>
       </div>
@@ -180,5 +173,86 @@
       </div>
     </div>
   </footer>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description">
+    <button class="cookie-close" type="button" onclick="rejectCookies()" aria-label="Close cookie banner">×</button>
+
+    <h3 id="cookie-title" class="cookie-title">Cookie Preferences</h3>
+
+    <p id="cookie-description" class="cookie-text">
+      We use cookies to enhance your browsing experience and understand site traffic.
+      <a href="cookies.html" target="_blank" rel="noopener noreferrer">Learn more about our cookie policy</a>.
+    </p>
+
+    <div class="cookie-buttons">
+      <button class="cookie-btn cookie-decline" type="button" onclick="rejectCookies()">Decline</button>
+      <button class="cookie-btn cookie-accept" type="button" onclick="acceptCookies()">Accept All</button>
+    </div>
+  </div>
+
+  <script>
+    const COOKIE_CONSENT_KEY = 'civicspan_cookie_consent';
+    const COOKIE_BANNER = document.getElementById('cookie-banner');
+    const CONSENT_EXPIRY_DAYS = 365;
+    const GA_ID = 'G-DHDMJY4DW5';
+
+    function setCookieConsent(consent) {
+      const expiryDate = new Date();
+      expiryDate.setDate(expiryDate.getDate() + CONSENT_EXPIRY_DAYS);
+      document.cookie = `${COOKIE_CONSENT_KEY}=${consent};path=/;expires=${expiryDate.toUTCString()};SameSite=Strict`;
+    }
+
+    function getCookieConsent() {
+      return document.cookie
+          .split('; ')
+          .find(row => row.startsWith(`${COOKIE_CONSENT_KEY}=`));
+    }
+
+    function loadAnalytics() {
+      if (window.gtagLoaded) {
+        return;
+      }
+
+      window.gtagLoaded = true;
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    }
+
+    function acceptCookies() {
+      setCookieConsent('accepted');
+      COOKIE_BANNER.classList.remove('show');
+      loadAnalytics();
+    }
+
+    function rejectCookies() {
+      setCookieConsent('rejected');
+      COOKIE_BANNER.classList.remove('show');
+    }
+
+    function showCookieBanner() {
+      const consent = getCookieConsent();
+
+      if (!consent) {
+        COOKIE_BANNER.classList.add('show');
+        return;
+      }
+
+      if (consent.includes('accepted')) {
+        loadAnalytics();
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', showCookieBanner);
+  </script>
 </body>
 </html>
