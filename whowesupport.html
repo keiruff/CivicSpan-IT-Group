@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" as="image" href="infrastructure.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  </noscript>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <title>Who We Support | CivicSpan IT Group</title>
 
-  <meta
-    name="description"
-    content="CivicSpan IT Group supports small businesses, nonprofits, government-adjacent organizations, and infrastructure-focused teams with technical support and digital solutions."
-  />
+  <meta name="description" content="CivicSpan IT Group supports small businesses, nonprofits, government-adjacent organizations, and infrastructure-focused teams with technical support and digital solutions.">
+  <meta name="keywords" content="IT support, small business IT, nonprofit IT support, government IT consulting, engineering technology, infrastructure support">
+  <meta name="author" content="CivicSpan IT Group">
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta property="og:title" content="Who We Support | CivicSpan IT Group">
+  <meta property="og:description" content="Technical support and digital solutions designed to improve operations for small businesses, nonprofits, and infrastructure-focused teams.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://civicspanitgroup.com/whowesupport.html">
+  <meta property="og:image" content="https://civicspanitgroup.com/social-preview.png">
+  <meta property="og:site_name" content="CivicSpan IT Group">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CivicSpan IT Group",
+    "url": "https://civicspanitgroup.com/"
+  }
+  </script>
 </head>
 
 <body>
@@ -20,7 +46,7 @@
   <header class="site-header">
     <nav class="navbar" aria-label="Primary navigation">
       <div class="logo">
-        <a href="index.html">
+        <a href="index.html" aria-label="CivicSpan IT Group home">
           <img src="logo.webp" alt="CivicSpan IT Group Logo" width="250" height="58">
         </a>
       </div>
@@ -167,5 +193,86 @@
       </div>
     </div>
   </footer>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description">
+    <button class="cookie-close" type="button" onclick="rejectCookies()" aria-label="Close cookie banner">×</button>
+
+    <h3 id="cookie-title" class="cookie-title">Cookie Preferences</h3>
+
+    <p id="cookie-description" class="cookie-text">
+      We use cookies to enhance your browsing experience and understand site traffic.
+      <a href="cookies.html" target="_blank" rel="noopener noreferrer">Learn more about our cookie policy</a>.
+    </p>
+
+    <div class="cookie-buttons">
+      <button class="cookie-btn cookie-decline" type="button" onclick="rejectCookies()">Decline</button>
+      <button class="cookie-btn cookie-accept" type="button" onclick="acceptCookies()">Accept All</button>
+    </div>
+  </div>
+
+  <script>
+    const COOKIE_CONSENT_KEY = 'civicspan_cookie_consent';
+    const COOKIE_BANNER = document.getElementById('cookie-banner');
+    const CONSENT_EXPIRY_DAYS = 365;
+    const GA_ID = 'G-DHDMJY4DW5';
+
+    function setCookieConsent(consent) {
+      const expiryDate = new Date();
+      expiryDate.setDate(expiryDate.getDate() + CONSENT_EXPIRY_DAYS);
+      document.cookie = `${COOKIE_CONSENT_KEY}=${consent};path=/;expires=${expiryDate.toUTCString()};SameSite=Strict`;
+    }
+
+    function getCookieConsent() {
+      return document.cookie
+          .split('; ')
+          .find(row => row.startsWith(`${COOKIE_CONSENT_KEY}=`));
+    }
+
+    function loadAnalytics() {
+      if (window.gtagLoaded) {
+        return;
+      }
+
+      window.gtagLoaded = true;
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    }
+
+    function acceptCookies() {
+      setCookieConsent('accepted');
+      COOKIE_BANNER.classList.remove('show');
+      loadAnalytics();
+    }
+
+    function rejectCookies() {
+      setCookieConsent('rejected');
+      COOKIE_BANNER.classList.remove('show');
+    }
+
+    function showCookieBanner() {
+      const consent = getCookieConsent();
+
+      if (!consent) {
+        COOKIE_BANNER.classList.add('show');
+        return;
+      }
+
+      if (consent.includes('accepted')) {
+        loadAnalytics();
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', showCookieBanner);
+  </script>
 </body>
 </html>
