@@ -1,31 +1,41 @@
-**New `.gitignore`**
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-```gitignore
-# OS / editor
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+/dist
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# OS / IDE
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 .vs/
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Temporary files
 *.tmp
 *.temp
 *.bak
 *.swp
-
-# Local environment
-.env
-.env.*
-!.env.example
-
-# Build / generated output
-dist/
-build/
-.cache/
