@@ -132,7 +132,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
                 <p className="text-neutral-light mb-6">
-                  Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                  Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
                 </p>
               </div>
 

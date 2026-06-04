@@ -219,7 +219,7 @@ export default function HomePage() {
           Need Technical Support or Digital Solutions?
         </h2>
         <p className="text-neutral-light text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
-          Contact CivicSpan IT Group to discuss your organization's needs.
+          Contact CivicSpan IT Group to discuss your organization&apos;s needs.
         </p>
         <Link 
           href="/contact" 

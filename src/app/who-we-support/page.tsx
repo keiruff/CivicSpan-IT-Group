@@ -45,7 +45,7 @@ export default function WhoWeSupportPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <p className="text-lg text-neutral-light max-w-3xl mb-8">
-              CivicSpan IT Group specializes in supporting organizations across Virginia and beyond that need enterprise-grade IT infrastructure, security, and support. Whether you're in the financial sector, government, healthcare, or professional services, we have the expertise and experience to meet your specific requirements.
+              CivicSpan IT Group specializes in supporting organizations across Virginia and beyond that need enterprise-grade IT infrastructure, security, and support. Whether you&apos;re in the financial sector, government, healthcare, or professional services, we have the expertise and experience to meet your specific requirements.
             </p>
           </div>
 
