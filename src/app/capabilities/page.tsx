@@ -59,28 +59,41 @@ export default function CapabilitiesPage() {
               <div className="space-y-4">
                 <div>
                   <h4 className="text-primary font-semibold uppercase text-sm tracking-widest mb-2">Business Type</h4>
-                  <p className="text-neutral-light">Service-Disabled Veteran-Owned Small Business (SDVOSB)</p>
+                  <ul className="space-y-1 text-neutral-light">
+                    <li>Woman-Owned Small Business</li>
+                    <li>Virginia LLC</li>
+                    <li>Public Sector Focus</li>
+                  </ul>
                 </div>
                 
                 <div>
                   <h4 className="text-primary font-semibold uppercase text-sm tracking-widest mb-2">Location</h4>
-                  <p className="text-neutral-light">Virginia, United States</p>
+                  <p className="text-neutral-light">Fredericksburg, Virginia</p>
                 </div>
                 
                 <div>
                   <h4 className="text-primary font-semibold uppercase text-sm tracking-widest mb-2">Services</h4>
-                  <p className="text-neutral-light">IT Support, Infrastructure Management, Digital Solutions</p>
+                  <ul className="space-y-1 text-neutral-light">
+                    <li>Engineering Technology Support</li>
+                    <li>Bentley ProjectWise Support</li>
+                    <li>Microsoft 365 & SharePoint</li>
+                    <li>Technical Documentation</li>
+                    <li>User Training & Adoption</li>
+                    <li>Process Automation</li>
+                  </ul>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-primary font-semibold uppercase text-sm tracking-widest mb-2">Certifications</h4>
+                  <h4 className="text-primary font-semibold uppercase text-sm tracking-widest mb-2">Capabilities</h4>
                   <ul className="space-y-2 text-neutral-light">
-                    <li>• ISO 27001 Compliant</li>
-                    <li>• SOC 2 Type II</li>
-                    <li>• HIPAA Ready</li>
-                    <li>• NIST Cybersecurity Framework</li>
+                    <li>• Public Sector Experience</li>
+                    <li>• Transportation & Infrastructure Technology</li>
+                    <li>• Cloud & Collaboration Solutions</li>
+                    <li>• End-User Support</li>
+                    <li>• Knowledge Management</li>
+                    <li>• Business Process Improvement</li>
                   </ul>
                 </div>
               </div>
