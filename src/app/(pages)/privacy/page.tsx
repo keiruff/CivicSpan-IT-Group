@@ -19,7 +19,7 @@ export default function PrivacyPage() {
             <div>
               <h3 className="text-xl font-bold text-primary mb-4">1. Introduction</h3>
               <p>
-                CivicSpan IT Group ("we," "us," "our," or "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+                CivicSpan IT Group (&quot;we,&quot; &quot;us,&quot; &quot;our,&quot; or &quot;Company&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
               </p>
             </div>
 
