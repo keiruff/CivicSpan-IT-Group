@@ -17,6 +17,10 @@ const companyHighlights = [
     label: 'PA Supplier',
     value: 'Supplier ID: 0000570359\nSAP #: 570359',
   },
+  {
+    label: 'PENNA Turnpike Vendor Code',
+    value: '10662',
+  },
 ]
 
 const coreCapabilities = [
