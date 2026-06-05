@@ -18,8 +18,8 @@ const companyHighlights = [
     value: 'Supplier ID: 0000570359\nSAP #: 570359',
   },
   {
-    label: 'PENNA Turnpike Vendor Code',
-    value: '10662',
+    label: 'PA Turnpike Vendor',
+    value: 'Vendor Code: 10662',
   },
 ]
 
@@ -62,13 +62,7 @@ const coreCapabilities = [
   },
 ]
 
-const naics = [
-  '541512',
-  '541511',
-  '541519',
-  '518210',
-  '611420',
-]
+const naics = ['541512', '541511', '541519', '518210', '611420']
 
 export default function CapabilitiesPage() {
   return (
@@ -157,14 +151,19 @@ export default function CapabilitiesPage() {
             </aside>
           </div>
 
-          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-28" aria-label="Company highlights">
+          <section
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-28"
+            aria-label="Company highlights"
+          >
             {companyHighlights.map((item) => (
               <div
                 key={item.label}
                 className="rounded-2xl border border-slate-400/15 bg-slate-900/80 p-6 shadow-xl backdrop-blur"
               >
                 <strong className="block text-white text-lg mb-2">{item.label}</strong>
-                <span className="block text-slate-400 leading-6 whitespace-pre-line">{item.value}</span>
+                <span className="block text-slate-400 leading-6 whitespace-pre-line">
+                  {item.value}
+                </span>
               </div>
             ))}
           </section>
@@ -202,7 +201,9 @@ export default function CapabilitiesPage() {
                 <article
                   key={item.title}
                   className={`relative min-h-[260px] rounded-[22px] border border-slate-400/15 bg-slate-900/80 p-7 overflow-hidden shadow-xl backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-green-500/45 hover:shadow-2xl ${
-                    index === 0 ? 'bg-[radial-gradient(circle_at_25%_20%,rgba(34,197,94,0.22),transparent_36%),rgba(15,23,42,0.86)]' : ''
+                    index === 0
+                      ? 'bg-[radial-gradient(circle_at_25%_20%,rgba(34,197,94,0.22),transparent_36%),rgba(15,23,42,0.86)]'
+                      : ''
                   }`}
                 >
                   <span className="inline-flex w-12 h-12 items-center justify-center mb-9 rounded-2xl bg-primary text-slate-950 font-black">
@@ -276,9 +277,18 @@ export default function CapabilitiesPage() {
 
               <div className="grid gap-4">
                 {[
-                  ['High-touch support', 'For teams that need clear answers, clean handoffs, and dependable follow-through.'],
-                  ['Technical environments', 'For organizations using specialized software, shared systems, and structured workflows.'],
-                  ['Practical modernization', 'For groups ready to improve documentation, access, cloud organization, or digital operations.'],
+                  [
+                    'High-touch support',
+                    'For teams that need clear answers, clean handoffs, and dependable follow-through.',
+                  ],
+                  [
+                    'Technical environments',
+                    'For organizations using specialized software, shared systems, and structured workflows.',
+                  ],
+                  [
+                    'Practical modernization',
+                    'For groups ready to improve documentation, access, cloud organization, or digital operations.',
+                  ],
                 ].map(([title, text]) => (
                   <div
                     key={title}
@@ -333,15 +343,16 @@ export default function CapabilitiesPage() {
               <div className="grid gap-6">
                 <div>
                   <h4 className="text-primary font-bold uppercase text-sm tracking-widest mb-2">
-                    Registrations & Vendor Information
+                    Professional Highlights
                   </h4>
                   <ul className="text-slate-300 leading-8">
-                    <li>• SAM.gov Registered</li>
-                    <li>• UEI: PMVWGHNEZYK4</li>
-                    <li>• CAGE Code: 20NK8</li>
+                    <li>• SAM.gov registration in progress/active</li>
                     <li>• eVA Registered Vendor</li>
-                    <li>• PA Supplier ID: 0000570359</li>
-                    <li>• PA SAP Vendor Number: 570359</li>
+                    <li>• Pennsylvania Supplier Portal Registered</li>
+                    <li>• PA Turnpike Vendor Profile Active</li>
+                    <li>• Bentley Developer Program Member</li>
+                    <li>• Published Open-Source ProjectWise Utility</li>
+                    <li>• ORCID Connected to GitHub Research Profile</li>
                   </ul>
                 </div>
 
@@ -352,9 +363,10 @@ export default function CapabilitiesPage() {
                   <ul className="text-slate-300 leading-8">
                     <li>• Public Sector Experience</li>
                     <li>• Transportation & Infrastructure Technology</li>
+                    <li>• Bentley ProjectWise Support</li>
                     <li>• Microsoft 365 & SharePoint Solutions</li>
-                    <li>• End-User Support</li>
-                    <li>• Knowledge Management</li>
+                    <li>• Technical Documentation & Training</li>
+                    <li>• Workflow Automation & Reporting</li>
                     <li>• Business Process Improvement</li>
                   </ul>
                 </div>
