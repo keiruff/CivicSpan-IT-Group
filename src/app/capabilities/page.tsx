@@ -10,12 +10,12 @@ const companyHighlights = [
     value: '20NK8',
   },
   {
-    label: 'PA Supplier',
-    value: 'Supplier ID: 0000570359\nSAP #: 570359',
+    label: 'eVA Vendor Code',
+    value: 'SUP356399',
   },
   {
-    label: 'Registrations',
-    value: 'SAM.gov • eVA • PA Supplier Portal',
+    label: 'PA Supplier',
+    value: 'Supplier ID: 0000570359\nSAP #: 570359',
   },
 ]
 
