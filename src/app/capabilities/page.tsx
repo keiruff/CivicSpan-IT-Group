@@ -346,13 +346,14 @@ export default function CapabilitiesPage() {
                     Professional Highlights
                   </h4>
                   <ul className="text-slate-300 leading-8">
-                    <li>• SAM.gov registration in progress/active</li>
-                    <li>• eVA Registered Vendor</li>
-                    <li>• Pennsylvania Supplier Portal Registered</li>
-                    <li>• PA Turnpike Vendor Profile Active</li>
                     <li>• Bentley Developer Program Member</li>
-                    <li>• Published Open-Source ProjectWise Utility</li>
-                    <li>• ORCID Connected to GitHub Research Profile</li>
+                    <li>• Bentley Communities Explorer</li>
+                    <li>• Published ProjectWise Workspace Doctor on GitHub</li>
+                    <li>• ORCID Researcher Profile Connected</li>
+                    <li>• Public Sector Technology Experience</li>
+                    <li>• Transportation & Infrastructure Technology Focus</li>
+                    <li>• Bentley ProjectWise Experience</li>
+                    <li>• Microsoft 365 & SharePoint Experience</li>
                   </ul>
                 </div>
 
