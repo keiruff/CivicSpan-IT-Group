@@ -3,41 +3,86 @@ import Hero from '@/components/Hero'
 const services = [
   {
     id: 1,
-    title: 'IT Support & Management',
-    overview: 'Comprehensive managed IT services designed for enterprise needs.',
+    icon: '⚙️',
+    title: 'Engineering Technology Support',
+    overview: 'Practical support for infrastructure, transportation, and engineering technology environments.',
     details: [
-      'Infrastructure monitoring and management',
-      '24/7 technical support and incident response',
-      'Security assessment and hardening',
-      'Disaster recovery planning',
-      'System performance optimization',
-      'Backup and business continuity',
+      'Bentley ProjectWise user support',
+      'Workspace and configuration troubleshooting',
+      'Engineering software assistance',
+      'CADD support coordination',
+      'User onboarding and access support',
+      'Technical issue documentation and reporting',
     ],
   },
   {
     id: 2,
-    title: 'Digital Solutions',
-    overview: 'Custom workflows and automation tailored to your operations.',
+    icon: '🖥️',
+    title: 'IT Support & Help Desk Services',
+    overview: 'Responsive technical support for everyday systems, users, and operational blockers.',
     details: [
-      'Business process automation',
-      'Custom workflow development',
-      'Integration of disparate systems',
-      'API development and management',
-      'Data migration and consolidation',
-      'Digital transformation consulting',
+      'End-user technical support',
+      'Software installation assistance',
+      'Account and access troubleshooting',
+      'Ticket triage and documentation',
+      'Remote support coordination',
+      'Knowledge base and support workflow improvement',
     ],
   },
   {
     id: 3,
-    title: 'Documentation & Knowledge',
-    overview: 'Professional documentation for operational excellence.',
+    icon: '☁️',
+    title: 'Microsoft 365 & Cloud Support',
+    overview: 'Support for modern collaboration, cloud-based workflows, and organized digital workspaces.',
     details: [
-      'Standard Operating Procedures (SOPs)',
-      'Technical runbooks and playbooks',
+      'Microsoft 365 support',
+      'SharePoint organization and cleanup',
+      'Teams and OneDrive support',
+      'Cloud storage structure planning',
+      'User permissions and access review',
+      'Basic Azure and cloud environment assistance',
+    ],
+  },
+  {
+    id: 4,
+    icon: '🔁',
+    title: 'Workflow Automation & Process Improvement',
+    overview: 'Cleaner workflows, repeatable processes, and automation that reduces manual effort.',
+    details: [
+      'PowerShell scripting support',
+      'Process mapping and cleanup',
+      'Manual task reduction',
+      'Reporting workflow improvement',
+      'Data organization and file structure cleanup',
+      'Operational handoff documentation',
+    ],
+  },
+  {
+    id: 5,
+    icon: '📚',
+    title: 'Documentation, Training & Knowledge Management',
+    overview: 'Clear documentation and training materials that help teams work with less confusion.',
+    details: [
+      'Standard Operating Procedures',
+      'User guides and job aids',
+      'Technical walkthroughs',
+      'Training materials and onboarding guides',
+      'Runbooks and troubleshooting notes',
       'Knowledge base development',
-      'Staff training documentation',
-      'Systems architecture documentation',
-      'Compliance and audit documentation',
+    ],
+  },
+  {
+    id: 6,
+    icon: '🌐',
+    title: 'Digital & Web Services',
+    overview: 'Right-sized digital support for small businesses, nonprofits, and public-facing teams.',
+    details: [
+      'Website updates and maintenance',
+      'Basic web content organization',
+      'Form and intake workflow setup',
+      'Digital presence cleanup',
+      'Business email and contact flow support',
+      'Small business technology setup assistance',
     ],
   },
 ]
@@ -47,20 +92,35 @@ export default function ServicesPage() {
     <>
       <Hero
         title="Our Services"
-        description="Comprehensive IT solutions built for enterprise operations."
+        description="Practical IT support, engineering technology assistance, documentation, automation, and digital solutions for infrastructure-focused teams."
       />
-      
+
       <section className="py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-20">
             {services.map((service, index) => (
-              <div key={service.id} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                <div>
-                  <h2 className="text-4xl font-bold text-white mb-4">{service.title}</h2>
-                  <p className="text-lg text-neutral-light mb-6">{service.overview}</p>
-                  
+              <div
+                key={service.id}
+                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+              >
+                <div className={index % 2 === 1 ? 'md:order-2' : ''}>
+                  <p className="text-primary font-semibold uppercase text-sm tracking-widest mb-3">
+                    Service {String(service.id).padStart(2, '0')}
+                  </p>
+
+                  <h2 className="text-4xl font-bold text-white mb-4">
+                    {service.title}
+                  </h2>
+
+                  <p className="text-lg text-neutral-light mb-6">
+                    {service.overview}
+                  </p>
+
                   <div className="space-y-3">
-                    <h3 className="text-primary font-semibold uppercase text-sm tracking-widest">Key Features</h3>
+                    <h3 className="text-primary font-semibold uppercase text-sm tracking-widest">
+                      Key Features
+                    </h3>
+
                     <ul className="space-y-2">
                       {service.details.map((detail, idx) => (
                         <li key={idx} className="flex items-start gap-3 text-neutral-muted">
@@ -71,8 +131,13 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-xl p-12 border border-green-500/20 flex items-center justify-center min-h-96">
-                  <div className="text-6xl opacity-20">{service.id === 1 ? '⚙️' : service.id === 2 ? '💻' : '📚'}</div>
+
+                <div
+                  className={`bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-xl p-12 border border-green-500/20 flex items-center justify-center min-h-96 ${
+                    index % 2 === 1 ? 'md:order-1' : ''
+                  }`}
+                >
+                  <div className="text-7xl opacity-25">{service.icon}</div>
                 </div>
               </div>
             ))}
