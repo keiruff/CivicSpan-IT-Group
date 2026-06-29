@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 const services = [
   {
     id: 1,
+    anchorId: 'consulting',
     icon: '⚙️',
     title: 'Engineering Technology Support',
     overview: 'Practical support for infrastructure, transportation, and engineering technology environments.',
@@ -17,6 +18,7 @@ const services = [
   },
   {
     id: 2,
+    anchorId: 'it-support',
     icon: '🖥️',
     title: 'IT Support & Help Desk Services',
     overview: 'Responsive technical support for everyday systems, users, and operational blockers.',
@@ -31,6 +33,7 @@ const services = [
   },
   {
     id: 3,
+    anchorId: 'cloud-support',
     icon: '☁️',
     title: 'Microsoft 365 & Cloud Support',
     overview: 'Support for modern collaboration, cloud-based workflows, and organized digital workspaces.',
@@ -45,6 +48,7 @@ const services = [
   },
   {
     id: 4,
+    anchorId: 'workflow-automation',
     icon: '🔁',
     title: 'Workflow Automation & Process Improvement',
     overview: 'Cleaner workflows, repeatable processes, and automation that reduces manual effort.',
@@ -59,6 +63,7 @@ const services = [
   },
   {
     id: 5,
+    anchorId: 'training',
     icon: '📚',
     title: 'Documentation, Training & Knowledge Management',
     overview: 'Clear documentation and training materials that help teams work with less confusion.',
@@ -73,6 +78,7 @@ const services = [
   },
   {
     id: 6,
+    anchorId: 'digital-solutions',
     icon: '🌐',
     title: 'Digital & Web Services',
     overview: 'Right-sized digital support for small businesses, nonprofits, and public-facing teams.',
@@ -101,7 +107,8 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={service.id}
-                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+                id={service.anchorId}
+                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start scroll-mt-28"
               >
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                   <p className="text-primary font-semibold uppercase text-sm tracking-widest mb-3">
