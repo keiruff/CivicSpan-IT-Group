@@ -139,7 +139,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="bg-dark-secondary/50 border border-green-500/15 rounded-lg p-6">
                   <h4 className="text-primary font-semibold mb-2">Email</h4>
-                  <a href="mailto:contact@civicspanitgroup.com" className="text-neutral-light hover:text-primary transition-colors">
+                  <a href="mailto:info@civicspanitgroup.com" className="text-neutral-light hover:text-primary transition-colors">
                     info@civicspanitgroup.com
                   </a>
                 </div>
