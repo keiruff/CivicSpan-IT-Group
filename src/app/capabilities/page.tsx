@@ -10,6 +10,10 @@ const companyHighlights = [
     value: '20NK8',
   },
   {
+    label: 'SWaM ID',
+    value: '845315',
+  },
+  {
     label: 'eVA Vendor Code',
     value: 'SUP356399',
   },
@@ -152,7 +156,7 @@ export default function CapabilitiesPage() {
           </div>
 
           <section
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-28"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-28"
             aria-label="Company highlights"
           >
             {companyHighlights.map((item) => (
@@ -305,7 +309,7 @@ export default function CapabilitiesPage() {
           <section className="rounded-3xl border border-slate-400/15 bg-gradient-to-br from-emerald-900/60 to-slate-900/90 p-8 sm:p-10 shadow-xl backdrop-blur mb-28">
             <h2 className="text-4xl font-extrabold text-white mb-8">Company Information</h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               <div className="grid gap-6">
                 <div>
                   <h4 className="text-primary font-bold uppercase text-sm tracking-widest mb-2">
@@ -370,6 +374,28 @@ export default function CapabilitiesPage() {
                     <li>• Workflow Automation & Reporting</li>
                     <li>• Business Process Improvement</li>
                   </ul>
+                </div>
+              </div>
+
+              <div className="grid gap-6">
+                <div>
+                  <h4 className="text-primary font-bold uppercase text-sm tracking-widest mb-2">
+                    Certifications & Registrations
+                  </h4>
+                  <ul className="text-slate-300 leading-8 mb-4">
+                    <li>• Virginia SWaM Certified</li>
+                    <li>• SWaM ID: 845315</li>
+                    <li>• Woman-Owned Small Business</li>
+                    <li>• eVA Registered Vendor</li>
+                    <li>• SAM.gov Registered</li>
+                  </ul>
+                  <div className="mt-4 p-4 bg-white/95 rounded-2xl shadow-xl border border-slate-200/10 inline-block max-w-[240px] hover:scale-105 transition-transform duration-300">
+                    <img 
+                      src="/swam_logo.jpg" 
+                      alt="Virginia SWaM Certification Logo" 
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
