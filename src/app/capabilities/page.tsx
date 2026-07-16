@@ -166,10 +166,10 @@ export default function CapabilitiesPage() {
             {companyHighlights.map((item) => (
               <div
                 key={item.label}
-                className="rounded-2xl border border-slate-400/15 bg-slate-900/80 p-6 shadow-xl backdrop-blur"
+                className="rounded-2xl border border-slate-400/15 bg-slate-900/80 p-5 xl:p-4 shadow-xl backdrop-blur"
               >
                 <strong className="block text-white text-lg mb-2">{item.label}</strong>
-                <span className="block text-slate-400 leading-6 whitespace-pre-line">
+                <span className="block text-slate-400 text-sm sm:text-base leading-6 whitespace-pre-line break-all">
                   {item.value}
                 </span>
               </div>
