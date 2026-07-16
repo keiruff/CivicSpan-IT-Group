@@ -393,8 +393,8 @@ export default function CapabilitiesPage() {
                     <li>• eVA Registered Vendor</li>
                     <li>• SAM.gov Registered (UEI: PMVWGHNEZYK4)</li>
                   </ul>
-                  <div className="flex flex-col sm:flex-row gap-4 mt-4 items-start">
-                    <div className="p-4 bg-white/95 rounded-2xl shadow-xl border border-slate-200/10 inline-block max-w-[200px] hover:scale-105 transition-transform duration-300 shrink-0">
+                  <div className="flex flex-col gap-4 mt-4">
+                    <div className="p-4 bg-white/95 rounded-2xl shadow-xl border border-slate-200/10 inline-block max-w-[200px] hover:scale-105 transition-transform duration-300">
                       <img 
                         src="/swam_logo.jpg" 
                         alt="Virginia SWaM Certification Logo" 
@@ -402,7 +402,7 @@ export default function CapabilitiesPage() {
                       />
                     </div>
                     
-                    <div className="flex-1 min-w-[200px] space-y-3 w-full">
+                    <div className="space-y-3 w-full max-w-[320px]">
                       <div className="p-4 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 to-transparent backdrop-blur-sm">
                         <div className="flex items-center gap-2 mb-1.5">
                           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
