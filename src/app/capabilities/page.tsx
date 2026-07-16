@@ -14,6 +14,10 @@ const companyHighlights = [
     value: '845315',
   },
   {
+    label: 'SBA Certs',
+    value: 'WOSB & EDWOSB',
+  },
+  {
     label: 'eVA Vendor Code',
     value: 'SUP356399',
   },
@@ -156,7 +160,7 @@ export default function CapabilitiesPage() {
           </div>
 
           <section
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-28"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-4 mb-28"
             aria-label="Company highlights"
           >
             {companyHighlights.map((item) => (
@@ -239,7 +243,7 @@ export default function CapabilitiesPage() {
                   'Familiarity with Bentley and ProjectWise ecosystems',
                   'Ability to connect technical support, systems assistance, and documentation',
                   'Focused support for infrastructure and engineering organizations',
-                  'Woman-owned small business with personalized, responsive support',
+                  'SBA Certified WOSB & EDWOSB with personalized, responsive support',
                 ].map((item) => (
                   <li
                     key={item}
@@ -316,7 +320,8 @@ export default function CapabilitiesPage() {
                     Business Type
                   </h4>
                   <ul className="text-slate-300 leading-7">
-                    <li>Woman-Owned Small Business</li>
+                    <li>SBA Certified WOSB & EDWOSB</li>
+                    <li>Virginia SWaM Certified (Woman-Owned)</li>
                     <li>Virginia Limited Liability Company</li>
                     <li>Public Sector Focus</li>
                   </ul>
@@ -383,18 +388,39 @@ export default function CapabilitiesPage() {
                     Certifications & Registrations
                   </h4>
                   <ul className="text-slate-300 leading-8 mb-4">
-                    <li>• Virginia SWaM Certified</li>
-                    <li>• SWaM ID: 845315</li>
-                    <li>• Woman-Owned Small Business</li>
+                    <li>• SBA Certified WOSB & EDWOSB</li>
+                    <li>• Virginia SWaM Certified (ID: 845315)</li>
                     <li>• eVA Registered Vendor</li>
-                    <li>• SAM.gov Registered</li>
+                    <li>• SAM.gov Registered (UEI: PMVWGHNEZYK4)</li>
                   </ul>
-                  <div className="mt-4 p-4 bg-white/95 rounded-2xl shadow-xl border border-slate-200/10 inline-block max-w-[240px] hover:scale-105 transition-transform duration-300">
-                    <img 
-                      src="/swam_logo.jpg" 
-                      alt="Virginia SWaM Certification Logo" 
-                      className="w-full h-auto object-contain rounded-lg"
-                    />
+                  <div className="flex flex-col sm:flex-row gap-4 mt-4 items-start">
+                    <div className="p-4 bg-white/95 rounded-2xl shadow-xl border border-slate-200/10 inline-block max-w-[200px] hover:scale-105 transition-transform duration-300 shrink-0">
+                      <img 
+                        src="/swam_logo.jpg" 
+                        alt="Virginia SWaM Certification Logo" 
+                        className="w-full h-auto object-contain rounded-lg"
+                      />
+                    </div>
+                    
+                    <div className="flex-1 min-w-[200px] space-y-3 w-full">
+                      <div className="p-4 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 to-transparent backdrop-blur-sm">
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                          <span className="text-xs font-extrabold text-white uppercase tracking-wider">SBA Certified WOSB</span>
+                        </div>
+                        <p className="text-[11px] text-slate-400">Women-Owned Small Business</p>
+                        <p className="text-[10px] text-slate-500 mt-1">Entrance: 07/09/2026 • Renewal: 07/08/2029</p>
+                      </div>
+
+                      <div className="p-4 rounded-2xl border border-sky-500/20 bg-gradient-to-r from-sky-500/10 to-transparent backdrop-blur-sm">
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
+                          <span className="text-xs font-extrabold text-white uppercase tracking-wider">SBA Certified EDWOSB</span>
+                        </div>
+                        <p className="text-[11px] text-slate-400">Economically-Disadvantaged Women-Owned</p>
+                        <p className="text-[10px] text-slate-500 mt-1">Entrance: 07/09/2026 • Renewal: 07/08/2029</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
