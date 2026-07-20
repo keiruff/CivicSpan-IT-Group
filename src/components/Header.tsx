@@ -12,6 +12,7 @@ export default function Header() {
     { href: '/services', label: 'Services' },
     { href: '/capabilities', label: 'Capabilities' },
     { href: '/who-we-support', label: 'Who We Support' },
+    { href: '/tools-and-utilities', label: 'Tools & Utilities' },
     { href: '/contact', label: 'Contact' },
   ]
 
