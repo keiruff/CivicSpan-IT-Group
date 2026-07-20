@@ -6,37 +6,42 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://civicspanitgroup.com/services.html</loc>
+    <loc>https://civicspanitgroup.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://civicspanitgroup.com/capabilities.html</loc>
+    <loc>https://civicspanitgroup.com/capabilities</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://civicspanitgroup.com/whowesupport.html</loc>
+    <loc>https://civicspanitgroup.com/who-we-support</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://civicspanitgroup.com/contact.html</loc>
+    <loc>https://civicspanitgroup.com/tools-and-utilities</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://civicspanitgroup.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://civicspanitgroup.com/privacy.html</loc>
+    <loc>https://civicspanitgroup.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://civicspanitgroup.com/cookies.html</loc>
+    <loc>https://civicspanitgroup.com/cookies</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://civicspanitgroup.com/disclaimer.html</loc>
+    <loc>https://civicspanitgroup.com/disclaimer</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

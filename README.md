@@ -1,6 +1,8 @@
 # CivicSpan IT Group Website
 
-Static marketing website for CivicSpan IT Group, a Virginia-based technology support business providing practical IT support, digital solutions, documentation, workflow assistance, and infrastructure-focused technology support for businesses, nonprofits, and engineering environments.
+Marketing website for CivicSpan IT Group, a Virginia-based technology support business providing practical IT support, digital solutions, documentation, workflow assistance, and infrastructure-focused technology support for businesses, nonprofits, and engineering environments.
+
+Built with [Next.js](https://nextjs.org/) (App Router), React, TypeScript, and Tailwind CSS.
 
 ---
 
@@ -12,54 +14,84 @@ https://civicspanitgroup.com
 
 ## Pages
 
-- `index.html` — Homepage and business overview
-- `services.html` — Service details
-- `capabilities.html` — Capabilities statement
-- `whowesupport.html` — Audience and client types
-- `contact.html` — Contact form and scheduling
-- `privacy.html` — Privacy policy
-- `cookies.html` — Cookie policy
-- `disclaimer.html` — Website disclaimer
-- `sitemap.xml` — Search engine sitemap
-- `robots.txt` — Search crawler instructions
+- `/` — Homepage and business overview
+- `/services` — Service details
+- `/capabilities` — Capabilities statement
+- `/who-we-support` — Audience and client types
+- `/tools-and-utilities` — Free tools and utilities
+- `/contact` — Contact form and scheduling
+- `/privacy` — Privacy policy
+- `/cookies` — Cookie policy
+- `/disclaimer` — Website disclaimer
 
 ---
 
-## Assets
+## Project Structure
 
-- `styles.css` — Shared site styling
-- `scripts.js` — Site JavaScript functionality
-- `logo.webp` — Site logo
-- `favicon.png` — Browser favicon
-- `infrastructure.webp` — Main background image
-
----
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript
-- Python
-- Git
-- GitHub
-- Vercel
+```text
+CivicSpan-IT-Group/
+│
+├── src/
+│   ├── app/
+│   │   ├── (pages)/          # Privacy, cookies, disclaimer
+│   │   ├── api/contact/      # Contact form API route
+│   │   ├── capabilities/
+│   │   ├── contact/
+│   │   ├── services/
+│   │   ├── tools-and-utilities/
+│   │   ├── who-we-support/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   └── components/           # Header, Footer, Hero, CookieBanner
+│
+├── public/                   # Static assets (images, favicon, robots.txt, sitemap.xml)
+│
+├── optimize_images.py        # Optional image optimization helper for public/ assets
+├── next.config.js
+├── tailwind.config.js
+├── tsconfig.json
+└── package.json
+```
 
 ---
 
 ## Local Development
 
-Open `index.html` directly in a browser, or serve the folder locally using Python:
+Install dependencies and start the dev server:
 
 ```bash
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
 Then visit:
 
 ```text
-http://localhost:8000
+http://localhost:3000
 ```
+
+Other useful commands:
+
+```bash
+npm run build       # Production build
+npm run start       # Serve the production build
+npm run lint        # Run ESLint
+npm run type-check  # Run the TypeScript compiler without emitting output
+```
+
+---
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Python (image optimization)
+- Git
+- GitHub
+- Vercel
 
 ---
 
@@ -76,7 +108,7 @@ Changes pushed to the main branch automatically trigger deployment updates.
 
 ## Performance Optimization
 
-Image optimization is handled using:
+Image optimization for assets in `public/` is handled using:
 
 ```text
 optimize_images.py
@@ -88,35 +120,6 @@ This script compresses and optimizes image assets to improve:
 - Mobile responsiveness
 - Lighthouse performance scores
 - Largest Contentful Paint (LCP)
-
----
-
-## Project Structure
-
-```text
-CivicSpan-IT-Group/
-│
-├── index.html
-├── services.html
-├── capabilities.html
-├── whowesupport.html
-├── contact.html
-├── privacy.html
-├── cookies.html
-├── disclaimer.html
-│
-├── styles.css
-├── scripts.js
-│
-├── logo.webp
-├── favicon.png
-├── infrastructure.webp
-│
-├── optimize_images.py
-├── sitemap.xml
-├── robots.txt
-└── README.md
-```
 
 ---
 

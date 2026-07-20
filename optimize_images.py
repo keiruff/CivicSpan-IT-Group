@@ -16,10 +16,10 @@ except ImportError:
         sys.exit(1)
 
 # Paths
-workspace_dir = r"c:\Users\keyru\source\repos\CivicSpan-IT-Group"
-favicon_path = os.path.join(workspace_dir, "favicon.png")
-logo_path = os.path.join(workspace_dir, "logo.webp")
-infra_path = os.path.join(workspace_dir, "infrastructure.webp")
+public_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public")
+favicon_path = os.path.join(public_dir, "favicon.png")
+logo_path = os.path.join(public_dir, "logo.webp")
+infra_path = os.path.join(public_dir, "infrastructure.webp")
 
 print("--- Image Optimization Process ---")
 
