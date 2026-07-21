@@ -47,7 +47,47 @@ export default function ContactPage() {
         description="Let's discuss how we can help transform your IT infrastructure."
       />
 
-      <section className="py-20 sm:py-32">
+      <section className="pt-20 sm:pt-32 pb-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">
+              Getting Started
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              What happens when you reach out.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
+            <article className="bg-dark-secondary/60 border border-green-500/15 rounded-xl p-7 text-center">
+              <span className="block font-extrabold text-primary text-3xl mb-3">01</span>
+              <h3 className="text-white font-bold text-lg mb-2">Discuss Your Needs</h3>
+              <p className="text-neutral-muted text-sm leading-relaxed">
+                Send a message or request a call to talk through your systems, challenges, and goals.
+              </p>
+            </article>
+
+            <article className="bg-dark-secondary/60 border border-green-500/15 rounded-xl p-7 text-center">
+              <span className="block font-extrabold text-primary text-3xl mb-3">02</span>
+              <h3 className="text-white font-bold text-lg mb-2">Scope & Proposal</h3>
+              <p className="text-neutral-muted text-sm leading-relaxed">
+                We recommend the right engagement model — hourly, project-based, or managed support —
+                and outline next steps.
+              </p>
+            </article>
+
+            <article className="bg-dark-secondary/60 border border-green-500/15 rounded-xl p-7 text-center">
+              <span className="block font-extrabold text-primary text-3xl mb-3">03</span>
+              <h3 className="text-white font-bold text-lg mb-2">Engagement Begins</h3>
+              <p className="text-neutral-muted text-sm leading-relaxed">
+                Work starts based on the agreed scope, with clear communication throughout.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-dark-secondary border border-green-500/15 rounded-xl p-8">
@@ -146,7 +186,7 @@ export default function ContactPage() {
 
                 <div className="bg-dark-secondary/50 border border-green-500/15 rounded-lg p-6">
                   <h4 className="text-primary font-semibold mb-2">Location</h4>
-                  <p className="text-neutral-light">Virginia, USA</p>
+                  <p className="text-neutral-light">Fredericksburg, Virginia — serving the Mid-Atlantic region</p>
                 </div>
 
                 <div className="bg-dark-secondary/50 border border-green-500/15 rounded-lg p-6">
