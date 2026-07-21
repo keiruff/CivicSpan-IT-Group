@@ -54,7 +54,7 @@ export default function SmallBusinessStartupPackage() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">What's Included</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">What&apos;s Included</h3>
               <ul className="grid grid-cols-1 gap-3">
                 {includes.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-neutral-light leading-relaxed">

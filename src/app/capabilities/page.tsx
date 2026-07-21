@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import Image from 'next/image'
 
 const companyHighlights = [
   {
@@ -469,9 +470,11 @@ export default function CapabilitiesPage() {
                   </ul>
                   <div className="flex flex-col gap-4 mt-4">
                     <div className="p-4 bg-white/95 rounded-2xl shadow-xl border border-slate-200/10 inline-block max-w-[200px] hover:scale-105 transition-transform duration-300">
-                      <img 
-                        src="/swam_logo.jpg" 
-                        alt="Virginia SWaM Certification Logo" 
+                      <Image
+                        src="/swam_logo.jpg"
+                        alt="Virginia SWaM Certification Logo"
+                        width={200}
+                        height={200}
                         className="w-full h-auto object-contain rounded-lg"
                       />
                     </div>
