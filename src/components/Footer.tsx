@@ -115,6 +115,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/tools-and-utilities" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
+                  Tools & Utilities
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
                   Contact Us
                 </Link>
