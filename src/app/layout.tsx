@@ -42,12 +42,37 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    'name': 'CivicSpan IT Group',
-    'url': 'https://civicspanitgroup.com/',
-  }
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'CivicSpan IT Group',
+      url: 'https://civicspanitgroup.com/',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'CivicSpan IT Group',
+      url: 'https://civicspanitgroup.com/',
+      logo: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
+      description: 'Infrastructure-focused IT support, Microsoft 365 consulting, ProjectWise support, and Dell business hardware deployment.',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'CivicSpan IT Group',
+      url: 'https://civicspanitgroup.com/',
+      image: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Fredericksburg',
+        addressRegion: 'VA',
+        addressCountry: 'US',
+      },
+      areaServed: ['Fredericksburg VA', 'Richmond VA', 'Northern Virginia', 'Maryland', 'Pennsylvania', 'Mid-Atlantic'],
+      knowsAbout: ['Microsoft 365', 'SharePoint', 'Microsoft Teams', 'Intune', 'Entra ID', 'Dell business laptops', 'Bentley ProjectWise'],
+    },
+  ]
 
   return (
     <html lang="en" className="scroll-smooth">

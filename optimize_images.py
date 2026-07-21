@@ -18,8 +18,8 @@ except ImportError:
 # Paths
 public_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public")
 favicon_path = os.path.join(public_dir, "favicon.png")
-logo_path = os.path.join(public_dir, "logo.webp")
-infra_path = os.path.join(public_dir, "infrastructure.webp")
+logo_path = os.path.join(public_dir, "civicspan-it-group-logo.webp")
+infra_path = os.path.join(public_dir, "infrastructure-it-support-mid-atlantic.webp")
 
 print("--- Image Optimization Process ---")
 
