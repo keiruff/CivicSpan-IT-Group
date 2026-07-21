@@ -9,6 +9,20 @@ type Props = {
 
 export default function ContentPageTemplate({ page, category, jsonLd }: Props) {
   const schema = jsonLd ? JSON.stringify(jsonLd) : null
+  const serviceLinks =
+    category === 'Topic'
+      ? [
+          { label: 'infrastructure managed services', href: '/services' },
+          { label: 'Microsoft 365 and cloud support', href: '/services#cloud-support' },
+          { label: 'engineering technology support', href: '/services#consulting' },
+        ]
+      : category === 'Location'
+        ? [
+            { label: 'regional IT consulting', href: '/services' },
+            { label: 'local IT support and help desk services', href: '/services#it-support' },
+            { label: 'infrastructure managed services', href: '/services#consulting' },
+          ]
+        : []
 
   return (
     <>
@@ -53,6 +67,26 @@ export default function ContentPageTemplate({ page, category, jsonLd }: Props) {
                 ) : null}
               </section>
             ))}
+
+            {serviceLinks.length ? (
+              <section className="rounded-3xl border border-green-500/15 bg-slate-950/80 p-8 sm:p-10 backdrop-blur">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">Related CivicSpan services</h2>
+                <p className="text-neutral-light leading-7 mb-5">
+                  Connect this page to CivicSpan&apos;s core service offerings for practical next steps.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {serviceLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="inline-flex rounded-full border border-green-500/25 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary hover:border-primary hover:bg-primary hover:text-dark transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ) : null}
 
             {page.faqs?.length ? (
               <section className="rounded-3xl border border-green-500/15 bg-slate-950/80 p-8 sm:p-10 backdrop-blur">
