@@ -105,6 +105,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/solutions" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
+                  Solutions
+                </Link>
+              </li>
+              <li>
                 <Link href="/capabilities" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
                   Capabilities
                 </Link>
