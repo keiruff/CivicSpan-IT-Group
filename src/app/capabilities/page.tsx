@@ -72,6 +72,18 @@ const coreCapabilities = [
 
 const naics = ['541512', '541511', '541519', '518210', '611420']
 
+const areasOfExpertise = [
+  'Bentley ProjectWise Administration & Support',
+  'Microsoft 365 Administration',
+  'SharePoint',
+  'Azure & Cloud Technologies',
+  'PowerShell Automation',
+  'Software Deployment & Endpoint Management',
+  'Technical Documentation & Knowledge Management',
+  'IT Process Improvement',
+  'Engineering Technology Support',
+]
+
 export default function CapabilitiesPage() {
   return (
     <>
@@ -158,6 +170,67 @@ export default function CapabilitiesPage() {
               </div>
             </aside>
           </div>
+
+          <section className="mb-28" aria-label="About the founder">
+            <div className="mb-10">
+              <p className="text-primary uppercase tracking-[0.16em] text-sm font-extrabold mb-5">
+                About CivicSpan
+              </p>
+              <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+                Meet the Founder
+              </h2>
+            </div>
+
+            <div className="rounded-3xl border border-slate-400/15 bg-slate-900/80 p-8 sm:p-10 shadow-xl backdrop-blur mb-5">
+              <p className="text-blue-100 text-lg leading-8 mb-6">
+                CivicSpan Technologies was founded by Keisha Ruffner, an IT professional with extensive
+                experience supporting enterprise technology environments for transportation and
+                engineering organizations.
+              </p>
+              <p className="text-slate-300 leading-7 mb-6">
+                Throughout her career, Keisha has specialized in technologies that keep engineering teams
+                productive, including Bentley ProjectWise, Microsoft 365, SharePoint, PowerShell
+                automation, software deployment, endpoint management, and technical documentation. She has
+                worked directly with engineers, designers, CAD professionals, and technical staff to
+                resolve complex issues, improve workflows, and support business-critical applications.
+              </p>
+              <p className="text-slate-300 leading-7 mb-6">
+                Recognizing that many organizations need responsive, knowledgeable IT support without the
+                overhead of large consulting firms, she founded CivicSpan to deliver practical technology
+                solutions backed by clear communication, documentation, and a commitment to long-term
+                client success.
+              </p>
+              <p className="text-slate-300 leading-7">
+                Today, CivicSpan partners with government agencies, engineering firms, municipalities,
+                utilities, and businesses to provide technology consulting, cloud solutions, engineering
+                technology support, and digital modernization services.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-5">
+              <div className="rounded-3xl border border-slate-400/15 bg-slate-900/80 p-8 shadow-xl backdrop-blur">
+                <h3 className="text-xl font-bold text-white mb-6">Areas of Expertise</h3>
+                <ul className="grid gap-3">
+                  {areasOfExpertise.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-slate-300 leading-7">
+                      <span className="text-primary font-bold mt-1">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-3xl border border-slate-400/15 bg-gradient-to-br from-emerald-900/60 to-slate-900/90 p-8 shadow-xl backdrop-blur">
+                <h3 className="text-xl font-bold text-white mb-4">Why CivicSpan?</h3>
+                <p className="text-blue-100 leading-8">
+                  CivicSpan combines enterprise-level technical experience with the responsiveness of a
+                  small business. Every engagement is guided by practical problem-solving, clear
+                  communication, and solutions designed to support your organization&apos;s long-term
+                  success.
+                </p>
+              </div>
+            </div>
+          </section>
 
           <section
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-4 mb-28"
