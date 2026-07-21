@@ -80,7 +80,7 @@ export default function Microsoft365MigrationPackage() {
                 *Final pricing depends on number of users, mailbox sizes, and source environment complexity.
               </p>
 
-              <div className="border-t border-white/5 pt-6 mb-8">
+              <div className="border-t border-white/5 pt-6 mb-6">
                 <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-3">Perfect For:</h4>
                 <ul className="space-y-2 text-xs text-slate-300">
                   {perfectFor.map((item, idx) => (
@@ -90,6 +90,18 @@ export default function Microsoft365MigrationPackage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              <div className="border-t border-white/5 pt-6 mb-8">
+                <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-3">What Happens Next</h4>
+                <ol className="space-y-3">
+                  {["Request a quote & describe your needs", "We schedule a discovery call", "Scope confirmed — we get to work"].map((step, i) => (
+                    <li key={i} className="flex items-start gap-3 text-xs text-slate-300">
+                      <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/15 border border-primary/30 text-primary font-bold text-[10px] flex items-center justify-center">{i + 1}</span>
+                      <span>{step}</span>
+                    </li>
+                  ))}
+                </ol>
               </div>
 
               <Link
