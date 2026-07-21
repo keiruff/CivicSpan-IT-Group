@@ -458,13 +458,14 @@ export default function CapabilitiesPage() {
               <div className="grid gap-6">
                 <div>
                   <h4 className="text-primary font-bold uppercase text-sm tracking-widest mb-2">
-                    Certifications & Registrations
+                    Certifications & Partnerships
                   </h4>
                   <ul className="text-slate-300 leading-8 mb-4">
                     <li>• SBA Certified WOSB & EDWOSB</li>
                     <li>• Virginia SWaM Certified (ID: 845315)</li>
                     <li>• eVA Registered Vendor</li>
                     <li>• SAM.gov Registered (UEI: PMVWGHNEZYK4)</li>
+                    <li>• Dell Technologies Partner</li>
                   </ul>
                   <div className="flex flex-col gap-4 mt-4">
                     <div className="p-4 bg-white/95 rounded-2xl shadow-xl border border-slate-200/10 inline-block max-w-[200px] hover:scale-105 transition-transform duration-300">

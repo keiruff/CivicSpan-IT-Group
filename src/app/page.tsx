@@ -50,6 +50,7 @@ export default function HomePage() {
             'Virginia SWaM Certified',
             'eVA Registered Vendor',
             'SAM.gov Registered',
+            'Dell Technologies Partner',
           ].map((badge) => (
             <span
               key={badge}
