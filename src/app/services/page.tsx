@@ -137,6 +137,64 @@ const engagementOptions = [
   },
 ]
 
+const siteUrl = 'https://civicspanitgroup.com'
+const businessName = 'CivicSpan IT Group'
+
+const servicesJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: businessName,
+      url: siteUrl,
+      logo: `${siteUrl}/civicspan-it-group-logo.webp`,
+      description:
+        'Infrastructure-focused IT support, Microsoft 365 consulting, ProjectWise support, and Dell business hardware deployment.',
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': `${siteUrl}/#localbusiness`,
+      name: businessName,
+      url: siteUrl,
+      image: `${siteUrl}/civicspan-it-group-logo.webp`,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Fredericksburg',
+        addressRegion: 'VA',
+        addressCountry: 'US',
+      },
+      areaServed: [
+        'Fredericksburg VA',
+        'Richmond VA',
+        'Northern Virginia',
+        'Maryland',
+        'Pennsylvania',
+        'Mid-Atlantic',
+      ],
+      knowsAbout: [
+        'Microsoft 365',
+        'SharePoint',
+        'Microsoft Teams',
+        'Intune',
+        'Entra ID',
+        'Dell business laptops',
+        'Bentley ProjectWise',
+      ],
+    },
+    ...services.map((service) => ({
+      '@type': 'Service',
+      '@id': `${siteUrl}/services#${service.anchorId}`,
+      name: service.title,
+      description: service.overview,
+      serviceType: service.title,
+      provider: { '@id': `${siteUrl}/#organization` },
+      areaServed: ['Fredericksburg VA', 'Richmond VA', 'Northern Virginia', 'Mid-Atlantic'],
+      url: `${siteUrl}/services#${service.anchorId}`,
+    })),
+  ],
+}
+
 const representativeEngagements = [
   {
     title: 'ProjectWise Workspace Health Assessment',
@@ -203,6 +261,10 @@ const representativeEngagements = [
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       <Hero
         title="Our Services"
         description="Practical IT support, engineering technology assistance, documentation, automation, and digital solutions for infrastructure-focused teams."
