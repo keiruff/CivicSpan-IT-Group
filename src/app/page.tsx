@@ -36,10 +36,29 @@ export default function HomePage() {
       </section>
 
       {/* Trust Bar */}
-      <section className="border-y border-white/5 bg-dark/30 py-6 text-center px-4">
-        <p className="text-neutral-light max-w-4xl mx-auto text-sm sm:text-base font-medium">
+      <section className="border-y border-white/5 bg-dark/30 py-8 px-4">
+        <p className="text-neutral-light max-w-4xl mx-auto text-sm sm:text-base font-medium text-center mb-6">
           Specialized in technical environments, engineering workflows, digital systems, and infrastructure-focused technology solutions.
         </p>
+        <p className="text-neutral-muted text-xs sm:text-sm text-center mb-6">
+          Headquartered in Fredericksburg, Virginia — serving clients across the Mid-Atlantic region.
+        </p>
+
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
+          {[
+            'Woman-Owned Small Business',
+            'Virginia SWaM Certified',
+            'eVA Registered Vendor',
+            'SAM.gov Registered',
+          ].map((badge) => (
+            <span
+              key={badge}
+              className="inline-flex items-center px-4 py-2 rounded-full border border-green-500/25 bg-dark-secondary text-neutral-light text-xs sm:text-sm font-semibold"
+            >
+              {badge}
+            </span>
+          ))}
+        </div>
       </section>
 
       {/* Featured Services Grid */}
