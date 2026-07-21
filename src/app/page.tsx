@@ -11,7 +11,7 @@ export default function HomePage() {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight max-w-4xl tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.45)]">
-            Technology support built for teams that keep operations moving.
+            Keeping Critical Infrastructure Running Through Reliable Technology
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-neutral-light max-w-2xl leading-relaxed mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
