@@ -168,6 +168,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SEO Topic Clusters */}
+      <section className="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div className="text-center mb-12">
+          <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">Helpful IT Resources</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Find support by problem, platform, or location.</h2>
+          <p className="text-neutral-muted text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mt-4">
+            Explore practical guides for Microsoft 365, Dell deployment, ProjectWise troubleshooting, and Mid-Atlantic service areas.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { title: 'Microsoft, Dell & ProjectWise Topics', body: 'Deep pages for high-intent Microsoft 365, SharePoint, Intune, Dell, and ProjectWise searches.', href: '/topics' },
+            { title: 'Location-Based IT Support', body: 'Useful regional pages for Fredericksburg, Richmond, Northern Virginia, Maryland, Pennsylvania, and ProjectWise support.', href: '/locations' },
+            { title: 'Problem-Led IT Guides', body: 'Guides for email access issues, slow ProjectWise, laptop deployments, Microsoft 365 security, and Windows 11 upgrades.', href: '/blog' },
+          ].map((item) => (
+            <Link key={item.href} href={item.href} className="group">
+              <article className="h-full rounded-2xl border border-green-500/15 bg-dark-secondary/80 p-8 hover:border-primary hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-2xl font-extrabold text-white mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
+                <p className="text-neutral-muted text-sm leading-6">{item.body}</p>
+                <span className="text-primary font-bold text-sm mt-5 inline-block">Explore pages →</span>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* How We Work Process Flow */}
       <section className="py-20 px-6 bg-gradient-to-b from-transparent to-dark/50">
         <div className="max-w-7xl mx-auto">

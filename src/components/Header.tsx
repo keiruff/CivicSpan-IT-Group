@@ -11,6 +11,10 @@ export default function Header() {
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
     { href: '/solutions', label: 'Solutions' },
+    { href: '/topics', label: 'Topics' },
+    { href: '/locations', label: 'Locations' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/faq', label: 'FAQ' },
     { href: '/capabilities', label: 'Capabilities' },
     { href: '/who-we-support', label: 'Who We Support' },
     { href: '/tools-and-utilities', label: 'Tools & Utilities' },
@@ -26,17 +30,17 @@ export default function Header() {
 
   return (
     <header className="site-header relative z-40">
-      <nav 
+      <nav
         className="w-full md:fixed md:top-0 md:left-0 md:h-[82px] flex flex-col md:flex-row justify-between items-center px-4 py-3 md:px-[55px] md:py-2.5 bg-dark border-b border-green-500/15 backdrop-blur-md z-[1000] gap-3 md:gap-0"
         aria-label="Primary navigation"
       >
         <div className="logo flex items-center justify-center w-full md:w-auto">
           <Link href="/" aria-label="CivicSpan IT Group home" className="inline-flex items-center justify-center">
-            <Image 
-              src="/logo.webp" 
-              alt="CivicSpan IT Group Logo" 
-              width={250} 
-              height={58} 
+            <Image
+              src="/civicspan-it-group-logo.webp"
+              alt="CivicSpan IT Group Logo"
+              width={250}
+              height={58}
               className="h-[52px] md:h-[58px] w-auto block object-contain transition-transform duration-300 hover:scale-[1.03]"
               priority
             />
