@@ -9,15 +9,15 @@ export default function HomePage() {
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(34,197,94,0.12),transparent)]" />
         <div className="max-w-4xl mx-auto flex flex-col items-center relative z-10">
           <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-4 animate-fade-in">
-            Infrastructure-Focused IT Support
+            ProjectWise, Bentley & CAD-Driven Engineering Support
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight max-w-4xl tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.45)]">
-            Keeping Critical Infrastructure Running Through Reliable Technology
+            Keeping ProjectWise, Bentley, and CAD-Driven Engineering Environments Running
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-neutral-light max-w-2xl leading-relaxed mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-            CivicSpan IT Group provides practical IT support, digital solutions, documentation, and workflow assistance for small businesses, nonprofits, and infrastructure-focused teams.
+            CivicSpan IT Group supports transportation, civil, and infrastructure teams that can&apos;t afford downtime, broken workflows, or generic DIY fixes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -40,7 +40,7 @@ export default function HomePage() {
       {/* Trust Bar */}
       <section className="border-y border-white/5 bg-dark/30 py-8 px-4">
         <p className="text-neutral-light max-w-4xl mx-auto text-sm sm:text-base font-medium text-center mb-6">
-          Specialized in technical environments, engineering workflows, digital systems, and infrastructure-focused technology solutions.
+          Specialized in ProjectWise administration, Bentley workflows, government procurement navigation, and accountable engineering-systems support.
         </p>
         <p className="text-neutral-muted text-xs sm:text-sm text-center mb-6">
           Headquartered in Fredericksburg, Virginia — serving clients across the Mid-Atlantic region.
@@ -95,12 +95,12 @@ export default function HomePage() {
             <article className="bg-dark-secondary border border-green-500/15 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-green-500/10 rounded-xl p-8 flex flex-col justify-between h-full transition-all duration-300 group-hover:-translate-y-2">
               <div>
                 <span className="text-3xl mb-4 block">⚙️</span>
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3">IT Support</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3">Engineering Systems Support</h2>
                 <p className="text-neutral-muted text-sm sm:text-base leading-relaxed">
-                  Technical assistance for software issues, user support, troubleshooting, installations, and system access needs.
+                  Hands-on support for ProjectWise, Bentley, CADD workspaces, datasource access, and permission issues inside real engineering environments.
                 </p>
                 <ul className="mt-4 space-y-1.5">
-                  {['Help desk & troubleshooting', 'Software & account access', 'Remote support'].map(item => (
+                  {['ProjectWise access issues', 'Bentley/CADD workspace support', 'Folder and permission structures'].map(item => (
                     <li key={item} className="flex items-center gap-2 text-xs text-neutral-muted">
                       <span className="text-primary font-bold">✓</span> {item}
                     </li>
@@ -139,12 +139,12 @@ export default function HomePage() {
             <article className="bg-dark-secondary border border-green-500/15 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-green-500/10 rounded-xl p-8 flex flex-col justify-between h-full transition-all duration-300 group-hover:-translate-y-2">
               <div>
                 <span className="text-3xl mb-4 block">📚</span>
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3">Training & Documentation</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3">Environment-Specific Documentation</h2>
                 <p className="text-neutral-muted text-sm sm:text-base leading-relaxed">
-                  Clear guides, user instructions, technical walkthroughs, and support materials for teams and end users.
+                  SOPs, walkthroughs, and handoffs built from your actual folder structures, naming conventions, roles, and workflows.
                 </p>
                 <ul className="mt-4 space-y-1.5">
-                  {['SOPs & user guides', 'Onboarding materials', 'Knowledge base development'].map(item => (
+                  {['Workflow-specific SOPs', 'Actual environment mapping', 'Admin and user handoffs'].map(item => (
                     <li key={item} className="flex items-center gap-2 text-xs text-neutral-muted">
                       <span className="text-primary font-bold">✓</span> {item}
                     </li>
@@ -239,7 +239,7 @@ export default function HomePage() {
                 Practical support without the runaround.
               </h2>
               <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
-                CivicSpan IT Group is built for organizations that need dependable technical help, clear communication, and support that respects how work actually gets done.
+                CivicSpan IT Group is built for organizations that need someone accountable when ProjectWise, Bentley, procurement, or engineering workflows block real work.
               </p>
             </div>
 
@@ -249,6 +249,7 @@ export default function HomePage() {
                 { icon: '⚡', title: 'Fast, Direct Communication', body: 'No ticket maze. You reach a real person who understands your environment.' },
                 { icon: '🏛️', title: 'Government & Engineering Aware', body: 'We understand eVA, SAM.gov, Bentley tools, and infrastructure workflows.' },
                 { icon: '📋', title: 'Documentation Included', body: 'Every engagement produces clear records your team actually keeps and uses.' },
+                { icon: '🛡️', title: 'A Vendor of Record, Not a Chatbot', body: 'SWaM-certified, accountable support that can work inside the systems AI can only describe.' },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
                   <span className="text-2xl flex-shrink-0">{item.icon}</span>
@@ -270,11 +271,23 @@ export default function HomePage() {
           Who We Support
         </h2>
         <p className="text-neutral-muted text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-12">
-          From small businesses to infrastructure-focused teams, CivicSpan IT Group delivers technical support and digital solutions designed to improve efficiency, communication, and day-to-day operations.
+          CivicSpan leads with engineering environments where access, permissions, procurement requirements, and accountability matter — then supports the surrounding digital operations.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 text-left">
           {[
+            {
+              icon: '⚙️',
+              title: 'Engineering Environments',
+              body: 'Infrastructure, transportation, and civil engineering firms running ProjectWise, Bentley, GIS, and CAD workflows.',
+              href: '/who-we-support',
+            },
+            {
+              icon: '🏛️',
+              title: 'Government-Adjacent Teams',
+              body: 'Contractors and vendors operating in eVA, SAM.gov, and government procurement environments.',
+              href: '/who-we-support',
+            },
             {
               icon: '🏪',
               title: 'Small Businesses',
@@ -285,18 +298,6 @@ export default function HomePage() {
               icon: '🤝',
               title: 'Nonprofits',
               body: 'Mission-driven organizations that need reliable, cost-conscious technology to serve their communities.',
-              href: '/who-we-support',
-            },
-            {
-              icon: '🏛️',
-              title: 'Government-Adjacent Teams',
-              body: 'Contractors and vendors operating in eVA, SAM.gov, and government procurement environments.',
-              href: '/who-we-support',
-            },
-            {
-              icon: '⚙️',
-              title: 'Engineering Environments',
-              body: 'Infrastructure, transportation, and civil engineering firms running Bentley, GIS, and CAD workflows.',
               href: '/who-we-support',
             },
           ].map((card) => (

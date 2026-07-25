@@ -12,13 +12,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'CivicSpan IT Group | Infrastructure-Focused IT Support',
-  description: 'CivicSpan IT Group provides practical IT support, digital solutions, documentation, and workflow assistance for infrastructure-focused teams, small businesses, and nonprofits.',
+  title: 'CivicSpan IT Group | ProjectWise, Bentley & Engineering Systems Support',
+  description: 'CivicSpan IT Group supports ProjectWise, Bentley, CAD-driven engineering environments, government-adjacent teams, small businesses, and nonprofits with accountable technology help.',
   keywords: 'IT support, Bentley support, ProjectWise support, engineering technology, infrastructure technology, digital solutions, technical consulting',
   authors: [{ name: 'CivicSpan IT Group' }],
   openGraph: {
     title: 'CivicSpan IT Group',
-    description: 'Practical IT support and digital solutions for infrastructure-focused organizations.',
+    description: 'ProjectWise, Bentley, engineering systems, documentation, and accountable digital support for infrastructure-focused organizations.',
     type: 'website',
     url: 'https://civicspanitgroup.com/',
     images: [
