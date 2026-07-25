@@ -2,33 +2,33 @@ import Hero from '@/components/Hero'
 
 const supportTypes = [
   {
-    title: 'Mid-Market Enterprises',
-    description: 'Growing companies looking to scale their infrastructure without proportional IT costs.',
-    icon: '🏢',
+    title: 'Engineering Environments',
+    description: 'Transportation, civil, infrastructure, GIS, and CAD teams running ProjectWise, Bentley tools, and production engineering workflows.',
+    icon: '⚙️',
   },
   {
-    title: 'Financial Services',
-    description: 'Banks, fintech, and investment firms requiring compliance and security.',
-    icon: '💰',
-  },
-  {
-    title: 'Government & Public Sector',
-    description: 'Agencies and public organizations needing reliable and compliant IT support.',
+    title: 'Government-Adjacent Teams',
+    description: 'Contractors, vendors, and public-sector partners navigating eVA, SAM.gov, procurement requirements, and accountable technology support.',
     icon: '🏛️',
   },
   {
-    title: 'Healthcare Organizations',
-    description: 'Hospitals and clinics maintaining HIPAA-compliant and secure systems.',
-    icon: '🏥',
+    title: 'Small Businesses',
+    description: 'Organizations that need practical technology setup, responsive support, and a vendor who takes responsibility when systems break.',
+    icon: '🏪',
   },
   {
-    title: 'Legal Firms',
-    description: 'Law offices requiring secure document management and client confidentiality.',
-    icon: '⚖️',
+    title: 'Nonprofits',
+    description: 'Mission-driven teams that need cost-conscious digital operations, documentation, and reliable day-to-day technology support.',
+    icon: '🤝',
+  },
+  {
+    title: 'Infrastructure-Focused Teams',
+    description: 'Utilities, municipalities, and project teams where files, workflows, access, and documentation must match the real operating environment.',
+    icon: '🛠️',
   },
   {
     title: 'Professional Services',
-    description: 'Consulting, accounting, and consulting firms needing business continuity.',
+    description: 'Consulting and operations teams that need clean Microsoft 365, SharePoint, documentation, and support workflows.',
     icon: '💼',
   },
 ]
@@ -38,14 +38,14 @@ export default function WhoWeSupportPage() {
     <>
       <Hero
         title="Who We Support"
-        description="Enterprise IT solutions for organizations that demand reliability and expertise."
+        description="Support for engineering, government-adjacent, infrastructure, nonprofit, and small-business teams that need accountable technology help."
       />
 
       <section className="py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <p className="text-lg text-neutral-light max-w-3xl mb-8">
-              CivicSpan IT Group specializes in supporting organizations across Virginia and beyond that need enterprise-grade IT infrastructure, security, and support. Whether you&apos;re in the financial sector, government, healthcare, or professional services, we have the expertise and experience to meet your specific requirements.
+              CivicSpan IT Group specializes in the environments where generic help desk answers are not enough: ProjectWise and Bentley workflows, government procurement systems, real folder and permission structures, and the day-to-day technology that keeps teams moving.
             </p>
           </div>
 
@@ -75,15 +75,15 @@ export default function WhoWeSupportPage() {
                 <ul className="space-y-3 text-neutral-light">
                   <li className="flex gap-3">
                     <span className="text-primary">✓</span>
-                    <span>Require 24/7 IT support and monitoring</span>
+                    <span>Depend on ProjectWise, Bentley, CAD, GIS, Microsoft 365, or documented workflows</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary">✓</span>
-                    <span>Need compliance and security expertise</span>
+                    <span>Need hands-on access, permission review, and environment-specific troubleshooting</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary">✓</span>
-                    <span>Value business continuity and disaster recovery</span>
+                    <span>Value accountable support when engineering systems block production work</span>
                   </li>
                 </ul>
               </div>
@@ -93,15 +93,15 @@ export default function WhoWeSupportPage() {
                 <ul className="space-y-3 text-neutral-light">
                   <li className="flex gap-3">
                     <span className="text-primary">✓</span>
-                    <span>Want to optimize IT costs without sacrificing reliability</span>
+                    <span>Want practical fixes without adding a full internal IT department</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary">✓</span>
-                    <span>Need strategic guidance for infrastructure decisions</span>
+                    <span>Need guidance that fits procurement, access, and engineering workflow constraints</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary">✓</span>
-                    <span>Seek a trusted IT partner, not just a vendor</span>
+                    <span>Seek a vendor of record, not a generic template or chatbot answer</span>
                   </li>
                 </ul>
               </div>

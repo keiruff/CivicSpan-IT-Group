@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="/services#it-support" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  IT Support
+                  Engineering Systems Support
                 </Link>
               </li>
               <li>
@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services#training" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Training & Documentation
+                  Environment-Specific Documentation
                 </Link>
               </li>
               <li>
@@ -185,7 +185,7 @@ export default function Footer() {
             </p>
 
             <p className="text-xs text-neutral-muted font-medium pt-2 border-t border-white/5">
-              IT Support • Training • Digital Solutions
+              ProjectWise • Bentley • Digital Solutions
             </p>
           </div>
         </div>
