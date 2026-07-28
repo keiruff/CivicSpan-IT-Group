@@ -4,8 +4,8 @@ import ProductCart from '@/components/ProductCart'
 import { products } from '@/data/products'
 
 export const metadata: Metadata = {
-  title: 'Products | CivicSpan Merchandise, Digital Downloads & Hardware',
-  description: 'Shop CivicSpan products including branded merchandise, digital downloads, IT accessories, and business hardware recommendations with a request cart.',
+  title: 'Products | Technology We Trust | CivicSpan IT Group',
+  description: 'CivicSpan recommendations for branded merchandise, digital downloads, IT accessories, and business hardware selected for reliability, supportability, and long-term value.',
 }
 
 const digitalProductUseCases = [
@@ -23,22 +23,33 @@ const digitalProductUseCases = [
   },
 ]
 
+const workstationBundle = [
+  'Dell Precision workstation',
+  '32GB RAM',
+  '2TB NVMe SSD',
+  'NVIDIA RTX graphics',
+  '27" UltraSharp monitor',
+  'Docking station',
+  'Mechanical keyboard',
+  'Bundle quote',
+]
+
 export default function ProductsPage() {
   return (
     <>
       <section className="relative overflow-hidden px-6 py-20 sm:py-28 text-center">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_45%_at_50%_0%,rgba(34,197,94,0.16),transparent)]" />
         <div className="relative z-10 max-w-4xl mx-auto">
-          <p className="text-primary font-bold text-xs sm:text-sm tracking-[0.18em] uppercase mb-4">Products</p>
+          <p className="text-primary font-bold text-xs sm:text-sm tracking-[0.18em] uppercase mb-4">CivicSpan Recommendations</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-            CivicSpan Products, Templates, and Curated Technology
+            Technology We Trust. Solutions We Support.
           </h1>
           <p className="text-blue-100 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            Add branded merchandise, digital downloads, IT accessories, and business hardware to a cart, then request checkout details when you are ready.
+            Every product in the CivicSpan catalog is selected because we would confidently recommend, deploy, and support it in a professional environment.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#products-cart" className="btn">
-              Start Shopping
+              Browse Products
             </Link>
             <Link
               href="/pillars/technology-lifecycle-management"
@@ -51,6 +62,49 @@ export default function ProductsPage() {
       </section>
 
       <main className="max-w-7xl mx-auto px-6 pb-24 space-y-20">
+        <section className="rounded-[28px] border border-green-500/15 bg-dark-secondary/80 p-8 sm:p-10">
+          <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-4">
+            Why Buy From CivicSpan?
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+            We don&apos;t stock thousands of products.
+          </h2>
+          <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-4xl mb-4">
+            We carefully select business technology that meets our standards for reliability, supportability, and long-term value.
+          </p>
+          <p className="text-primary text-lg sm:text-xl font-extrabold leading-relaxed max-w-4xl">
+            If we wouldn&apos;t deploy it for a client, we won&apos;t sell it.
+          </p>
+        </section>
+
+        <section className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
+          <div>
+            <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-4">
+              Recommended Bundle
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              Building an Engineering Workstation
+            </h2>
+            <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
+              Need a workstation capable of handling Bentley OpenRoads Designer, ProjectWise Explorer, CAD, GIS, and large infrastructure datasets? Start here.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-green-500/15 bg-dark-secondary/80 p-7">
+            <div className="space-y-3">
+              {workstationBundle.map((item, index) => (
+                <div key={item} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary font-extrabold text-xs">
+                    {index + 1}
+                  </span>
+                  <span className="text-white font-semibold">{item}</span>
+                  {index < workstationBundle.length - 1 ? <span className="ml-auto text-neutral-muted">↓</span> : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="products-cart">
           <ProductCart products={products} />
         </section>

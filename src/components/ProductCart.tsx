@@ -85,13 +85,13 @@ export default function ProductCart({ products }: Props) {
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
             <div>
               <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-3">
-                Shop by Category
+                Featured Categories
               </p>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-                Add products to your cart
+                Browse Products
               </h2>
               <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-3xl">
-                This cart collects the items you want. Pricing, variants, payment, delivery, and print-on-demand checkout can be connected after the provider is selected.
+                Browse CivicSpan recommendations by category. These are products we would confidently recommend, deploy, and support in a professional environment.
               </p>
             </div>
 
@@ -132,7 +132,32 @@ export default function ProductCart({ products }: Props) {
                   <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-3">{product.type}</p>
                   <h3 className="text-xl font-extrabold text-white mb-3">{product.name}</h3>
                   <p className="text-neutral-light text-sm leading-6 mb-4">{product.description}</p>
-                  <p className="text-neutral-muted text-xs leading-5 mb-6">{product.fulfillment}</p>
+                  <div className="mb-6 space-y-5">
+                    <div>
+                      <p className="text-primary uppercase tracking-[0.16em] text-[0.7rem] font-extrabold mb-2">Recommended for</p>
+                      <div className="flex flex-wrap gap-2">
+                        {product.recommendedFor.map((item) => (
+                          <span key={item} className="rounded-full border border-green-500/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <p className="text-primary uppercase tracking-[0.16em] text-[0.7rem] font-extrabold mb-2">Why CivicSpan recommends it</p>
+                      <ul className="space-y-1.5">
+                        {product.whyRecommended.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-xs text-neutral-muted leading-5">
+                            <span className="text-primary font-bold mt-0.5">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <p className="text-neutral-muted text-xs leading-5">{product.fulfillment}</p>
+                  </div>
 
                   <div className="mt-auto flex items-center justify-between gap-3">
                     {quantity > 0 ? (
@@ -177,8 +202,8 @@ export default function ProductCart({ products }: Props) {
       <aside className="xl:sticky xl:top-28 rounded-3xl border border-green-500/20 bg-slate-950/90 p-6 shadow-xl">
         <div className="flex items-center justify-between gap-4 mb-5">
           <div>
-            <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Cart</p>
-            <h2 className="text-2xl font-extrabold text-white">Product Request</h2>
+            <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Shopping Cart</p>
+            <h2 className="text-2xl font-extrabold text-white">Your Cart</h2>
           </div>
           <span className="rounded-full border border-green-500/25 bg-primary/10 px-3 py-1 text-primary text-sm font-bold">
             {itemCount} item{itemCount === 1 ? '' : 's'}
@@ -254,12 +279,12 @@ export default function ProductCart({ products }: Props) {
             </div>
 
             <p className="text-neutral-muted text-xs leading-5">
-              This is a quote/request cart. Payment, print-on-demand checkout, digital download delivery, and exact product pricing can be connected after providers are selected.
+              Payment, print-on-demand checkout, digital download delivery, and exact product pricing can be connected after providers are selected.
             </p>
           </div>
         ) : (
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-neutral-muted text-sm leading-6">
-            Your cart is empty. Add merchandise, digital products, accessories, or business hardware to start a product request.
+            Your cart is empty. Add recommended merchandise, digital products, accessories, or business hardware to start.
           </div>
         )}
       </aside>
