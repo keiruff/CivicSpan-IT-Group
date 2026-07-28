@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { topicPages } from '@/data/seoContent'
+import { pillarPages } from '@/data/pillarContent'
 
 export const metadata: Metadata = {
   title: 'IT Topic Clusters | ProjectWise, Microsoft 365 & Dell | CivicSpan IT Group',
@@ -58,6 +59,25 @@ export default function TopicsPage() {
       </section>
 
       <main className="max-w-7xl mx-auto px-6 pb-24 space-y-16">
+        <section>
+          <div className="mb-8">
+            <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">Pillar Hubs</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Start with the main expertise areas</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {pillarPages.map((pillar) => (
+              <Link key={pillar.slug} href={`/pillars/${pillar.slug}`} className="group">
+                <article className="h-full rounded-3xl border border-green-500/15 bg-dark-secondary/80 p-7 hover:border-primary hover:-translate-y-1 transition-all duration-300">
+                  <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-3">{pillar.eyebrow}</p>
+                  <h3 className="text-2xl font-extrabold text-white mb-3 group-hover:text-primary transition-colors">{pillar.title}</h3>
+                  <p className="text-neutral-light text-sm leading-6">{pillar.description}</p>
+                  <span className="text-primary font-bold text-sm mt-5 inline-block">Explore pillar →</span>
+                </article>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {topicClusters.map((cluster) => (
             <article key={cluster.title} className="rounded-3xl border border-green-500/15 bg-dark-secondary/80 p-8 h-full">

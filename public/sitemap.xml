@@ -21,6 +21,51 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://civicspanitgroup.com/infrastructure-technology-operations</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://civicspanitgroup.com/why-civicspan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://civicspanitgroup.com/pillars</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://civicspanitgroup.com/pillars/infrastructure-modernization</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://civicspanitgroup.com/pillars/microsoft-365</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://civicspanitgroup.com/pillars/engineering-technology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://civicspanitgroup.com/pillars/cloud-operations</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://civicspanitgroup.com/pillars/it-documentation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://civicspanitgroup.com/pillars/technology-lifecycle-management</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://civicspanitgroup.com/locations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
