@@ -2,6 +2,34 @@ import Hero from '@/components/Hero'
 import Image from 'next/image'
 import Link from 'next/link'
 
+
+const operationsPillars = [
+  {
+    title: 'Infrastructure Operations',
+    items: ['Endpoint deployment', 'Dell procurement', 'Microsoft 365', 'Cloud support'],
+  },
+  {
+    title: 'Infrastructure Modernization',
+    items: ['Windows 11', 'Azure migration', 'Microsoft 365 migration', 'Technology refreshes'],
+  },
+  {
+    title: 'Engineering Technology',
+    items: ['ProjectWise', 'Bentley', 'CAD', 'GIS'],
+  },
+  {
+    title: 'Managed Infrastructure',
+    items: ['Monitoring', 'Lifecycle management', 'Documentation', 'Patch management'],
+  },
+  {
+    title: 'Security & Governance',
+    items: ['Cloud security', 'Identity', 'Compliance', 'Risk reduction'],
+  },
+  {
+    title: 'Knowledge & Operations',
+    items: ['SOPs', 'Runbooks', 'CMDB', 'Onboarding', 'Disaster recovery documentation'],
+  },
+]
+
 const services = [
   {
     id: 1,
@@ -202,6 +230,15 @@ const servicesJsonLd = {
         'Device lifecycle management',
         'Endpoint deployment',
         'Hardware procurement',
+        'Infrastructure and technology operations',
+        'Infrastructure modernization',
+        'Windows 11 upgrades',
+        'Azure migration',
+        'Patch management',
+        'Cloud security',
+        'Compliance documentation',
+        'CMDB planning',
+        'Disaster recovery documentation',
         'Bentley ProjectWise',
       ],
     },
@@ -289,9 +326,41 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
       />
       <Hero
-        title="Our Services"
-        description="Managed infrastructure services, engineering technology support, Microsoft 365 assistance, documentation, automation, and digital solutions for infrastructure-focused teams."
+        title="Infrastructure & Technology Operations"
+        description="CivicSpan helps organizations build, modernize, secure, document, and support the technology operations that keep the business running."
       />
+
+      <section className="py-20 sm:py-28 border-b border-white/5" id="infrastructure-technology-operations">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-12">
+            <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-3">
+              One Operating Story
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              Everything fits under Infrastructure &amp; Technology Operations.
+            </h2>
+            <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
+              The service areas below are not separate ideas. They are the connected work required to keep devices, cloud platforms, engineering tools, security controls, and operational knowledge reliable over time.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {operationsPillars.map((pillar) => (
+              <article key={pillar.title} className="rounded-2xl border border-green-500/15 bg-dark-secondary/80 p-7 h-full">
+                <h3 className="text-xl font-bold text-primary mb-4">{pillar.title}</h3>
+                <ul className="space-y-2">
+                  {pillar.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-neutral-muted text-sm">
+                      <span className="text-primary font-bold mt-0.5">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

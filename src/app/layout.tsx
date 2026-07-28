@@ -13,12 +13,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'CivicSpan IT Group | ProjectWise, Bentley & Engineering Systems Support',
-  description: 'CivicSpan IT Group supports ProjectWise, Bentley, CAD-driven engineering environments, government-adjacent teams, small businesses, and nonprofits with accountable technology help.',
-  keywords: 'IT support, Bentley support, ProjectWise support, engineering technology, infrastructure technology, digital solutions, technical consulting',
+  description: 'CivicSpan IT Group helps organizations build, modernize, secure, document, and support infrastructure and technology operations.',
+  keywords: 'infrastructure operations, technology operations, managed infrastructure services, ProjectWise support, Microsoft 365 consulting, Dell procurement, endpoint deployment',
   authors: [{ name: 'CivicSpan IT Group' }],
   openGraph: {
     title: 'CivicSpan IT Group',
-    description: 'ProjectWise, Bentley, engineering systems, documentation, and accountable digital support for infrastructure-focused organizations.',
+    description: 'Infrastructure and technology operations support for ProjectWise, Microsoft 365, Dell endpoints, cloud support, documentation, and governance.',
     type: 'website',
     url: 'https://civicspanitgroup.com/',
     images: [
@@ -55,7 +55,7 @@ export default function RootLayout({
       name: 'CivicSpan IT Group',
       url: 'https://civicspanitgroup.com/',
       logo: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
-      description: 'Infrastructure-focused IT support, Microsoft 365 consulting, ProjectWise support, and Dell business hardware deployment.',
+      description: 'Infrastructure and technology operations support, Microsoft 365 consulting, ProjectWise support, Dell procurement, endpoint deployment, documentation, and governance.',
     },
     {
       '@context': 'https://schema.org',
@@ -70,7 +70,7 @@ export default function RootLayout({
         addressCountry: 'US',
       },
       areaServed: ['Fredericksburg VA', 'Richmond VA', 'Northern Virginia', 'Maryland', 'Pennsylvania', 'Mid-Atlantic'],
-      knowsAbout: ['Microsoft 365', 'SharePoint', 'Microsoft Teams', 'Intune', 'Entra ID', 'Dell business laptops', 'Bentley ProjectWise'],
+      knowsAbout: ['Infrastructure and technology operations', 'Managed infrastructure services', 'Microsoft 365', 'SharePoint', 'Microsoft Teams', 'Intune', 'Entra ID', 'Dell business laptops', 'Endpoint deployment', 'Cloud support', 'Bentley ProjectWise', 'CAD', 'GIS'],
     },
   ]
 

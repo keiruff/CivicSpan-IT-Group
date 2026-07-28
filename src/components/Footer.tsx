@@ -19,7 +19,7 @@ export default function Footer() {
             />
 
             <p className="text-neutral-light text-[0.95rem] leading-relaxed mb-4">
-              Providing specialized IT support, digital solutions, and technical consulting for infrastructure-focused teams.
+              Helping organizations build, modernize, secure, document, and support the technology operations that keep business running.
             </p>
 
             <div className="flex items-center gap-4 text-xl">
@@ -60,6 +60,16 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-3">
+              <li>
+                <Link href="/services#infrastructure-technology-operations" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
+                  Infrastructure &amp; Technology Operations
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#managed-infrastructure-services" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
+                  Managed Infrastructure Services
+                </Link>
+              </li>
               <li>
                 <Link href="/services#it-support" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
                   Engineering Systems Support
@@ -135,6 +145,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/why-civicspan" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
+                  Why CivicSpan
+                </Link>
+              </li>
+              <li>
                 <Link href="/who-we-support" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
                   Who We Support
                 </Link>
@@ -185,7 +200,7 @@ export default function Footer() {
             </p>
 
             <p className="text-xs text-neutral-muted font-medium pt-2 border-t border-white/5">
-              ProjectWise • Bentley • Digital Solutions
+              Infrastructure Operations • ProjectWise • Microsoft 365 • Dell
             </p>
           </div>
         </div>
