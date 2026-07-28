@@ -90,7 +90,7 @@ export default function HomePage() {
           <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">What We Do</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Core Services</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 justify-center items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 justify-center items-stretch">
           <Link href="/services#it-support" className="group h-full">
             <article className="bg-dark-secondary border border-green-500/15 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-green-500/10 rounded-xl p-8 flex flex-col justify-between h-full transition-all duration-300 group-hover:-translate-y-2">
               <div>
@@ -101,6 +101,28 @@ export default function HomePage() {
                 </p>
                 <ul className="mt-4 space-y-1.5">
                   {['ProjectWise access issues', 'Bentley/CADD workspace support', 'Folder and permission structures'].map(item => (
+                    <li key={item} className="flex items-center gap-2 text-xs text-neutral-muted">
+                      <span className="text-primary font-bold">✓</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <span className="text-primary font-semibold text-sm group-hover:underline mt-6 inline-flex items-center gap-1.5">
+                Learn more <span>&rarr;</span>
+              </span>
+            </article>
+          </Link>
+
+          <Link href="/services#managed-infrastructure-services" className="group h-full">
+            <article className="bg-dark-secondary border border-green-500/15 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-green-500/10 rounded-xl p-8 flex flex-col justify-between h-full transition-all duration-300 group-hover:-translate-y-2">
+              <div>
+                <span className="text-3xl mb-4 block">🛠️</span>
+                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3">Managed Infrastructure Services</h2>
+                <p className="text-neutral-muted text-sm sm:text-base leading-relaxed">
+                  Device lifecycle, endpoint deployment, Microsoft 365 management, cloud management, hardware procurement, and security hardening.
+                </p>
+                <ul className="mt-4 space-y-1.5">
+                  {['Device lifecycle management', 'Endpoint deployment', 'Security hardening'].map(item => (
                     <li key={item} className="flex items-center gap-2 text-xs text-neutral-muted">
                       <span className="text-primary font-bold">✓</span> {item}
                     </li>

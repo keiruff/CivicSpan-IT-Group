@@ -53,6 +53,24 @@ const services = [
   },
   {
     id: 4,
+    anchorId: 'managed-infrastructure-services',
+    imageUrl: '/images/services/it-support.png',
+    icon: '🛠️',
+    title: 'Managed Infrastructure Services',
+    overview: 'Lifecycle-focused infrastructure support that helps organizations standardize devices, cloud tools, security, and procurement.',
+    details: [
+      'Device lifecycle management',
+      'Endpoint deployment',
+      'Infrastructure assessments',
+      'Microsoft 365 management',
+      'Cloud management',
+      'Hardware procurement',
+      'Security hardening',
+      'Asset lifecycle planning',
+    ],
+  },
+  {
+    id: 5,
     anchorId: 'workflow-automation',
     imageUrl: '/images/services/workflow-automation.png',
     icon: '🔁',
@@ -68,7 +86,7 @@ const services = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     anchorId: 'training',
     imageUrl: '/images/services/training.png',
     icon: '📚',
@@ -84,7 +102,7 @@ const services = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     anchorId: 'digital-solutions',
     imageUrl: '/images/services/digital-solutions.png',
     icon: '🌐',
@@ -129,6 +147,7 @@ const engagementOptions = [
     bestFor: 'Ongoing technology support through a monthly service agreement.',
     examples: [
       'Microsoft 365 administration',
+      'Managed infrastructure services',
       'Engineering technology support',
       'Routine maintenance',
       'Priority technical assistance',
@@ -179,6 +198,10 @@ const servicesJsonLd = {
         'Intune',
         'Entra ID',
         'Dell business laptops',
+        'Managed infrastructure services',
+        'Device lifecycle management',
+        'Endpoint deployment',
+        'Hardware procurement',
         'Bentley ProjectWise',
       ],
     },
@@ -267,7 +290,7 @@ export default function ServicesPage() {
       />
       <Hero
         title="Our Services"
-        description="Practical IT support, engineering technology assistance, documentation, automation, and digital solutions for infrastructure-focused teams."
+        description="Managed infrastructure services, engineering technology support, Microsoft 365 assistance, documentation, automation, and digital solutions for infrastructure-focused teams."
       />
 
       <section className="py-20 sm:py-32">
