@@ -51,18 +51,6 @@ export default function ProductsPage() {
       </section>
 
       <main className="max-w-7xl mx-auto px-6 pb-24 space-y-20">
-        <section className="rounded-[28px] border border-green-500/15 bg-dark-secondary/80 p-8 sm:p-10">
-          <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-4">
-            Phase 1 Product Strategy
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-            A real cart now. Provider checkout can connect next.
-          </h2>
-          <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-4xl">
-            This version creates a working request cart with product image slots, quantities, cart persistence, and checkout handoff. Once a print-on-demand, payment, affiliate, or digital-download provider is selected, the same product structure can connect to live checkout and delivery.
-          </p>
-        </section>
-
         <section id="products-cart">
           <ProductCart products={products} />
         </section>
