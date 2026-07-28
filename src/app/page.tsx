@@ -1,5 +1,49 @@
 import Link from 'next/link'
 
+const lifecycleSteps = [
+  { step: 'Plan', service: 'Assessments & Roadmaps', href: '/services#infrastructure-technology-operations' },
+  { step: 'Procure', service: 'Dell Solutions', href: '/topics/dell' },
+  { step: 'Deploy', service: 'Microsoft 365, Endpoint Deployment', href: '/services#managed-infrastructure-services' },
+  { step: 'Secure', service: 'Identity, Cloud Security', href: '/topics/entra-id-consulting' },
+  { step: 'Document', service: 'SOPs, Runbooks, Knowledge Bases', href: '/services#training' },
+  { step: 'Operate', service: 'Managed Services', href: '/services#managed-infrastructure-services' },
+  { step: 'Modernize', service: 'Windows 11, Azure, Cloud Migration', href: '/blog/how-to-prepare-for-a-windows-11-upgrade' },
+  { step: 'Repeat', service: 'Continuous improvement', href: '/infrastructure-technology-operations' },
+]
+
+const outcomeCards = [
+  {
+    title: 'Modern Workplace Deployment',
+    body: 'Microsoft 365, endpoint deployment, identity, security baselines, and user-ready documentation.',
+    href: '/solutions/microsoft-365-migration',
+  },
+  {
+    title: 'Engineering Technology Operations',
+    body: 'ProjectWise, Bentley, CAD, GIS, workstations, permissions, and production engineering workflows.',
+    href: '/topics/projectwise',
+  },
+  {
+    title: 'Infrastructure Modernization',
+    body: 'Windows 11 readiness, Azure migration planning, cloud support, technology refreshes, and roadmaps.',
+    href: '/services#infrastructure-technology-operations',
+  },
+  {
+    title: 'Knowledge Management',
+    body: 'SOPs, runbooks, onboarding guides, knowledge bases, CMDB planning, and recovery documentation.',
+    href: '/services#training',
+  },
+  {
+    title: 'Managed Infrastructure',
+    body: 'Monitoring, lifecycle management, patch planning, documentation, and long-term operational support.',
+    href: '/services#managed-infrastructure-services',
+  },
+  {
+    title: 'Technology Lifecycle Management',
+    body: 'Plan, procure, deploy, secure, document, operate, modernize, and repeat with fewer surprises.',
+    href: '/infrastructure-technology-operations',
+  },
+]
+
 export default function HomePage() {
   return (
     <>
@@ -9,15 +53,19 @@ export default function HomePage() {
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(34,197,94,0.12),transparent)]" />
         <div className="max-w-4xl mx-auto flex flex-col items-center relative z-10">
           <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-4 animate-fade-in">
-            ProjectWise, Bentley & CAD-Driven Engineering Support
+            Infrastructure &amp; Technology Operations
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight max-w-4xl tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.45)]">
-            Keeping ProjectWise, Bentley, and CAD-Driven Engineering Environments Running
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight max-w-5xl tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.45)]">
+            Technology Operations for Organizations That Can&apos;t Afford Downtime
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-neutral-light max-w-2xl leading-relaxed mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-            CivicSpan IT Group supports transportation, civil, and infrastructure teams that can&apos;t afford downtime, broken workflows, or generic DIY fixes.
+          <p className="text-lg sm:text-xl md:text-2xl text-primary font-extrabold max-w-3xl leading-relaxed mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
+            Build. Modernize. Secure. Document. Support.
+          </p>
+
+          <p className="text-base sm:text-lg md:text-xl text-neutral-light max-w-3xl leading-relaxed mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
+            CivicSpan helps infrastructure, engineering, government, nonprofit, and small business teams improve the technology they rely on every day — from deployment and modernization to documentation and long-term operational support.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -28,10 +76,10 @@ export default function HomePage() {
               Discuss Your Needs
             </Link>
             <Link
-              href="/services"
+              href="/infrastructure-technology-operations"
               className="px-8 py-3.5 bg-transparent border-2 border-primary hover:bg-primary/10 text-primary rounded-lg font-bold transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto text-center"
             >
-              View Services
+              Explore the Framework
             </Link>
           </div>
         </div>
@@ -40,7 +88,7 @@ export default function HomePage() {
       {/* Trust Bar */}
       <section className="border-y border-white/5 bg-dark/30 py-8 px-4">
         <p className="text-neutral-light max-w-4xl mx-auto text-sm sm:text-base font-medium text-center mb-6">
-          Specialized in ProjectWise administration, Bentley workflows, government procurement navigation, and accountable engineering-systems support.
+          CivicSpan helps organizations operate and modernize the technology that keeps their business running.
         </p>
         <p className="text-neutral-muted text-xs sm:text-sm text-center mb-6">
           Headquartered in Fredericksburg, Virginia — serving clients across the Mid-Atlantic region.
@@ -68,10 +116,10 @@ export default function HomePage() {
       <section className="py-14 px-6 max-w-5xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { value: '7+', label: 'Service Packages' },
-            { value: '5+', label: 'Certifications & Partners' },
+            { value: '8', label: 'Lifecycle Stages' },
+            { value: '6', label: 'Operations Pillars' },
             { value: 'Mid-Atlantic', label: 'Regional Coverage' },
-            { value: '3', label: 'Engagement Models' },
+            { value: '3', label: 'Core Engagement Models' },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -84,109 +132,64 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Services Grid */}
-      <section id="services" className="py-16 px-6 max-w-7xl mx-auto">
+      {/* CivicSpan Technology Lifecycle */}
+      <section id="technology-lifecycle" className="py-20 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">What We Do</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Core Services</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 justify-center items-stretch">
-          <Link href="/services#it-support" className="group h-full">
-            <article className="bg-dark-secondary border border-green-500/15 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-green-500/10 rounded-xl p-8 flex flex-col justify-between h-full transition-all duration-300 group-hover:-translate-y-2">
-              <div>
-                <span className="text-3xl mb-4 block">⚙️</span>
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3">Engineering Systems Support</h2>
-                <p className="text-neutral-muted text-sm sm:text-base leading-relaxed">
-                  Hands-on support for ProjectWise, Bentley, CADD workspaces, datasource access, and permission issues inside real engineering environments.
-                </p>
-                <ul className="mt-4 space-y-1.5">
-                  {['ProjectWise access issues', 'Bentley/CADD workspace support', 'Folder and permission structures'].map(item => (
-                    <li key={item} className="flex items-center gap-2 text-xs text-neutral-muted">
-                      <span className="text-primary font-bold">✓</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <span className="text-primary font-semibold text-sm group-hover:underline mt-6 inline-flex items-center gap-1.5">
-                Learn more <span>&rarr;</span>
-              </span>
-            </article>
-          </Link>
-
-          <Link href="/services#managed-infrastructure-services" className="group h-full">
-            <article className="bg-dark-secondary border border-green-500/15 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-green-500/10 rounded-xl p-8 flex flex-col justify-between h-full transition-all duration-300 group-hover:-translate-y-2">
-              <div>
-                <span className="text-3xl mb-4 block">🛠️</span>
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3">Managed Infrastructure Services</h2>
-                <p className="text-neutral-muted text-sm sm:text-base leading-relaxed">
-                  Device lifecycle, endpoint deployment, Microsoft 365 management, cloud management, hardware procurement, and security hardening.
-                </p>
-                <ul className="mt-4 space-y-1.5">
-                  {['Device lifecycle management', 'Endpoint deployment', 'Security hardening'].map(item => (
-                    <li key={item} className="flex items-center gap-2 text-xs text-neutral-muted">
-                      <span className="text-primary font-bold">✓</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <span className="text-primary font-semibold text-sm group-hover:underline mt-6 inline-flex items-center gap-1.5">
-                Learn more <span>&rarr;</span>
-              </span>
-            </article>
-          </Link>
-
-          <Link href="/services#digital-solutions" className="group h-full">
-            <article className="bg-dark-secondary border border-green-500/15 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-green-500/10 rounded-xl p-8 flex flex-col justify-between h-full transition-all duration-300 group-hover:-translate-y-2">
-              <div>
-                <span className="text-3xl mb-4 block">💻</span>
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3">Digital Solutions</h2>
-                <p className="text-neutral-muted text-sm sm:text-base leading-relaxed">
-                  Website updates, business technology setup, workflow cleanup, documentation, and process improvement.
-                </p>
-                <ul className="mt-4 space-y-1.5">
-                  {['Website updates & maintenance', 'Workflow automation', 'Business email & setup'].map(item => (
-                    <li key={item} className="flex items-center gap-2 text-xs text-neutral-muted">
-                      <span className="text-primary font-bold">✓</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <span className="text-primary font-semibold text-sm group-hover:underline mt-6 inline-flex items-center gap-1.5">
-                Learn more <span>&rarr;</span>
-              </span>
-            </article>
-          </Link>
-
-          <Link href="/services#training" className="group h-full">
-            <article className="bg-dark-secondary border border-green-500/15 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-green-500/10 rounded-xl p-8 flex flex-col justify-between h-full transition-all duration-300 group-hover:-translate-y-2">
-              <div>
-                <span className="text-3xl mb-4 block">📚</span>
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3">Environment-Specific Documentation</h2>
-                <p className="text-neutral-muted text-sm sm:text-base leading-relaxed">
-                  SOPs, walkthroughs, and handoffs built from your actual folder structures, naming conventions, roles, and workflows.
-                </p>
-                <ul className="mt-4 space-y-1.5">
-                  {['Workflow-specific SOPs', 'Actual environment mapping', 'Admin and user handoffs'].map(item => (
-                    <li key={item} className="flex items-center gap-2 text-xs text-neutral-muted">
-                      <span className="text-primary font-bold">✓</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <span className="text-primary font-semibold text-sm group-hover:underline mt-6 inline-flex items-center gap-1.5">
-                Learn more <span>&rarr;</span>
-              </span>
-            </article>
-          </Link>
+          <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">Signature Framework</p>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white mb-4">The CivicSpan Technology Lifecycle</h2>
+          <p className="text-neutral-muted text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
+            We focus on understanding the environment, solving immediate issues, documenting what matters, and improving the system over time.
+          </p>
         </div>
 
-        <div className="text-center mt-12">
-          <Link
-            href="/services"
-            className="inline-block px-8 py-3 bg-primary hover:bg-primary-dark text-dark font-bold rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/25"
-          >
-            View Detailed Services
-          </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+          {lifecycleSteps.map((item, index) => (
+            <Link key={item.step} href={item.href} className="group h-full">
+              <article className="h-full rounded-2xl border border-green-500/15 bg-dark-secondary/80 p-6 hover:border-primary hover:-translate-y-1 transition-all duration-300">
+                <div className="flex items-center justify-between gap-4 mb-4">
+                  <span className="text-primary font-extrabold text-xs tracking-[0.18em] uppercase">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="text-neutral-muted text-xl">{index < lifecycleSteps.length - 1 ? '↓' : '↻'}</span>
+                </div>
+                <h3 className="text-2xl font-extrabold text-white mb-3 group-hover:text-primary transition-colors">{item.step}</h3>
+                <p className="text-neutral-muted text-sm leading-6">{item.service}</p>
+              </article>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-green-500/20 bg-dark-secondary/70 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-[0.7fr_1.3fr] border-b border-white/8 text-left">
+            <div className="px-6 py-4 text-primary font-bold uppercase tracking-wider text-xs">Lifecycle</div>
+            <div className="px-6 py-4 text-primary font-bold uppercase tracking-wider text-xs border-t md:border-t-0 md:border-l border-white/8">CivicSpan Service</div>
+          </div>
+          {lifecycleSteps.map((item) => (
+            <Link key={item.step} href={item.href} className="grid grid-cols-1 md:grid-cols-[0.7fr_1.3fr] border-b border-white/5 last:border-b-0 hover:bg-white/[0.03] transition-colors">
+              <div className="px-6 py-4 text-white font-semibold">{item.step}</div>
+              <div className="px-6 py-4 text-neutral-light md:border-l border-white/8">{item.service}</div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Outcomes */}
+      <section id="outcomes" className="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div className="text-center mb-12">
+          <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">Business Outcomes</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">People buy outcomes, not generic IT support.</h2>
+          <p className="text-neutral-muted text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mt-4">
+            CivicSpan organizes services around operational resilience: reliable workplaces, managed infrastructure, documented knowledge, and technology that improves over time.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {outcomeCards.map((card) => (
+            <Link key={card.title} href={card.href} className="group">
+              <article className="h-full rounded-2xl border border-green-500/15 bg-dark-secondary/80 p-8 hover:border-primary hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-2xl font-extrabold text-white mb-3 group-hover:text-primary transition-colors">{card.title}</h3>
+                <p className="text-neutral-muted text-sm leading-6">{card.body}</p>
+                <span className="text-primary font-bold text-sm mt-5 inline-block">Explore outcome →</span>
+              </article>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -216,6 +219,39 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* AI Readiness */}
+      <section className="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div className="rounded-[28px] border border-green-500/15 bg-[radial-gradient(circle_at_50%_0%,rgba(34,197,94,0.12),transparent_40%),rgba(15,23,42,0.85)] p-8 sm:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
+            <div>
+              <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-3">AI Readiness</p>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">AI starts with good infrastructure.</h2>
+              <p className="text-neutral-light text-sm sm:text-base leading-relaxed mb-6">
+                Organizations get the most from AI when Microsoft 365 is organized, identities and permissions are secure, documentation is clean, infrastructure is reliable, and data is managed well. CivicSpan helps build that foundation before teams invest in AI.
+              </p>
+              <Link href="/services#ai-readiness-foundations" className="inline-flex items-center gap-1.5 text-primary font-bold text-sm hover:underline">
+                Explore AI readiness foundations <span>&rarr;</span>
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                'Organized Microsoft 365 environments',
+                'Secure identities and permissions',
+                'Clean documentation and runbooks',
+                'Reliable infrastructure and endpoints',
+                'Well-managed data and knowledge',
+                'Governance that reduces operational risk',
+              ].map((item) => (
+                <div key={item} className="rounded-xl border border-green-500/15 bg-dark-secondary/80 p-4 text-neutral-light text-sm flex items-start gap-3">
+                  <span className="text-primary font-bold">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How We Work Process Flow */}
       <section className="py-20 px-6 bg-gradient-to-b from-transparent to-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -224,7 +260,7 @@ export default function HomePage() {
               How We Work
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              A clear, repeatable approach to better support.
+              A clear, repeatable approach to technology operations.
             </h2>
             <p className="text-neutral-light text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
               We focus on understanding the environment, solving immediate issues, documenting what matters, and improving the system over time.
@@ -234,7 +270,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
               { num: '01', title: 'Assess', body: 'Understand your systems, workflows, users, and where friction is slowing things down.' },
-              { num: '02', title: 'Support', body: 'Provide responsive, practical help for the technical issues affecting day-to-day work.' },
+              { num: '02', title: 'Support', body: 'Stabilize the technical issues affecting day-to-day work and operational continuity.' },
               { num: '03', title: 'Document', body: 'Create clear records, instructions, and handoffs so knowledge stays with the organization.' },
               { num: '04', title: 'Improve', body: 'Refine workflows, reduce repeat issues, and make support easier to manage over time.' },
             ].map((step) => (
@@ -258,10 +294,10 @@ export default function HomePage() {
                 Why CivicSpan
               </p>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight">
-                Practical support without the runaround.
+                An operations partner, not a commodity help desk.
               </h2>
               <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
-                CivicSpan IT Group is built for organizations that need someone accountable when ProjectWise, Bentley, procurement, or engineering workflows block real work.
+                CivicSpan is built for organizations that need operational continuity, lifecycle management, governance, documentation, modernization, and accountable technology support.
               </p>
             </div>
 
@@ -347,10 +383,10 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 px-6 text-center border-t border-white/5 bg-gradient-to-t from-dark/60 to-transparent">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-          Need Technical Support or Digital Solutions?
+          Ready to improve the technology your organization runs on?
         </h2>
         <p className="text-neutral-light text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
-          Contact CivicSpan IT Group to discuss your organization&apos;s needs.
+          Start with the environment, the operational risk, or the modernization goal. CivicSpan will help map the path forward.
         </p>
         <Link
           href="/contact"

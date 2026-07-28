@@ -99,6 +99,22 @@ const services = [
   },
   {
     id: 5,
+    anchorId: 'ai-readiness-foundations',
+    imageUrl: '/images/services/cloud-support.png',
+    icon: '▣',
+    title: 'AI Readiness Foundations',
+    overview: 'Practical infrastructure, governance, documentation, identity, and data-readiness work that prepares organizations to use AI responsibly.',
+    details: [
+      'Organized Microsoft 365 environments',
+      'Secure identities and permissions',
+      'Clean documentation and runbooks',
+      'Reliable infrastructure and endpoints',
+      'Well-managed data and knowledge',
+      'Governance for operational risk reduction',
+    ],
+  },
+  {
+    id: 6,
     anchorId: 'workflow-automation',
     imageUrl: '/images/services/workflow-automation.png',
     icon: '🔁',
@@ -114,7 +130,7 @@ const services = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     anchorId: 'training',
     imageUrl: '/images/services/training.png',
     icon: '📚',
@@ -130,7 +146,7 @@ const services = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     anchorId: 'digital-solutions',
     imageUrl: '/images/services/digital-solutions.png',
     icon: '🌐',
@@ -176,6 +192,7 @@ const engagementOptions = [
     examples: [
       'Microsoft 365 administration',
       'Managed infrastructure services',
+      'AI readiness foundations',
       'Engineering technology support',
       'Routine maintenance',
       'Priority technical assistance',
@@ -239,6 +256,8 @@ const servicesJsonLd = {
         'Compliance documentation',
         'CMDB planning',
         'Disaster recovery documentation',
+        'AI readiness foundations',
+        'Operational resilience',
         'Bentley ProjectWise',
       ],
     },
