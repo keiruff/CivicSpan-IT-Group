@@ -386,6 +386,119 @@ export const topicPages: ContentPage[] = [
       { label: 'ProjectWise Health Check', href: '/solutions/projectwise-health-check' },
     ],
   },
+  {
+    slug: 'common-projectwise-errors',
+    title: 'Common ProjectWise Errors',
+    eyebrow: 'ProjectWise Errors',
+    description: 'Common ProjectWise errors related to cache, workspace paths, permissions, datasource access, and workstation configuration.',
+    intro: 'ProjectWise errors often point to a larger operational pattern: inconsistent clients, stale cache, missing permissions, or unclear workspace standards.',
+    sections: [
+      { heading: 'Frequent error areas', body: 'The most common issues involve file access, local cache, references, workspace variables, and datasource connectivity.', bullets: ['Cache and local file conflicts', 'Workspace path warnings', 'Datasource connection issues', 'Permission and folder access errors', 'Reference file problems'] },
+      { heading: 'Why documentation matters', body: 'Errors repeat when the fix lives only in one person’s memory. A troubleshooting runbook helps administrators resolve issues consistently.' },
+      { heading: 'Best next step', body: 'If the same errors repeat across users or projects, a ProjectWise Health Check can identify patterns and document corrective actions.' },
+    ],
+    related: [
+      { label: 'ProjectWise Performance Issues', href: '/topics/projectwise-performance-issues' },
+      { label: 'ProjectWise Cache Cleanup', href: '/topics/how-to-clean-a-projectwise-cache' },
+      { label: 'ProjectWise Health Check', href: '/solutions/projectwise-health-check' },
+    ],
+  },
+  {
+    slug: 'sharepoint-governance',
+    title: 'SharePoint Governance',
+    eyebrow: 'SharePoint Governance',
+    description: 'SharePoint governance guidance for libraries, permissions, sharing, ownership, naming standards, and Microsoft 365 operations.',
+    intro: 'SharePoint works best when the organization defines how sites, libraries, owners, permissions, and external sharing should be managed.',
+    sections: [
+      { heading: 'Governance basics', body: 'A practical governance model defines site ownership, library structure, permission review, retention expectations, and user guidance.', bullets: ['Site and library ownership', 'Permission review cadence', 'External sharing rules', 'Naming and folder standards', 'User documentation'] },
+      { heading: 'Operations outcome', body: 'Governance reduces support tickets because users know where files belong and administrators know who owns access decisions.' },
+    ],
+    related: [
+      { label: 'SharePoint Consulting', href: '/topics/sharepoint-consulting' },
+      { label: 'Microsoft 365 Migration Services', href: '/topics/microsoft-365-migration-services' },
+      { label: 'Microsoft Consulting', href: '/topics/microsoft' },
+    ],
+  },
+  {
+    slug: 'onedrive-best-practices',
+    title: 'OneDrive Best Practices',
+    eyebrow: 'OneDrive',
+    description: 'OneDrive best practices for file sync, sharing, known folders, retention, onboarding, and small-business Microsoft 365 operations.',
+    intro: 'OneDrive is useful for personal work files, but it needs clear boundaries so business records do not disappear into individual accounts.',
+    sections: [
+      { heading: 'Best practices', body: 'Set expectations for what belongs in OneDrive, what belongs in SharePoint or Teams, and how users should share files securely.', bullets: ['Known folder move planning', 'Sync health checks', 'Sharing guidance', 'Offboarding procedures', 'User training'] },
+      { heading: 'Operational risk', body: 'Without clear guidance, files can become hard to find, hard to recover, or tied to employees who later leave the organization.' },
+    ],
+    related: [
+      { label: 'Microsoft 365 for Small Business', href: '/topics/microsoft-365-for-small-business' },
+      { label: 'SharePoint Governance', href: '/topics/sharepoint-governance' },
+      { label: 'Microsoft Teams Deployment', href: '/topics/microsoft-teams-deployment' },
+    ],
+  },
+  {
+    slug: 'entra-id-basics',
+    title: 'Entra ID Basics',
+    eyebrow: 'Identity',
+    description: 'Plain-language Entra ID basics for accounts, MFA, groups, roles, access reviews, and Microsoft 365 identity security.',
+    intro: 'Entra ID is the identity layer behind Microsoft 365. It controls how users sign in, which roles they hold, and how access is protected.',
+    sections: [
+      { heading: 'Identity basics', body: 'Small organizations should understand users, groups, admin roles, MFA, conditional access, and account cleanup before the environment grows.', bullets: ['User and group structure', 'MFA and sign-in protection', 'Admin role review', 'Guest access', 'Offboarding cleanup'] },
+      { heading: 'Operations outcome', body: 'Clean identity management lowers risk and makes onboarding, offboarding, and support easier to manage.' },
+    ],
+    related: [
+      { label: 'Entra ID Consulting', href: '/topics/entra-id-consulting' },
+      { label: 'Microsoft 365 Security Mistakes', href: '/blog/5-common-microsoft-365-security-mistakes' },
+      { label: 'Microsoft Consulting', href: '/topics/microsoft' },
+    ],
+  },
+  {
+    slug: 'dell-latitude-vs-precision',
+    title: 'Dell Latitude vs Precision',
+    eyebrow: 'Dell Hardware',
+    description: 'Dell Latitude vs Precision guidance for business laptops, engineering workstations, CAD, GIS, mobility, and lifecycle planning.',
+    intro: 'Latitude and Precision systems solve different business problems. The right choice depends on workload, mobility, graphics needs, lifecycle expectations, and support standards.',
+    sections: [
+      { heading: 'How to choose', body: 'Latitude is usually the business laptop standard for general productivity. Precision is built for engineering, CAD, GIS, graphics, and workstation-class workloads.', bullets: ['Latitude for mobile business users', 'Precision for CAD and GIS workloads', 'Docking and monitor needs', 'Warranty and lifecycle planning', 'Standard image and deployment requirements'] },
+      { heading: 'Operations outcome', body: 'Standardizing the right device class reduces support variation and makes procurement, deployment, and refresh planning easier.' },
+    ],
+    related: [
+      { label: 'Dell Latitude Business Laptops', href: '/topics/dell-latitude-business-laptops' },
+      { label: 'Dell Precision Workstations', href: '/topics/dell-precision-workstations' },
+      { label: 'Dell Business Laptops Setup', href: '/solutions/dell-business-laptops' },
+    ],
+  },
+  {
+    slug: 'business-laptop-buying-guide',
+    title: 'Business Laptop Buying Guide',
+    eyebrow: 'Laptop Buying Guide',
+    description: 'Business laptop buying guidance for standard models, warranties, docking, security, endpoint deployment, and lifecycle planning.',
+    intro: 'A business laptop purchase should be part of an endpoint standard, not a one-off transaction. The goal is secure, supportable, repeatable deployment.',
+    sections: [
+      { heading: 'Buying considerations', body: 'Evaluate warranty, docking, performance, security, remote support, lifecycle timing, and whether the device fits your standard image.', bullets: ['Business-class warranty', 'Docking and monitor compatibility', 'Windows 11 readiness', 'BitLocker and security baseline', 'Asset documentation'] },
+      { heading: 'Operational outcome', body: 'A good buying standard makes every future laptop easier to deploy, secure, document, and replace.' },
+    ],
+    related: [
+      { label: 'Dell Small Business Computers', href: '/topics/dell-small-business-computers' },
+      { label: 'Device Lifecycle Planning', href: '/topics/device-lifecycle-planning' },
+      { label: 'New Employee Technology Package', href: '/solutions/new-employee-technology' },
+    ],
+  },
+  {
+    slug: 'device-lifecycle-planning',
+    title: 'Device Lifecycle Planning',
+    eyebrow: 'Lifecycle Planning',
+    description: 'Device lifecycle planning for procurement, deployment, asset records, refresh timing, security hardening, and disposal documentation.',
+    intro: 'Device lifecycle planning connects procurement, deployment, support, refreshes, and documentation so hardware does not become an operational surprise.',
+    sections: [
+      { heading: 'Lifecycle stages', body: 'A useful lifecycle plan covers standards, purchasing, deployment, monitoring, patching, refresh timing, and retirement.', bullets: ['Hardware standards', 'Procurement and warranty tracking', 'Endpoint deployment', 'Patch and security baseline', 'Refresh and retirement planning'] },
+      { heading: 'Documentation', body: 'Asset records, handoff notes, onboarding steps, and disposal records help the organization understand what exists and what needs attention next.' },
+    ],
+    related: [
+      { label: 'Dell Laptop Deployment Services', href: '/topics/dell-laptop-deployment-services' },
+      { label: 'Business Laptop Buying Guide', href: '/topics/business-laptop-buying-guide' },
+      { label: 'Managed Infrastructure Services', href: '/services#managed-infrastructure-services' },
+    ],
+  },
 ]
 
 export const locationPages: ContentPage[] = [

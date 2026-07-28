@@ -16,6 +16,7 @@ export default function Header() {
     { href: '/blog', label: 'Blog' },
     { href: '/faq', label: 'FAQ' },
     { href: '/capabilities', label: 'Capabilities' },
+    { href: '/why-civicspan', label: 'Why CivicSpan' },
     { href: '/who-we-support', label: 'Who We Support' },
     { href: '/tools-and-utilities', label: 'Tools & Utilities' },
     { href: '/contact', label: 'Contact' },

@@ -78,10 +78,21 @@ export default function SolutionsPage() {
     <>
       <Hero
         title="Solutions & Packages"
-        description="Structured, flat-rate technology solutions designed to get your business up, running, and secured."
+        description="Clear, buyable technology packages for teams that need a defined outcome instead of an open-ended IT services conversation."
       />
 
       <main className="relative overflow-hidden py-20 px-6 max-w-7xl mx-auto">
+        <section className="relative z-10 rounded-[28px] border border-green-500/15 bg-dark-secondary/70 p-8 sm:p-10 mb-12">
+          <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-4">
+            Easy to Buy
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+            Pick the outcome. CivicSpan handles the technology path.
+          </h2>
+          <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-3xl">
+            Each package turns a common operational need into a defined scope: what is included, who it is for, and where pricing starts. That makes it easier to move from “we need IT help” to “we can buy this.”
+          </p>
+        </section>
         <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(34,197,94,0.03)_1px,transparent_1px),linear-gradient(rgba(34,197,94,0.02)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:linear-gradient(to_bottom,black,transparent_80%)]" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-center items-stretch relative z-10">
