@@ -130,6 +130,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/products" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
+                  Products
+                </Link>
+              </li>
+              <li>
                 <Link href="/pillars" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
                   Pillar Pages
                 </Link>
