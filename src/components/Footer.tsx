@@ -61,13 +61,18 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services#infrastructure-technology-operations" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
+                <Link href="/infrastructure-technology-operations" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
                   Infrastructure &amp; Technology Operations
                 </Link>
               </li>
               <li>
                 <Link href="/services#managed-infrastructure-services" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
                   Managed Infrastructure Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#ai-readiness-foundations" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
+                  AI Readiness Foundations
                 </Link>
               </li>
               <li>
@@ -107,6 +112,11 @@ export default function Footer() {
               <li>
                 <Link href="/" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
                   Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/infrastructure-technology-operations" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
+                  Operations Framework
                 </Link>
               </li>
               <li>
