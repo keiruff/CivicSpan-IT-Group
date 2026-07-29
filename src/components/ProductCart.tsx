@@ -51,22 +51,7 @@ export default function ProductCart({ products }: Props) {
     .filter((item): item is CartItem & { product: Product } => Boolean(item.product))
     .filter((item) => item.product.category !== 'Business Hardware')
 
-  const itemCount = cart.reduce((total, item) => total + item.quantity, 0)
-
-  const buildHardwareQuoteHref = (product: Product) => {
-    const body = encodeURIComponent([
-      `Hardware quote request: ${product.name}`,
-      `Category: ${product.category}`,
-      '',
-      'Please share:',
-      '- Quantity and user roles',
-      '- Preferred Dell model or workload requirements',
-      '- Deployment, onboarding, warranty, and managed support needs',
-      '- Timeline, shipping, and purchase order requirements',
-    ].join('\n'))
-
-    return `mailto:${requestQuoteEmail}?subject=${encodeURIComponent(`Custom quote and spec review: ${product.name}`)}&body=${body}`
-  }
+  const itemCount = cartLines.reduce((total, item) => total + item.quantity, 0)
 
   const addToCart = (productId: string) => {
     setCart((current) => {
@@ -94,7 +79,7 @@ export default function ProductCart({ products }: Props) {
 
   const cartMessage = encodeURIComponent([
     'Product request:',
-    ...cartLines.map((line) => `- ${line.product.name} (${line.product.category}) x ${line.quantity}`),
+    ...cartLines.map((line) => `- ${line.product.name}${line.product.price ? ` ${line.product.price}` : ''} (${line.product.category}) x ${line.quantity}`),
     notes ? `Notes: ${notes}` : '',
   ].filter(Boolean).join('\n'))
 
@@ -108,10 +93,10 @@ export default function ProductCart({ products }: Props) {
                 Featured Categories
               </p>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-                Browse Products and Quote-Ready Bundles
+                Shop Downloads and Merchandise. Scope Hardware Separately.
               </h2>
               <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-3xl">
-                Browse CivicSpan recommendations by category. Hardware is scoped as a custom quote so CivicSpan can validate specs, bundle deployment services, and support the full lifecycle instead of publishing one-size-fits-all pricing.
+                Use the cart for print-on-demand CivicSpan merchandise and instant-ready operational downloads. Dell hardware stays visible in the catalog, but routes through B2B scoping and custom quotes.
               </p>
             </div>
 
@@ -152,7 +137,14 @@ export default function ProductCart({ products }: Props) {
                 <div className="p-6 flex flex-col flex-1">
                   <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-3">{product.type}</p>
                   <h3 className="text-xl font-extrabold text-white mb-3">{product.name}</h3>
-                  <p className="text-neutral-light text-sm leading-6 mb-4">{product.description}</p>
+                  <div className="mb-4 space-y-3">
+                    {product.price ? (
+                      <p className="inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-primary text-sm font-extrabold">
+                        {product.price}
+                      </p>
+                    ) : null}
+                    <p className="text-neutral-light text-sm leading-6">{product.description}</p>
+                  </div>
                   <div className="mb-6 space-y-5">
                     <div>
                       <p className="text-primary uppercase tracking-[0.16em] text-[0.7rem] font-extrabold mb-2">Recommended for</p>
@@ -209,10 +201,10 @@ export default function ProductCart({ products }: Props) {
 
                     {isHardware ? (
                       <a
-                        href={buildHardwareQuoteHref(product)}
+                        href="/contact"
                         className="rounded-lg bg-primary px-4 py-2 text-dark font-bold text-sm hover:bg-primary-dark transition-colors text-center"
                       >
-                        Request Bundle Quote
+                        Request a Quote
                       </a>
                     ) : (
                       <button
@@ -234,8 +226,8 @@ export default function ProductCart({ products }: Props) {
       <aside className="xl:sticky xl:top-28 rounded-3xl border border-green-500/20 bg-slate-950/90 p-6 shadow-xl">
         <div className="flex items-center justify-between gap-4 mb-5">
           <div>
-            <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Product Requests</p>
-            <h2 className="text-2xl font-extrabold text-white">Request List</h2>
+            <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Active Checkout Cart</p>
+            <h2 className="text-2xl font-extrabold text-white">Merchandise & Downloads</h2>
           </div>
           <span className="rounded-full border border-green-500/25 bg-primary/10 px-3 py-1 text-primary text-sm font-bold">
             {itemCount} item{itemCount === 1 ? '' : 's'}
@@ -250,6 +242,9 @@ export default function ProductCart({ products }: Props) {
                   <div>
                     <h3 className="text-white font-bold text-sm">{line.product.name}</h3>
                     <p className="text-neutral-muted text-xs mt-1">{line.product.category}</p>
+                    {line.product.price ? (
+                      <p className="text-primary text-xs font-extrabold mt-1">{line.product.price}</p>
+                    ) : null}
                   </div>
                   <button
                     type="button"
@@ -290,7 +285,7 @@ export default function ProductCart({ products }: Props) {
                 onChange={(event) => setNotes(event.target.value)}
                 rows={4}
                 className="w-full rounded-xl border border-green-500/20 bg-dark-secondary p-3 text-sm text-white placeholder:text-neutral-muted focus:border-primary focus:outline-none"
-                placeholder="Add sizes, colors, quantities by team, download questions, or accessory preferences. For Dell hardware, use the bundle quote button on the product card."
+                placeholder="Add sizes, colors, quantities by team, or digital download questions. For Dell hardware, use Request a Quote on the product card."
               />
             </label>
 
@@ -299,7 +294,7 @@ export default function ProductCart({ products }: Props) {
                 href={`mailto:${requestQuoteEmail}?subject=CivicSpan%20product%20request&body=${cartMessage}`}
                 className="block w-full rounded-lg bg-primary px-5 py-3 text-center text-dark font-bold hover:bg-primary-dark transition-colors"
               >
-                Request details
+                Request checkout details
               </a>
               <button
                 type="button"
@@ -311,12 +306,12 @@ export default function ProductCart({ products }: Props) {
             </div>
 
             <p className="text-neutral-muted text-xs leading-5">
-              Merchandise, digital downloads, and accessories can move through checkout later. Dell hardware stays quote-based so specs, deployment, support, and procurement details are validated first.
+              This cart is for print-on-demand merchandise, digital downloads, and low-friction accessories. Dell hardware stays quote-based so specs, deployment, support, and procurement details are validated first.
             </p>
           </div>
         ) : (
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-neutral-muted text-sm leading-6">
-            Your request list is empty. Add merchandise, digital products, or accessories here, or use Request Bundle Quote on Dell hardware cards for a spec review.
+            Your cart is empty. Add print-on-demand merchandise, digital downloads, or accessories here, or use Request a Quote on Dell hardware cards for B2B scoping.
           </div>
         )}
       </aside>
