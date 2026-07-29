@@ -62,6 +62,33 @@ export default function EngineeringWorkstationPackage() {
                   </li>
                 ))}
               </ul>
+              <p className="text-xs text-neutral-muted mt-6 p-4 rounded-xl border border-white/5 bg-white/3">
+                <strong className="text-neutral-light">Note:</strong> Hardware cost is combined with setup & software configuration. Pricing is tailored via Dell Deal Registration.
+              </p>
+            </div>
+
+            {/* Strategic Value Section */}
+            <div className="rounded-2xl border border-primary/20 bg-slate-900/60 p-6 space-y-4">
+              <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                <span className="text-primary">⚙️</span> Dell Precision Partner & Spec Review Model
+              </h3>
+              <p className="text-sm text-neutral-light leading-relaxed">
+                Rather than treating high-end Dell Precision workstations like standard retail items, we structure every procurement around <strong>Deal Registration</strong> and <strong>Bentley/CAD performance validation</strong>:
+              </p>
+              <ul className="space-y-3 text-xs sm:text-sm text-slate-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary font-bold mt-0.5">•</span>
+                  <span><strong>Dell Deal Registration Margins:</strong> We register your workstation deployment directly with Dell to unlock backend bid concessions and volume rebates that reduce total client cost.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary font-bold mt-0.5">•</span>
+                  <span><strong>CAD & Bentley Spec Review:</strong> High-performance workstations require ISV certification, custom GPU profiles, and memory bandwidth optimization—not standard consumer checkouts.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary font-bold mt-0.5">•</span>
+                  <span><strong>Bundled Managed Onboarding:</strong> Software licensing, domain migration, and 30-day post-deployment engineering support are fully integrated into one transparent proposal.</span>
+                </li>
+              </ul>
             </div>
           </div>
 

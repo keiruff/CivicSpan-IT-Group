@@ -66,6 +66,30 @@ export default function DellBusinessLaptopsPackage() {
                 <strong className="text-neutral-light">Note:</strong> Hardware purchase is separate from the setup service fee. Pricing shown reflects the provisioning and configuration service only.
               </p>
             </div>
+
+            {/* Strategic Value Section */}
+            <div className="rounded-2xl border border-primary/20 bg-slate-900/60 p-6 space-y-4">
+              <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                <span className="text-primary">🛡️</span> The Dell Partner Advantage: Why We Quote Custom Bundles
+              </h3>
+              <p className="text-sm text-neutral-light leading-relaxed">
+                Rather than putting standard off-the-shelf hardware into a generic shopping cart, we leverage our <strong>Dell Partner status</strong> to deliver maximum value on every procurement:
+              </p>
+              <ul className="space-y-3 text-xs sm:text-sm text-slate-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary font-bold mt-0.5">•</span>
+                  <span><strong>Dell Deal Registration Pricing:</strong> We submit your opportunity directly into the Dell Partner Portal to lock in special bid concessions and tier-1 partner discounts that aren&apos;t available at retail.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary font-bold mt-0.5">•</span>
+                  <span><strong>Turnkey Bundle Integration:</strong> Hardware, imaging, security hardening, and ongoing managed support are bundled into a single invoice—eliminating payment processing waste and retail markup.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary font-bold mt-0.5">•</span>
+                  <span><strong>Architecture & Workload Matching:</strong> We validate memory, processor, and display requirements against your team&apos;s actual daily software stack before placing the order.</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Pricing & CTA Column */}
