@@ -11,6 +11,7 @@ export type Product = {
   rating: number
   recommendedFor: string[]
   whyRecommended: string[]
+  price?: string
 }
 
 const merchandiseWhy = ['Professional brand presentation', 'Useful for events and giveaways', 'No inventory required with print-on-demand']
@@ -135,6 +136,7 @@ export const products: Product[] = [
     image: '/images/products/windows-11-readiness-checklist.webp',
     fulfillment: 'Digital download. File delivery can be connected after checkout/download tooling is selected.',
     type: 'Digital download',
+    price: '$19',
     rating: 5,
     recommendedFor: ['Windows 11', 'Modernization', 'Readiness'],
     whyRecommended: digitalWhy,
@@ -147,6 +149,7 @@ export const products: Product[] = [
     image: '/images/products/microsoft-365-security-checklist.webp',
     fulfillment: 'Digital download. File delivery can be connected after checkout/download tooling is selected.',
     type: 'Digital download',
+    price: '$29',
     rating: 5,
     recommendedFor: ['Microsoft 365', 'Security', 'Identity'],
     whyRecommended: digitalWhy,
@@ -159,6 +162,7 @@ export const products: Product[] = [
     image: '/images/products/it-asset-inventory-template.webp',
     fulfillment: 'Digital download. File delivery can be connected after checkout/download tooling is selected.',
     type: 'Digital download',
+    price: '$19',
     rating: 5,
     recommendedFor: ['Assets', 'Lifecycle', 'CMDB'],
     whyRecommended: digitalWhy,
@@ -171,6 +175,7 @@ export const products: Product[] = [
     image: '/images/products/sop-templates.webp',
     fulfillment: 'Digital download. File delivery can be connected after checkout/download tooling is selected.',
     type: 'Digital download',
+    price: '$29',
     rating: 5,
     recommendedFor: ['SOPs', 'Runbooks', 'Operations'],
     whyRecommended: digitalWhy,
@@ -183,6 +188,7 @@ export const products: Product[] = [
     image: '/images/products/disaster-recovery-template.webp',
     fulfillment: 'Digital download. File delivery can be connected after checkout/download tooling is selected.',
     type: 'Digital download',
+    price: '$29',
     rating: 5,
     recommendedFor: ['Recovery', 'Risk reduction', 'Continuity'],
     whyRecommended: digitalWhy,
@@ -195,6 +201,7 @@ export const products: Product[] = [
     image: '/images/products/employee-it-onboarding-checklist.webp',
     fulfillment: 'Digital download. File delivery can be connected after checkout/download tooling is selected.',
     type: 'Digital download',
+    price: '$19',
     rating: 5,
     recommendedFor: ['Onboarding', 'Accounts', 'Devices'],
     whyRecommended: digitalWhy,
@@ -306,6 +313,18 @@ export const products: Product[] = [
     rating: 5,
     recommendedFor: ['CAD', 'Bentley', 'GIS', 'Engineering'],
     whyRecommended: ['Curated specs for CAD/Bentley workloads', 'Validated GPU, memory, and storage fit', 'Warranty and lifecycle planning', 'Optional onboarding and managed support'],
+  },
+  {
+    id: 'dell-network-switch',
+    name: 'Dell Networking Switch',
+    category: 'Business Hardware',
+    description: 'Dell networking hardware planning for small offices, refresh projects, and standardized business infrastructure.',
+    image: '/images/products/dell-network-switch.webp',
+    fulfillment: 'Request a custom quote. CivicSpan confirms port count, PoE needs, VLANs, rack/cabling requirements, deployment scope, and support expectations before quoting.',
+    type: 'Business hardware',
+    rating: 5,
+    recommendedFor: ['Network refresh', 'Small offices', 'Infrastructure upgrades'],
+    whyRecommended: ['Scoped to the business network design', 'Best quoted with deployment planning', 'Supports lifecycle and support documentation'],
   },
   {
     id: 'dell-docking-station',
