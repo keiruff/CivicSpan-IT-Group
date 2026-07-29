@@ -16,7 +16,7 @@ export type Product = {
 const merchandiseWhy = ['Professional brand presentation', 'Useful for events and giveaways', 'No inventory required with print-on-demand']
 const digitalWhy = ['Supports repeatable operations', 'Easy to adapt to your environment', 'Built around documentation and readiness']
 const accessoryWhy = ['Supports cleaner desk setups', 'Useful for standardized deployments', 'Easy to pair with business laptops']
-const hardwareWhy = ['Business-class lifecycle', 'Enterprise support options', 'Designed for professional environments']
+const hardwareWhy = ['Scoped around the client opportunity', 'Designed for deployment and support bundles', 'Quoted after spec and lifecycle review']
 
 export const products: Product[] = [
   {
@@ -275,49 +275,49 @@ export const products: Product[] = [
     id: 'dell-laptop',
     name: 'Dell Latitude Business Laptop',
     category: 'Business Hardware',
-    description: 'Business-class Dell laptop category for standardized endpoint deployments.',
+    description: 'Business-class Dell laptop standard scoped for users, lifecycle, warranty, onboarding, and managed support needs.',
     image: '/images/products/dell-laptop.webp',
-    fulfillment: 'Business hardware. Final model, warranty, procurement path, and pricing can be scoped with CivicSpan.',
+    fulfillment: 'Request a custom bundle quote. CivicSpan reviews user roles, quantities, warranty needs, deployment tasks, and support package options before quoting.',
     type: 'Business hardware',
     rating: 5,
     recommendedFor: ['Business users', 'Endpoint deployment', 'Lifecycle planning'],
-    whyRecommended: ['Reliable business platform', 'Strong warranty options', 'Easy to standardize across teams'],
+    whyRecommended: ['Reliable business platform', 'Strong warranty options', 'Easy to standardize across teams', 'Best quoted with onboarding and support'],
   },
   {
     id: 'dell-monitor',
     name: 'Dell UltraSharp Monitor',
     category: 'Business Hardware',
-    description: 'Dell monitor category for office, hybrid, and engineering workstation setups.',
+    description: 'Dell monitor category scoped with desk standards, docking needs, user roles, and workstation bundle requirements.',
     image: '/images/products/dell-monitor.webp',
-    fulfillment: 'Business hardware. Final model, warranty, procurement path, and pricing can be scoped with CivicSpan.',
+    fulfillment: 'Request a custom bundle quote. CivicSpan confirms display size, resolution, warranty, docking, and rollout needs before quoting.',
     type: 'Business hardware',
     rating: 5,
     recommendedFor: ['Office work', 'Engineering review', 'Dual-monitor setups'],
-    whyRecommended: ['Excellent display quality', 'Long lifecycle', 'Strong fit for business workstations'],
+    whyRecommended: ['Excellent display quality', 'Long lifecycle', 'Strong fit for business workstations', 'Best paired with a workstation or laptop bundle'],
   },
   {
     id: 'dell-workstation',
     name: 'Dell Precision Workstation',
     category: 'Business Hardware',
-    description: 'Dell workstation category for CAD, GIS, engineering, and power-user workloads.',
+    description: 'Dell Precision workstation planning for CAD, GIS, Bentley, engineering, and power-user workloads that need validated specs.',
     image: '/images/products/dell-workstation.webp',
-    fulfillment: 'Business hardware. Final model, warranty, procurement path, and pricing can be scoped with CivicSpan.',
+    fulfillment: 'Request a custom spec review. CivicSpan validates CAD/Bentley workloads, GPU, memory, storage, warranty, deployment, and support requirements before quoting.',
     type: 'Business hardware',
     rating: 5,
     recommendedFor: ['CAD', 'Bentley', 'GIS', 'Engineering'],
-    whyRecommended: ['Excellent thermal performance', 'Long lifecycle', 'Enterprise support', 'Easily upgraded'],
+    whyRecommended: ['Curated specs for CAD/Bentley workloads', 'Validated GPU, memory, and storage fit', 'Warranty and lifecycle planning', 'Optional onboarding and managed support'],
   },
   {
     id: 'dell-docking-station',
     name: 'Dell Docking Station',
     category: 'Business Hardware',
-    description: 'Dell docking station category for standardized business laptop deployments.',
+    description: 'Dell docking station planning for standardized laptop deployments, desk setups, monitors, and hybrid work packages.',
     image: '/images/products/dell-docking-station.webp',
-    fulfillment: 'Business hardware. Final model, warranty, procurement path, and pricing can be scoped with CivicSpan.',
+    fulfillment: 'Request a custom bundle quote. CivicSpan confirms laptop models, display requirements, power delivery, desk standards, and deployment quantities before quoting.',
     type: 'Business hardware',
     rating: 5,
     recommendedFor: ['Hybrid work', 'Laptop deployments', 'Desk setups'],
-    whyRecommended: ['Reduces cable clutter', 'Supports repeatable desk setups', 'Pairs well with Dell laptops'],
+    whyRecommended: ['Reduces cable clutter', 'Supports repeatable desk setups', 'Pairs well with Dell laptops', 'Best scoped with the full endpoint bundle'],
   },
 ]
 
