@@ -96,7 +96,7 @@ export default function ProductCart({ products }: Props) {
                 Shop Downloads and Merchandise. Scope Hardware Separately.
               </h2>
               <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-3xl">
-                Use the cart for print-on-demand CivicSpan merchandise and instant-ready operational downloads. Dell hardware stays visible in the catalog, but routes through B2B scoping and custom quotes.
+                Use the cart for Printful print-on-demand CivicSpan merchandise and instant-ready operational downloads. Dell hardware stays visible in the catalog, but routes through B2B scoping and custom quotes.
               </p>
             </div>
 
@@ -227,7 +227,7 @@ export default function ProductCart({ products }: Props) {
         <div className="flex items-center justify-between gap-4 mb-5">
           <div>
             <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Active Checkout Cart</p>
-            <h2 className="text-2xl font-extrabold text-white">Merchandise & Downloads</h2>
+            <h2 className="text-2xl font-extrabold text-white">Printful Merch & Downloads</h2>
           </div>
           <span className="rounded-full border border-green-500/25 bg-primary/10 px-3 py-1 text-primary text-sm font-bold">
             {itemCount} item{itemCount === 1 ? '' : 's'}
@@ -306,12 +306,12 @@ export default function ProductCart({ products }: Props) {
             </div>
 
             <p className="text-neutral-muted text-xs leading-5">
-              This cart is for print-on-demand merchandise, digital downloads, and low-friction accessories. Dell hardware stays quote-based so specs, deployment, support, and procurement details are validated first.
+              This cart is for Printful print-on-demand merchandise, digital downloads, and low-friction accessories. Dell hardware stays quote-based so specs, deployment, support, and procurement details are validated first.
             </p>
           </div>
         ) : (
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-neutral-muted text-sm leading-6">
-            Your cart is empty. Add print-on-demand merchandise, digital downloads, or accessories here, or use Request a Quote on Dell hardware cards for B2B scoping.
+            Your cart is empty. Add Printful merchandise, digital downloads, or accessories here, or use Request a Quote on Dell hardware cards for B2B scoping.
           </div>
         )}
       </aside>

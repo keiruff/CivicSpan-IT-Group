@@ -14,7 +14,7 @@ export type Product = {
   price?: string
 }
 
-const merchandiseWhy = ['Professional brand presentation', 'Useful for events and giveaways', 'No inventory required with print-on-demand']
+const merchandiseWhy = ['Professional brand presentation', 'Useful for events and giveaways', 'Printful print-on-demand fulfillment with no inventory']
 const digitalWhy = ['Supports repeatable operations', 'Easy to adapt to your environment', 'Built around documentation and readiness']
 const accessoryWhy = ['Supports cleaner desk setups', 'Useful for standardized deployments', 'Easy to pair with business laptops']
 const hardwareWhy = ['Scoped around the client opportunity', 'Designed for deployment and support bundles', 'Quoted after spec and lifecycle review']
@@ -26,7 +26,7 @@ export const products: Product[] = [
     category: 'CivicSpan Merchandise',
     description: 'Branded polo shirt for events, client visits, and professional team wear.',
     image: '/images/products/civicspan-polo-shirt.webp',
-    fulfillment: 'Print-on-demand item. Final provider, colors, sizing, and pricing can be added later.',
+    fulfillment: 'Printful print-on-demand item. Colors, sizing, and final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
     rating: 5,
     recommendedFor: ['Events', 'Client visits', 'Team wear'],
@@ -38,7 +38,7 @@ export const products: Product[] = [
     category: 'CivicSpan Merchandise',
     description: 'Casual branded T-shirt for everyday wear and community events.',
     image: '/images/products/civicspan-t-shirt.webp',
-    fulfillment: 'Print-on-demand item. Final provider, colors, sizing, and pricing can be added later.',
+    fulfillment: 'Printful print-on-demand item. Colors, sizing, and final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
     rating: 5,
     recommendedFor: ['Casual wear', 'Events', 'Giveaways'],
@@ -50,7 +50,7 @@ export const products: Product[] = [
     category: 'CivicSpan Merchandise',
     description: 'Branded hoodie for cooler weather, field days, and casual work settings.',
     image: '/images/products/civicspan-hoodie.webp',
-    fulfillment: 'Print-on-demand item. Final provider, colors, sizing, and pricing can be added later.',
+    fulfillment: 'Printful print-on-demand item. Colors, sizing, and final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
     rating: 5,
     recommendedFor: ['Field work', 'Cool weather', 'Team wear'],
@@ -62,7 +62,7 @@ export const products: Product[] = [
     category: 'CivicSpan Merchandise',
     description: 'Branded hat for field work, outdoor events, and client giveaways.',
     image: '/images/products/civicspan-hat.webp',
-    fulfillment: 'Print-on-demand item. Final provider, colors, sizing, and pricing can be added later.',
+    fulfillment: 'Printful print-on-demand item. Colors, sizing, and final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
     rating: 5,
     recommendedFor: ['Field work', 'Events', 'Giveaways'],
@@ -74,7 +74,7 @@ export const products: Product[] = [
     category: 'CivicSpan Merchandise',
     description: 'Branded mug for office use, client gifts, and desk setups.',
     image: '/images/products/civicspan-mug.webp',
-    fulfillment: 'Print-on-demand item. Final provider, colors, sizing, and pricing can be added later.',
+    fulfillment: 'Printful print-on-demand item. Colors, sizing, and final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
     rating: 5,
     recommendedFor: ['Office use', 'Client gifts', 'Desk setups'],
@@ -86,7 +86,7 @@ export const products: Product[] = [
     category: 'CivicSpan Merchandise',
     description: 'Branded mousepad for practical workstation setups.',
     image: '/images/products/civicspan-mousepad.webp',
-    fulfillment: 'Print-on-demand item. Final provider, colors, sizing, and pricing can be added later.',
+    fulfillment: 'Printful print-on-demand item. Colors, sizing, and final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
     rating: 5,
     recommendedFor: ['Workstations', 'Giveaways', 'Office setups'],
@@ -98,7 +98,7 @@ export const products: Product[] = [
     category: 'CivicSpan Merchandise',
     description: 'Branded stickers for laptops, notebooks, water bottles, and giveaways.',
     image: '/images/products/civicspan-stickers.webp',
-    fulfillment: 'Print-on-demand item. Final provider, sizes, and pricing can be added later.',
+    fulfillment: 'Printful print-on-demand item. Sizes and final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
     rating: 5,
     recommendedFor: ['Giveaways', 'Laptops', 'Notebooks'],
@@ -110,7 +110,7 @@ export const products: Product[] = [
     category: 'CivicSpan Merchandise',
     description: 'Branded notebook for planning, meetings, and documentation notes.',
     image: '/images/products/civicspan-notebook.webp',
-    fulfillment: 'Print-on-demand item. Final provider and pricing can be added later.',
+    fulfillment: 'Printful print-on-demand item. Final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
     rating: 5,
     recommendedFor: ['Meetings', 'Planning', 'Documentation'],
@@ -122,7 +122,7 @@ export const products: Product[] = [
     category: 'CivicSpan Merchandise',
     description: 'Branded tumbler for office, travel, and client gifts.',
     image: '/images/products/civicspan-tumbler.webp',
-    fulfillment: 'Print-on-demand item. Final provider and pricing can be added later.',
+    fulfillment: 'Printful print-on-demand item. Final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
     rating: 5,
     recommendedFor: ['Office', 'Travel', 'Client gifts'],

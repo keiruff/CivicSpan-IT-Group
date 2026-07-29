@@ -5,7 +5,7 @@ import { products } from '@/data/products'
 
 export const metadata: Metadata = {
   title: 'Products | Technology We Trust | CivicSpan IT Group',
-  description: 'Shop CivicSpan print-on-demand merchandise and digital IT templates, or request custom-scoped Dell hardware solutions for business teams.',
+  description: 'Shop CivicSpan Printful print-on-demand merchandise and digital IT templates, or request custom-scoped Dell hardware solutions for business teams.',
 }
 
 const digitalProductUseCases = [
@@ -45,7 +45,7 @@ export default function ProductsPage() {
             Technology We Trust. Solutions We Support.
           </h1>
           <p className="text-blue-100 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            Use the active cart for CivicSpan print-on-demand merchandise and practical digital checklists. For Dell laptops, workstations, monitors, docks, and networking hardware, request a custom B2B quote instead of checking out with a fixed retail price.
+            Use the active cart for CivicSpan Printful print-on-demand merchandise and practical digital checklists. For Dell laptops, workstations, monitors, docks, and networking hardware, request a custom B2B quote instead of checking out with a fixed retail price.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#products-cart" className="btn">
@@ -70,7 +70,7 @@ export default function ProductsPage() {
             We don&apos;t stock thousands of products.
           </h2>
           <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-4xl mb-4">
-            We carefully select business technology that meets our standards for reliability, supportability, and long-term value. Merchandise and digital downloads can sell instantly; hardware requests start with scope validation so the quote can include the right Dell configuration, warranty, deployment work, and managed support options.
+            We carefully select business technology that meets our standards for reliability, supportability, and long-term value. Printful merchandise and digital downloads can sell instantly; hardware requests start with scope validation so the quote can include the right Dell configuration, warranty, deployment work, and managed support options.
           </p>
           <p className="text-primary text-lg sm:text-xl font-extrabold leading-relaxed max-w-4xl">
             If we wouldn&apos;t deploy it for a client, we won&apos;t sell it.
@@ -149,7 +149,7 @@ export default function ProductsPage() {
             Keep checkout simple. Keep hardware strategic.
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Print-on-demand items and $10-$30 digital downloads can convert immediately. Dell hardware stays behind custom quote scoping so CivicSpan can validate the opportunity, register the deal path, and bundle deployment or managed services before pricing.
+            Printful print-on-demand items and $10-$30 digital downloads can convert immediately. Dell hardware stays behind custom quote scoping so CivicSpan can validate the opportunity, register the deal path, and bundle deployment or managed services before pricing.
           </p>
           <Link href="/contact" className="btn mt-8">
             Request a Spec Review
