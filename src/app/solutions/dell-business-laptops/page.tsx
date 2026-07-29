@@ -108,11 +108,11 @@ export default function DellBusinessLaptopsPackage() {
               </div>
 
               <Link
-                href="/contact?package=dell-business-laptops"
-                className="w-full text-center block px-6 py-3.5 bg-primary hover:bg-primary-dark text-dark font-bold rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/25"
-              >
-                Request a Quote
-              </Link>
+                  href="/contact?package=dell-business-laptops&bundle=true"
+                  className="w-full text-center block px-6 py-3.5 bg-primary hover:bg-primary-dark text-dark font-bold rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/25"
+                >
+                  Request Bundle Quote
+                </Link>
             </div>
           </div>
         </div>
