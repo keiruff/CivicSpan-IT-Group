@@ -5,7 +5,7 @@ import { products } from '@/data/products'
 
 export const metadata: Metadata = {
   title: 'Products | Technology We Trust | CivicSpan IT Group',
-  description: 'CivicSpan recommendations for branded merchandise, digital downloads, IT accessories, and business hardware selected for reliability, supportability, and long-term value.',
+  description: 'CivicSpan recommendations for branded merchandise, digital downloads, IT accessories, and custom-quoted Dell hardware bundles selected for reliability, supportability, and long-term value.',
 }
 
 const digitalProductUseCases = [
@@ -19,7 +19,7 @@ const digitalProductUseCases = [
   },
   {
     title: 'Procurement support',
-    body: 'Use curated hardware and accessory categories to standardize purchases instead of buying one-off devices with no lifecycle plan.',
+    body: 'Use curated hardware and accessory categories to standardize purchases, then request a custom bundle quote before devices are priced or ordered.',
   },
 ]
 
@@ -31,7 +31,7 @@ const workstationBundle = [
   '27" UltraSharp monitor',
   'Docking station',
   'Mechanical keyboard',
-  'Bundle quote',
+  'Custom quote and spec review',
 ]
 
 export default function ProductsPage() {
@@ -45,7 +45,7 @@ export default function ProductsPage() {
             Technology We Trust. Solutions We Support.
           </h1>
           <p className="text-blue-100 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            Every product in the CivicSpan catalog is selected because we would confidently recommend, deploy, and support it in a professional environment.
+            Every product in the CivicSpan catalog is selected because we would confidently recommend, deploy, and support it. Dell hardware is handled through custom quotes and spec reviews, not off-the-shelf cart pricing.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#products-cart" className="btn">
@@ -70,7 +70,7 @@ export default function ProductsPage() {
             We don&apos;t stock thousands of products.
           </h2>
           <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-4xl mb-4">
-            We carefully select business technology that meets our standards for reliability, supportability, and long-term value.
+            We carefully select business technology that meets our standards for reliability, supportability, and long-term value. Hardware requests start with scope validation so the quote can include the right Dell configuration, warranty, deployment work, and managed support options.
           </p>
           <p className="text-primary text-lg sm:text-xl font-extrabold leading-relaxed max-w-4xl">
             If we wouldn&apos;t deploy it for a client, we won&apos;t sell it.
@@ -86,7 +86,7 @@ export default function ProductsPage() {
               Building an Engineering Workstation
             </h2>
             <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
-              Need a workstation capable of handling Bentley OpenRoads Designer, ProjectWise Explorer, CAD, GIS, and large infrastructure datasets? Start here.
+              Need a workstation capable of handling Bentley OpenRoads Designer, ProjectWise Explorer, CAD, GIS, and large infrastructure datasets? Start with a spec review, then quote the hardware with onboarding and support attached.
             </p>
           </div>
 
@@ -134,13 +134,13 @@ export default function ProductsPage() {
 
         <section className="text-center rounded-[28px] border border-slate-400/15 bg-[radial-gradient(circle_at_50%_0%,rgba(34,197,94,0.15),transparent_40%),rgba(15,23,42,0.85)] p-10 sm:p-14 shadow-xl">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-            Ready for live checkout later?
+            Hardware should start with a conversation, not a cart.
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            The cart is ready for provider integration. Next steps can include print-on-demand fulfillment, Stripe checkout, affiliate links, or protected digital-download delivery.
+            Merchandise and digital downloads can support live checkout later. Dell laptops, workstations, docks, and monitors should stay quote-based so CivicSpan can validate the opportunity, register the deal path, and bundle deployment or managed services before pricing.
           </p>
           <Link href="/contact" className="btn mt-8">
-            Plan Checkout Integration
+            Request a Spec Review
           </Link>
         </section>
       </main>
