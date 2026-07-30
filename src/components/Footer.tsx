@@ -34,17 +34,9 @@ export default function Footer() {
             <Link href="/solutions" className="hover:text-primary transition-colors">
               Solutions
             </Link>
-            <Link href="/products" className="hover:text-primary transition-colors">
-              Products
+            <Link href="/products" className="text-primary font-semibold hover:underline transition-colors">
+              Shop
             </Link>
-            <a
-              href="https://h1bg1p-j7.myshopify.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary font-semibold hover:underline inline-flex items-center gap-1"
-            >
-              Shopify Store ↗
-            </a>
             <Link href="/capabilities" className="hover:text-primary transition-colors">
               Capabilities
             </Link>
