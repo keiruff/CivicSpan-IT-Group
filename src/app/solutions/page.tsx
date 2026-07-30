@@ -3,8 +3,8 @@ import Hero from '@/components/Hero'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Technology Solutions & Packages | CivicSpan IT Group',
-  description: 'Explore our specialized, flat-rate technology packages designed for small businesses, engineering workstations, office moves, and Microsoft 365 migrations.',
+  title: 'Service Packages | CivicSpan IT Group',
+  description: 'Explore fixed-scope CivicSpan service packages for startup technology, engineering workstations, office moves, Microsoft 365 migrations, and onboarding.',
 }
 
 const packages = [
@@ -77,20 +77,20 @@ export default function SolutionsPage() {
   return (
     <>
       <Hero
-        title="Solutions & Packages"
-        description="Clear, buyable technology packages for teams that need a defined outcome instead of an open-ended IT services conversation."
+        title="Service Packages"
+        description="Fixed-scope service options for teams that know the outcome they need and want a clearer starting point."
       />
 
       <main className="relative overflow-hidden py-20 px-6 max-w-7xl mx-auto">
         <section className="relative z-10 rounded-[28px] border border-green-500/15 bg-dark-secondary/70 p-8 sm:p-10 mb-12">
           <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-4">
-            Easy to Buy
+            Fixed-Scope Services
           </p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-            Pick the outcome. CivicSpan handles the technology path.
+            Packages are services with a clearer starting scope.
           </h2>
           <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-3xl">
-            Each package turns a common operational need into a defined scope: what is included, who it is for, and where pricing starts. That makes it easier to move from “we need IT help” to “we can buy this.”
+            These packages do not replace the Services page or the Shop. They are common service starting points with a defined outcome, a starting price, and a clearer path to a quote.
           </p>
         </section>
         <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(34,197,94,0.03)_1px,transparent_1px),linear-gradient(rgba(34,197,94,0.02)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:linear-gradient(to_bottom,black,transparent_80%)]" />
@@ -142,7 +142,7 @@ export default function SolutionsPage() {
           ))}
         </div>
 
-        {/* Custom Solution Call to Action */}
+        {/* Custom Service Call to Action */}
         <section className="text-center rounded-[28px] border border-slate-400/15 bg-[radial-gradient(circle_at_50%_0%,rgba(34,197,94,0.15),transparent_40%),rgba(15,23,42,0.85)] p-10 sm:p-14 shadow-xl backdrop-blur mt-20 relative z-10">
           <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-5">
             Tailored Just for You
@@ -153,7 +153,7 @@ export default function SolutionsPage() {
           </h2>
 
           <p className="max-w-2xl mx-auto mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            We also create custom technology packages based on your unique workflows, hardware preferences, and licensing requirements.
+            We also scope custom services based on your workflows, hardware preferences, licensing requirements, and support needs.
           </p>
 
           <Link href="/contact" className="btn mt-8">

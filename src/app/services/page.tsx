@@ -378,6 +378,26 @@ export default function ServicesPage() {
               </article>
             ))}
           </div>
+
+          <div className="mt-10 rounded-2xl border border-primary/25 bg-primary/10 p-6 sm:p-7">
+            <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-3">
+              How to choose
+            </p>
+            <h3 className="text-2xl font-extrabold text-white mb-3">
+              Services are scoped work. Packages are common starting points. Shop is for downloads and merchandise.
+            </h3>
+            <p className="text-neutral-light text-sm sm:text-base leading-relaxed mb-5 max-w-4xl">
+              Start here when you need consulting, support, implementation, procurement, deployment, documentation, or ongoing operations. Use Service Packages when your need matches a fixed-scope outcome. Use Shop only for digital templates and merchandise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/solutions" className="btn text-center">
+                View Service Packages
+              </Link>
+              <Link href="/products" className="px-6 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300 text-center">
+                Shop Downloads &amp; Merch
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

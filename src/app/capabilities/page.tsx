@@ -448,7 +448,7 @@ export default function CapabilitiesPage() {
                     <li>• Public Sector Experience</li>
                     <li>• Transportation & Infrastructure Technology</li>
                     <li>• Bentley ProjectWise Support</li>
-                    <li>• Microsoft 365 & SharePoint Solutions</li>
+                    <li>• Microsoft 365 & SharePoint Support</li>
                     <li>• Technical Documentation & Training</li>
                     <li>• Workflow Automation & Reporting</li>
                     <li>• Business Process Improvement</li>

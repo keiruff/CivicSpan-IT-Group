@@ -138,7 +138,7 @@ export default function InfrastructureTechnologyOperationsPage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/solutions" className="px-8 py-3 bg-primary hover:bg-primary-dark text-dark font-bold rounded-lg transition-all duration-300">
-              View Solutions
+              View Service Packages
             </Link>
             <Link href="/contact" className="px-8 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300">
               Discuss Your Needs
