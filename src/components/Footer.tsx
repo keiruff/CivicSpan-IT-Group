@@ -135,6 +135,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <a
+                  href="https://h1bg1p-j7.myshopify.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem] inline-flex items-center gap-1"
+                >
+                  Shopify Store ↗
+                </a>
+              </li>
+              <li>
                 <Link href="/pillars" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
                   Pillar Pages
                 </Link>

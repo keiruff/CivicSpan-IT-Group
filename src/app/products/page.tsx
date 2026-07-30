@@ -48,12 +48,20 @@ export default function ProductsPage() {
             Use the active cart for CivicSpan Printful print-on-demand merchandise and practical digital checklists. For Dell laptops, workstations, monitors, docks, and networking hardware, request a custom B2B quote instead of checking out with a fixed retail price.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#products-cart" className="btn">
-              Browse Products
+            <a
+              href="https://h1bg1p-j7.myshopify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Visit Official Store ↗
+            </a>
+            <Link href="#products-cart" className="px-8 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300">
+              Browse Recommendations
             </Link>
             <Link
               href="/pillars/technology-lifecycle-management"
-              className="px-8 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300"
+              className="px-8 py-3 border border-white/20 text-white hover:bg-white/10 font-bold rounded-lg transition-all duration-300"
             >
               View Lifecycle Framework
             </Link>
@@ -146,14 +154,24 @@ export default function ProductsPage() {
 
         <section className="text-center rounded-[28px] border border-slate-400/15 bg-[radial-gradient(circle_at_50%_0%,rgba(34,197,94,0.15),transparent_40%),rgba(15,23,42,0.85)] p-10 sm:p-14 shadow-xl">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-            Keep checkout simple. Keep hardware strategic.
+            Visit the CivicSpan Official Store
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Printful print-on-demand items and $10-$30 digital downloads can convert immediately. Dell hardware stays behind custom quote scoping so CivicSpan can validate the opportunity, register the deal path, and bundle deployment or managed services before pricing.
+            Explore curated tech accessories, business products, and official merchandise on our online storefront. For enterprise hardware and custom deployments, request a spec review.
           </p>
-          <Link href="/contact" className="btn mt-8">
-            Request a Spec Review
-          </Link>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://h1bg1p-j7.myshopify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Shop Online Store ↗
+            </a>
+            <Link href="/contact" className="px-8 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300">
+              Request a Spec Review
+            </Link>
+          </div>
         </section>
       </main>
     </>
