@@ -52,19 +52,6 @@ export default function Header() {
 
         <div className="nav-links flex justify-center flex-wrap gap-2 sm:gap-4 md:gap-6 items-center w-full md:w-auto text-[0.9rem] sm:text-base">
           {navLinks.map((link) => {
-            if (link.external) {
-              return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-primary transition-all duration-300 py-1.5 px-2.5 md:py-3 md:px-2 font-medium relative whitespace-nowrap block after:content-[''] after:absolute after:left-0 after:bottom-[-2px] md:after:bottom-[-4px] after:h-[2px] after:bg-primary after:transition-all after:duration-300 after:w-0 hover:after:w-full"
-                >
-                  {link.label} ↗
-                </a>
-              )
-            }
             const active = isActive(link.href)
             return (
               <Link
