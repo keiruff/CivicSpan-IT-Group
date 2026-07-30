@@ -205,7 +205,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {[
             { title: 'SEO Pillar Pages', body: 'Pillar hubs for Infrastructure Modernization, Microsoft 365, Engineering Technology, Cloud Operations, IT Documentation, and Technology Lifecycle Management.', href: '/pillars' },
-            { title: 'Curated Products', body: 'Branded merchandise, digital downloads, IT accessories, and business hardware categories aligned with CivicSpan operations.', href: '/products' },
+            { title: 'Shop', body: 'Digital SOP templates, Printful merchandise, IT accessories, and business hardware guidance in one clear shop path.', href: '/products' },
             { title: 'Microsoft, Dell & ProjectWise Topics', body: 'Deep pages for high-intent Microsoft 365, SharePoint, Intune, Dell, and ProjectWise searches.', href: '/topics' },
             { title: 'Location-Based IT Support', body: 'Useful regional pages for Fredericksburg, Richmond, Northern Virginia, Maryland, Pennsylvania, and ProjectWise support.', href: '/locations' },
             { title: 'Problem-Led IT Guides', body: 'Guides for email access issues, slow ProjectWise, laptop deployments, Microsoft 365 security, and Windows 11 upgrades.', href: '/blog' },

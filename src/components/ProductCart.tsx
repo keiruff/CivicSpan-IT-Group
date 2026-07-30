@@ -96,7 +96,7 @@ export default function ProductCart({ products }: Props) {
                 Shop Downloads and Merchandise. Scope Hardware Separately.
               </h2>
               <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-3xl">
-                Use the cart for Printful print-on-demand CivicSpan merchandise and instant-ready operational downloads. Dell hardware stays visible in the catalog, but routes through B2B scoping and custom quotes.
+                Use this page as a shop guide for Printful merchandise, Shopify-delivered downloads, and supported hardware categories. Dell hardware stays visible in the catalog, but routes through B2B scoping and custom quotes.
               </p>
             </div>
 
@@ -196,7 +196,7 @@ export default function ProductCart({ products }: Props) {
                         </button>
                       </div>
                     ) : (
-                      <span className="text-neutral-muted text-xs">Not in cart</span>
+                      <span className="text-neutral-muted text-xs">Not in list</span>
                     )}
 
                     {isHardware ? (
@@ -212,7 +212,7 @@ export default function ProductCart({ products }: Props) {
                         onClick={() => addToCart(product.id)}
                         className="rounded-lg bg-primary px-4 py-2 text-dark font-bold text-sm hover:bg-primary-dark transition-colors"
                       >
-                        Add to cart
+                        Add to list
                       </button>
                     )}
                   </div>
@@ -226,8 +226,8 @@ export default function ProductCart({ products }: Props) {
       <aside className="xl:sticky xl:top-28 rounded-3xl border border-green-500/20 bg-slate-950/90 p-6 shadow-xl">
         <div className="flex items-center justify-between gap-4 mb-5">
           <div>
-            <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Active Checkout Cart</p>
-            <h2 className="text-2xl font-extrabold text-white">Printful Merch & Downloads</h2>
+            <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Shop Shortlist</p>
+            <h2 className="text-2xl font-extrabold text-white">Merch & Downloads</h2>
           </div>
           <span className="rounded-full border border-green-500/25 bg-primary/10 px-3 py-1 text-primary text-sm font-bold">
             {itemCount} item{itemCount === 1 ? '' : 's'}
@@ -279,13 +279,13 @@ export default function ProductCart({ products }: Props) {
             ))}
 
             <label className="block">
-              <span className="block text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Order notes</span>
+              <span className="block text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Shortlist notes</span>
               <textarea
                 value={notes}
                 onChange={(event) => setNotes(event.target.value)}
                 rows={4}
                 className="w-full rounded-xl border border-green-500/20 bg-dark-secondary p-3 text-sm text-white placeholder:text-neutral-muted focus:border-primary focus:outline-none"
-                placeholder="Add sizes, colors, quantities by team, or digital download questions. For Dell hardware, use Request a Quote on the product card."
+                placeholder="Add sizes, colors, quantities by team, Shopify product links, or digital download questions. For Dell hardware, use Request a Quote on the product card."
               />
             </label>
 
@@ -294,24 +294,24 @@ export default function ProductCart({ products }: Props) {
                 href={`mailto:${requestQuoteEmail}?subject=CivicSpan%20product%20request&body=${cartMessage}`}
                 className="block w-full rounded-lg bg-primary px-5 py-3 text-center text-dark font-bold hover:bg-primary-dark transition-colors"
               >
-                Request checkout details
+                Request product links/details
               </a>
               <button
                 type="button"
                 onClick={clearCart}
                 className="block w-full rounded-lg border border-green-500/25 px-5 py-3 text-center text-primary font-bold hover:bg-primary/10 transition-colors"
               >
-                Clear list
+                Clear shortlist
               </button>
             </div>
 
             <p className="text-neutral-muted text-xs leading-5">
-              This cart is for Printful print-on-demand merchandise, digital downloads, and low-friction accessories. Dell hardware stays quote-based so specs, deployment, support, and procurement details are validated first.
+              Shopify remains the checkout system for merchandise and digital downloads. This shortlist is only for questions, sizing notes, and quote requests before purchase. Dell hardware stays quote-based so specs, deployment, support, and procurement details are validated first.
             </p>
           </div>
         ) : (
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-neutral-muted text-sm leading-6">
-            Your cart is empty. Add Printful merchandise, digital downloads, or accessories here, or use Request a Quote on Dell hardware cards for B2B scoping.
+            Your shortlist is empty. Add Printful merchandise, digital downloads, or accessories here for questions, or use Request a Quote on Dell hardware cards for B2B scoping.
           </div>
         )}
       </aside>
