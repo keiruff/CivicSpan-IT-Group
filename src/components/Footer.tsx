@@ -5,256 +5,91 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="mt-20 md:mt-32 bg-gradient-to-b from-dark/40 to-dark/80 border-t border-green-500/20 px-6 py-12 md:py-16 md:px-10 text-neutral-muted">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 pb-12 border-b border-white/8">
+    <footer className="mt-12 md:mt-20 bg-gradient-to-b from-dark/60 to-dark border-t border-green-500/15 px-6 py-8 md:py-12 md:px-10 text-neutral-muted text-sm">
+      <div className="max-w-7xl mx-auto space-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pb-8 border-b border-white/10">
           {/* Logo & Intro */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start space-y-4 sm:col-span-2 lg:col-span-1">
             <Image
               src="/civicspan-it-group-logo.webp"
               alt="CivicSpan IT Group Logo"
-              width={160}
-              height={37}
-              className="w-40 h-auto mb-6 block"
+              width={150}
+              height={35}
+              className="w-36 h-auto block"
             />
-
-            <p className="text-neutral-light text-[0.95rem] leading-relaxed mb-4">
-              Helping organizations build, modernize, secure, document, and support the technology operations that keep business running.
+            <p className="text-neutral-light/80 text-xs sm:text-sm leading-relaxed max-w-xs">
+              Helping organizations build, modernize, secure, document, and support business-critical technology operations.
             </p>
-
-            <div className="flex items-center gap-4 text-xl">
-              <a
-                href="mailto:info@civicspanitgroup.com"
-                title="Email us"
-                aria-label="Send email"
-                className="hover:text-primary transition-all duration-300 hover:scale-110"
-              >
-                ✉
-              </a>
-              <a
-                href="https://linkedin.com/in/keisha-ruffner-71236240b"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Visit LinkedIn"
-                aria-label="LinkedIn"
-                className="hover:text-primary font-bold transition-all duration-300 hover:scale-110"
-              >
-                in
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=61589970300407"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Visit Facebook"
-                aria-label="Facebook"
-                className="hover:text-primary font-bold transition-all duration-300 hover:scale-110"
-              >
-                f
-              </a>
+            <div className="flex items-center gap-3 text-base text-neutral-light">
+              <a href="mailto:info@civicspanitgroup.com" title="Email us" aria-label="Send email" className="hover:text-primary transition-colors">✉</a>
+              <a href="tel:5407602020" title="Call us" aria-label="Call phone" className="hover:text-primary transition-colors">☎</a>
+              <a href="https://linkedin.com/in/keisha-ruffner-71236240b" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" className="hover:text-primary font-bold transition-colors">in</a>
+              <a href="https://www.facebook.com/profile.php?id=61589970300407" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" className="hover:text-primary font-bold transition-colors">f</a>
             </div>
           </div>
 
-          {/* Services Quick Links */}
+          {/* Key Services */}
           <div>
-            <h3 className="text-primary font-semibold uppercase text-xs sm:text-sm tracking-wider mb-6">
-              Services
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/infrastructure-technology-operations" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Infrastructure &amp; Technology Operations
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#managed-infrastructure-services" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Managed Infrastructure Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#ai-readiness-foundations" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  AI Readiness Foundations
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#it-support" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Engineering Systems Support
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#digital-solutions" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Digital Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#training" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Environment-Specific Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#consulting" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Technical Consulting
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Schedule Consultation
-                </Link>
-              </li>
+            <h3 className="text-white font-semibold uppercase text-xs tracking-wider mb-3">Services &amp; Solutions</h3>
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li><Link href="/infrastructure-technology-operations" className="hover:text-primary transition-colors">Operations Framework</Link></li>
+              <li><Link href="/services#managed-infrastructure-services" className="hover:text-primary transition-colors">Managed Services</Link></li>
+              <li><Link href="/services#ai-readiness-foundations" className="hover:text-primary transition-colors">AI Readiness</Link></li>
+              <li><Link href="/services#it-support" className="hover:text-primary transition-colors">Engineering Support</Link></li>
+              <li><Link href="/services#digital-solutions" className="hover:text-primary transition-colors">Digital Solutions</Link></li>
+              <li><Link href="/solutions" className="hover:text-primary transition-colors">Tailored Solutions</Link></li>
             </ul>
           </div>
 
-          {/* Company Quick Links */}
+          {/* Explore & Store */}
           <div>
-            <h3 className="text-primary font-semibold uppercase text-xs sm:text-sm tracking-wider mb-6">
-              Company
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/infrastructure-technology-operations" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Operations Framework
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Products
-                </Link>
-              </li>
+            <h3 className="text-white font-semibold uppercase text-xs tracking-wider mb-3">Explore &amp; Store</h3>
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <a
                   href="https://h1bg1p-j7.myshopify.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem] inline-flex items-center gap-1"
+                  className="text-primary hover:underline font-semibold inline-flex items-center gap-1"
                 >
                   Shopify Store ↗
                 </a>
               </li>
-              <li>
-                <Link href="/pillars" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Pillar Pages
-                </Link>
-              </li>
-              <li>
-                <Link href="/topics" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Topic Guides
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Service Areas
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Helpful Guides
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/capabilities" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Capabilities
-                </Link>
-              </li>
-              <li>
-                <Link href="/why-civicspan" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Why CivicSpan
-                </Link>
-              </li>
-              <li>
-                <Link href="/who-we-support" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Who We Support
-                </Link>
-              </li>
-              <li>
-                <Link href="/tools-and-utilities" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Tools & Utilities
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-neutral-muted hover:text-primary transition-all duration-300 hover:pl-1 text-[0.95rem]">
-                  Contact Us
-                </Link>
-              </li>
+              <li><Link href="/products" className="hover:text-primary transition-colors">Product Catalog</Link></li>
+              <li><Link href="/tools-and-utilities" className="hover:text-primary transition-colors">Tools &amp; Utilities</Link></li>
+              <li><Link href="/capabilities" className="hover:text-primary transition-colors">Capabilities Statement</Link></li>
+              <li><Link href="/who-we-support" className="hover:text-primary transition-colors">Who We Support</Link></li>
+              <li><Link href="/blog" className="hover:text-primary transition-colors">Guides &amp; Articles</Link></li>
             </ul>
           </div>
 
-          {/* Contact Details */}
-          <div className="flex flex-col space-y-4">
-            <h3 className="text-primary font-semibold uppercase text-xs sm:text-sm tracking-wider mb-2">
-              Contact
-            </h3>
-
-            <p className="text-[0.95rem] text-neutral-light flex items-center gap-2">
-              <span>✉</span>
-              <a href="mailto:info@civicspanitgroup.com" className="hover:text-primary transition-colors">
-                info@civicspanitgroup.com
-              </a>
-            </p>
-
-            <p className="text-[0.95rem] text-neutral-light flex items-center gap-2">
-              <span>☎</span>
-              <a href="tel:5407602020" className="hover:text-primary transition-colors">
-                (540) 760-2020
-              </a>
-            </p>
-
-            <p className="text-[0.95rem] text-neutral-light flex items-center gap-2">
-              <span>📍</span>
-              <a
-                href="https://www.google.com/maps/search/Fredericksburg,+VA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                Fredericksburg, Virginia
-              </a>
-            </p>
-
-            <p className="text-xs text-neutral-muted font-medium pt-2 border-t border-white/5">
-              Infrastructure Operations • ProjectWise • Microsoft 365 • Dell
-            </p>
+          {/* Company & Contact */}
+          <div>
+            <h3 className="text-white font-semibold uppercase text-xs tracking-wider mb-3">Company &amp; Contact</h3>
+            <ul className="space-y-2 text-xs sm:text-sm mb-4">
+              <li><Link href="/why-civicspan" className="hover:text-primary transition-colors">Why CivicSpan</Link></li>
+              <li><Link href="/locations" className="hover:text-primary transition-colors">Service Areas</Link></li>
+              <li><Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact &amp; Scheduling</Link></li>
+            </ul>
+            <div className="text-xs text-neutral-light/70 space-y-1 border-t border-white/5 pt-3">
+              <p>📍 Fredericksburg, Virginia</p>
+              <p>📞 (540) 760-2020</p>
+            </div>
           </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center py-8 gap-4 text-sm">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-neutral-light/60">
           <div>
             &copy; {currentYear} CivicSpan IT Group. All rights reserved.
           </div>
-
-          <div className="flex flex-wrap items-center gap-4 md:gap-6">
-            <Link href="/privacy" className="hover:text-primary transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/cookies" className="hover:text-primary transition-colors">
-              Cookie Policy
-            </Link>
-            <Link href="/disclaimer" className="hover:text-primary transition-colors">
-              Disclaimer
-            </Link>
-          </div>
-
-          <div className="text-xs text-neutral-light/50 font-medium">
-            Built with care for infrastructure teams.
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <span>•</span>
+            <Link href="/cookies" className="hover:text-primary transition-colors">Cookie Policy</Link>
+            <span>•</span>
+            <Link href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link>
           </div>
         </div>
       </div>
