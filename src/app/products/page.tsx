@@ -40,14 +40,14 @@ export default function ProductsPage() {
             Request quotes for scoped business hardware.
           </h1>
           <p className="text-blue-100 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            This page is only for products that need CivicSpan review before purchase: Dell laptops, workstations, monitors, docks, and network hardware. Merchandise, templates, accessories, and direct-purchase items stay on Shopify.
+            Enterprise technology solutions available by quote. Contact CivicSpan to discuss your requirements.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={shopifyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn"
+              className="inline-flex items-center justify-center rounded-lg border-2 border-primary bg-primary px-8 py-3.5 text-dark font-bold shadow-lg shadow-green-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark"
             >
               Browse Recommended Products ↗
             </a>
@@ -59,18 +59,6 @@ export default function ProductsPage() {
       </section>
 
       <main className="max-w-7xl mx-auto px-6 pb-24 space-y-20">
-        <section className="rounded-[28px] border border-green-500/15 bg-dark-secondary/80 p-8 sm:p-10">
-          <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-4">
-            Clear separation
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-            Shopify handles direct-purchase products. CivicSpan scopes quote-based hardware.
-          </h2>
-          <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-4xl">
-            If a product can be purchased directly, it belongs on Shopify. If it needs sizing, warranty review, deployment planning, procurement support, or managed support, it stays here as a quote request.
-          </p>
-        </section>
-
         <section className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
           <div>
             <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-4">
