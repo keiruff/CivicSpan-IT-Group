@@ -11,7 +11,6 @@ export default function Header() {
     { href: '/', label: 'Home' },
     { href: '/infrastructure-technology-operations', label: 'Operations' },
     { href: '/services', label: 'Services' },
-    { href: '/solutions', label: 'Solutions' },
     { href: '/products', label: 'Shop' },
     { href: '/topics', label: 'Topics' },
     { href: '/locations', label: 'Locations' },

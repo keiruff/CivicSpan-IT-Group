@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const lifecycleSteps = [
   { step: 'Plan', service: 'Assessments & Roadmaps', href: '/services#infrastructure-technology-operations' },
-  { step: 'Procure', service: 'Dell Solutions', href: '/topics/dell' },
+  { step: 'Procure', service: 'Dell Procurement & Deployment', href: '/topics/dell' },
   { step: 'Deploy', service: 'Microsoft 365, Endpoint Deployment', href: '/services#managed-infrastructure-services' },
   { step: 'Secure', service: 'Identity, Cloud Security', href: '/topics/entra-id-consulting' },
   { step: 'Document', service: 'SOPs, Runbooks, Knowledge Bases', href: '/services#training' },
@@ -15,7 +15,7 @@ const outcomeCards = [
   {
     title: 'Modern Workplace Deployment',
     body: 'Microsoft 365, endpoint deployment, identity, security baselines, and user-ready documentation.',
-    href: '/solutions/microsoft-365-migration',
+    href: '/services#managed-infrastructure-services',
   },
   {
     title: 'Engineering Technology Operations',
@@ -204,8 +204,8 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {[
-            { title: 'SEO Pillar Pages', body: 'Pillar hubs for Infrastructure Modernization, Microsoft 365, Engineering Technology, Cloud Operations, IT Documentation, and Technology Lifecycle Management.', href: '/pillars' },
-            { title: 'Shop', body: 'Digital SOP templates, Printful merchandise, IT accessories, and business hardware guidance in one clear shop path.', href: '/products' },
+            { title: 'Expertise Pillars', body: 'Hubs for Infrastructure Modernization, Microsoft 365, Engineering Technology, Cloud Operations, IT Documentation, and Technology Lifecycle Management.', href: '/pillars' },
+            { title: 'Product Shop', body: 'Downloads and merchandise only. Consulting, support, and hardware deployment stay in Services.', href: '/products' },
             { title: 'Microsoft, Dell & ProjectWise Topics', body: 'Deep pages for high-intent Microsoft 365, SharePoint, Intune, Dell, and ProjectWise searches.', href: '/topics' },
             { title: 'Location-Based IT Support', body: 'Useful regional pages for Fredericksburg, Richmond, Northern Virginia, Maryland, Pennsylvania, and ProjectWise support.', href: '/locations' },
             { title: 'Problem-Led IT Guides', body: 'Guides for email access issues, slow ProjectWise, laptop deployments, Microsoft 365 security, and Windows 11 upgrades.', href: '/blog' },

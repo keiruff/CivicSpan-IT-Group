@@ -4,8 +4,8 @@ import ProductCart from '@/components/ProductCart'
 import { products } from '@/data/products'
 
 export const metadata: Metadata = {
-  title: 'Shop | Templates, Merchandise & Hardware Guidance | CivicSpan IT Group',
-  description: 'Shop CivicSpan digital SOP templates and Printful merchandise through Shopify, or request custom-scoped Dell hardware solutions for business teams.',
+  title: 'Shop | Downloads & Merchandise | CivicSpan IT Group',
+  description: 'Shop CivicSpan digital SOP templates and Printful merchandise through Shopify. Hardware and consulting requests are scoped separately through Services.',
 }
 
 const digitalProductUseCases = [
@@ -40,12 +40,12 @@ export default function ProductsPage() {
       <section className="relative overflow-hidden px-6 py-20 sm:py-28 text-center">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_45%_at_50%_0%,rgba(34,197,94,0.16),transparent)]" />
         <div className="relative z-10 max-w-4xl mx-auto">
-          <p className="text-primary font-bold text-xs sm:text-sm tracking-[0.18em] uppercase mb-4">CivicSpan Recommendations</p>
+          <p className="text-primary font-bold text-xs sm:text-sm tracking-[0.18em] uppercase mb-4">Downloads & Merchandise</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-            Shop Templates, Merchandise, and Supported Hardware.
+            Shop downloads and merchandise. Scope services separately.
           </h1>
           <p className="text-blue-100 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            Start here for CivicSpan digital SOP templates, Printful print-on-demand merchandise, and hardware recommendations. Shopify handles checkout and downloads; CivicSpan scopes Dell business hardware separately.
+            Start here for CivicSpan digital SOP templates and Printful merchandise. Shopify handles checkout and downloads; consulting, support, and hardware deployments stay in the Services path.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -57,13 +57,13 @@ export default function ProductsPage() {
               Open Shopify Checkout ↗
             </a>
             <Link href="#products-cart" className="px-8 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300">
-              Browse Shop Categories
+              Browse Products
             </Link>
             <Link
               href="/pillars/technology-lifecycle-management"
               className="px-8 py-3 border border-white/20 text-white hover:bg-white/10 font-bold rounded-lg transition-all duration-300"
             >
-              View Lifecycle Framework
+              View Services Framework
             </Link>
           </div>
         </div>
@@ -72,29 +72,29 @@ export default function ProductsPage() {
       <main className="max-w-7xl mx-auto px-6 pb-24 space-y-20">
         <section className="rounded-[28px] border border-green-500/15 bg-dark-secondary/80 p-8 sm:p-10">
           <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-4">
-            One clear shop path
+            Clear separation
           </p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-            Services stay separate. Purchasable items live here.
+            Shop is for products. Services are scoped work.
           </h2>
           <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-4xl mb-4">
-            The Services page explains CivicSpan consulting and support work. This Shop page points customers to digital SOP templates, Printful merchandise, and curated hardware recommendations without creating a second competing destination. Shopify remains the checkout and file-delivery system.
+            The Services page explains consulting, support, implementation, and hardware deployment work. This Shop page is only for digital SOP templates and merchandise fulfilled through Shopify.
           </p>
           <p className="text-primary text-lg sm:text-xl font-extrabold leading-relaxed max-w-4xl">
-            If it is a paid download or product, it belongs in the shop flow. If it is consulting, it belongs on Services.
+            If it requires discovery, configuration, procurement, deployment, or support, it belongs in Services—not the shop.
           </p>
         </section>
 
         <section className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
           <div>
             <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-4">
-              Recommended Bundle
+              Hardware Scoping
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Building an Engineering Workstation
+              Planning an Engineering Workstation
             </h2>
             <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
-              Need a workstation capable of handling Bentley OpenRoads Designer, ProjectWise Explorer, CAD, GIS, and large infrastructure datasets? Start with a spec review, then quote the hardware with onboarding and support attached.
+              Engineering workstations are not treated like cart items. Start with a spec review, then quote hardware with onboarding, deployment, and support attached.
             </p>
           </div>
 
@@ -116,10 +116,10 @@ export default function ProductsPage() {
         <section id="products-cart">
           <div className="mb-8 rounded-3xl border border-primary/25 bg-primary/10 p-6 sm:p-7 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
             <div>
-              <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">B2B Solutions &amp; Custom Scoping</p>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">Looking for enterprise hardware for your team?</h2>
+              <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Hardware Quotes</p>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">Need business hardware for your team?</h2>
               <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
-                We scope, register, and deploy Dell hardware directly for business clients.
+                We scope, register, and deploy Dell hardware through the Services workflow instead of a generic cart.
               </p>
             </div>
             <Link href="/contact" className="btn shrink-0">
@@ -135,10 +135,10 @@ export default function ProductsPage() {
               Digital Products
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Templates that support operations, not just downloads.
+              Templates that support the Services workflow.
             </h2>
             <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
-              Digital products reinforce CivicSpan&apos;s larger positioning: operational resilience, lifecycle management, documentation, governance, and readiness for modernization.
+              Digital products support operational resilience, lifecycle management, documentation, governance, and modernization readiness without replacing scoped consulting work.
             </p>
           </div>
 
@@ -157,7 +157,7 @@ export default function ProductsPage() {
             Ready to buy or download?
           </h2>
           <p className="max-w-2xl mx-auto mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Explore curated tech accessories, business products, and official merchandise on our online storefront. For enterprise hardware and custom deployments, request a spec review.
+            Explore digital templates and official merchandise on the online storefront. For enterprise hardware, consulting, or custom deployments, request a spec review.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a

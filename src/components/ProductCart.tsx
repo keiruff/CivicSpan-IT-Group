@@ -93,10 +93,10 @@ export default function ProductCart({ products }: Props) {
                 Featured Categories
               </p>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-                Shop Downloads and Merchandise. Scope Hardware Separately.
+                Shop Downloads and Merchandise. Quote Hardware Separately.
               </h2>
               <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-3xl">
-                Use this page as a shop guide for Printful merchandise, Shopify-delivered downloads, and supported hardware categories. Dell hardware stays visible in the catalog, but routes through B2B scoping and custom quotes.
+                Use this page for Printful merchandise and Shopify-delivered downloads. Dell hardware can stay visible for reference, but it routes to a quote because specs, deployment, support, and procurement need review.
               </p>
             </div>
 
@@ -238,8 +238,8 @@ export default function ProductCart({ products }: Props) {
       <aside className="xl:sticky xl:top-28 rounded-3xl border border-green-500/20 bg-slate-950/90 p-6 shadow-xl">
         <div className="flex items-center justify-between gap-4 mb-5">
           <div>
-            <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Shop Shortlist</p>
-            <h2 className="text-2xl font-extrabold text-white">Merch & Downloads</h2>
+            <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">Product Shortlist</p>
+            <h2 className="text-2xl font-extrabold text-white">Downloads & Merch</h2>
           </div>
           <span className="rounded-full border border-green-500/25 bg-primary/10 px-3 py-1 text-primary text-sm font-bold">
             {itemCount} item{itemCount === 1 ? '' : 's'}
@@ -318,12 +318,12 @@ export default function ProductCart({ products }: Props) {
             </div>
 
             <p className="text-neutral-muted text-xs leading-5">
-              Shopify remains the checkout system for merchandise and digital downloads. This shortlist is only for questions, sizing notes, and quote requests before purchase. Dell hardware stays quote-based so specs, deployment, support, and procurement details are validated first.
+              Shopify remains the checkout system for merchandise and digital downloads. This shortlist is only for questions before purchase. Dell hardware stays quote-based so specs, deployment, support, and procurement details are validated first.
             </p>
           </div>
         ) : (
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-neutral-muted text-sm leading-6">
-            Your shortlist is empty. Add Printful merchandise, digital downloads, or accessories here for questions, or use Request a Quote on Dell hardware cards for B2B scoping.
+            Your shortlist is empty. Add Printful merchandise or digital downloads here for questions, or use Request a Quote on Dell hardware cards for scoped procurement.
           </div>
         )}
       </aside>
