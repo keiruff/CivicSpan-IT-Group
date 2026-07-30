@@ -12,6 +12,7 @@ export type Product = {
   recommendedFor: string[]
   whyRecommended: string[]
   price?: string
+  shopifyUrl?: string
 }
 
 const merchandiseWhy = ['Professional brand presentation', 'Useful for events and giveaways', 'Printful print-on-demand fulfillment with no inventory']
@@ -21,6 +22,34 @@ const hardwareWhy = ['Scoped around the client opportunity', 'Designed for deplo
 
 export const products: Product[] = [
   {
+    id: 'case-for-airpods',
+    name: 'Case for AirPods®',
+    category: 'CivicSpan Merchandise',
+    description: 'Impact-resistant protective case for Apple AirPods® with sleek CivicSpan styling.',
+    image: '/images/products/case-for-airpods.webp',
+    fulfillment: 'Available on official Shopify store.',
+    type: 'Print-on-demand',
+    price: '$19.89',
+    shopifyUrl: 'https://h1bg1p-j7.myshopify.com/products/case-for-airpods%C2%AE',
+    rating: 5,
+    recommendedFor: ['AirPods protection', 'Everyday carry', 'Team tech gear'],
+    whyRecommended: merchandiseWhy,
+  },
+  {
+    id: 'clear-case-for-iphone',
+    name: 'Clear Case for iPhone®',
+    category: 'CivicSpan Merchandise',
+    description: 'Durable clear protective case engineered for iPhone® models.',
+    image: '/images/products/clear-case-for-iphone.webp',
+    fulfillment: 'Available on official Shopify store.',
+    type: 'Print-on-demand',
+    price: '$12.19',
+    shopifyUrl: 'https://h1bg1p-j7.myshopify.com/products/clear-case-for-iphone%C2%AE',
+    rating: 5,
+    recommendedFor: ['iPhone protection', 'Field work', 'Team devices'],
+    whyRecommended: merchandiseWhy,
+  },
+  {
     id: 'civicspan-polo-shirt',
     name: 'CivicSpan Polo Shirt',
     category: 'CivicSpan Merchandise',
@@ -28,6 +57,7 @@ export const products: Product[] = [
     image: '/images/products/civicspan-polo-shirt.webp',
     fulfillment: 'Printful print-on-demand item. Colors, sizing, and final pricing can be synced from your Printful catalog.',
     type: 'Print-on-demand',
+    shopifyUrl: 'https://h1bg1p-j7.myshopify.com/collections/all',
     rating: 5,
     recommendedFor: ['Events', 'Client visits', 'Team wear'],
     whyRecommended: merchandiseWhy,

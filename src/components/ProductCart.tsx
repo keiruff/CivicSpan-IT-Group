@@ -207,13 +207,25 @@ export default function ProductCart({ products }: Props) {
                         Request a Quote
                       </a>
                     ) : (
-                      <button
-                        type="button"
-                        onClick={() => addToCart(product.id)}
-                        className="rounded-lg bg-primary px-4 py-2 text-dark font-bold text-sm hover:bg-primary-dark transition-colors"
-                      >
-                        Add to list
-                      </button>
+                      <div className="flex items-center gap-2">
+                        {product.shopifyUrl ? (
+                          <a
+                            href={product.shopifyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-lg bg-primary px-3.5 py-2 text-dark font-bold text-xs sm:text-sm hover:bg-primary-dark transition-colors inline-flex items-center gap-1 shrink-0"
+                          >
+                            Buy on Shopify ↗
+                          </a>
+                        ) : null}
+                        <button
+                          type="button"
+                          onClick={() => addToCart(product.id)}
+                          className="rounded-lg border border-primary/30 bg-primary/10 px-3.5 py-2 text-primary font-bold text-xs sm:text-sm hover:bg-primary/20 transition-colors shrink-0"
+                        >
+                          Add to list
+                        </button>
+                      </div>
                     )}
                   </div>
                 </div>
