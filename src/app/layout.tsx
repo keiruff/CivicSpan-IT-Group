@@ -70,13 +70,14 @@ export default function RootLayout({
         addressCountry: 'US',
       },
       areaServed: ['Fredericksburg VA', 'Richmond VA', 'Northern Virginia', 'Maryland', 'Pennsylvania', 'Mid-Atlantic'],
-      knowsAbout: ['Infrastructure and technology operations', 'Managed infrastructure services', 'Microsoft 365', 'SharePoint', 'Microsoft Teams', 'Intune', 'Entra ID', 'Dell business laptops', 'Endpoint deployment', 'Cloud support', 'Bentley ProjectWise', 'CAD', 'GIS'],
+      knowsAbout: ['Infrastructure and technology operations', 'Managed infrastructure services', 'Microsoft 365', 'SharePoint', 'Microsoft Teams', 'Intune', 'Entra ID', 'Dell business laptops', '[...]
     },
   ]
 
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/favicon-48x48.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <script
           type="application/ld+json"
