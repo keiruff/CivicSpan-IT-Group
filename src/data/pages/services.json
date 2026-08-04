@@ -1,0 +1,41 @@
+{
+  "slug": "services",
+  "title": "Services",
+  "eyebrow": "What we do",
+  "description": "Practical IT support and infrastructure services for businesses across the Mid-Atlantic.",
+  "intro": "Practical IT support and infrastructure services for businesses across the Mid-Atlantic.",
+  "sections": [
+    {
+      "heading": "Infrastructure Managed Services",
+      "body": "Managed services to maintain and scale your core infrastructure, covering monitoring, patching, backups, and on-call support.",
+      "bullets": [
+        "Proactive monitoring and alerting",
+        "Automated patch management",
+        "Disaster recovery planning"
+      ]
+    },
+    {
+      "heading": "Cloud & Microsoft 365 Support",
+      "body": "Migrations, configuration, and operational support for cloud platforms and Microsoft 365 productivity stack.",
+      "bullets": [
+        "Tenant and identity management",
+        "Secure configuration and policy enforcement",
+        "Migration planning and execution"
+      ]
+    },
+    {
+      "heading": "Consulting & Engineering",
+      "body": "Project-based engineering and documentation to modernize environments and improve operational efficiency."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How quickly can we get started?",
+      "answer": "We typically perform an onboarding assessment within the first two weeks and propose a prioritized plan."
+    }
+  ],
+  "related": [
+    { "label": "Contact CivicSpan", "href": "/contact" },
+    { "label": "Capabilities", "href": "/capabilities" }
+  ]
+}
