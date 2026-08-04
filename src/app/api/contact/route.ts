@@ -1,3 +1,4 @@
+import sgMail from '@sendgrid/mail'
 import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
@@ -29,39 +30,18 @@ export async function POST(request: Request) {
 
     if (SENDGRID_API_KEY && SENDGRID_FROM && SENDGRID_TO) {
       try {
-        const payload = {
-          personalizations: [
-            {
-              to: [{ email: SENDGRID_TO }],
-              subject: `Website Contact: ${subject}`,
-            },
-          ],
-          from: { email: SENDGRID_FROM, name: 'CivicSpan Website' },
-          content: [
-            {
-              type: 'text/plain',
-              value: `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}`,
-            },
-          ],
-        }
+        sgMail.setApiKey(SENDGRID_API_KEY)
 
-        const res = await fetch('https://api.sendgrid.com/v3/mail/send', {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${SENDGRID_API_KEY}`,
-            'Content-Type': 'application/json',
+        await sgMail.send({
+          to: SENDGRID_TO,
+          from: {
+            email: SENDGRID_FROM,
+            name: 'CivicSpan Website',
           },
-          body: JSON.stringify(payload),
+          replyTo: email,
+          subject: `Website Contact: ${subject}`,
+          text: `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}`,
         })
-
-        if (!res.ok) {
-          const text = await res.text()
-          console.error('SendGrid error:', res.status, text)
-          return NextResponse.json(
-            { success: false, error: 'Failed to send message via email provider.' },
-            { status: 502 }
-          )
-        }
       } catch (err) {
         console.error('Error sending via SendGrid:', err)
         return NextResponse.json(
