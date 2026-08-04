@@ -22,15 +22,64 @@ export async function POST(request: Request) {
       )
     }
 
-    // Mock processing the email / logging the contact form lead
-    console.log('--- NEW CONTACT INQUIRY ---')
-    console.log(`Date: ${new Date().toISOString()}`)
-    console.log(`Name: ${name}`)
-    console.log(`Email: ${email}`)
-    console.log(`Company: ${company || 'N/A'}`)
-    console.log(`Subject: ${subject}`)
-    console.log(`Message: ${message}`)
-    console.log('---------------------------')
+    // If SENDGRID is configured, send via SendGrid. Otherwise fallback to console logging.
+    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
+    const SENDGRID_FROM = process.env.SENDGRID_FROM
+    const SENDGRID_TO = process.env.SENDGRID_TO || process.env.SENDGRID_FROM
+
+    if (SENDGRID_API_KEY && SENDGRID_FROM && SENDGRID_TO) {
+      try {
+        const payload = {
+          personalizations: [
+            {
+              to: [{ email: SENDGRID_TO }],
+              subject: `Website Contact: ${subject}`,
+            },
+          ],
+          from: { email: SENDGRID_FROM, name: 'CivicSpan Website' },
+          content: [
+            {
+              type: 'text/plain',
+              value: `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}`,
+            },
+          ],
+        }
+
+        const res = await fetch('https://api.sendgrid.com/v3/mail/send', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${SENDGRID_API_KEY}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        })
+
+        if (!res.ok) {
+          const text = await res.text()
+          console.error('SendGrid error:', res.status, text)
+          return NextResponse.json(
+            { success: false, error: 'Failed to send message via email provider.' },
+            { status: 502 }
+          )
+        }
+      } catch (err) {
+        console.error('Error sending via SendGrid:', err)
+        return NextResponse.json(
+          { success: false, error: 'Failed to send message via email provider.' },
+          { status: 502 }
+        )
+      }
+    } else {
+      // Fallback: log to server console (existing behavior)
+      console.log('--- NEW CONTACT INQUIRY (logged only) ---')
+      console.log(`Date: ${new Date().toISOString()}`)
+      console.log(`Name: ${name}`)
+      console.log(`Email: ${email}`)
+      console.log(`Company: ${company || 'N/A'}`)
+      console.log(`Subject: ${subject}`)
+      console.log(`Message: ${message}`)
+      console.log('------------------------------------------')
+    }
 
     return NextResponse.json(
       { success: true, message: 'Message received successfully!' },
