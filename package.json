@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "optimize-images": "python3 optimize_images.py"
   },
   "dependencies": {
     "next": "^14.0.0",
@@ -17,7 +18,7 @@
     "framer-motion": "^10.16.0"
   },
   "devDependencies": {
-    "@types/node": "^20.10.0",
+    "@types-node": "^20.10.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
