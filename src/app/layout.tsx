@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-48x48.svg', type: 'image/svg+xml' },
       { url: '/favicon.png', type: 'image/png' },
     ],
+    apple: '/apple-icon.png',
   },
   openGraph: {
     title: 'CivicSpan IT Group',
@@ -85,8 +85,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon-48x48.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
