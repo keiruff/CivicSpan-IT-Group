@@ -112,15 +112,9 @@ CivicSpan IT Group provides accessible, reliable, and practical technology suppo
 
 ---
 
-## Contributing
-
-Contributions and fixes are welcome. Please open an issue or submit a pull request with a description of the change. For large changes, open an issue first to discuss scope.
-
----
-
 ## Contact
 
-For commercial inquiries or support requests, use the contact form on the website or email: hello@civicspanitgroup.com
+For commercial inquiries or support requests, use the contact form on the website or email: info@civicspanitgroup.com
 
 ---
 
