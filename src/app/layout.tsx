@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   description: 'CivicSpan IT Group helps organizations build, modernize, secure, document, and support infrastructure and technology operations.',
   keywords: 'infrastructure operations, technology operations, managed infrastructure services, ProjectWise support, Microsoft 365 consulting, Dell procurement, endpoint deployment',
   authors: [{ name: 'CivicSpan IT Group' }],
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-48x48.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'CivicSpan IT Group',
     description: 'Infrastructure and technology operations support for ProjectWise, Microsoft 365, Dell endpoints, cloud support, documentation, and governance.',
@@ -77,7 +84,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon-48x48.svg" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon-48x48.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <script
           type="application/ld+json"
