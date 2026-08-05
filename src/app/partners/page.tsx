@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -11,6 +12,8 @@ export const metadata: Metadata = {
 const partnerships = [
   {
     icon: '🖥️',
+    badgeSrc: '/dell-technologies-authorized-partner.svg',
+    badgeAlt: 'Dell Technologies Authorized Partner badge',
     title: 'Dell Technologies Partner',
     body: 'Endpoint procurement, deployment, and lifecycle management for workstations, laptops, and infrastructure hardware, sized for engineering workflows and government-adjacent compliance requirements.',
   },
@@ -87,8 +90,18 @@ export default function PartnersPage() {
                   key={partner.title}
                   className="h-full rounded-2xl border border-green-500/15 bg-dark-secondary/70 p-7 hover:border-primary/40 transition-colors"
                 >
-                  <div className="flex items-start gap-4">
-                    <span className="text-3xl flex-shrink-0">{partner.icon}</span>
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                    {'badgeSrc' in partner ? (
+                      <Image
+                        src={partner.badgeSrc}
+                        alt={partner.badgeAlt}
+                        width={240}
+                        height={70}
+                        className="w-40 sm:w-52 flex-shrink-0 rounded-sm bg-white"
+                      />
+                    ) : (
+                      <span className="text-3xl flex-shrink-0">{partner.icon}</span>
+                    )}
                     <div>
                       <h3 className="text-xl font-bold text-white mb-3">{partner.title}</h3>
                       <p className="text-neutral-muted leading-relaxed">{partner.body}</p>
