@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CookieBanner from '@/components/CookieBanner'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 import Script from "next/script";
 
@@ -139,6 +140,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieBanner />
+        <SpeedInsights />
       </body>
     </html>
   )
