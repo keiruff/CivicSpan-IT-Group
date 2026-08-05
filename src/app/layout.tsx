@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://civicspanitgroup.com/search-thumbnail.png',
-        width: 512,
-        height: 512,
-        alt: 'CivicSpan IT Group search thumbnail',
+        url: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
+        width: 1774,
+        height: 887,
+        alt: 'CivicSpan IT Group logo',
       },
     ],
   },
@@ -85,7 +85,7 @@ export default function RootLayout({
       '@type': 'LocalBusiness',
       name: 'CivicSpan IT Group',
       url: 'https://civicspanitgroup.com/',
-      image: 'https://civicspanitgroup.com/search-thumbnail.png',
+      image: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
       telephone: '+1-540-760-2020',
       email: 'info@civicspanitgroup.com',
       priceRange: '$$',
