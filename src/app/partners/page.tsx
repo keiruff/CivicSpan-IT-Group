@@ -9,11 +9,23 @@ export const metadata: Metadata = {
     'CivicSpan IT Group is an authorized partner across Dell, Epson, Cisco, and TD SYNNEX, giving engineering, government-adjacent, and small business clients procurement, deployment, and support under one accountable vendor of record.',
 }
 
-const partnerships = [
+type Partnership = {
+  icon: string
+  title: string
+  body: string
+  badge?: {
+    src: string
+    alt: string
+  }
+}
+
+const partnerships: Partnership[] = [
   {
     icon: '🖥️',
-    badgeSrc: '/dell-technologies-authorized-partner.svg',
-    badgeAlt: 'Dell Technologies Authorized Partner badge',
+    badge: {
+      src: '/dell-technologies-authorized-partner.svg',
+      alt: 'Dell Technologies Authorized Partner badge',
+    },
     title: 'Dell Technologies Partner',
     body: 'Endpoint procurement, deployment, and lifecycle management for workstations, laptops, and infrastructure hardware, sized for engineering workflows and government-adjacent compliance requirements.',
   },
@@ -91,10 +103,10 @@ export default function PartnersPage() {
                   className="h-full rounded-2xl border border-green-500/15 bg-dark-secondary/70 p-7 hover:border-primary/40 transition-colors"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                    {partner.badgeSrc ? (
+                    {partner.badge ? (
                       <Image
-                        src={partner.badgeSrc}
-                        alt={partner.badgeAlt ?? partner.title}
+                        src={partner.badge.src}
+                        alt={partner.badge.alt}
                         width={240}
                         height={70}
                         className="w-40 sm:w-52 flex-shrink-0 rounded-sm bg-white"
