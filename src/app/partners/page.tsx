@@ -3,7 +3,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Vendor Partnerships & Procurement Authorization | CivicSpan IT Group',
+  title: 'Authorized Vendor Partnerships for Procurement | CivicSpan IT Group',
   description:
     'CivicSpan IT Group is an authorized partner across Dell, Epson, Cisco, and TD SYNNEX, giving engineering, government-adjacent, and small business clients procurement, deployment, and support under one accountable vendor of record.',
 }
@@ -65,7 +65,7 @@ export default function PartnersPage() {
   return (
     <>
       <Hero
-        title="Vendor Partnerships & Procurement Authorization"
+        title="Authorized Vendor Partnerships for Procurement"
         description="One vendor of record. Four authorized supply chains."
       />
 

@@ -3,8 +3,8 @@ import Link from 'next/link'
 import Hero from '@/components/Hero'
 
 export const metadata: Metadata = {
-  title: 'Why CivicSpan | Reliable Infrastructure & Technology Operations',
-  description: 'CivicSpan’s philosophy: technology is not the goal. Reliable operations are. We help organizations build, modernize, secure, document, and support the systems that keep work moving.',
+  title: 'Why CivicSpan IT Group | Documented IT Operations Support',
+  description: 'See how CivicSpan IT Group delivers documented IT operations support for ProjectWise, Microsoft 365, Dell procurement, and infrastructure teams that need accountable help.',
 }
 
 const principles = [
@@ -39,7 +39,7 @@ export default function WhyCivicSpanPage() {
   return (
     <>
       <Hero
-        title="Why CivicSpan"
+        title="Why CivicSpan IT Group"
         description="Technology is not the goal. Reliable operations are."
       />
 

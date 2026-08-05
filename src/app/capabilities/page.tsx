@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'Capabilities Statement for IT Support and Procurement | CivicSpan IT Group',
+  description: 'Review CivicSpan IT Group capabilities for ProjectWise support, help desk operations, documentation, cloud systems, digital services, and government-adjacent procurement.',
+}
 
 const companyHighlights = [
   {
@@ -89,7 +95,7 @@ export default function CapabilitiesPage() {
   return (
     <>
       <Hero
-        title="Our Capabilities"
+        title="IT Support and Procurement Capabilities Statement"
         description="Practical IT support, engineering technology assistance, and digital solutions for infrastructure-focused teams."
       />
 
@@ -103,9 +109,9 @@ export default function CapabilitiesPage() {
                 Capabilities Statement
               </p>
 
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-8">
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-8">
                 Modern IT support for infrastructure teams that cannot afford downtime.
-              </h1>
+              </h2>
 
               <p className="text-blue-100 text-lg leading-8 max-w-3xl">
                 CivicSpan IT Group bridges engineering technology, user support, documentation,
