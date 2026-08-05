@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://civicspanitgroup.com',
   },
+  icons: {
+    icon: [{ url: '/favicon-48x48.svg', type: 'image/svg+xml', sizes: '48x48' }],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: 'CivicSpan IT Group | Engineering Technology & Government IT Operations',
     description: 'Accountable technical execution for organizations that cannot afford downtime. Specialized Bentley, ProjectWise, and infrastructure support.',
@@ -36,6 +40,23 @@ export const metadata: Metadata = {
     siteName: 'CivicSpan IT Group',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://civicspanitgroup.com/search-thumbnail.png',
+        width: 512,
+        height: 512,
+        alt: 'CivicSpan IT Group search thumbnail',
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'standard',
+    },
   },
 }
 
@@ -64,7 +85,7 @@ export default function RootLayout({
       '@type': 'LocalBusiness',
       name: 'CivicSpan IT Group',
       url: 'https://civicspanitgroup.com/',
-      image: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
+      image: 'https://civicspanitgroup.com/search-thumbnail.png',
       telephone: '+1-540-760-2020',
       email: 'info@civicspanitgroup.com',
       priceRange: '$$',
@@ -92,8 +113,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" href="/favicon-48x48.svg" type="image/svg+xml" sizes="48x48" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <script
           type="application/ld+json"
