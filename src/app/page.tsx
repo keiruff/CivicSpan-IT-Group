@@ -122,7 +122,7 @@ export default function HomePage() {
             CivicSpan is an authorized partner across the vendors engineering and government-adjacent teams already rely on — Dell, Epson, Cisco, and TD SYNNEX — so procurement, deployment, and support stay under one accountable vendor of record instead of scattered across resellers.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
             {[
               { icon: '🖥️', title: 'Dell Technologies Partner', body: 'Endpoint procurement & deployment' },
               { icon: '🖨️', title: 'Epson Authorized Partner', body: 'Print, scan & imaging hardware' },
@@ -138,6 +138,10 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <Link href="/partners" className="inline-flex text-primary hover:text-primary-light font-bold text-sm transition-colors">
+            View vendor partnerships and procurement authorization →
+          </Link>
         </div>
       </section>
 
