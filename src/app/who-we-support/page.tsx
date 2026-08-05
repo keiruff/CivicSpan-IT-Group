@@ -1,4 +1,10 @@
+import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
+
+export const metadata: Metadata = {
+  title: 'IT Support for Engineering and Government-Adjacent Teams | CivicSpan IT Group',
+  description: 'CivicSpan supports engineering environments, government-adjacent teams, nonprofits, and small businesses with ProjectWise, Microsoft 365, Dell deployment, and documented IT operations.',
+}
 
 const supportTypes = [
   {
@@ -37,7 +43,7 @@ export default function WhoWeSupportPage() {
   return (
     <>
       <Hero
-        title="Who We Support"
+        title="IT Support for Engineering and Government-Adjacent Teams"
         description="Support for engineering, government-adjacent, infrastructure, nonprofit, and small-business teams that need accountable technology help."
       />
 

@@ -1,7 +1,12 @@
+import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
 import Link from 'next/link'
 
+export const metadata: Metadata = {
+  title: 'ProjectWise and IT Support Services in Fredericksburg | CivicSpan IT Group',
+  description: 'Get ProjectWise support, Microsoft 365 consulting, Dell procurement, endpoint deployment, and documented IT operations support from CivicSpan IT Group. Start a service conversation today.',
+}
 
 const operationsPillars = [
   {
@@ -222,6 +227,18 @@ const servicesJsonLd = {
       name: businessName,
       url: siteUrl,
       image: `${siteUrl}/civicspan-it-group-logo.webp`,
+      telephone: '+1-540-760-2020',
+      email: 'info@civicspanitgroup.com',
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+1-540-760-2020',
+          email: 'info@civicspanitgroup.com',
+          contactType: 'sales and support',
+          areaServed: ['Fredericksburg VA', 'Richmond VA', 'Northern Virginia', 'Maryland', 'Pennsylvania'],
+          availableLanguage: 'English',
+        },
+      ],
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Fredericksburg',
@@ -345,8 +362,8 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
       />
       <Hero
-        title="Infrastructure & Technology Operations"
-        description="CivicSpan helps organizations build, modernize, secure, document, and support the technology operations that keep the business running."
+        title="ProjectWise and IT Support Services in Fredericksburg"
+        description="CivicSpan helps engineering, government-adjacent, and small business teams build, modernize, secure, document, and support the technology operations that keep work moving."
       />
 
       <section className="py-20 sm:py-28 border-b border-white/5" id="infrastructure-technology-operations">

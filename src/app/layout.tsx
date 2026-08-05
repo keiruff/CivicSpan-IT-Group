@@ -12,8 +12,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'CivicSpan IT Group | ProjectWise, Bentley & Engineering Systems Support',
-  description: 'CivicSpan IT Group helps organizations build, modernize, secure, document, and support infrastructure and technology operations.',
+  title: 'ProjectWise Support in Fredericksburg | CivicSpan IT Group',
+  description: 'CivicSpan IT Group provides ProjectWise support, Microsoft 365 consulting, Dell procurement, and technology operations for Fredericksburg and Mid-Atlantic teams.',
   keywords: 'infrastructure operations, technology operations, managed infrastructure services, ProjectWise support, Microsoft 365 consulting, Dell procurement, endpoint deployment',
   authors: [{ name: 'CivicSpan IT Group' }],
   icons: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'CivicSpan IT Group',
-    description: 'Infrastructure and technology operations support for ProjectWise, Microsoft 365, Dell endpoints, cloud support, documentation, and governance.',
+    description: 'ProjectWise support, Microsoft 365 consulting, Dell procurement, cloud support, documentation, and technology operations for Fredericksburg and Mid-Atlantic teams.',
     type: 'website',
     url: 'https://civicspanitgroup.com/',
     images: [
@@ -70,6 +70,19 @@ export default function RootLayout({
       name: 'CivicSpan IT Group',
       url: 'https://civicspanitgroup.com/',
       image: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
+      telephone: '+1-540-760-2020',
+      email: 'info@civicspanitgroup.com',
+      priceRange: '$$',
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+1-540-760-2020',
+          email: 'info@civicspanitgroup.com',
+          contactType: 'sales and support',
+          areaServed: ['Fredericksburg VA', 'Richmond VA', 'Northern Virginia', 'Maryland', 'Pennsylvania'],
+          availableLanguage: 'English',
+        },
+      ],
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Fredericksburg',
