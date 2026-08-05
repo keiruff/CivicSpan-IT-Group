@@ -291,6 +291,117 @@ const servicesJsonLd = {
   ],
 }
 
+const advancedCapabilities = [
+  {
+    title: 'Heavy-Duty Cybersecurity',
+    subtitle: 'Engineering IP Protection & Zero-Trust CAD Environments',
+    description:
+      'We protect the core assets of infrastructure firms. Instead of standard corporate antivirus, we secure multi-agency collaboration spaces, enforce zero-trust identity controls around heavy engineering file repositories, and deploy strict data-loss prevention to keep proprietary CAD models and BIM data locked down.',
+    icon: 'shield',
+  },
+  {
+    title: 'Defensive Network Architecture',
+    subtitle: 'High-Availability Edge Operations for Heavy Database Streams',
+    description:
+      "Engineers working remotely or on-site cannot afford latency when pulling from massive database clusters. We architect encrypted SD-WAN routing pipelines and segmented networks that isolate production ProjectWise and SQL traffic, ensuring robust perimeter defense without sacrificing synchronization speed.",
+    icon: 'network',
+  },
+  {
+    title: 'Enterprise-Scale Modernization',
+    subtitle: 'Cloud Migration Pipelines for Complex Engineering Apps',
+    description:
+      'Aging on-premise infrastructure should not create operational bottlenecks. We manage the secure migration of legacy database servers and heavy applications into unified hybrid cloud environments across Azure and AWS. From Windows 11 enterprise readiness to seamless workspace path configuration, we eliminate physical hardware risks.',
+    icon: 'refresh',
+  },
+  {
+    title: 'Strategic Risk Management',
+    subtitle: 'Information Governance, CMDB Auditing & Business Continuity',
+    description:
+      'Firms handling major transportation and public works projects face immense liability under state and federal records acts. We establish rigorous configuration management, build precise data-audit trails to verify access history, and deliver immutable backup architectures to keep operations resilient during an event.',
+    icon: 'file-check',
+  },
+]
+
+function AdvancedCapabilityIcon({ icon }: { icon: string }) {
+  const iconClasses = 'h-6 w-6 text-primary'
+
+  if (icon === 'network') {
+    return (
+      <svg className={iconClasses} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect width="6" height="6" x="3" y="3" rx="1" />
+        <rect width="6" height="6" x="15" y="3" rx="1" />
+        <rect width="6" height="6" x="9" y="15" rx="1" />
+        <path d="M6 9v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9" />
+        <path d="M12 13v2" />
+      </svg>
+    )
+  }
+
+  if (icon === 'refresh') {
+    return (
+      <svg className={iconClasses} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+        <path d="M3 21v-5h5" />
+        <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+        <path d="M16 8h5V3" />
+      </svg>
+    )
+  }
+
+  if (icon === 'file-check') {
+    return (
+      <svg className={iconClasses} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <path d="M14 2v6h6" />
+        <path d="m9 15 2 2 4-4" />
+      </svg>
+    )
+  }
+
+  return (
+    <svg className={iconClasses} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  )
+}
+
+function AdvancedCapabilities() {
+  return (
+    <section className="py-20 sm:py-28 border-b border-white/5 bg-slate-950/35" id="advanced-capabilities">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mb-12">
+          <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-3">
+            Advanced Capabilities
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+            Enterprise security and governance, built for engineering environments.
+          </h2>
+          <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
+            Accountable technical execution designed to protect high-stakes infrastructure workflows from external disruption and compliance risk.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+          {advancedCapabilities.map((item) => (
+            <article
+              key={item.title}
+              className="rounded-2xl border border-green-500/15 bg-dark-secondary/85 p-7 sm:p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-green-500/10"
+            >
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-green-500/20 bg-primary/10">
+                <AdvancedCapabilityIcon icon={item.icon} />
+              </div>
+              <h3 className="text-xl font-bold text-white">{item.title}</h3>
+              <p className="mt-1 mb-4 text-sm font-semibold text-primary">{item.subtitle}</p>
+              <p className="text-sm leading-7 text-neutral-muted">{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 const representativeEngagements = [
   {
     title: 'ProjectWise Workspace Health Assessment',
@@ -417,6 +528,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <AdvancedCapabilities />
 
       <section className="py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
