@@ -1,8 +1,8 @@
 # CivicSpan IT Group Website
 
-Marketing website for CivicSpan IT Group, a Virginia-based technology support business providing practical IT support, digital solutions, documentation, workflow assistance, and infrastructure-focused technology support for businesses, nonprofits, and engineering environments.
+Marketing website for CivicSpan IT Group, a Virginia-based technology support business providing practical IT support, digital solutions, documentation, workflow assistance, and infrastructure-focused services for small and medium-sized organizations.
 
-Built with [Next.js](https://nextjs.org/) (App Router), React, TypeScript, and Tailwind CSS.
+Built with Next.js (App Router), React, TypeScript, and Tailwind CSS.
 
 ---
 
@@ -67,9 +67,7 @@ npm run dev
 
 Then visit:
 
-```text
 http://localhost:3000
-```
 
 Other useful commands:
 
@@ -82,53 +80,50 @@ npm run type-check  # Run the TypeScript compiler without emitting output
 
 ---
 
-## Technologies Used
+## Technologies
 
 - Next.js
 - React
 - TypeScript
 - Tailwind CSS
-- Python (image optimization)
-- Git
-- GitHub
+- Python (image optimization helper)
+- Git / GitHub
 - Vercel
 
 ---
 
 ## Deployment
 
-This website is deployed using:
+This website is deployed using GitHub and Vercel. Changes pushed to the default branch trigger automated deployments.
 
-- GitHub
-- Vercel
-
-Changes pushed to the main branch automatically trigger deployment updates.
+If you need to update environment variables or Vercel settings, use the Vercel dashboard for the project.
 
 ---
 
 ## Performance Optimization
 
-Image optimization for assets in `public/` is handled using:
-
-```text
-optimize_images.py
-```
-
-This script compresses and optimizes image assets to improve:
-
-- Load speed
-- Mobile responsiveness
-- Lighthouse performance scores
-- Largest Contentful Paint (LCP)
+Image optimization for assets in `public/` is handled using the `optimize_images.py` script. Run it locally before committing large images to reduce bundle size and improve Lighthouse scores.
 
 ---
 
 ## Purpose
 
-CivicSpan IT Group was built to provide accessible, reliable, and practical technology support with a focus on operational efficiency, infrastructure environments, and real-world business technology needs.
+CivicSpan IT Group provides accessible, reliable, and practical technology support with a focus on operational efficiency, infrastructure environments, and real-world business technology needs.
 
 ---
 
-## License
+## Contributing
+
+Contributions and fixes are welcome. Please open an issue or submit a pull request with a description of the change. For large changes, open an issue first to discuss scope.
+
+---
+
+## Contact
+
+For commercial inquiries or support requests, use the contact form on the website or email: hello@civicspanitgroup.com
+
+---
+
+## License / Copyright
 
 © 2026 CivicSpan IT Group. All rights reserved.
