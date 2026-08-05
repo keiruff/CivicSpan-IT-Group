@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     canonical: 'https://civicspanitgroup.com',
   },
   icons: {
-    icon: [{ url: '/favicon-48x48.svg', type: 'image/svg+xml', sizes: '48x48' }],
+    icon: [{ url: '/favicon.png', type: 'image/png', sizes: '1254x1254' }],
     apple: '/apple-icon.png',
   },
   openGraph: {
@@ -114,7 +114,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon-48x48.svg" type="image/svg+xml" sizes="48x48" />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="1254x1254" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <script
           type="application/ld+json"
