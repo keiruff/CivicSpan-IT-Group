@@ -91,10 +91,10 @@ export default function PartnersPage() {
                   className="h-full rounded-2xl border border-green-500/15 bg-dark-secondary/70 p-7 hover:border-primary/40 transition-colors"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                    {'badgeSrc' in partner ? (
+                    {partner.badgeSrc ? (
                       <Image
                         src={partner.badgeSrc}
-                        alt={partner.badgeAlt}
+                        alt={partner.badgeAlt ?? partner.title}
                         width={240}
                         height={70}
                         className="w-40 sm:w-52 flex-shrink-0 rounded-sm bg-white"
