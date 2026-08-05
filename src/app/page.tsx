@@ -65,7 +65,7 @@ export default function HomePage() {
           </p>
 
           <p className="text-base sm:text-lg md:text-xl text-neutral-light max-w-3xl leading-relaxed mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-            CivicSpan helps infrastructure, engineering, government, nonprofit, and small business teams improve the technology they rely on every day — from deployment and modernization to documentation and long-term operational support.
+            CivicSpan helps infrastructure, engineering, government, nonprofit, and small business teams improve the technology they rely on every day, from deployment and modernization to documentation and long-term operational support.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -91,7 +91,7 @@ export default function HomePage() {
           CivicSpan helps organizations operate and modernize the technology that keeps their business running.
         </p>
         <p className="text-neutral-muted text-xs sm:text-sm text-center mb-6">
-          Headquartered in Fredericksburg, Virginia — serving clients across the Mid-Atlantic region.
+          Headquartered in Fredericksburg, Virginia, serving clients across the Mid-Atlantic region.
         </p>
 
         <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
@@ -119,7 +119,7 @@ export default function HomePage() {
             Multi-Vendor Procurement, One Point of Contact
           </h2>
           <p className="text-neutral-light text-sm sm:text-base leading-relaxed mb-6">
-            CivicSpan is an authorized partner across the vendors engineering and government-adjacent teams already rely on — Dell, Epson, Cisco, and TD SYNNEX — so procurement, deployment, and support stay under one accountable vendor of record instead of scattered across resellers.
+            CivicSpan is an authorized partner across the vendors engineering and government-adjacent teams already rely on, Dell, Epson, Cisco, and TD SYNNEX, so procurement, deployment, and support stay under one accountable vendor of record instead of scattered across resellers.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
@@ -319,11 +319,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why CivicSpan — enriched 2-column */}
+      {/* Why CivicSpan, enriched 2-column */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <div className="rounded-3xl border border-green-500/15 bg-dark-secondary/60 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-            {/* Left column — headline */}
+            {/* Left column, headline */}
             <div className="p-10 sm:p-14 border-b md:border-b-0 md:border-r border-white/5 flex flex-col justify-center">
               <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-3">
                 Why CivicSpan
@@ -336,7 +336,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Right column — differentiators */}
+            {/* Right column, differentiators */}
             <div className="p-10 sm:p-14 space-y-6">
               {[
                 { icon: '⚡', title: 'Fast, Direct Communication', body: 'No ticket maze. You reach a real person who understands your environment.' },
@@ -357,14 +357,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Who We Support — enriched cards */}
+      {/* Who We Support, enriched cards */}
       <section className="py-20 px-6 max-w-7xl mx-auto text-center border-t border-white/5">
         <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-2">Clients</p>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
           Who We Support
         </h2>
         <p className="text-neutral-muted text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-12">
-          CivicSpan leads with engineering environments where access, permissions, procurement requirements, and accountability matter — then supports the surrounding digital operations.
+          CivicSpan leads with engineering environments where access, permissions, procurement requirements, and accountability matter, then supports the surrounding digital operations.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 text-left">

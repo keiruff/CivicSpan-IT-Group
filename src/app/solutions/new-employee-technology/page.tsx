@@ -31,7 +31,7 @@ export default function NewEmployeeTechnologyPackage() {
     <>
       <Hero
         title="New Employee Technology Package"
-        description="Onboard new hires with a fully configured, secure workstation — ready to work on Day One."
+        description="Onboard new hires with a fully configured, secure workstation, ready to work on Day One."
       />
 
       <main className="relative overflow-hidden py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
@@ -48,7 +48,7 @@ export default function NewEmployeeTechnologyPackage() {
                 A new hire&apos;s first week sets the tone for their entire experience. Nothing undermines confidence faster than spending it waiting on a laptop that won&apos;t connect, accounts that aren&apos;t active, or emails that don&apos;t work.
               </p>
               <p className="text-blue-100 leading-7 mt-4 text-[1.05rem]">
-                CivicSpan IT Group delivers a turnkey onboarding package — hardware configured, accounts provisioned, security policies applied, and applications installed — so your new employee walks in ready to contribute on Day One.
+                CivicSpan IT Group delivers a turnkey onboarding package, hardware configured, accounts provisioned, security policies applied, and applications installed, so your new employee walks in ready to contribute on Day One.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export default function NewEmployeeTechnologyPackage() {
               <div className="border-t border-white/5 pt-6 mb-8">
                 <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-3">What Happens Next</h4>
                 <ol className="space-y-3">
-                  {["Request a quote & describe your needs", "We schedule a discovery call", "Scope confirmed — we get to work"].map((step, i) => (
+                  {["Request a quote & describe your needs", "We schedule a discovery call", "Scope confirmed, we get to work"].map((step, i) => (
                     <li key={i} className="flex items-start gap-3 text-xs text-slate-300">
                       <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/15 border border-primary/30 text-primary font-bold text-[10px] flex items-center justify-center">{i + 1}</span>
                       <span>{step}</span>
