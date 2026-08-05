@@ -13,10 +13,23 @@ export function generateMetadata({ params }: Props): Metadata {
   const page = findLocation(params.slug)
   if (!page) return {}
 
+  const canonical = `${siteUrl}/locations/${page.slug}`
+
   return {
-    title: `${page.title} | CivicSpan IT Group`,
-    description: page.description,
-    alternates: { canonical: `${siteUrl}/locations/${page.slug}` },
+    title: page.metadata?.title ?? `${page.title} | CivicSpan IT Group`,
+    description: page.metadata?.description ?? page.description,
+    keywords: page.metadata?.keywords,
+    alternates: { canonical },
+    openGraph: page.metadata?.openGraph
+      ? {
+          title: page.metadata.openGraph.title,
+          description: page.metadata.openGraph.description,
+          url: page.metadata.openGraph.url ?? canonical,
+          siteName: 'CivicSpan IT Group',
+          locale: 'en_US',
+          type: 'website',
+        }
+      : undefined,
   }
 }
 

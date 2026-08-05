@@ -7,6 +7,16 @@ export type ContentPage = {
   sections: { heading: string; body: string; bullets?: string[] }[]
   faqs?: { question: string; answer: string }[]
   related: { label: string; href: string }[]
+  metadata?: {
+    title?: string
+    description?: string
+    keywords?: string[]
+    openGraph?: {
+      title: string
+      description: string
+      url?: string
+    }
+  }
 }
 
 export const siteUrl = 'https://civicspanitgroup.com'
@@ -520,15 +530,36 @@ export const locationPages: ContentPage[] = [
   },
   {
     slug: 'it-consulting-richmond-va',
-    title: 'IT Consulting in Richmond, VA',
+    title: 'ProjectWise Support & Engineering IT in Richmond, VA',
     eyebrow: 'Richmond VA',
-    description: 'IT consulting for Richmond-area small businesses, nonprofits, public-sector vendors, and infrastructure-focused teams.',
-    intro: 'CivicSpan supports Richmond-area organizations with Microsoft 365, device deployment, workflow cleanup, documentation, and practical technical consulting.',
+    description: 'Specialized ProjectWise administration, heavy-duty cybersecurity, and enterprise software modernization for Richmond transportation, engineering, and government-adjacent teams.',
+    intro: 'CivicSpan supports Richmond-area transportation, engineering, and government-adjacent organizations with ProjectWise operations, secure modernization, workflow cleanup, documentation, and practical technical consulting.',
+    metadata: {
+      title: 'ProjectWise Support & Engineering IT | Richmond, VA | CivicSpan IT Group',
+      description: 'CivicSpan IT Group delivers specialized ProjectWise administration, heavy-duty cybersecurity, and enterprise software modernization for Richmond transportation, engineering, and government-adjacent teams.',
+      keywords: [
+        'ProjectWise support Richmond VA',
+        'Richmond engineering IT operations',
+        'VDOT consultant IT support Virginia',
+        'Bentley software specialist Richmond',
+        'SWaM certified IT vendor Richmond',
+        'Central Virginia CAD workstation support',
+        'Government contractor network defense Richmond',
+        'Infrastructure data governance Central VA',
+      ],
+      openGraph: {
+        title: 'Richmond Engineering IT & ProjectWise Operations | CivicSpan',
+        description: 'Accountable technical execution and secure cloud modernizations for infrastructure firms and state agency partners in Richmond, VA.',
+        url: 'https://civicspanitgroup.com/locations/it-consulting-richmond-va',
+      },
+    },
     sections: [
-      { heading: 'Consulting areas', body: 'We help assess current systems, clean up workflows, improve documentation, and support Microsoft and Dell environments.', bullets: ['Microsoft 365 tenant review', 'SharePoint and Teams structure', 'Laptop standards', 'Process documentation', 'User support planning'] },
+      { heading: 'Consulting areas', body: 'We help assess current systems, clean up workflows, improve documentation, and support Microsoft, Dell, Bentley, and ProjectWise environments.', bullets: ['ProjectWise administration support', 'Bentley workflow troubleshooting', 'Microsoft 365 tenant review', 'SharePoint and Teams structure', 'CAD workstation standards', 'Process documentation', 'User support planning'] },
+      { heading: 'Richmond regional fit', body: 'This page is built for Central Virginia infrastructure teams, transportation partners, public-sector vendors, and engineering firms that need a technical partner who understands uptime, procurement, and documentation.' },
       { heading: 'Regional delivery', body: 'Support can be remote-first with scheduled onsite coordination when a project requires local presence.' },
     ],
     related: [
+      { label: 'ProjectWise Support Virginia', href: '/locations/projectwise-support-virginia' },
       { label: 'SharePoint Consulting', href: '/topics/sharepoint-consulting' },
       { label: 'Dell Laptop Deployment Services', href: '/topics/dell-laptop-deployment-services' },
       { label: 'Contact', href: '/contact' },
@@ -584,15 +615,36 @@ export const locationPages: ContentPage[] = [
   },
   {
     slug: 'microsoft-365-northern-virginia',
-    title: 'Microsoft 365 Support in Northern Virginia',
-    eyebrow: 'Northern Virginia Microsoft 365',
-    description: 'Microsoft 365 setup, migration, SharePoint, Teams, Intune, and Entra ID support for Northern Virginia organizations.',
-    intro: 'CivicSpan supports Northern Virginia organizations that need practical Microsoft 365 consulting, migration planning, and user-ready documentation.',
+    title: 'Enterprise Engineering IT & Network Defense in Northern Virginia',
+    eyebrow: 'Northern Virginia Engineering IT',
+    description: 'Heavy-duty cybersecurity, ProjectWise database administration, hybrid cloud migrations, and Microsoft 365 support for federal, municipal, and infrastructure engineering teams in Northern Virginia.',
+    intro: 'CivicSpan supports Northern Virginia organizations that need enterprise engineering IT operations, zero-trust CAD environments, ProjectWise administration, hybrid cloud modernization, and user-ready documentation.',
+    metadata: {
+      title: 'Enterprise Engineering IT & Network Defense | Northern Virginia | CivicSpan',
+      description: 'CivicSpan IT Group provides heavy-duty cybersecurity, ProjectWise database administration, and hybrid cloud migrations for federal, municipal, and infrastructure engineering teams in NoVA.',
+      keywords: [
+        'Northern Virginia engineering IT support',
+        'ProjectWise administration NoVA',
+        'Government contractor cybersecurity Virginia',
+        'Bentley application specialist Northern VA',
+        'eVA registered procurement partner NoVA',
+        'Zero trust CAD environments Northern Virginia',
+        'NoVA infrastructure strategic risk management',
+        'Defense-grade network defense Virginia',
+      ],
+      openGraph: {
+        title: 'Northern Virginia Enterprise IT & Infrastructure Security | CivicSpan',
+        description: 'High-availability edge operations and zero-trust engineering environments for federal and municipal contractors in Northern Virginia.',
+        url: 'https://civicspanitgroup.com/locations/microsoft-365-northern-virginia',
+      },
+    },
     sections: [
-      { heading: 'Microsoft 365 services', body: 'We support email migration, SharePoint structure, Teams rollout, Intune device management, and Entra ID access cleanup.', bullets: ['Microsoft 365 migration', 'SharePoint consulting', 'Teams deployment', 'Intune setup', 'Entra ID review'] },
-      { heading: 'Who we help', body: 'Small businesses, nonprofits, public-sector vendors, and infrastructure-focused teams that need secure collaboration without unnecessary complexity.' },
+      { heading: 'Engineering IT and Microsoft 365 services', body: 'We support secure collaboration, ProjectWise administration, SharePoint structure, Teams rollout, Intune device management, Entra ID access cleanup, and hybrid cloud migration planning.', bullets: ['ProjectWise administration', 'Zero-trust CAD environment planning', 'Microsoft 365 migration', 'SharePoint consulting', 'Teams deployment', 'Intune setup', 'Entra ID review'] },
+      { heading: 'Who we help', body: 'Federal-adjacent vendors, municipal partners, engineering firms, nonprofits, and infrastructure-focused teams that need secure collaboration without unnecessary complexity.' },
+      { heading: 'Security and modernization focus', body: 'Northern Virginia clients often need network defense, identity controls, risk documentation, and hybrid cloud planning that can support regulated or procurement-sensitive environments.' },
     ],
     related: [
+      { label: 'ProjectWise Support Virginia', href: '/locations/projectwise-support-virginia' },
       { label: 'Microsoft 365 Migration Services', href: '/topics/microsoft-365-migration-services' },
       { label: 'Entra ID Consulting', href: '/topics/entra-id-consulting' },
       { label: 'Contact', href: '/contact' },
