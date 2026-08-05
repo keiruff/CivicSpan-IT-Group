@@ -3,8 +3,8 @@ import Hero from '@/components/Hero'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Capabilities Statement for IT Support and Procurement | CivicSpan IT Group',
-  description: 'Review CivicSpan IT Group capabilities for ProjectWise support, help desk operations, documentation, cloud systems, digital services, and government-adjacent procurement.',
+  title: 'Capabilities Statement for IT Support, Security, and Procurement | CivicSpan IT Group',
+  description: 'Review CivicSpan IT Group capabilities for engineering technology support, cybersecurity, modernization, governance, and authorized procurement through Dell, Epson, Cisco, and TD SYNNEX.',
 }
 
 const companyHighlights = [
@@ -38,42 +38,92 @@ const companyHighlights = [
   },
 ]
 
+const procurementPartners = [
+  {
+    icon: '🖥️',
+    title: 'Dell Technologies Partner',
+    body: 'Endpoint procurement, deployment, and lifecycle management for laptops, workstations, and infrastructure hardware sized for engineering workflows.',
+  },
+  {
+    icon: '🖨️',
+    title: 'Epson Authorized Partner',
+    body: 'Print, scan, and imaging hardware procurement and support, including production-grade equipment for engineering and design environments.',
+  },
+  {
+    icon: '🌐',
+    title: 'Cisco Partner',
+    body: 'Networking and infrastructure hardware for secure office deployments, segmented networks, and reliable connectivity across demanding environments.',
+  },
+  {
+    icon: '📦',
+    title: 'TD SYNNEX Authorized Reseller',
+    body: 'Broad-line distribution access across thousands of manufacturers so clients can source more technology through one accountable vendor of record.',
+  },
+]
+
+const advancedCapabilities = [
+  {
+    title: 'Heavy-Duty Cybersecurity',
+    subtitle: 'Engineering IP Protection & Zero-Trust CAD Environments',
+    description:
+      'Protection for the core assets of infrastructure firms: multi-agency collaboration spaces, zero-trust identity controls around engineering repositories, and strict data-loss prevention for proprietary CAD models and BIM data.',
+  },
+  {
+    title: 'Defensive Network Architecture',
+    subtitle: 'High-Availability Edge Operations for Heavy Database Streams',
+    description:
+      'Encrypted SD-WAN routing pipelines and segmented networks that isolate production ProjectWise and SQL traffic while supporting fast synchronization for remote and on-site engineering teams.',
+  },
+  {
+    title: 'Enterprise-Scale Modernization',
+    subtitle: 'Cloud Migration Pipelines for Complex Engineering Apps',
+    description:
+      'Secure migration of legacy database servers and heavy applications into unified hybrid cloud environments, with Windows 11 readiness and workspace path configuration handled as part of the transition.',
+  },
+  {
+    title: 'Strategic Risk Management',
+    subtitle: 'Information Governance, CMDB Auditing & Business Continuity',
+    description:
+      'Configuration management, data-audit trails, access-history verification, and resilient backup planning for firms carrying records, continuity, and public works liability.',
+  },
+]
+
 const coreCapabilities = [
   {
     number: '01',
-    title: 'ProjectWise & Bentley Support',
+    title: 'Engineering Technology Operations',
     description:
-      'User assistance, troubleshooting, onboarding support, and workflow familiarity across Bentley-centered environments.',
+      'ProjectWise, Bentley, CAD, GIS, permissions, onboarding, and production workflow support for teams that cannot afford tool downtime.',
   },
   {
     number: '02',
-    title: 'Help Desk Operations',
+    title: 'Cybersecurity & Identity Controls',
     description:
-      'Responsive technical support for access issues, software questions, installation needs, and everyday user blockers.',
+      'Security hardening, access review, zero-trust planning, and data-loss prevention around engineering files and collaboration spaces.',
   },
   {
     number: '03',
-    title: 'Workflow Improvement',
+    title: 'Network & Infrastructure Architecture',
     description:
-      'Process cleanup, documentation, handoff clarity, and repeatable support patterns that reduce operational friction.',
+      'Segmented networks, SD-WAN planning, reliable connectivity, and infrastructure designs that protect production data streams.',
   },
   {
     number: '04',
-    title: 'Cloud & Systems Support',
+    title: 'Cloud & Systems Modernization',
     description:
-      'Practical support for cloud storage, business systems, access structure, and modern digital workspaces.',
+      'Microsoft 365, Azure, hybrid cloud, Windows 11 readiness, server migration, and workspace modernization for complex environments.',
   },
   {
     number: '05',
-    title: 'Training & Documentation',
+    title: 'Governance, Documentation & Continuity',
     description:
-      'Clear user guides, technical walkthroughs, onboarding materials, and service documentation that teams can actually use.',
+      'SOPs, runbooks, CMDB planning, audit trails, backup readiness, and business-continuity documentation that survives turnover.',
   },
   {
     number: '06',
-    title: 'Digital & Web Services',
+    title: 'Authorized Procurement & Deployment',
     description:
-      'Website updates, digital organization, small business technology setup, and right-sized online systems support.',
+      'Dell, Epson, Cisco, and TD SYNNEX sourcing with deployment, asset records, and support kept under one accountable vendor of record.',
   },
 ]
 
@@ -82,13 +132,13 @@ const naics = ['541512', '541511', '541519', '518210', '611420']
 const areasOfExpertise = [
   'Bentley ProjectWise Administration & Support',
   'Microsoft 365 Administration',
-  'SharePoint',
-  'Azure & Cloud Technologies',
-  'PowerShell Automation',
+  'SharePoint, Teams, and OneDrive Governance',
+  'Azure, Hybrid Cloud, and Windows 11 Readiness',
+  'Security Hardening, Identity, and Zero-Trust Planning',
+  'Network Segmentation, SD-WAN, and Infrastructure Design',
   'Software Deployment & Endpoint Management',
-  'Technical Documentation & Knowledge Management',
-  'IT Process Improvement',
-  'Engineering Technology Support',
+  'CMDB, Runbooks, Audit Trails, and Business Continuity',
+  'Authorized Hardware Procurement and Deployment',
 ]
 
 export default function CapabilitiesPage() {
@@ -96,7 +146,7 @@ export default function CapabilitiesPage() {
     <>
       <Hero
         title="IT Support and Procurement Capabilities Statement"
-        description="Practical IT support, engineering technology assistance, and digital solutions for infrastructure-focused teams."
+        description="Practical IT support, engineering technology assistance, security governance, modernization, and authorized procurement for infrastructure-focused teams."
       />
 
       <main className="relative overflow-hidden">
@@ -114,8 +164,9 @@ export default function CapabilitiesPage() {
               </h2>
 
               <p className="text-blue-100 text-lg leading-8 max-w-3xl">
-                CivicSpan IT Group bridges engineering technology, user support, documentation,
-                and digital operations so teams can move faster with cleaner systems and clearer workflows.
+                CivicSpan IT Group bridges engineering technology, cybersecurity, modernization,
+                documentation, procurement, and digital operations so teams can move faster with
+                cleaner systems and clearer workflows.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
@@ -162,9 +213,9 @@ export default function CapabilitiesPage() {
 
               <div className="grid gap-3 mt-6">
                 {[
-                  ['Engineering', 'Technology environments'],
-                  ['Workflow', 'Documentation and adoption'],
-                  ['Operations', 'Responsive support systems'],
+                  ['Engineering', 'ProjectWise, CAD, and data workflows'],
+                  ['Security', 'Identity, governance, and continuity'],
+                  ['Procurement', 'Dell, Epson, Cisco, and TD SYNNEX'],
                 ].map(([title, text]) => (
                   <div
                     key={title}
@@ -210,7 +261,7 @@ export default function CapabilitiesPage() {
               <p className="text-slate-300 leading-7">
                 Today, CivicSpan partners with government agencies, engineering firms, municipalities,
                 utilities, and businesses to provide technology consulting, cloud solutions, engineering
-                technology support, and digital modernization services.
+                technology support, secure modernization, authorized procurement, and digital modernization services.
               </p>
             </div>
 
@@ -269,8 +320,9 @@ export default function CapabilitiesPage() {
             <p className="text-blue-100 text-lg leading-9">
               CivicSpan IT Group supports transportation, engineering, infrastructure,
               government-adjacent, nonprofit, and small business teams with practical technology services.
-              Our work connects day-to-day support, Bentley ecosystem familiarity, access management,
-              process documentation, onboarding, and digital systems improvement.
+              Our work connects day-to-day support, Bentley ecosystem familiarity, cybersecurity,
+              network architecture, modernization, authorized procurement, access management, process
+              documentation, onboarding, and digital systems improvement.
             </p>
           </section>
 
@@ -307,6 +359,79 @@ export default function CapabilitiesPage() {
             </div>
           </section>
 
+          <section id="advanced-capabilities" className="mb-28 rounded-3xl border border-green-500/15 bg-slate-900/70 p-8 sm:p-10 shadow-xl backdrop-blur">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 mb-10">
+              <div>
+                <p className="text-primary uppercase tracking-[0.16em] text-sm font-extrabold mb-5">
+                  Advanced Capabilities
+                </p>
+                <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+                  Enterprise security and governance for engineering environments.
+                </h2>
+              </div>
+              <p className="text-blue-100 text-lg leading-8">
+                These capabilities extend the core support model into the higher-risk work that
+                infrastructure firms face: protecting proprietary design files, modernizing aging
+                systems, segmenting heavy data workflows, and proving operational accountability.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {advancedCapabilities.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-2xl border border-slate-400/15 bg-slate-950/45 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/45"
+                >
+                  <p className="text-primary font-bold text-xs uppercase tracking-[0.16em] mb-3">
+                    {item.subtitle}
+                  </p>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-slate-300 leading-7">{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section id="authorized-partners" className="mb-28">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 mb-10">
+              <div>
+                <p className="text-primary uppercase tracking-[0.16em] text-sm font-extrabold mb-5">
+                  Authorized Procurement
+                </p>
+                <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+                  Multi-vendor procurement, one accountable point of contact.
+                </h2>
+              </div>
+              <div>
+                <p className="text-blue-100 text-lg leading-8 mb-5">
+                  CivicSpan is an authorized partner across the vendors engineering and
+                  government-adjacent teams already rely on. Procurement, deployment, asset records,
+                  and support stay together instead of being scattered across resellers.
+                </p>
+                <a href="/partners" className="inline-flex text-primary hover:text-primary-light font-bold text-sm transition-colors">
+                  View vendor partnerships and procurement authorization →
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {procurementPartners.map((partner) => (
+                <article
+                  key={partner.title}
+                  className="rounded-2xl border border-green-500/15 bg-dark-secondary/70 p-7 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl flex-shrink-0">{partner.icon}</span>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-3">{partner.title}</h3>
+                      <p className="text-neutral-muted leading-relaxed">{partner.body}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
           <section className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-5 mb-28">
             <div className="rounded-3xl border border-slate-400/15 bg-slate-900/80 p-8 shadow-xl backdrop-blur">
               <p className="text-primary uppercase tracking-[0.16em] text-sm font-extrabold mb-5">
@@ -324,6 +449,7 @@ export default function CapabilitiesPage() {
                   'Ability to connect technical support, systems assistance, and documentation',
                   'Focused support for infrastructure and engineering organizations',
                   'SBA Certified WOSB & EDWOSB with personalized, responsive support',
+                  'Authorized procurement access through Dell, Epson, Cisco, and TD SYNNEX',
                 ].map((item) => (
                   <li
                     key={item}
@@ -421,10 +547,11 @@ export default function CapabilitiesPage() {
                   <ul className="text-slate-300 leading-7">
                     <li>Engineering Technology Support</li>
                     <li>Bentley ProjectWise Support</li>
+                    <li>Cybersecurity & Identity Controls</li>
+                    <li>Network & Infrastructure Architecture</li>
                     <li>Microsoft 365 & SharePoint</li>
                     <li>Technical Documentation</li>
-                    <li>User Training & Adoption</li>
-                    <li>Process Automation</li>
+                    <li>Authorized Procurement & Deployment</li>
                   </ul>
                 </div>
               </div>
@@ -457,6 +584,8 @@ export default function CapabilitiesPage() {
                     <li>• Microsoft 365 & SharePoint Support</li>
                     <li>• Technical Documentation & Training</li>
                     <li>• Workflow Automation & Reporting</li>
+                    <li>• Cybersecurity & Governance Planning</li>
+                    <li>• Authorized Multi-Vendor Procurement</li>
                     <li>• Business Process Improvement</li>
                   </ul>
                 </div>
@@ -473,6 +602,9 @@ export default function CapabilitiesPage() {
                     <li>• eVA Registered Vendor</li>
                     <li>• SAM.gov Registered (UEI: PMVWGHNEZYK4)</li>
                     <li>• Dell Technologies Partner</li>
+                    <li>• Epson Authorized Partner</li>
+                    <li>• Cisco Partner</li>
+                    <li>• TD SYNNEX Authorized Reseller</li>
                   </ul>
                   <div className="flex flex-col gap-4 mt-4">
                     <div className="p-4 bg-white/95 rounded-2xl shadow-xl border border-slate-200/10 inline-block max-w-[200px] hover:scale-105 transition-transform duration-300">
@@ -484,7 +616,7 @@ export default function CapabilitiesPage() {
                         className="w-full h-auto object-contain rounded-lg"
                       />
                     </div>
-                    
+
                     <div className="space-y-3 w-full max-w-[320px]">
                       <div className="p-4 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 to-transparent backdrop-blur-sm">
                         <div className="flex items-center gap-2 mb-1.5">
