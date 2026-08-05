@@ -8,6 +8,7 @@ export default function Header() {
   const pathname = usePathname()
 
   const navLinks = [
+    { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
     { href: '/partners', label: 'Partners' },
     { href: '/products', label: 'Shop' },
