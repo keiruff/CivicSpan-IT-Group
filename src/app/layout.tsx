@@ -12,35 +12,30 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'ProjectWise Support in Fredericksburg | CivicSpan IT Group',
-  description: 'CivicSpan IT Group provides ProjectWise support, Microsoft 365 consulting, Dell procurement, and technology operations for Fredericksburg and Mid-Atlantic teams.',
-  keywords: 'infrastructure operations, technology operations, managed infrastructure services, ProjectWise support, Microsoft 365 consulting, Dell procurement, endpoint deployment',
-  authors: [{ name: 'CivicSpan IT Group' }],
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png' },
-    ],
-    apple: '/apple-icon.png',
+  title: 'ProjectWise & Engineering IT Operations | Fredericksburg, VA | CivicSpan IT Group',
+  description: 'CivicSpan IT Group provides specialized technology operations, ProjectWise & Bentley administration, heavy-duty cybersecurity, and multi-vendor procurement for government-adjacent and infrastructure teams in Virginia.',
+  keywords: [
+    'ProjectWise support Fredericksburg VA',
+    'Bentley application specialist Virginia',
+    'Government contractor IT services Fredericksburg',
+    'SWaM certified IT vendor Virginia',
+    'eVA registered IT procurement',
+    'Engineering technology operations',
+    'Infrastructure data governance',
+    'CAD workstation support Mid-Atlantic',
+    'Defense-grade network architecture',
+    'SAM.gov registered IT consultant',
+  ],
+  alternates: {
+    canonical: 'https://civicspanitgroup.com',
   },
   openGraph: {
-    title: 'CivicSpan IT Group',
-    description: 'ProjectWise support, Microsoft 365 consulting, Dell procurement, cloud support, documentation, and technology operations for Fredericksburg and Mid-Atlantic teams.',
-    type: 'website',
-    url: 'https://civicspanitgroup.com/',
-    images: [
-      {
-        url: 'https://civicspanitgroup.com/social-preview.png',
-        width: 1200,
-        height: 630,
-        alt: 'CivicSpan IT Group Banner',
-      },
-    ],
+    title: 'CivicSpan IT Group | Engineering Technology & Government IT Operations',
+    description: 'Accountable technical execution for organizations that cannot afford downtime. Specialized Bentley, ProjectWise, and infrastructure support.',
+    url: 'https://civicspanitgroup.com',
     siteName: 'CivicSpan IT Group',
-  },
-  robots: {
-    index: true,
-    follow: true,
+    locale: 'en_US',
+    type: 'website',
   },
 }
 
