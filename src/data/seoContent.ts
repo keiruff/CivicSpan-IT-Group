@@ -15,7 +15,14 @@ export type ContentPage = {
       title: string
       description: string
       url?: string
+      type?: 'website' | 'article'
     }
+  }
+  howTo?: {
+    name: string
+    description: string
+    totalTime?: string
+    steps: { name: string; text: string; url?: string }[]
   }
 }
 
@@ -764,6 +771,66 @@ export const blogPages: ContentPage[] = [
       { label: 'ProjectWise Performance Issues', href: '/topics/projectwise-performance-issues' },
       { label: 'How to Clean a ProjectWise Cache', href: '/topics/how-to-clean-a-projectwise-cache' },
       { label: 'ProjectWise Health Check', href: '/solutions/projectwise-health-check' },
+    ],
+  },
+  {
+    slug: 'slow-projectwise-sync',
+    title: 'Resolving Slow ProjectWise File Syncing Across Distant Networks',
+    eyebrow: 'Problem Led ProjectWise',
+    description: 'Troubleshooting guide for engineering teams experiencing slow ProjectWise synchronization, delta file transfer lag, and workspace latency across distant networks.',
+    intro: 'Engineering, transportation, and public works teams operating across regional offices or field trailers often experience severe bottlenecks when checking out or syncing massive CAD models and BIM datasets. When a design file hangs mid-sync over a long-distance connection, the issue is rarely simple slow internet. It is usually an infrastructure alignment problem.',
+    metadata: {
+      title: 'Fix Slow ProjectWise File Syncing & Latency | CivicSpan IT Group',
+      description: 'Troubleshooting guide for engineering teams experiencing slow ProjectWise synchronization, delta file transfer lag, and workspace latency across distant networks.',
+      keywords: [
+        'ProjectWise file sync slow',
+        'ProjectWise lag over WAN',
+        'Bentley ProjectWise troubleshooting',
+        'delta file transfer freezing ProjectWise',
+        'ProjectWise checkout stuck',
+        'managed workspace latency engineering',
+        'fix slow CAD file synchronization',
+        'ProjectWise server connection timeout',
+        'engineering database performance tuning',
+        'Bentley software latency fix',
+      ],
+      openGraph: {
+        title: 'Troubleshooting Slow ProjectWise File Syncing Across Distant Networks',
+        description: 'Stop losing billable design hours to freezing synchronization bars. Read the technical breakdown and solutions to stabilize your engineering environment.',
+        url: 'https://civicspanitgroup.com/blog/slow-projectwise-sync',
+        type: 'article',
+      },
+    },
+    sections: [
+      { heading: 'Why ProjectWise synchronization latency happens', body: 'ProjectWise synchronization issues usually sit at the intersection of WAN latency, database handshakes, workspace configuration, workstation performance, and traffic prioritization. The most useful troubleshooting approach is to map where the delay starts before treating the symptom as a generic connectivity problem.' },
+      { heading: 'Root cause 1: Delta file syncing and WAN latency constraints', body: 'ProjectWise relies on delta file transfer behavior that is designed to download changes instead of repeatedly moving entire design datasets. That helps bandwidth, but it still depends on stable handshakes between the local ProjectWise Design Integration client, the integration server, and supporting services. When wide-area network latency climbs, file-locking checks, workspace profile requests, and checkout validation can stall before the file transfer feels like it has started.', bullets: ['Long-distance office or field trailer connections', 'High-latency WAN links', 'Repeated lock and permission checks', 'Workspace profile requests across the network'] },
+      { heading: 'Root cause 2: High-traffic database contention', body: 'Before a design file transfers, ProjectWise still has to query the underlying database to check out files, verify document attributes, and audit permissions. If database traffic shares the same congested path as routine corporate web traffic, engineers can sit waiting while the environment validates the action instead of transferring the file.', bullets: ['SQL-backed metadata lookups', 'Checkout and permission validation', 'Unsegmented business and engineering traffic', 'Localized congestion near the database tier'] },
+      { heading: 'Root cause 3: Misconfigured or outdated local workspaces', body: 'Engineering applications often load managed workspaces that include state-specific CAD standards, seed files, cells, references, and resource directories. If those paths are uncached, outdated, or forced to load repeatedly over remote network paths, application-level lag can look like a network failure.', bullets: ['VDOT or state-specific workspace standards', 'Uncached seed files and cells', 'Repeated remote path loading', 'Outdated workstation configurations'] },
+      { heading: 'Action 1: Deploy encrypted SD-WAN and dedicated network segmentation', body: 'Traditional VPNs often wrap all corporate data into one high-overhead tunnel, forcing large engineering file streams to compete with basic web traffic. CivicSpan architectures isolate production ProjectWise, database, and CAD application traffic with secure segmentation and software-defined wide-area networking so heavy design workflows receive a dedicated, encrypted path instead of fighting for the same lane as routine browsing.', bullets: ['Separate ProjectWise and database traffic from general web traffic', 'Prioritize high-overhead engineering file streams', 'Reduce packet congestion across distant offices', 'Document the routing path for operations handoff'] },
+      { heading: 'Action 2: Architect high-availability edge database operations', body: 'Remote offices and field trailers need low-latency access to the data and configuration services that ProjectWise depends on. For complex environments, that can mean high-availability edge operations, hybrid cloud database patterns, or optimized database proximity through Azure or AWS architecture so checkout validation and workspace lookups happen closer to active design teams.', bullets: ['Reduce WAN handshaking delay', 'Improve checkout validation responsiveness', 'Plan hybrid cloud or edge database placement', 'Keep production database paths resilient'] },
+      { heading: 'Action 3: Modernize workstation configurations and workspace caching', body: 'Application lag often mimics network failure when local client memory, storage, or workspace configuration is outdated. A practical fix includes reviewing workstation performance paths, modernizing legacy client configuration, and moving static design standards to local solid-state storage or optimized cache paths instead of repeatedly pulling them over high-latency network links.', bullets: ['Review workstation storage and memory pressure', 'Modernize ProjectWise and Bentley client configuration', 'Optimize local workspace cache schemas', 'Keep static standards close to the workstation'] },
+      { heading: 'Secure your engineering infrastructure', body: 'CivicSpan IT Group specializes in building, securing, and optimizing the technology operations that infrastructure teams rely on every day. We help create the infrastructure, routing, caching, and data-governance practices required to keep CAD and ProjectWise environments fast, resilient, and audit-ready. Stop losing billable design hours to freezing sync bars.' },
+    ],
+    faqs: [
+      { question: 'Why does ProjectWise file syncing freeze over remote connections?', answer: 'Common causes include WAN latency, database lookup delays, unsegmented traffic, remote workspace loading, local cache problems, and outdated workstation configuration.' },
+      { question: 'Is slow ProjectWise syncing always an internet speed problem?', answer: 'No. Internet bandwidth matters, but synchronization delays often come from latency, handshaking, database validation, workspace paths, and traffic contention.' },
+      { question: 'Can SD-WAN help ProjectWise performance?', answer: 'Yes, when it is designed around engineering traffic. Segmenting and prioritizing ProjectWise and database paths can reduce contention and improve responsiveness for distant offices.' },
+    ],
+    howTo: {
+      name: 'How to Fix Slow ProjectWise File Syncing and WAN Latency',
+      description: 'A troubleshooting guide to resolve delta file transfer freezing, application-level lag, and database latency in ProjectWise environments over wide-area networks.',
+      totalTime: 'PT30M',
+      steps: [
+        { name: 'Deploy Dedicated Network Segmentation and SD-WAN', text: 'Isolate production ProjectWise database and CAD application traffic from general corporate web traffic. Implement encrypted SD-WAN routing pipelines to prioritize high-overhead engineering file streams and reduce packet congestion.', url: 'https://civicspanitgroup.com/blog/slow-projectwise-sync#action-1-deploy-encrypted-sd-wan-and-dedicated-network-segmentation' },
+        { name: 'Architect High-Availability Edge Database Operations', text: 'Reduce WAN handshaking latency between distant field sites and central integration servers. Plan high-availability edge operations or hybrid cloud database placement closer to active engineering environments to speed up checkout validation.', url: 'https://civicspanitgroup.com/blog/slow-projectwise-sync#action-2-architect-high-availability-edge-database-operations' },
+        { name: 'Optimize Workstation Workspace Caching Schemas', text: 'Review local workstation performance, update outdated configurations, and force heavy managed workspace directories, seed files, and design standards to cache on fast local storage rather than pulling repeatedly over high-latency network paths.', url: 'https://civicspanitgroup.com/blog/slow-projectwise-sync#action-3-modernize-workstation-configurations-and-workspace-caching' },
+      ],
+    },
+    related: [
+      { label: 'ProjectWise Running Slow?', href: '/blog/projectwise-running-slow' },
+      { label: 'ProjectWise Performance Issues', href: '/topics/projectwise-performance-issues' },
+      { label: 'ProjectWise Health Check', href: '/solutions/projectwise-health-check' },
+      { label: 'Engineering Technology Operations', href: '/pillars/engineering-technology' },
     ],
   },
   {

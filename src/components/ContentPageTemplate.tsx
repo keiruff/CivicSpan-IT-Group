@@ -7,6 +7,13 @@ type Props = {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[]
 }
 
+function sectionId(heading: string) {
+  return heading
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
 export default function ContentPageTemplate({ page, category, jsonLd }: Props) {
   const schema = jsonLd ? JSON.stringify(jsonLd) : null
   const serviceLinks =
@@ -51,7 +58,8 @@ export default function ContentPageTemplate({ page, category, jsonLd }: Props) {
             {page.sections.map((section) => (
               <section
                 key={section.heading}
-                className="rounded-3xl border border-green-500/15 bg-dark-secondary/80 p-8 sm:p-10 backdrop-blur"
+                id={sectionId(section.heading)}
+                className="rounded-3xl border border-green-500/15 bg-dark-secondary/80 p-8 sm:p-10 backdrop-blur scroll-mt-28"
               >
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">{section.heading}</h2>
                 <p className="text-neutral-light leading-7">{section.body}</p>
