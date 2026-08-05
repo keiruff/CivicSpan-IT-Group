@@ -71,7 +71,7 @@ export default function ContactPage() {
               <span className="block font-extrabold text-primary text-3xl mb-3">02</span>
               <h3 className="text-white font-bold text-lg mb-2">Scope & Proposal</h3>
               <p className="text-neutral-muted text-sm leading-relaxed">
-                We recommend the right engagement model — hourly, project-based, or managed support —
+                We recommend the right engagement model, hourly, project-based, or managed support ,
                 and outline next steps.
               </p>
             </article>
@@ -186,7 +186,7 @@ export default function ContactPage() {
 
                 <div className="bg-dark-secondary/50 border border-green-500/15 rounded-lg p-6">
                   <h4 className="text-primary font-semibold mb-2">Location</h4>
-                  <p className="text-neutral-light">Fredericksburg, Virginia — serving the Mid-Atlantic region</p>
+                  <p className="text-neutral-light">Fredericksburg, Virginia, serving the Mid-Atlantic region</p>
                 </div>
 
                 <div className="bg-dark-secondary/50 border border-green-500/15 rounded-lg p-6">

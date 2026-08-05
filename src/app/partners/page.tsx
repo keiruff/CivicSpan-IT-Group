@@ -5,14 +5,14 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Vendor Partnerships & Procurement Authorization | CivicSpan IT Group',
   description:
-    'CivicSpan IT Group is an authorized partner across Dell, Epson, Cisco, and TD SYNNEX — giving engineering, government-adjacent, and small business clients procurement, deployment, and support under one accountable vendor of record.',
+    'CivicSpan IT Group is an authorized partner across Dell, Epson, Cisco, and TD SYNNEX, giving engineering, government-adjacent, and small business clients procurement, deployment, and support under one accountable vendor of record.',
 }
 
 const partnerships = [
   {
     icon: '🖥️',
     title: 'Dell Technologies Partner',
-    body: 'Endpoint procurement, deployment, and lifecycle management for workstations, laptops, and infrastructure hardware — sized for engineering workflows and government-adjacent compliance requirements.',
+    body: 'Endpoint procurement, deployment, and lifecycle management for workstations, laptops, and infrastructure hardware, sized for engineering workflows and government-adjacent compliance requirements.',
   },
   {
     icon: '🖨️',
@@ -22,12 +22,12 @@ const partnerships = [
   {
     icon: '🌐',
     title: 'Cisco Partner',
-    body: 'Networking and infrastructure hardware to support secure, reliable connectivity — from office deployments to engineering environments with demanding uptime needs.',
+    body: 'Networking and infrastructure hardware to support secure, reliable connectivity, from office deployments to engineering environments with demanding uptime needs.',
   },
   {
     icon: '📦',
     title: 'TD SYNNEX Authorized Reseller',
-    body: 'Broad-line distribution access across thousands of manufacturers, giving CivicSpan the reach to source and fulfill hardware needs beyond our core partner lines — without adding vendors to your accounts payable list.',
+    body: 'Broad-line distribution access across thousands of manufacturers, giving CivicSpan the reach to source and fulfill hardware needs beyond our core partner lines, without adding vendors to your accounts payable list.',
   },
 ]
 
@@ -45,18 +45,18 @@ const reasons = [
   {
     icon: '📋',
     title: 'Documentation Included',
-    body: 'Every hardware deployment comes with the same documentation standard CivicSpan applies across all engagements — asset records, configuration notes, and handoff-ready runbooks.',
+    body: 'Every hardware deployment comes with the same documentation standard CivicSpan applies across all engagements, asset records, configuration notes, and handoff-ready runbooks.',
   },
   {
     icon: '🤝',
     title: 'Right-Sized for Small Teams',
-    body: "No minimum order thresholds or enterprise-only account requirements — CivicSpan brings authorized procurement access to engineering firms, nonprofits, and small businesses that don't have in-house purchasing power.",
+    body: "No minimum order thresholds or enterprise-only account requirements, CivicSpan brings authorized procurement access to engineering firms, nonprofits, and small businesses that don't have in-house purchasing power.",
   },
 ]
 
 const procurementSteps = [
   { step: 'Assess', body: 'We understand your hardware needs, budget, and timeline.' },
-  { step: 'Source', body: 'We quote through the right authorized channel — Dell, Epson, Cisco, or TD SYNNEX — for the best fit.' },
+  { step: 'Source', body: 'We quote through the right authorized channel, Dell, Epson, Cisco, or TD SYNNEX, for the best fit.' },
   { step: 'Deploy', body: 'Hardware arrives configured, imaged, and ready for your environment.' },
   { step: 'Document', body: 'You receive clear asset records and configuration documentation.' },
 ]
@@ -73,7 +73,7 @@ export default function PartnersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mb-16">
             <p className="text-neutral-light text-base sm:text-lg leading-relaxed">
-              CivicSpan is directly authorized across the manufacturers and distributors that infrastructure, engineering, and government-adjacent teams already depend on. That means procurement, deployment, and support don&apos;t get scattered across resellers — they stay with one accountable, SWaM-certified vendor who understands your environment.
+              CivicSpan is directly authorized across the manufacturers and distributors that infrastructure, engineering, and government-adjacent teams already depend on. That means procurement, deployment, and support don&apos;t get scattered across resellers, they stay with one accountable, SWaM-certified vendor who understands your environment.
             </p>
           </div>
 

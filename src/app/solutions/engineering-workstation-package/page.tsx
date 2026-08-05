@@ -45,7 +45,7 @@ export default function EngineeringWorkstationPackage() {
                 Workstation-Grade Performance, Configured from Day One
               </h2>
               <p className="text-blue-100 leading-7 text-[1.05rem]">
-                Engineering applications like Bentley MicroStation, OpenRoads Designer, and ArcGIS Pro demand hardware that is tuned correctly — not just powerful on paper. An improperly configured workstation is just an expensive bottleneck.
+                Engineering applications like Bentley MicroStation, OpenRoads Designer, and ArcGIS Pro demand hardware that is tuned correctly, not just powerful on paper. An improperly configured workstation is just an expensive bottleneck.
               </p>
               <p className="text-blue-100 leading-7 mt-4 text-[1.05rem]">
                 CivicSpan IT Group deploys Dell Precision workstations with ISV-certified drivers, GPU profiles, and memory settings dialed in specifically for your software stack. We handle procurement, configuration, migration, and integration so your team can open day one without a hiccup.
@@ -82,7 +82,7 @@ export default function EngineeringWorkstationPackage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary font-bold mt-0.5">•</span>
-                  <span><strong>CAD & Bentley Spec Review:</strong> High-performance workstations require ISV certification, custom GPU profiles, and memory bandwidth optimization—not standard consumer checkouts.</span>
+                  <span><strong>CAD & Bentley Spec Review:</strong> High-performance workstations require ISV certification, custom GPU profiles, and memory bandwidth optimization,not standard consumer checkouts.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary font-bold mt-0.5">•</span>
@@ -122,7 +122,7 @@ export default function EngineeringWorkstationPackage() {
               <div className="border-t border-white/5 pt-6 mb-8">
                 <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-3">What Happens Next</h4>
                 <ol className="space-y-3">
-                  {["Request a quote & describe your needs", "We schedule a discovery call", "Scope confirmed — we get to work"].map((step, i) => (
+                  {["Request a quote & describe your needs", "We schedule a discovery call", "Scope confirmed, we get to work"].map((step, i) => (
                     <li key={i} className="flex items-start gap-3 text-xs text-slate-300">
                       <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/15 border border-primary/30 text-primary font-bold text-[10px] flex items-center justify-center">{i + 1}</span>
                       <span>{step}</span>
@@ -150,7 +150,7 @@ export default function EngineeringWorkstationPackage() {
             Have a specific software stack or hardware requirement?
           </h2>
           <p className="max-w-2xl mx-auto mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-            We configure workstations around your exact workflow — including niche engineering tools, licensing servers, and network-attached storage integrations.
+            We configure workstations around your exact workflow, including niche engineering tools, licensing servers, and network-attached storage integrations.
           </p>
           <Link href="/contact" className="btn mt-6">
             Request a Custom Quote

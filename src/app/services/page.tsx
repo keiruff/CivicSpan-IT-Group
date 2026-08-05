@@ -531,7 +531,7 @@ export default function ServicesPage() {
             </h2>
             <p className="text-neutral-light text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
               The following examples illustrate CivicSpan&apos;s typical methodology for common
-              engagement types — they describe how we approach this kind of work, not a specific past
+              engagement types, they describe how we approach this kind of work, not a specific past
               client project.
             </p>
           </div>
@@ -589,7 +589,7 @@ export default function ServicesPage() {
             <p className="text-neutral-light text-sm sm:text-base leading-relaxed mb-6 max-w-3xl">
               To help administrators identify common ProjectWise workspace issues, CivicSpan developed an
               open-source PowerShell tool that audits workspace configurations and produces structured
-              reports for troubleshooting and documentation — tangible evidence of our problem-solving
+              reports for troubleshooting and documentation, tangible evidence of our problem-solving
               approach, available for anyone to use.
             </p>
             <Link

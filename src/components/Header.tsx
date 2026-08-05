@@ -8,19 +8,10 @@ export default function Header() {
   const pathname = usePathname()
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/infrastructure-technology-operations', label: 'Operations' },
     { href: '/services', label: 'Services' },
-    { href: '/products', label: 'Shop' },
     { href: '/partners', label: 'Partners' },
-    { href: '/topics', label: 'Topics' },
-    { href: '/locations', label: 'Locations' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/faq', label: 'FAQ' },
-    { href: '/capabilities', label: 'Capabilities' },
-    { href: '/why-civicspan', label: 'Why CivicSpan' },
-    { href: '/who-we-support', label: 'Who We Support' },
-    { href: '/tools-and-utilities', label: 'Tools & Utilities' },
+    { href: '/products', label: 'Shop' },
+    { href: '/topics', label: 'Resources' },
     { href: '/contact', label: 'Contact' },
   ]
 

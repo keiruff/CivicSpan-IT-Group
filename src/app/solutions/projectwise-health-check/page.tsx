@@ -48,7 +48,7 @@ export default function ProjectWiseHealthCheckPackage() {
                 ProjectWise performance issues rarely announce themselves clearly. Engineers accept slow file opens, random sync errors, and workspace warnings as &ldquo;just how it is.&rdquo; They&apos;re not. They&apos;re symptoms of misconfigured local caches, broken datasource connections, or stale workspace profiles.
               </p>
               <p className="text-blue-100 leading-7 mt-4 text-[1.05rem]">
-                CivicSpan IT Group performs a structured health check across your ProjectWise client environment, identifies root causes, and delivers a written report with clear corrective steps — so your engineering team spends time on projects, not troubleshooting their tools.
+                CivicSpan IT Group performs a structured health check across your ProjectWise client environment, identifies root causes, and delivers a written report with clear corrective steps, so your engineering team spends time on projects, not troubleshooting their tools.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export default function ProjectWiseHealthCheckPackage() {
               <div className="border-t border-white/5 pt-6 mb-8">
                 <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-3">What Happens Next</h4>
                 <ol className="space-y-3">
-                  {["Request a quote & describe your needs", "We schedule a discovery call", "Scope confirmed — we get to work"].map((step, i) => (
+                  {["Request a quote & describe your needs", "We schedule a discovery call", "Scope confirmed, we get to work"].map((step, i) => (
                     <li key={i} className="flex items-start gap-3 text-xs text-slate-300">
                       <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/15 border border-primary/30 text-primary font-bold text-[10px] flex items-center justify-center">{i + 1}</span>
                       <span>{step}</span>
