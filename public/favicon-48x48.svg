@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-  <rect width="48" height="48" rx="8" fill="#065f46" />
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" fill="white" font-weight="700">C</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="CivicSpan IT Group">
+  <rect width="48" height="48" rx="10" fill="#ffffff"/>
+  <path d="M7.5 33.4c6.9-4.9 15.3-7.2 25.4-6.9 3 .1 5.8.4 8.6 1.1" fill="none" stroke="#031b3a" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M8.7 38.2c8.6-5.2 18.2-7.2 28.7-5.9" fill="none" stroke="#0b7fd3" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M6.5 30.4C8.9 17.5 19.3 8.5 32.2 7.7c4.4-.3 8.3.4 11.8 2" fill="none" stroke="#0b8fe8" stroke-width="4.8" stroke-linecap="round"/>
+  <path d="M12.4 20.5c6.5-7.8 18.6-10.7 29.1-5.7" fill="none" stroke="#0b7fd3" stroke-width="2.3" stroke-linecap="round"/>
+  <path d="M18 25h4v-5.5l-2-1.2-2 1.2V25Z" fill="#063f86"/>
+  <path d="M24 25h5.5V15l-2.8-1.7L24 15v10Z" fill="#0759ad"/>
+  <path d="M31.5 25h5V20l-2.5-1.5-2.5 1.5v5Z" fill="#0697df"/>
+  <path d="M22 33.5c4 1.7 8.3 4.3 12.7 7.7" fill="none" stroke="#0b7fd3" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M27.5 31.5c3.8 1.1 7.4 2.8 10.8 5.3" fill="none" stroke="#031b3a" stroke-width="2.4" stroke-linecap="round"/>
 </svg>
