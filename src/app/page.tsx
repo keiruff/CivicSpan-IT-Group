@@ -110,6 +110,35 @@ export default function HomePage() {
             </span>
           ))}
         </div>
+
+        <div className="max-w-5xl mx-auto mt-10 rounded-2xl border border-green-500/15 bg-dark-secondary/60 p-6 sm:p-8 text-left">
+          <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-3">
+            Multi-Vendor Procurement
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">
+            Multi-Vendor Procurement, One Point of Contact
+          </h2>
+          <p className="text-neutral-light text-sm sm:text-base leading-relaxed mb-6">
+            CivicSpan is an authorized partner across the vendors engineering and government-adjacent teams already rely on — Dell, Epson, Cisco, and TD SYNNEX — so procurement, deployment, and support stay under one accountable vendor of record instead of scattered across resellers.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {[
+              { icon: '🖥️', title: 'Dell Technologies Partner', body: 'Endpoint procurement & deployment' },
+              { icon: '🖨️', title: 'Epson Authorized Partner', body: 'Print, scan & imaging hardware' },
+              { icon: '🌐', title: 'Cisco Partner', body: 'Networking & infrastructure hardware' },
+              { icon: '📦', title: 'TD SYNNEX Authorized Reseller', body: 'Broad-line distribution access' },
+            ].map((item) => (
+              <div key={item.title} className="flex items-start gap-4">
+                <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                <div>
+                  <h3 className="text-white font-bold text-sm mb-1">{item.title}</h3>
+                  <p className="text-neutral-muted text-sm leading-relaxed">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Stats Row */}
