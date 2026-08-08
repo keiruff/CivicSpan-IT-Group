@@ -11,17 +11,17 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
           {/* Logo & Tagline */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <Link href="/" aria-label="CivicSpan IT Group Home" className="inline-flex items-center gap-3">
+            <Link href="/" aria-label="CivicSpan IT Group Home" className="inline-flex items-center gap-2.5">
               <Image
                 src="/civicspan-logo-mark.svg"
                 alt="CivicSpan IT Group logo mark"
-                width={48}
-                height={48}
-                className="h-11 w-11 rounded-full bg-white object-contain"
+                width={40}
+                height={40}
+                className="h-9 w-9 rounded-full bg-white object-contain"
               />
               <span className="flex flex-col leading-none">
-                <span className="text-sm font-black tracking-[0.18em] text-white">CIVICSPAN</span>
-                <span className="mt-1 text-[0.65rem] font-extrabold tracking-[0.28em] text-primary">IT GROUP</span>
+                <span className="text-xs font-black tracking-[0.14em] text-white">CIVICSPAN</span>
+                <span className="mt-0.5 text-[0.58rem] font-extrabold tracking-[0.22em] text-primary">IT GROUP</span>
               </span>
             </Link>
             <span className="hidden sm:inline text-white/20">|</span>

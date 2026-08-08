@@ -49,22 +49,22 @@ export default function Header() {
   return (
     <header className="site-header relative z-40">
       <nav
-        className="w-full md:fixed md:top-0 md:left-0 md:h-[82px] flex flex-col md:flex-row justify-between items-center px-4 py-3 md:px-[55px] md:py-2.5 bg-dark border-b border-green-500/15 backdrop-blur-md z-[1000] gap-3 md:gap-0"
+        className="w-full md:fixed md:top-0 md:left-0 md:h-[72px] flex flex-col md:flex-row justify-between items-center px-4 py-3 md:px-10 md:py-2.5 bg-dark border-b border-green-500/15 backdrop-blur-md z-[1000] gap-3 md:gap-0"
         aria-label="Primary navigation"
       >
         <div className="logo flex items-center justify-center w-full md:w-auto">
-          <Link href="/" aria-label="CivicSpan IT Group home" className="inline-flex items-center justify-center gap-3 text-left transition-transform duration-300 hover:scale-[1.02]" onClick={() => setMenuOpen(false)}>
+          <Link href="/" aria-label="CivicSpan IT Group home" className="inline-flex items-center justify-center gap-2.5 text-left transition-transform duration-300 hover:scale-[1.02]" onClick={() => setMenuOpen(false)}>
             <Image
               src="/civicspan-logo-mark.svg"
               alt="CivicSpan IT Group logo mark"
-              width={64}
-              height={64}
-              className="h-[52px] w-[52px] md:h-[58px] md:w-[58px] rounded-full bg-white object-contain"
+              width={48}
+              height={48}
+              className="h-10 w-10 md:h-11 md:w-11 rounded-full bg-white object-contain"
               priority
             />
             <span className="flex flex-col leading-none">
-              <span className="text-lg md:text-xl font-black tracking-[0.18em] text-white">CIVICSPAN</span>
-              <span className="mt-1 text-xs md:text-sm font-extrabold tracking-[0.28em] text-primary">IT GROUP</span>
+              <span className="text-base md:text-lg font-black tracking-[0.14em] text-white">CIVICSPAN</span>
+              <span className="mt-0.5 text-[0.65rem] md:text-xs font-extrabold tracking-[0.24em] text-primary">IT GROUP</span>
             </span>
           </Link>
         </div>

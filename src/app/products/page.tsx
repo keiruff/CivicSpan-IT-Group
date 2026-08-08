@@ -59,14 +59,14 @@ export default function ProductsPage() {
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-md lg:max-w-lg rounded-[2rem] border border-green-500/20 bg-white/[0.03] p-4 shadow-2xl shadow-green-500/10">
+          <div className="mx-auto w-full max-w-[260px] sm:max-w-xs lg:max-w-sm rounded-3xl border border-green-500/15 bg-white/[0.025] p-3 shadow-xl shadow-green-500/5">
             <Image
               src="/civicspan-recommended-badge.svg"
               alt="CivicSpan Recommended badge: trusted, tested, deployed"
-              width={1200}
-              height={760}
+              width={720}
+              height={456}
               priority
-              className="h-auto w-full"
+              className="h-auto w-full opacity-95"
             />
           </div>
         </div>
