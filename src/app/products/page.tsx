@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import ProductCart from '@/components/ProductCart'
 import { products } from '@/data/products'
 
@@ -34,26 +35,39 @@ export default function ProductsPage() {
     <>
       <section className="relative overflow-hidden px-6 py-20 sm:py-28 text-center">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_45%_at_50%_0%,rgba(34,197,94,0.16),transparent)]" />
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <p className="text-primary font-bold text-xs sm:text-sm tracking-[0.18em] uppercase mb-4">Bulk Hardware &amp; Licensing Collection</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-            Request quotes for bulk hardware, licensing, and deployment support.
-          </h1>
-          <p className="text-blue-100 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            Enterprise technology, licensing, and deployment support available by quote. Contact CivicSpan to discuss quantities, public-sector requirements, and rollout needs.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={shopifyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg border-2 border-primary bg-primary px-8 py-3.5 text-dark font-bold shadow-lg shadow-green-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark"
-            >
-              Browse Recommended Products ↗
-            </a>
-            <a href={generalQuoteHref} className="px-8 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300">
-              Request a Custom Quote
-            </a>
+        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center text-left">
+          <div className="text-center lg:text-left">
+            <p className="text-primary font-bold text-xs sm:text-sm tracking-[0.18em] uppercase mb-4">Bulk Hardware &amp; Licensing Collection</p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+              Request quotes for bulk hardware, licensing, and deployment support.
+            </h1>
+            <p className="text-blue-100 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto lg:mx-0">
+              Enterprise technology, licensing, and deployment support available by quote. Contact CivicSpan to discuss quantities, public-sector requirements, and rollout needs.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a
+                href={shopifyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-primary bg-primary px-8 py-3.5 text-dark font-bold shadow-lg shadow-green-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark"
+              >
+                Browse Recommended Products ↗
+              </a>
+              <a href={generalQuoteHref} className="px-8 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300 text-center">
+                Request a Custom Quote
+              </a>
+            </div>
+          </div>
+
+          <div className="mx-auto w-full max-w-md lg:max-w-lg rounded-[2rem] border border-green-500/20 bg-white/[0.03] p-4 shadow-2xl shadow-green-500/10">
+            <Image
+              src="/civicspan-recommended-badge.svg"
+              alt="CivicSpan Recommended badge: trusted, tested, deployed"
+              width={1200}
+              height={760}
+              priority
+              className="h-auto w-full"
+            />
           </div>
         </div>
       </section>

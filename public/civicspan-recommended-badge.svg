@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">CivicSpan Recommended badge</title>
+  <desc id="desc">Trusted, tested, deployed badge for CivicSpan recommended products</desc>
+  <defs>
+    <linearGradient id="navy" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#06152c"/>
+      <stop offset="1" stop-color="#0b1e3d"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000818" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path d="M600 36c229 0 419 151 450 348 23 147-58 285-214 337-71 24-153 24-236 24s-165 0-236-24C208 669 127 531 150 384 181 187 371 36 600 36z" fill="#f8fafc" stroke="#06152c" stroke-width="18"/>
+    <path d="M212 370c39-160 195-268 388-268s349 108 388 268" fill="none" stroke="#16a34a" stroke-width="12"/>
+    <path d="M242 575c67 90 194 130 358 130s291-40 358-130" fill="none" stroke="#16a34a" stroke-width="12"/>
+
+    <rect x="85" y="230" width="1030" height="235" rx="46" fill="url(#navy)" stroke="#f8fafc" stroke-width="14"/>
+    <rect x="112" y="257" width="976" height="181" rx="32" fill="none" stroke="#dbeafe" stroke-width="5" opacity="0.9"/>
+
+    <g transform="translate(188 280)">
+      <path d="M86 0l74 28v64c0 66-43 126-74 141C55 218 12 158 12 92V28L86 0z" fill="url(#green)" stroke="#4ade80" stroke-width="8"/>
+      <path d="M48 107l31 31 61-74" fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <text x="600" y="315" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="900" fill="#ffffff" letter-spacing="2">CIVICSPAN</text>
+    <text x="665" y="390" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" fill="#4ade80" letter-spacing="2">RECOMMENDED</text>
+
+    <text x="600" y="535" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="900" fill="#06152c" letter-spacing="6">TRUSTED. TESTED. DEPLOYED.</text>
+    <line x1="360" y1="565" x2="540" y2="565" stroke="#16a34a" stroke-width="6"/>
+    <path d="M600 544l13 27 30 4-22 21 5 30-26-14-26 14 5-30-22-21 30-4z" fill="#22c55e"/>
+    <line x1="660" y1="565" x2="840" y2="565" stroke="#16a34a" stroke-width="6"/>
+    <text x="600" y="625" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600" fill="#111827">Every product is selected for business reliability,</text>
+    <text x="600" y="665" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600" fill="#111827">compatibility, and supportability.</text>
+  </g>
+</svg>
