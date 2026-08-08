@@ -217,7 +217,7 @@ const servicesJsonLd = {
       '@id': `${siteUrl}/#organization`,
       name: businessName,
       url: siteUrl,
-      logo: `${siteUrl}/civicspan-it-group-logo.webp`,
+      logo: `${siteUrl}/civicspan-logo-mark.svg`,
       description:
         'Infrastructure-focused IT support, Microsoft 365 consulting, ProjectWise support, and Dell business hardware deployment.',
     },
@@ -226,7 +226,7 @@ const servicesJsonLd = {
       '@id': `${siteUrl}/#localbusiness`,
       name: businessName,
       url: siteUrl,
-      image: `${siteUrl}/civicspan-it-group-logo.webp`,
+      image: `${siteUrl}/civicspan-logo-mark.svg`,
       telephone: '+1-540-760-2020',
       email: 'info@civicspanitgroup.com',
       contactPoint: [
