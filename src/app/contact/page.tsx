@@ -29,10 +29,15 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       })
       
-      if (response.ok) {
-        alert('Message sent successfully! We\'ll be in touch soon.')
-        setFormData({ name: '', email: '', company: '', subject: '', message: '' })
+      const result = await response.json().catch(() => null)
+
+      if (!response.ok) {
+        alert(result?.error || 'Failed to send message. Please try again.')
+        return
       }
+
+      alert('Message sent successfully! We\'ll be in touch soon.')
+      setFormData({ name: '', email: '', company: '', subject: '', message: '' })
     } catch (error) {
       alert('Failed to send message. Please try again.')
     } finally {
@@ -71,7 +76,7 @@ export default function ContactPage() {
               <span className="block font-extrabold text-primary text-3xl mb-3">02</span>
               <h3 className="text-white font-bold text-lg mb-2">Scope & Proposal</h3>
               <p className="text-neutral-muted text-sm leading-relaxed">
-                We recommend the right engagement model, hourly, project-based, or managed support ,
+                We recommend the right engagement model, hourly, project-based, or managed support,
                 and outline next steps.
               </p>
             </article>

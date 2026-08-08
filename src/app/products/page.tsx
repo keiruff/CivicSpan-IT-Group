@@ -204,7 +204,7 @@ export default function ProductsPage() {
               Plan the bundle before pricing the parts.
             </h2>
             <p className="text-neutral-light text-sm sm:text-base leading-relaxed">
-              Business hardware quotes should account for the user role, lifecycle, warranty, deployment work, and support plan,not just the device model.
+              Business hardware quotes should account for the user role, lifecycle, warranty, deployment work, and support plan, not just the device model.
             </p>
           </div>
 

@@ -139,7 +139,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <Link href="/partners" className="inline-flex text-primary hover:text-primary-light font-bold text-sm transition-colors">
+          <Link href="/partners" className="inline-flex text-primary hover:text-white font-bold text-sm transition-colors">
             View vendor partnerships and procurement authorization →
           </Link>
         </div>

@@ -192,7 +192,7 @@ export default function CapabilitiesPage() {
                   href={shopifyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex text-primary hover:text-primary-light font-bold text-sm transition-colors"
+                  className="inline-flex text-primary hover:text-white font-bold text-sm transition-colors"
                 >
                   Open the Bulk Hardware &amp; Licensing Collection →
                 </a>
@@ -270,7 +270,7 @@ export default function CapabilitiesPage() {
 
             <div className="rounded-3xl border border-slate-400/15 bg-slate-900/80 p-8 sm:p-10 shadow-xl backdrop-blur mb-5">
               <p className="text-blue-100 text-lg leading-8 mb-6">
-                CivicSpan Technologies was founded by Keisha Ruffner, an IT professional with extensive
+                CivicSpan IT Group was founded by Keisha Ruffner, an IT professional with extensive
                 experience supporting enterprise technology environments for transportation and
                 engineering organizations.
               </p>
@@ -437,7 +437,7 @@ export default function CapabilitiesPage() {
                   government-adjacent teams already rely on. Procurement, deployment, asset records,
                   and support stay together instead of being scattered across resellers.
                 </p>
-                <a href="/partners" className="inline-flex text-primary hover:text-primary-light font-bold text-sm transition-colors">
+                <a href="/partners" className="inline-flex text-primary hover:text-white font-bold text-sm transition-colors">
                   View vendor partnerships and procurement authorization →
                 </a>
               </div>
