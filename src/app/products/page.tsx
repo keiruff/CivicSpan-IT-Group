@@ -30,6 +30,68 @@ const workstationBundle = [
   'Custom quote and spec review',
 ]
 
+const partnerShopPackages = [
+  {
+    title: 'Dell Endpoint Hardware Package',
+    partner: 'Dell Technologies',
+    partnerHref: 'https://www.dell.com/en-us/lp/business-solutions',
+    description: 'Business laptop, workstation, dock, monitor, warranty, deployment, and support scoping for standardized endpoint rollouts.',
+    recommendedFor: ['Laptops', 'Workstations', 'Docks', 'Monitors'],
+    includes: ['Hardware standard review', 'Warranty and lifecycle planning', 'Deployment quote support'],
+  },
+  {
+    title: 'Cisco Network Hardware Package',
+    partner: 'Cisco',
+    partnerHref: 'https://www.cisco.com/site/us/en/products/index.html',
+    description: 'Network switching, wireless, routing, and connectivity hardware planning for secure office and infrastructure environments.',
+    recommendedFor: ['Switching', 'Wireless', 'Routing', 'Refresh projects'],
+    includes: ['Network requirement review', 'Bill-of-materials planning', 'Deployment documentation'],
+  },
+  {
+    title: 'Epson Print & Imaging Package',
+    partner: 'Epson',
+    partnerHref: 'https://epson.com/For-Work',
+    description: 'Printer, scanner, imaging, and large-format device planning for business, engineering, and public-sector workflows.',
+    recommendedFor: ['Printers', 'Scanners', 'Large-format', 'Office imaging'],
+    includes: ['Device fit review', 'Workflow and volume scoping', 'Setup and handoff planning'],
+  },
+  {
+    title: 'Ergotron Workspace Equipment Package',
+    partner: 'Ergotron',
+    partnerHref: 'https://www.ergotron.com/en-us/products',
+    description: 'Monitor arms, carts, mounts, and sit-stand workspace equipment planning for offices, classrooms, healthcare, and technical teams.',
+    recommendedFor: ['Monitor arms', 'Carts', 'Mounts', 'Sit-stand workspaces'],
+    includes: ['Workspace fit review', 'Mounting and compatibility planning', 'Rollout coordination'],
+  },
+  {
+    title: 'Complete Partner Shop Bundle',
+    partner: 'CivicSpan partner ecosystem',
+    partnerHref: shopifyUrl,
+    description: 'A combined quote package for teams that need endpoint hardware, networking, print/imaging, workspace equipment, licensing support, deployment planning, and documentation.',
+    recommendedFor: ['Multi-vendor procurement', 'Public-sector bids', 'Technology refreshes', 'Deployment support'],
+    includes: ['Partner product scoping', 'Bundled quote coordination', 'Asset, warranty, and deployment documentation'],
+    featured: true,
+  },
+]
+
+function partnerPackageQuoteHref(pkg: (typeof partnerShopPackages)[number]) {
+  const subject = encodeURIComponent(`Partner package quote request: ${pkg.title}`)
+  const body = encodeURIComponent([
+    `I would like a quote for: ${pkg.title}`,
+    '',
+    `Partner line: ${pkg.partner}`,
+    '',
+    'Products or categories:',
+    'Quantity:',
+    'Timeline:',
+    'Organization:',
+    'Deployment/support needs:',
+    'Notes:',
+  ].join('\n'))
+
+  return `mailto:${quoteEmail}?subject=${subject}&body=${body}`
+}
+
 export default function ProductsPage() {
   return (
     <>
@@ -98,6 +160,81 @@ export default function ProductsPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section id="partner-shop-packages" className="space-y-8">
+          <div className="rounded-[28px] border border-green-500/15 bg-dark-secondary/80 p-6 sm:p-8">
+            <p className="text-primary uppercase tracking-[0.16em] text-xs sm:text-sm font-extrabold mb-3">
+              Partner Shop Packages
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+              Quote-ready partner packages for procurement and deployment.
+            </h2>
+            <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-3xl">
+              Use these packages to start a focused quote tied to the partner product line, or choose the complete bundle when a project needs hardware, licensing, rollout planning, and documentation together.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {partnerShopPackages.map((pkg) => (
+              <article
+                key={pkg.title}
+                className={`rounded-3xl border overflow-hidden flex flex-col h-full ${
+                  pkg.featured
+                    ? 'border-primary/35 bg-primary/10 md:col-span-2 lg:col-span-3'
+                    : 'border-green-500/15 bg-dark-secondary/80'
+                }`}
+              >
+                <div className="p-6 flex flex-col flex-1">
+                  <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-3">{pkg.partner}</p>
+                  <h3 className="text-2xl font-extrabold text-white leading-tight mb-4">{pkg.title}</h3>
+                  <p className="text-neutral-light text-sm leading-6 mb-5">{pkg.description}</p>
+
+                  <div className="mb-6 space-y-5">
+                    <div>
+                      <p className="text-primary uppercase tracking-[0.16em] text-[0.7rem] font-extrabold mb-2">Recommended for</p>
+                      <div className="flex flex-wrap gap-2">
+                        {pkg.recommendedFor.map((item) => (
+                          <span key={item} className="rounded-full border border-green-500/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <p className="text-primary uppercase tracking-[0.16em] text-[0.7rem] font-extrabold mb-2">Package includes</p>
+                      <ul className="space-y-1.5">
+                        {pkg.includes.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-xs text-neutral-muted leading-5">
+                            <span className="text-primary font-bold mt-0.5">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-auto flex flex-col sm:flex-row sm:items-center gap-3">
+                    <a
+                      href={pkg.partnerHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg border border-primary/40 px-4 py-2 text-primary font-bold text-sm hover:bg-primary/10 transition-colors text-center"
+                    >
+                      View Partner Products ↗
+                    </a>
+                    <a
+                      href={partnerPackageQuoteHref(pkg)}
+                      className="rounded-lg bg-primary px-4 py-2 text-dark font-bold text-sm hover:bg-primary-dark transition-colors text-center"
+                    >
+                      Request Package Quote
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
