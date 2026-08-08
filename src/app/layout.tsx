@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import CookieBanner from '@/components/CookieBanner'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
-import Script from "next/script";
+import Script from 'next/script'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-image-preview': 'standard',
+      'max-image-preview': 'large',
     },
   },
 }
@@ -134,7 +134,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} font-sans antialiased bg-dark text-white min-h-screen flex flex-col`}>
         <Script
-  src="https://www.googletagmanager.com/gtag/js?id=G-YOURIDHERE"
+  src="https://www.googletagmanager.com/gtag/js?id=G-DHDMJY4DW5"
   strategy="afterInteractive"
 />
 <Script id="google-analytics" strategy="afterInteractive">
