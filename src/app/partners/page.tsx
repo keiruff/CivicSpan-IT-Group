@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Authorized Vendor Partnerships for Procurement | CivicSpan IT Group',
   description:
-    'CivicSpan IT Group is an authorized partner across Dell, Epson, Cisco, and TD SYNNEX, giving engineering, government-adjacent, and small business clients procurement, deployment, and support under one accountable vendor of record.',
+    'CivicSpan IT Group is an authorized partner across Dell, Epson, Cisco, Ergotron, and TD SYNNEX, giving engineering, government-adjacent, and small business clients procurement, deployment, and support under one accountable vendor of record.',
 }
 
 type Partnership = {
@@ -38,6 +38,11 @@ const partnerships: Partnership[] = [
     icon: '🌐',
     title: 'Cisco Partner',
     body: 'Networking and infrastructure hardware to support secure, reliable connectivity, from office deployments to engineering environments with demanding uptime needs.',
+  },
+  {
+    icon: '🧍',
+    title: 'Ergotron Partner',
+    body: 'Ergonomic carts, mounts, monitor arms, and sit-stand workspace equipment for healthcare, education, office, and technical environments.',
   },
   {
     icon: '📦',
@@ -76,12 +81,51 @@ const procurementSteps = [
   { step: 'Document', body: 'You receive clear asset records and configuration documentation.' },
 ]
 
+const partnerServicePackages = [
+  {
+    title: 'Dell Endpoint Deployment Package',
+    partner: 'Dell Technologies',
+    href: 'https://www.dell.com/en-us/lp/business-solutions',
+    summary: 'Business laptops, workstations, docks, monitors, warranty planning, deployment preparation, and asset documentation.',
+    includes: ['Latitude and Precision hardware scoping', 'Warranty and lifecycle guidance', 'Endpoint setup and handoff documentation'],
+  },
+  {
+    title: 'Cisco Network Readiness Package',
+    partner: 'Cisco',
+    href: 'https://www.cisco.com/site/us/en/products/index.html',
+    summary: 'Network hardware planning for secure offices, segmented environments, refresh projects, and reliable connectivity.',
+    includes: ['Switching, routing, and wireless scoping', 'Small office and engineering network planning', 'Configuration documentation and rollout support'],
+  },
+  {
+    title: 'Epson Print & Imaging Package',
+    partner: 'Epson',
+    href: 'https://epson.com/For-Work',
+    summary: 'Business print, scan, imaging, and large-format equipment planning for offices, engineering teams, and public-sector workflows.',
+    includes: ['Printer and scanner requirement review', 'Large-format workflow support', 'Deployment and user handoff planning'],
+  },
+  {
+    title: 'Ergotron Workspace Package',
+    partner: 'Ergotron',
+    href: 'https://www.ergotron.com/en-us/products',
+    summary: 'Ergonomic monitor arms, carts, mounts, and sit-stand workspace equipment planning for modern work environments.',
+    includes: ['Workspace and mounting requirement review', 'Healthcare, education, and office fit planning', 'Deployment coordination and asset records'],
+  },
+  {
+    title: 'Complete Partner Procurement Bundle',
+    partner: 'Dell, Cisco, Epson, Ergotron, and TD SYNNEX',
+    href: 'https://h1bg1p-j7.myshopify.com/',
+    summary: 'A bundled procurement and deployment package for teams that need endpoint hardware, networking, print/imaging, ergonomic equipment, and documentation through one vendor of record.',
+    includes: ['Multi-vendor hardware and licensing scoping', 'Quote coordination and deployment planning', 'Asset, warranty, and support documentation'],
+    featured: true,
+  },
+]
+
 export default function PartnersPage() {
   return (
     <>
       <Hero
         title="Authorized Vendor Partnerships for Procurement"
-        description="One vendor of record. Four authorized supply chains."
+        description="One vendor of record. Multiple authorized supply chains."
       />
 
       <section className="py-20 sm:py-28">
@@ -119,6 +163,53 @@ export default function PartnersPage() {
                       <p className="text-neutral-muted leading-relaxed">{partner.body}</p>
                     </div>
                   </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-20">
+            <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-3">Partner Service Packages</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Procurement packages built around authorized partner lines</h2>
+            <p className="text-neutral-light max-w-4xl mb-10 leading-relaxed">
+              Start with a focused partner package or combine the partner lines into one scoped procurement and deployment bundle. Each package keeps vendor product research, quoting, deployment planning, and documentation connected through CivicSpan.
+            </p>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {partnerServicePackages.map((pkg) => (
+                <article
+                  key={pkg.title}
+                  className={`rounded-2xl border p-7 transition-colors ${
+                    pkg.featured
+                      ? 'border-primary/40 bg-primary/10 lg:col-span-2'
+                      : 'border-green-500/15 bg-dark-secondary/70 hover:border-primary/40'
+                  }`}
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-5">
+                    <div>
+                      <p className="text-primary text-xs font-extrabold uppercase tracking-[0.16em] mb-2">{pkg.partner}</p>
+                      <h3 className="text-2xl font-extrabold text-white">{pkg.title}</h3>
+                    </div>
+                    <a
+                      href={pkg.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex shrink-0 items-center justify-center rounded-lg border border-primary/40 px-4 py-2 text-sm font-bold text-primary hover:bg-primary/10 transition-colors"
+                    >
+                      View Partner Products ↗
+                    </a>
+                  </div>
+
+                  <p className="text-neutral-light leading-relaxed mb-5">{pkg.summary}</p>
+
+                  <ul className="grid gap-2">
+                    {pkg.includes.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-neutral-muted leading-6">
+                        <span className="text-primary font-bold mt-0.5">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </article>
               ))}
             </div>
