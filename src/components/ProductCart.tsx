@@ -34,10 +34,10 @@ export default function ProductCart({ products }: Props) {
           Recommended Products
         </p>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-          Quote-ready hardware for business deployments.
+          Quote-ready hardware and licensing support for public-sector deployments.
         </h2>
         <p className="text-neutral-light text-sm sm:text-base leading-relaxed max-w-3xl">
-          These Dell product categories stay on this page because they require scoping before purchase. Each quote request opens a pre-filled email so quantities, warranty, deployment, and support needs can be confirmed before pricing.
+          These Dell hardware and licensing-related categories stay on this page because they require scoping before purchase. Each quote request opens a pre-filled email so quantities, warranty, deployment, and support needs can be confirmed before pricing.
         </p>
       </section>
 
