@@ -127,7 +127,44 @@ const coreCapabilities = [
   },
 ]
 
-const naics = ['541512', '541511', '541519', '518210', '611420']
+const shopifyUrl = 'https://h1bg1p-j7.myshopify.com/'
+
+const partnerLogoChips = ['Cisco', 'Epson', 'Ergotron']
+
+const naics = [
+  { code: '541512', label: 'Computer systems design services' },
+  { code: '541511', label: 'Custom computer programming services' },
+  { code: '541519', label: 'Other computer related services' },
+  { code: '518210', label: 'Data processing, hosting, and related services' },
+  { code: '611420', label: 'Computer training' },
+]
+
+const publicSectorTargets = [
+  'Virginia Department of Transportation and transportation districts',
+  'Virginia Information Technologies Agency and IT modernization buyers',
+  'Virginia Department of General Services and statewide procurement offices',
+  'Virginia Community College System and regional campus IT teams',
+  'George Mason University, University of Virginia, Virginia Tech, and VCU procurement groups',
+  'Municipal utilities, planning departments, and public works teams using CAD, GIS, or ProjectWise',
+]
+
+const outreachTemplate = [
+  'Subject: SWaM-certified IT operations and hardware support for public-sector teams',
+  '',
+  'Hello [Name],',
+  '',
+  'CivicSpan IT Group is a Virginia SWaM-certified, SBA WOSB/EDWOSB, eVA-registered, and SAM.gov-registered technology partner supporting public-sector and higher-education teams with infrastructure IT support, engineering technology workflows, and authorized hardware procurement.',
+  '',
+  'For upcoming technology, endpoint, ProjectWise, Microsoft 365, or procurement needs, our capabilities page summarizes our registrations, NAICS alignment, and partner channels: https://civicspan-it-group-keisha-ruffners-projects.vercel.app/capabilities',
+  '',
+  'For bulk hardware or licensing needs, our quote path starts here: https://h1bg1p-j7.myshopify.com/',
+  '',
+  'Would it be useful to schedule a short capabilities introduction or vendor-file review?',
+  '',
+  'Best,',
+  'Keisha Ruffner',
+  'CivicSpan IT Group',
+]
 
 const areasOfExpertise = [
   'Bentley ProjectWise Administration & Support',
@@ -168,6 +205,25 @@ export default function CapabilitiesPage() {
                 documentation, procurement, and digital operations so teams can move faster with
                 cleaner systems and clearer workflows.
               </p>
+
+              <div className="mt-8 rounded-2xl border border-primary/25 bg-primary/10 p-5">
+                <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-2">
+                  B2B Procurement Path
+                </p>
+                <p className="text-blue-100 leading-7 mb-4">
+                  Need bulk business hardware, licensing, or deployment support for a public-sector bid?
+                  Start with CivicSpan&apos;s quote-ready collection so quantities, warranty, deployment, and
+                  support needs can be scoped before pricing.
+                </p>
+                <a
+                  href={shopifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex text-primary hover:text-primary-light font-bold text-sm transition-colors"
+                >
+                  Open the Bulk Hardware &amp; Licensing Collection →
+                </a>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
                 <a href="/contact" className="btn">
@@ -414,7 +470,7 @@ export default function CapabilitiesPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
               {procurementPartners.map((partner) => (
                 <article
                   key={partner.title}
@@ -429,6 +485,33 @@ export default function CapabilitiesPage() {
                   </div>
                 </article>
               ))}
+            </div>
+
+            <div className="rounded-2xl border border-primary/20 bg-slate-950/50 p-6">
+              <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-4">
+                OEM Partner Badging
+              </p>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <div className="rounded-xl bg-white p-3 shadow-lg">
+                  <Image
+                    src="/dell-technologies-authorized-partner.svg"
+                    alt="Dell Technologies Authorized Partner badge"
+                    width={220}
+                    height={64}
+                    className="w-44 sm:w-52 h-auto"
+                  />
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {partnerLogoChips.map((partner) => (
+                    <span
+                      key={partner}
+                      className="inline-flex items-center rounded-full border border-slate-200/15 bg-white px-4 py-2 text-slate-950 text-sm font-black shadow-lg"
+                    >
+                      {partner}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
 
@@ -647,18 +730,77 @@ export default function CapabilitiesPage() {
               <p className="text-primary uppercase tracking-[0.16em] text-sm font-extrabold mb-5">
                 Federal Alignment
               </p>
-              <h2 className="text-4xl font-extrabold text-white">NAICS Codes</h2>
+              <h2 className="text-4xl font-extrabold text-white">NAICS Codes and Registry Updates</h2>
+              <p className="text-slate-300 leading-7 mt-4 max-w-4xl">
+                These codes should stay aligned across the capabilities page, eVA vendor profile, and SAM.gov entity record.
+                When adding a new code for bids or teaming packages, update SAM.gov first, then mirror the same code set in eVA and outbound capability materials.
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              {naics.map((code) => (
-                <span
-                  key={code}
-                  className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-slate-200/15 bg-slate-950/50 px-4 py-3 text-primary text-xl font-bold tracking-wide"
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+              {naics.map((item) => (
+                <div
+                  key={item.code}
+                  className="rounded-2xl border border-slate-200/15 bg-slate-950/50 px-4 py-4"
                 >
-                  {code}
-                </span>
+                  <span className="block text-primary text-xl font-bold tracking-wide mb-2">
+                    {item.code}
+                  </span>
+                  <span className="block text-slate-300 text-sm leading-6">{item.label}</span>
+                </div>
               ))}
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+              <div className="rounded-2xl border border-primary/20 bg-primary/10 p-6">
+                <h3 className="text-white text-xl font-bold mb-3">eVA procurement sync</h3>
+                <p className="text-slate-300 leading-7">
+                  Keep flat-rate consulting and setup fees consistent between the shop quote path and the Virginia eVA vendor profile so buyers see the same public-sector pricing structure in both places.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-sky-500/20 bg-sky-500/10 p-6">
+                <h3 className="text-white text-xl font-bold mb-3">SAM.gov update note</h3>
+                <p className="text-slate-300 leading-7">
+                  If you add NAICS coverage for a bid, update the active SAM.gov entity record before using the new code in federal-facing capability statements or prime-vendor outreach.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="rounded-3xl border border-slate-400/15 bg-slate-900/80 p-8 sm:p-10 shadow-xl backdrop-blur mb-28">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 mb-10">
+              <div>
+                <p className="text-primary uppercase tracking-[0.16em] text-sm font-extrabold mb-5">
+                  Prime Vendor Outreach
+                </p>
+                <h2 className="text-4xl font-extrabold text-white leading-tight">
+                  A focused path for public-sector bidding.
+                </h2>
+              </div>
+              <p className="text-blue-100 text-lg leading-8">
+                Use this section as a fast reference for capability emails, agency targeting, and procurement profile maintenance when bidding on regional public-sector or higher-education work.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-8">
+              <div className="rounded-2xl border border-green-500/15 bg-slate-950/50 p-6">
+                <h3 className="text-white text-xl font-bold mb-4">Target outreach list</h3>
+                <ul className="grid gap-3 text-slate-300 leading-7">
+                  {publicSectorTargets.map((target) => (
+                    <li key={target} className="flex items-start gap-3">
+                      <span className="text-primary font-bold mt-1">•</span>
+                      <span>{target}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-2xl border border-green-500/15 bg-slate-950/50 p-6">
+                <h3 className="text-white text-xl font-bold mb-4">Cold outreach capability email</h3>
+                <pre className="whitespace-pre-wrap rounded-2xl border border-white/10 bg-black/30 p-5 text-slate-300 text-sm leading-6 overflow-x-auto">
+                  {outreachTemplate.join('\n')}
+                </pre>
+              </div>
             </div>
           </section>
 
