@@ -13,8 +13,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'ProjectWise & Engineering IT Operations | Fredericksburg, VA | CivicSpan IT Group',
-  description: 'CivicSpan IT Group provides specialized technology operations, ProjectWise & Bentley administration, heavy-duty cybersecurity, and multi-vendor procurement for government-adjacent and infrastructure teams in Virginia.',
+  metadataBase: new URL('https://civicspanitgroup.com'),
+  title: 'ProjectWise, SharePoint, Website & Shopify IT Support | CivicSpan IT Group',
+  description: 'CivicSpan IT Group provides ProjectWise support, SharePoint setup, website creation, Shopify store setup, Microsoft 365 consulting, cybersecurity, and multi-vendor procurement for infrastructure and public-sector teams.',
   keywords: [
     'ProjectWise support Fredericksburg VA',
     'Bentley application specialist Virginia',
@@ -26,13 +27,17 @@ export const metadata: Metadata = {
     'CAD workstation support Mid-Atlantic',
     'Defense-grade network architecture',
     'SAM.gov registered IT consultant',
+    'SharePoint setup services',
+    'website creation services Virginia',
+    'Shopify store setup services',
+    'small business website package',
   ],
   alternates: {
     canonical: 'https://civicspanitgroup.com',
   },
   icons: {
-    icon: [{ url: '/favicon.png', type: 'image/png', sizes: '1254x1254' }],
-    apple: '/apple-icon.png',
+    icon: [{ url: '/civicspan-logo-mark.svg', type: 'image/svg+xml' }],
+    apple: '/civicspan-logo-mark.svg',
   },
   openGraph: {
     title: 'CivicSpan IT Group | Engineering Technology & Government IT Operations',
@@ -43,12 +48,18 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
-        width: 1774,
-        height: 887,
-        alt: 'CivicSpan IT Group logo',
+        url: 'https://civicspanitgroup.com/civicspan-logo-mark.svg',
+        width: 1024,
+        height: 1024,
+        alt: 'CivicSpan IT Group logo mark',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CivicSpan IT Group | ProjectWise, SharePoint, Website & Shopify Support',
+    description: 'ProjectWise support, SharePoint setup, website creation, Shopify store setup, Microsoft 365 consulting, and multi-vendor procurement.',
+    images: ['https://civicspanitgroup.com/civicspan-logo-mark.svg'],
   },
   robots: {
     index: true,
@@ -78,7 +89,7 @@ export default function RootLayout({
       '@type': 'Organization',
       name: 'CivicSpan IT Group',
       url: 'https://civicspanitgroup.com/',
-      logo: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
+      logo: 'https://civicspanitgroup.com/civicspan-logo-mark.svg',
       description: 'Infrastructure and technology operations support, Microsoft 365 consulting, ProjectWise support, Dell procurement, endpoint deployment, documentation, and governance.',
     },
     {
@@ -86,7 +97,7 @@ export default function RootLayout({
       '@type': 'LocalBusiness',
       name: 'CivicSpan IT Group',
       url: 'https://civicspanitgroup.com/',
-      image: 'https://civicspanitgroup.com/civicspan-it-group-logo.webp',
+      image: 'https://civicspanitgroup.com/civicspan-logo-mark.svg',
       telephone: '+1-540-760-2020',
       email: 'info@civicspanitgroup.com',
       priceRange: '$$',
@@ -107,15 +118,15 @@ export default function RootLayout({
         addressCountry: 'US',
       },
       areaServed: ['Fredericksburg VA', 'Richmond VA', 'Northern Virginia', 'Maryland', 'Pennsylvania', 'Mid-Atlantic'],
-      knowsAbout: ['Infrastructure and technology operations', 'Managed infrastructure services', 'Microsoft 365', 'SharePoint', 'Microsoft Teams', 'Intune', 'Entra ID', 'Dell business laptops'],
+      knowsAbout: ['Infrastructure and technology operations', 'Managed infrastructure services', 'Microsoft 365', 'SharePoint', 'Microsoft Teams', 'Intune', 'Entra ID', 'Dell business laptops', 'website creation', 'Shopify store setup'],
     },
   ]
 
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.png" type="image/png" sizes="1254x1254" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="icon" href="/civicspan-logo-mark.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/civicspan-logo-mark.svg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -135,7 +146,7 @@ export default function RootLayout({
   `}
 </Script>
         <Header />
-        <main id="main-content" className="flex-grow mt-0 md:mt-[82px]">
+        <main id="main-content" className="flex-grow mt-0 md:mt-[72px]">
           {children}
         </main>
         <Footer />

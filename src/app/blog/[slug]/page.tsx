@@ -56,7 +56,7 @@ export default function BlogPostPage({ params }: Props) {
       publisher: {
         '@type': 'Organization',
         name: 'CivicSpan IT Group',
-        logo: { '@type': 'ImageObject', url: `${siteUrl}/civicspan-it-group-logo.webp` },
+        logo: { '@type': 'ImageObject', url: `${siteUrl}/civicspan-logo-mark.svg` },
       },
       mainEntityOfPage: canonical,
     },
@@ -79,7 +79,7 @@ export default function BlogPostPage({ params }: Props) {
               '@type': 'Organization',
               name: 'CivicSpan IT Group',
               url: siteUrl,
-              logo: `${siteUrl}/civicspan-it-group-logo.webp`,
+              logo: `${siteUrl}/civicspan-logo-mark.svg`,
             },
           },
         ]
