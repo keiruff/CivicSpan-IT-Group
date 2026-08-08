@@ -62,9 +62,9 @@ export default function Header() {
               className="h-10 w-10 md:h-11 md:w-11 rounded-full bg-white object-contain"
               priority
             />
-            <span className="flex flex-col leading-none">
-              <span className="text-base md:text-lg font-black tracking-[0.14em] text-white">CIVICSPAN</span>
-              <span className="mt-0.5 text-[0.65rem] md:text-xs font-extrabold tracking-[0.24em] text-primary">IT GROUP</span>
+            <span className="flex flex-col leading-tight">
+              <span className="text-[1.05rem] md:text-[1.18rem] font-extrabold tracking-[0.04em] text-white">CivicSpan</span>
+              <span className="text-[0.68rem] md:text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-slate-300">IT Group</span>
             </span>
           </Link>
         </div>
