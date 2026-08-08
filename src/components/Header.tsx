@@ -53,15 +53,19 @@ export default function Header() {
         aria-label="Primary navigation"
       >
         <div className="logo flex items-center justify-center w-full md:w-auto">
-          <Link href="/" aria-label="CivicSpan IT Group home" className="inline-flex items-center justify-center" onClick={() => setMenuOpen(false)}>
+          <Link href="/" aria-label="CivicSpan IT Group home" className="inline-flex items-center justify-center gap-3 text-left transition-transform duration-300 hover:scale-[1.02]" onClick={() => setMenuOpen(false)}>
             <Image
-              src="/civicspan-it-group-logo.webp"
-              alt="CivicSpan IT Group Logo"
-              width={250}
-              height={58}
-              className="h-[52px] md:h-[58px] w-auto block object-contain transition-transform duration-300 hover:scale-[1.03]"
+              src="/civicspan-logo-mark.svg"
+              alt="CivicSpan IT Group logo mark"
+              width={64}
+              height={64}
+              className="h-[52px] w-[52px] md:h-[58px] md:w-[58px] rounded-full bg-white object-contain"
               priority
             />
+            <span className="flex flex-col leading-none">
+              <span className="text-lg md:text-xl font-black tracking-[0.18em] text-white">CIVICSPAN</span>
+              <span className="mt-1 text-xs md:text-sm font-extrabold tracking-[0.28em] text-primary">IT GROUP</span>
+            </span>
           </Link>
         </div>
 
