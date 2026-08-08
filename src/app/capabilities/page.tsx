@@ -129,7 +129,7 @@ const coreCapabilities = [
 
 const shopifyUrl = 'https://h1bg1p-j7.myshopify.com/'
 
-const partnerLogoChips = ['Cisco', 'Epson', 'Ergotron']
+const partnerLogoChips = ['Cisco', 'Epson']
 
 const naics = [
   { code: '541512', label: 'Computer systems design services' },
@@ -460,30 +460,39 @@ export default function CapabilitiesPage() {
               ))}
             </div>
 
-            <div className="rounded-2xl border border-primary/20 bg-slate-950/50 p-6">
-              <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-4">
+            <div className="rounded-2xl border border-primary/20 bg-slate-950/50 p-6 sm:p-7">
+              <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-5">
                 Authorized OEM Partners
               </p>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <div className="rounded-xl bg-white p-3 shadow-lg">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
+                <div className="flex min-h-24 items-center justify-center rounded-2xl bg-white p-5 shadow-lg">
                   <Image
                     src="/dell-technologies-authorized-partner.svg"
                     alt="Dell Technologies Authorized Partner badge"
-                    width={220}
-                    height={64}
-                    className="w-44 sm:w-52 h-auto"
+                    width={260}
+                    height={76}
+                    className="max-h-16 w-full max-w-[230px] object-contain"
                   />
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  {partnerLogoChips.map((partner) => (
-                    <span
-                      key={partner}
-                      className="inline-flex items-center rounded-full border border-slate-200/15 bg-white px-4 py-2 text-slate-950 text-sm font-black shadow-lg"
-                    >
-                      {partner}
-                    </span>
-                  ))}
+
+                <div className="flex min-h-24 items-center justify-center rounded-2xl bg-white p-5 shadow-lg">
+                  <Image
+                    src="/ergotron-logo.svg"
+                    alt="Ergotron logo"
+                    width={260}
+                    height={60}
+                    className="max-h-14 w-full max-w-[220px] object-contain"
+                  />
                 </div>
+
+                {partnerLogoChips.map((partner) => (
+                  <div
+                    key={partner}
+                    className="flex min-h-24 items-center justify-center rounded-2xl bg-white px-6 py-5 text-slate-950 shadow-lg"
+                  >
+                    <span className="text-lg font-black tracking-tight">{partner}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
