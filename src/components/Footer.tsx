@@ -26,7 +26,7 @@ export default function Footer() {
             </Link>
             <span className="hidden sm:inline text-white/20">|</span>
             <p className="text-neutral-light/70 text-xs">
-              Infrastructure &amp; Technology Operations • Fredericksburg, VA
+              10320 Hillside Lane, Fredericksburg, VA 22408
             </p>
           </div>
 

@@ -204,6 +204,14 @@ export default function CapabilitiesPage() {
                 </a>
 
                 <a
+                  href="/civicspan-it-group-capabilities-statement.pdf"
+                  download
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-primary/40 bg-primary/10 text-primary font-bold hover:bg-primary hover:text-slate-950 transition-all duration-300"
+                >
+                  Download Capabilities Statement
+                </a>
+
+                <a
                   href="#core-capabilities"
                   className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-400/30 bg-slate-900/60 text-slate-200 font-bold hover:text-primary hover:border-primary transition-all duration-300"
                 >
