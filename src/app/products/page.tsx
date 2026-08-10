@@ -46,7 +46,21 @@ const workstationBundle = [
   'Custom quote and spec review',
 ]
 
-const partnerShopPackages = [
+type PartnerShopPackage = {
+  title: string
+  partner: string
+  partnerHref: string
+  partnerLogo?: {
+    src: string
+    alt: string
+  }
+  description: string
+  recommendedFor: string[]
+  includes: string[]
+  featured?: boolean
+}
+
+const partnerShopPackages: PartnerShopPackage[] = [
   {
     title: 'Dell Endpoint Hardware Package',
     partner: 'Dell Technologies',
@@ -67,6 +81,10 @@ const partnerShopPackages = [
     title: 'Epson Print & Imaging Package',
     partner: 'Epson',
     partnerHref: 'https://epson.com/For-Work',
+    partnerLogo: {
+      src: '/epson-logo.svg',
+      alt: 'Epson logo',
+    },
     description: 'Printer, scanner, imaging, and large-format device planning for business, engineering, and public-sector workflows.',
     recommendedFor: ['Printers', 'Scanners', 'Large-format', 'Office imaging'],
     includes: ['Device fit review', 'Workflow and volume scoping', 'Setup and handoff planning'],
@@ -315,7 +333,20 @@ export default function ProductsPage() {
                 }`}
               >
                 <div className="p-6 flex flex-col flex-1">
-                  <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold mb-3">{pkg.partner}</p>
+                  <div className="mb-3 flex items-center justify-between gap-4">
+                    <p className="text-primary uppercase tracking-[0.16em] text-xs font-extrabold">{pkg.partner}</p>
+                    {pkg.partnerLogo ? (
+                      <span className="flex h-9 w-24 shrink-0 items-center justify-center rounded-md bg-white px-3 py-2">
+                        <Image
+                          src={pkg.partnerLogo.src}
+                          alt={pkg.partnerLogo.alt}
+                          width={120}
+                          height={32}
+                          className="h-auto max-h-5 w-full object-contain"
+                        />
+                      </span>
+                    ) : null}
+                  </div>
                   <h3 className="text-2xl font-extrabold text-white leading-tight mb-4">{pkg.title}</h3>
                   <p className="text-neutral-light text-sm leading-6 mb-5">{pkg.description}</p>
 

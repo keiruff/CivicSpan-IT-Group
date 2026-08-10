@@ -16,6 +16,7 @@ type Partnership = {
   badge?: {
     src: string
     alt: string
+    className?: string
   }
 }
 
@@ -25,12 +26,18 @@ const partnerships: Partnership[] = [
     badge: {
       src: '/dell-technologies-authorized-partner.svg',
       alt: 'Dell Technologies Authorized Partner badge',
+      className: 'w-40 sm:w-52',
     },
     title: 'Dell Technologies Partner',
     body: 'Endpoint procurement, deployment, and lifecycle management for workstations, laptops, and infrastructure hardware, sized for engineering workflows and government-adjacent compliance requirements.',
   },
   {
     icon: '🖨️',
+    badge: {
+      src: '/epson-logo.svg',
+      alt: 'Epson logo',
+      className: 'w-32 sm:w-40 px-4 py-3',
+    },
     title: 'Epson Authorized Partner',
     body: 'Print, scan, and imaging hardware procurement and support, including large-format and production-grade equipment for engineering and design workflows.',
   },
@@ -153,7 +160,7 @@ export default function PartnersPage() {
                         alt={partner.badge.alt}
                         width={240}
                         height={70}
-                        className="w-40 sm:w-52 flex-shrink-0 rounded-sm bg-white"
+                        className={`${partner.badge.className ?? 'w-40 sm:w-52'} flex-shrink-0 rounded-sm bg-white object-contain`}
                       />
                     ) : (
                       <span className="text-3xl flex-shrink-0">{partner.icon}</span>

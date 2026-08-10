@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const lifecycleSteps = [
@@ -125,12 +126,24 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
             {[
               { icon: '🖥️', title: 'Dell Technologies Partner', body: 'Endpoint procurement & deployment' },
-              { icon: '🖨️', title: 'Epson Authorized Partner', body: 'Print, scan & imaging hardware' },
+              { icon: '🖨️', title: 'Epson Authorized Partner', body: 'Print, scan & imaging hardware', logo: '/epson-logo.svg' },
               { icon: '🌐', title: 'Cisco Partner', body: 'Networking & infrastructure hardware' },
               { icon: '📦', title: 'TD SYNNEX Authorized Reseller', body: 'Broad-line distribution access' },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-4">
-                <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                {item.logo ? (
+                  <span className="flex h-10 w-20 flex-shrink-0 items-center justify-center rounded-md bg-white px-2 py-1.5">
+                    <Image
+                      src={item.logo}
+                      alt={`${item.title} logo`}
+                      width={120}
+                      height={32}
+                      className="h-auto max-h-6 w-full object-contain"
+                    />
+                  </span>
+                ) : (
+                  <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                )}
                 <div>
                   <h3 className="text-white font-bold text-sm mb-1">{item.title}</h3>
                   <p className="text-neutral-muted text-sm leading-relaxed">{item.body}</p>
