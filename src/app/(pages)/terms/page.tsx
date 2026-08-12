@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: '1. General Use of Website',
-    content: <><p className="mb-4">You must be at least 18 years old, or the age of majority in your jurisdiction, to use this website or make a purchase from our store. You agree to provide accurate, current, and complete information when creating an account, placing an order, or submitting a contact or consultation request.</p><p>You agree not to use this website for any unlawful purpose, to interfere with the site&apos;s operation, or to attempt unauthorized access to any portion of the site, our systems, or connected accounts. All content on this website, including text, graphics, logos, and branding, is the property of CivicSpan IT Group unless otherwise noted and may not be reproduced, distributed, or used without prior written permission.</p></>,
+    content: <><p className="mb-4">You must be at least 18 years old, or the age of majority in your jurisdiction, to use this website or make a purchase from our store. You agree to provide accurate, current, and complete information when creating an account, placing an order, or submitting a contact or consultation request.</p><p>You agree not to use this website for any unlawful purpose, to interfere with the site&apos;s operation, or to attempt unauthorized access to any portion of the site, our systems, or connected accounts. All content on this website, including text, graphics, logos, and branding, is the property of CivicSpan Technologies LLC dba CivicSpan IT Group (&quot;CivicSpan&quot;) unless otherwise noted and may not be reproduced, distributed, or used without prior written permission.</p></>,
   },
   {
     title: '2. Online Store Purchases',
@@ -33,7 +33,7 @@ const sections = [
   },
   {
     title: '7. Indemnification',
-    content: <p>You agree to indemnify and hold harmless CivicSpan IT Group, its owner, employees, and contractors from claims, damages, losses, liabilities, and expenses, including reasonable attorney&apos;s fees, arising from your use of our website, store, products, or services, or your violation of these Terms.</p>,
+    content: <p>You agree to indemnify and hold harmless CivicSpan Technologies LLC dba CivicSpan IT Group, its owner, employees, and contractors from claims, damages, losses, liabilities, and expenses, including reasonable attorney&apos;s fees, arising from your use of our website, store, products, or services, or your violation of these Terms.</p>,
   },
   {
     title: '8. Privacy',
@@ -53,10 +53,10 @@ const sections = [
   },
   {
     title: '12. Contact Us',
-    content: <p>CivicSpan IT Group<br />Spotsylvania, Virginia<br />Website: civicspanitgroup.com<br />Store: shop.civicspanitgroup.com</p>,
+    content: <p>CivicSpan Technologies LLC dba CivicSpan IT Group<br />10320 Hillside Lane<br />Fredericksburg, VA 22408<br />Phone: <a className="text-primary hover:underline" href="tel:+15407602020">(540) 760-2020</a><br />Email: <a className="text-primary hover:underline" href="mailto:info@civicspanitgroup.com">info@civicspanitgroup.com</a><br />Website: civicspanitgroup.com<br />Store: shop.civicspanitgroup.com</p>,
   },
 ]
 
 export default function TermsPage() {
-  return <><Hero title="Terms and Conditions" description="Terms governing CivicSpan IT Group’s website, store, products, and services." /><section className="py-20 sm:py-32"><div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div className="space-y-8 text-neutral-light leading-relaxed"><div><h2 className="text-2xl font-bold text-white mb-2">CivicSpan IT Group Terms and Conditions</h2><p className="text-sm text-neutral-muted">Effective date: August 12, 2026</p></div><p>These Terms and Conditions govern your access to and use of civicspanitgroup.com, shop.civicspanitgroup.com, and CivicSpan IT Group services, products, digital downloads, and engagements. By accessing our website, purchasing from our store, or engaging our services, you agree to these Terms.</p>{sections.map((section) => <div key={section.title}><h3 className="text-xl font-bold text-primary mb-4">{section.title}</h3>{section.content}</div>)}</div></div></section></>
+  return <><Hero title="Terms and Conditions" description="Terms governing CivicSpan IT Group’s website, store, products, and services." /><section className="py-20 sm:py-32"><div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div className="space-y-8 text-neutral-light leading-relaxed"><div><h2 className="text-2xl font-bold text-white mb-2">CivicSpan IT Group Terms and Conditions</h2><p className="text-sm text-neutral-muted">Effective date: August 12, 2026</p></div><p>These Terms and Conditions govern your access to and use of civicspanitgroup.com, shop.civicspanitgroup.com, and CivicSpan Technologies LLC dba CivicSpan IT Group (&quot;CivicSpan,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) services, products, digital downloads, and engagements. By accessing our website, purchasing from our store, or engaging our services, you agree to these Terms.</p>{sections.map((section) => <div key={section.title}><h3 className="text-xl font-bold text-primary mb-4">{section.title}</h3>{section.content}</div>)}</div></div></section></>
 }

@@ -190,8 +190,16 @@ export default function ContactPage() {
                 </div>
 
                 <div className="bg-dark-secondary/50 border border-green-500/15 rounded-lg p-6">
-                  <h4 className="text-primary font-semibold mb-2">Location</h4>
-                  <p className="text-neutral-light">Fredericksburg, Virginia, serving the Mid-Atlantic region</p>
+                  <h4 className="text-primary font-semibold mb-2">Phone</h4>
+                  <a href="tel:+15407602020" className="text-neutral-light hover:text-primary transition-colors">
+                    (540) 760-2020
+                  </a>
+                </div>
+
+                <div className="bg-dark-secondary/50 border border-green-500/15 rounded-lg p-6">
+                  <h4 className="text-primary font-semibold mb-2">Business Address</h4>
+                  <p className="text-neutral-light">10320 Hillside Lane, Fredericksburg, VA 22408</p>
+                  <p className="mt-2 text-sm text-neutral-muted">CivicSpan Technologies LLC dba CivicSpan IT Group</p>
                 </div>
 
                 <div className="bg-dark-secondary/50 border border-green-500/15 rounded-lg p-6">

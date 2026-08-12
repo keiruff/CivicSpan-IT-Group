@@ -26,7 +26,7 @@ export default function Footer() {
             </Link>
             <span className="hidden sm:inline text-white/20">|</span>
             <p className="text-neutral-light/70 text-xs">
-              10320 Hillside Lane, Fredericksburg, VA 22408
+              CivicSpan Technologies LLC dba CivicSpan IT Group · 10320 Hillside Lane, Fredericksburg, VA 22408 · (540) 760-2020
             </p>
           </div>
 

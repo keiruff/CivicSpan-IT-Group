@@ -19,7 +19,7 @@ export default function PrivacyPage() {
             <div>
               <h3 className="text-xl font-bold text-primary mb-4">1. Introduction</h3>
               <p>
-                CivicSpan IT Group (&quot;we,&quot; &quot;us,&quot; &quot;our,&quot; or &quot;Company&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+                CivicSpan Technologies LLC dba CivicSpan IT Group (&quot;we,&quot; &quot;us,&quot; &quot;our,&quot; or &quot;Company&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
               </p>
             </div>
 
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
                 <a href="mailto:privacy@civicspanitgroup.com" className="text-primary hover:underline">
                   privacy@civicspanitgroup.com
                 </a>
-                .
+                . Our business address is 10320 Hillside Lane, Fredericksburg, VA 22408, and our phone number is <a href="tel:+15407602020" className="text-primary hover:underline">(540) 760-2020</a>.
               </p>
             </div>
           </div>
