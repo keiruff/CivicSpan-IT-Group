@@ -150,6 +150,15 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Script id="zift-analytics" strategy="afterInteractive">
+          {`(function() {
+            var zanalytics_ = document.createElement('script');
+            zanalytics_.type = 'text/javascript';
+            zanalytics_.async = false;
+            zanalytics_.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'static.ziftsolutions.com/analytics/8a998ab59fd1366a019fd16634327c70.js';
+            document.getElementsByTagName('script')[0].parentNode.appendChild(zanalytics_);
+          })();`}
+        </Script>
         <CookieBanner />
         <SpeedInsights />
       </body>

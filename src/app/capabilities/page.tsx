@@ -129,7 +129,7 @@ const coreCapabilities = [
 
 const shopifyUrl = 'https://h1bg1p-j7.myshopify.com/'
 
-const partnerLogoChips = ['Cisco', 'Epson']
+const partnerLogoChips = ['Epson']
 
 const naics = [
   { code: '541512', label: 'Computer systems design services' },
@@ -480,6 +480,16 @@ export default function CapabilitiesPage() {
                     width={260}
                     height={76}
                     className="max-h-16 w-full max-w-[230px] object-contain"
+                  />
+                </div>
+
+                <div className="flex min-h-24 items-center justify-center rounded-2xl bg-white p-5 shadow-lg">
+                  <Image
+                    src="/cisco-partner-logo.svg"
+                    alt="Cisco Partner logo"
+                    width={260}
+                    height={260}
+                    className="max-h-20 w-full max-w-[130px] object-contain"
                   />
                 </div>
 
