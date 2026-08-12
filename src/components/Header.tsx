@@ -14,6 +14,7 @@ export default function Header() {
     { href: '/services', label: 'Services' },
     { href: '/partners', label: 'Partners' },
     { href: '/products', label: 'Shop' },
+    { href: 'https://shop.civicspanitgroup.com', label: 'Shop Hardware', external: true },
     { href: '/topics', label: 'Resources' },
     { href: '/contact', label: 'Contact' },
   ]
@@ -37,7 +38,7 @@ export default function Header() {
   }
 
   const linkClass = (href: string) => {
-    const active = isActive(href)
+    const active = href ? isActive(href) : false
 
     return `text-white hover:text-primary transition-all duration-300 py-1.5 px-2.5 md:py-3 md:px-2 font-medium relative whitespace-nowrap block
       ${active ? 'text-primary' : ''}
@@ -71,15 +72,25 @@ export default function Header() {
 
         <div className="nav-links flex justify-center flex-wrap gap-2 sm:gap-4 md:gap-6 items-center w-full md:w-auto text-[0.9rem] sm:text-base">
           {primaryLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              aria-current={isActive(link.href) ? 'page' : undefined}
-              className={linkClass(link.href)}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                className={linkClass('')}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={isActive(link.href) ? 'page' : undefined}
+                className={linkClass(link.href)}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
 
           <div className="relative">
