@@ -73,6 +73,10 @@ const partnerShopPackages: PartnerShopPackage[] = [
     title: 'Cisco Network Hardware Package',
     partner: 'Cisco',
     partnerHref: 'https://www.cisco.com/site/us/en/products/index.html',
+    partnerLogo: {
+      src: '/cisco-partner-logo.svg',
+      alt: 'Cisco Partner logo',
+    },
     description: 'Network switching, wireless, routing, and connectivity hardware planning for secure office and infrastructure environments.',
     recommendedFor: ['Switching', 'Wireless', 'Routing', 'Refresh projects'],
     includes: ['Network requirement review', 'Bill-of-materials planning', 'Deployment documentation'],

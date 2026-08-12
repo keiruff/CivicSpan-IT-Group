@@ -43,6 +43,11 @@ const partnerships: Partnership[] = [
   },
   {
     icon: '🌐',
+    badge: {
+      src: '/cisco-partner-logo.svg',
+      alt: 'Cisco Partner logo',
+      className: 'w-32 sm:w-40',
+    },
     title: 'Cisco Partner',
     body: 'Networking and infrastructure hardware to support secure, reliable connectivity, from office deployments to engineering environments with demanding uptime needs.',
   },

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-labelledby="title desc">
+  <title id="title">Cisco Partner</title>
+  <desc id="desc">Cisco Partner logo on a dark navy background</desc>
+  <defs><linearGradient id="accent" x1="0" x2="1"><stop stop-color="#2168DD"/><stop offset=".22" stop-color="#00B4E4"/><stop offset=".5" stop-color="#00B4E4"/><stop offset=".73" stop-color="#FF1373"/><stop offset="1" stop-color="#FF9C27"/></linearGradient></defs>
+  <rect x="50" y="16" width="600" height="668" rx="40" fill="#02182F"/>
+  <g fill="#fff" stroke="#fff" stroke-linecap="round">
+    <path d="M129 239v-21M184 239v-49M239 259V152M295 239v-49M350 239v-21M405 239v-49M460 259V152M516 239v-49M571 239v-21" stroke-width="20"/>
+  </g>
+  <text x="350" y="385" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="108" letter-spacing="4">CISCO</text>
+  <rect x="119" y="549" width="463" height="8" fill="url(#accent)"/>
+  <text x="350" y="510" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="66" letter-spacing="6">PARTNER</text>
+</svg>

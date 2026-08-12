@@ -127,7 +127,7 @@ export default function HomePage() {
             {[
               { icon: '🖥️', title: 'Dell Technologies Partner', body: 'Endpoint procurement & deployment' },
               { icon: '🖨️', title: 'Epson Authorized Partner', body: 'Print, scan & imaging hardware', logo: '/epson-logo.svg' },
-              { icon: '🌐', title: 'Cisco Partner', body: 'Networking & infrastructure hardware' },
+              { icon: '🌐', title: 'Cisco Partner', body: 'Networking & infrastructure hardware', logo: '/cisco-partner-logo.svg' },
               { icon: '📦', title: 'TD SYNNEX Authorized Reseller', body: 'Broad-line distribution access' },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-4">

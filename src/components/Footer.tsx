@@ -58,6 +58,10 @@ export default function Footer() {
               Privacy Policy
             </Link>
             <span>•</span>
+            <Link href="/terms" className="hover:text-primary transition-colors">
+              Terms &amp; Conditions
+            </Link>
+            <span>•</span>
             <Link href="/cookies" className="hover:text-primary transition-colors">
               Cookie Policy
             </Link>
