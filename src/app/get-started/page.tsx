@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
-import { FormEvent, useState } from 'react'
+import { FormEvent, Suspense, useState } from 'react'
 
 const needs = [
   'Your Wi-Fi, email, or Microsoft 365 keeps acting up and you do not have an IT person.',
@@ -26,7 +26,7 @@ const services = {
   ],
 }
 
-export default function GetStartedPage() {
+function GetStartedContent() {
   const searchParams = useSearchParams()
   const [formData, setFormData] = useState({ name: '', contact: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -132,5 +132,13 @@ export default function GetStartedPage() {
 
       <p className="px-4 pb-3 text-center text-sm text-neutral-muted">Also selling tech accessories and gear? <a href="https://shop.civicspanitgroup.com" className="text-primary hover:underline">Check out our shop →</a></p>
     </>
+  )
+}
+
+export default function GetStartedPage() {
+  return (
+    <Suspense fallback={<div className="min-h-[50vh]" />}>
+      <GetStartedContent />
+    </Suspense>
   )
 }
