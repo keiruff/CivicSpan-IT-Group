@@ -75,22 +75,24 @@ function GetStartedContent() {
       </section>
 
       <section className="px-4 py-6 border-y border-white/10 bg-dark-secondary/90">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6">
-          <p className="text-xs font-bold tracking-wider uppercase text-neutral-muted">Trusted credentials</p>
-          <span className="rounded-full border border-green-500/30 bg-dark px-4 py-2 text-sm font-semibold text-neutral-light">Woman-Owned Small Business</span>
-          <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/virginia-swam-certified-business-logo.jpg" alt="Virginia SWaM Certified" className="h-8 w-auto" /></span>
-          <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/dell-technologies-authorized-partner.svg" alt="Dell Technologies Authorized Partner" className="h-7 w-auto" /></span>
-          <span className="inline-flex items-center rounded-full border border-white/70 bg-white px-3 py-1.5 shadow-sm"><img src="/epson-logo.svg" alt="Epson Authorized Partner" className="h-7 w-auto" /></span>
-          <span className="inline-flex items-center rounded-full border border-white/70 bg-white px-3 py-1.5 shadow-sm"><img src="/cisco-partner-logo.svg" alt="Cisco Partner" className="h-7 w-auto" /></span>
+        <div className="max-w-4xl mx-auto">
+          <p className="mb-4 text-center text-xs font-bold tracking-wider uppercase text-neutral-muted">Trusted credentials</p>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-5 sm:gap-3">
+            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-green-500/30 bg-dark px-2 text-center text-xs font-semibold text-neutral-light">Woman-Owned Small Business</span>
+            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-green-500/30 bg-dark px-2"><img src="/virginia-swam-certified-business-logo.jpg" alt="Virginia SWaM Certified" className="max-h-8 max-w-full object-contain" /></span>
+            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-green-500/30 bg-dark px-2"><img src="/dell-technologies-authorized-partner.svg" alt="Dell Technologies Authorized Partner" className="max-h-7 max-w-full object-contain" /></span>
+            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-white/70 bg-white px-2 shadow-sm"><img src="/epson-logo.svg" alt="Epson Authorized Partner" className="max-h-7 max-w-full object-contain" /></span>
+            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-white/70 bg-white px-2 shadow-sm"><img src="/cisco-partner-logo.svg" alt="Cisco Partner" className="max-h-7 max-w-full object-contain" /></span>
+          </div>
         </div>
       </section>
 
-      <section className="px-4 py-12 border-y border-white/5 bg-dark/30">
+      <section className="px-4 py-12 border-y border-white/10 bg-dark/70">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-extrabold text-white text-center mb-8">You might need us if...</h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {needs.map((need) => (
-              <li key={need} className="rounded-xl border border-green-500/15 bg-dark-secondary/70 p-5 text-neutral-light leading-relaxed flex gap-3">
+              <li key={need} className="flex gap-3 rounded-xl border border-slate-700 bg-dark-secondary/85 p-5 text-neutral-light leading-relaxed transition-colors hover:border-primary/50 hover:bg-dark-secondary">
                 <span className="text-primary font-bold" aria-hidden="true">✓</span><span>{need}</span>
               </li>
             ))}
