@@ -69,7 +69,7 @@ function GetStartedContent() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-start">
             <a href="#get-help" className="px-7 py-3.5 rounded-lg bg-primary hover:bg-primary-dark text-dark font-bold shadow-lg shadow-green-500/25 transition-all hover:-translate-y-0.5">Get Help Now</a>
-            <a href="#what-we-do" className="px-7 py-3.5 rounded-lg border-2 border-white bg-dark-secondary/95 text-white font-bold shadow-lg shadow-black/30 hover:border-primary hover:bg-dark-secondary transition-all hover:-translate-y-0.5">See What We Do</a>
+            <a href="#what-we-do" className="inline-flex items-center justify-center px-7 py-3.5 rounded-lg border-2 border-white bg-dark-secondary/95 text-white font-bold shadow-lg shadow-black/30 hover:border-primary hover:bg-dark-secondary transition-all hover:-translate-y-0.5">See What We Do</a>
           </div>
         </div>
       </section>
@@ -77,12 +77,12 @@ function GetStartedContent() {
       <section className="px-4 py-6 border-y border-white/10 bg-dark-secondary/90">
         <div className="max-w-4xl mx-auto">
           <p className="mb-4 text-center text-xs font-bold tracking-wider uppercase text-neutral-muted">Trusted credentials</p>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-5 sm:gap-3">
-            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-green-500/30 bg-dark px-2 text-center text-xs font-semibold text-neutral-light">Woman-Owned Small Business</span>
-            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-green-500/30 bg-dark px-2"><img src="/virginia-swam-certified-business-logo.jpg" alt="Virginia SWaM Certified" className="max-h-8 max-w-full object-contain" /></span>
-            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-green-500/30 bg-dark px-2"><img src="/dell-technologies-authorized-partner.svg" alt="Dell Technologies Authorized Partner" className="max-h-7 max-w-full object-contain" /></span>
-            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-white/70 bg-white px-2 shadow-sm"><img src="/epson-logo.svg" alt="Epson Authorized Partner" className="max-h-7 max-w-full object-contain" /></span>
-            <span className="inline-flex h-10 items-center justify-center rounded-lg border border-white/70 bg-white px-2 shadow-sm"><img src="/cisco-partner-logo.svg" alt="Cisco Partner" className="max-h-7 max-w-full object-contain" /></span>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <span className="inline-flex h-12 w-40 items-center justify-center rounded-lg border border-green-500/30 bg-dark px-3 text-center text-xs font-semibold text-neutral-light">Woman-Owned Small Business</span>
+            <span className="inline-flex h-12 w-40 items-center justify-center rounded-lg border border-green-500/30 bg-dark px-3"><img src="/virginia-swam-certified-business-logo.jpg" alt="Virginia SWaM Certified" className="max-h-9 max-w-full object-contain" /></span>
+            <span className="inline-flex h-12 w-40 items-center justify-center rounded-lg border border-green-500/30 bg-dark px-3"><img src="/dell-technologies-authorized-partner.svg" alt="Dell Technologies Authorized Partner" className="max-h-8 max-w-full object-contain" /></span>
+            <span className="inline-flex h-12 w-40 items-center justify-center rounded-lg border border-white/70 bg-white px-3 shadow-sm"><img src="/epson-logo.svg" alt="Epson Authorized Partner" className="max-h-8 max-w-full object-contain" /></span>
+            <span className="inline-flex h-12 w-40 items-center justify-center rounded-lg border border-white/70 bg-white px-3 shadow-sm"><img src="/cisco-partner-logo.svg" alt="Cisco Partner" className="max-h-8 max-w-full object-contain" /></span>
           </div>
         </div>
       </section>
