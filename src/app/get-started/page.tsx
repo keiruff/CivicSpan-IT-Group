@@ -61,13 +61,13 @@ function GetStartedContent() {
     <>
       <section className="relative overflow-hidden px-4 py-16 sm:py-24">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_55%_at_50%_0%,rgba(34,197,94,0.16),transparent)]" />
-        <div className="relative max-w-3xl mx-auto text-center">
+        <div className="relative max-w-4xl mx-auto text-left">
           <p className="text-primary font-bold text-xs sm:text-sm tracking-wider uppercase mb-4">Everyday IT Help</p>
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight text-white mb-5">Real IT Help, Without the Runaround</h1>
-          <p className="text-lg sm:text-xl text-neutral-light leading-relaxed mb-8">
+          <p className="text-lg sm:text-xl text-neutral-light leading-relaxed mb-8 max-w-3xl">
             From setting up your home office to fixing the tech headaches slowing your small business down, CivicSpan IT Group is a real person you can actually reach, not a ticket queue.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-start">
             <a href="#get-help" className="px-7 py-3.5 rounded-lg bg-primary hover:bg-primary-dark text-dark font-bold shadow-lg shadow-green-500/25 transition-all hover:-translate-y-0.5">Get Help Now</a>
             <a href="#what-we-do" className="px-7 py-3.5 rounded-lg border-2 border-white bg-dark-secondary/95 text-white font-bold shadow-lg shadow-black/30 hover:border-primary hover:bg-dark-secondary transition-all hover:-translate-y-0.5">See What We Do</a>
           </div>
@@ -80,8 +80,8 @@ function GetStartedContent() {
           <span className="rounded-full border border-green-500/30 bg-dark px-4 py-2 text-sm font-semibold text-neutral-light">Woman-Owned Small Business</span>
           <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/virginia-swam-certified-business-logo.jpg" alt="Virginia SWaM Certified" className="h-8 w-auto" /></span>
           <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/dell-technologies-authorized-partner.svg" alt="Dell Technologies Authorized Partner" className="h-7 w-auto" /></span>
-          <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/epson-logo.svg" alt="Epson Authorized Partner" className="h-7 w-auto" /></span>
-          <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/cisco-partner-logo.svg" alt="Cisco Partner" className="h-7 w-auto" /></span>
+          <span className="inline-flex items-center rounded-full border border-white/70 bg-white px-3 py-1.5 shadow-sm"><img src="/epson-logo.svg" alt="Epson Authorized Partner" className="h-7 w-auto" /></span>
+          <span className="inline-flex items-center rounded-full border border-white/70 bg-white px-3 py-1.5 shadow-sm"><img src="/cisco-partner-logo.svg" alt="Cisco Partner" className="h-7 w-auto" /></span>
         </div>
       </section>
 
@@ -131,7 +131,7 @@ function GetStartedContent() {
             <label className="block text-sm font-medium text-neutral-light">Name<input required name="name" value={formData.name} onChange={(event) => setFormData({ ...formData, name: event.target.value })} className="mt-2 w-full rounded-lg border border-green-500/20 bg-dark/50 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/40" autoComplete="name" /></label>
             <label className="block text-sm font-medium text-neutral-light">Email or phone<input required name="contact" value={formData.contact} onChange={(event) => setFormData({ ...formData, contact: event.target.value })} className="mt-2 w-full rounded-lg border border-green-500/20 bg-dark/50 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/40" autoComplete="email" placeholder="you@example.com or (540) 760-2020" /></label>
             <label className="block text-sm font-medium text-neutral-light">What do you need help with?<textarea required name="message" value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} rows={4} className="mt-2 w-full resize-none rounded-lg border border-green-500/20 bg-dark/50 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/40" /></label>
-            <button type="submit" disabled={status === 'submitting'} className="w-full rounded-lg bg-primary hover:bg-primary-dark disabled:opacity-60 px-6 py-3.5 font-bold text-dark transition-colors">{status === 'submitting' ? 'Sending...' : 'Get Help Now'}</button>
+            <button type="submit" disabled={status === 'submitting'} className="w-full rounded-lg border-2 border-primary bg-primary px-6 py-3.5 font-bold text-dark shadow-lg shadow-green-500/30 transition-all hover:-translate-y-0.5 hover:bg-primary-dark hover:border-primary-dark disabled:cursor-not-allowed disabled:opacity-60">{status === 'submitting' ? 'Sending...' : 'Get Help Now'}</button>
           </form>
           {status === 'success' && <p className="mt-4 text-center text-primary" role="status">Thanks. Your message is on its way.</p>}
           {status === 'error' && <p className="mt-4 text-center text-red-300" role="alert">We could not send that. Please call (540) 760-2020 or email info@civicspanitgroup.com.</p>}
