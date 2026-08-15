@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Everyday IT Help | CivicSpan IT Group',
-  description: 'Get straightforward IT help for your home office or small business, from Wi-Fi and Microsoft 365 to computers, printers, and ongoing support.',
+  description: 'Real IT help for home offices and small businesses — Wi-Fi, Microsoft 365, computers, printers, and ongoing support. No runaround.',
   alternates: { canonical: 'https://civicspanitgroup.com/get-started' },
 }
 
