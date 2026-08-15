@@ -48,25 +48,25 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom Row */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-light/60">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-light/80">
           <div>
             &copy; {currentYear} CivicSpan IT Group. All rights reserved.
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Link href="/privacy" className="hover:text-primary transition-colors">
+            <Link href="/privacy" className="text-neutral-light hover:text-primary transition-colors">
               Privacy Policy
             </Link>
             <span>•</span>
-            <Link href="/terms" className="hover:text-primary transition-colors">
+            <Link href="/terms" className="text-neutral-light hover:text-primary transition-colors">
               Terms &amp; Conditions
             </Link>
             <span>•</span>
-            <Link href="/cookies" className="hover:text-primary transition-colors">
+            <Link href="/cookies" className="text-neutral-light hover:text-primary transition-colors">
               Cookie Policy
             </Link>
             <span>•</span>
-            <Link href="/disclaimer" className="hover:text-primary transition-colors">
+            <Link href="/disclaimer" className="text-neutral-light hover:text-primary transition-colors">
               Disclaimer
             </Link>
           </div>

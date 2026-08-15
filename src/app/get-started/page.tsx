@@ -130,9 +130,9 @@ function GetStartedContent() {
         <div className="max-w-2xl mx-auto rounded-2xl border border-green-500/20 bg-dark-secondary/85 p-6 sm:p-9">
           <div className="text-center mb-7"><h2 className="text-3xl font-extrabold text-white mb-3">Tell us what you need</h2><p className="text-neutral-light">We&apos;ll get back to you fast.</p></div>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <label className="block text-sm font-medium text-neutral-light">Name<input required name="name" value={formData.name} onChange={(event) => setFormData({ ...formData, name: event.target.value })} className="mt-2 w-full rounded-lg border border-green-500/20 bg-dark/50 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/40" autoComplete="name" /></label>
-            <label className="block text-sm font-medium text-neutral-light">Email or phone<input required name="contact" value={formData.contact} onChange={(event) => setFormData({ ...formData, contact: event.target.value })} className="mt-2 w-full rounded-lg border border-green-500/20 bg-dark/50 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/40" autoComplete="email" placeholder="you@example.com or (540) 760-2020" /></label>
-            <label className="block text-sm font-medium text-neutral-light">What do you need help with?<textarea required name="message" value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} rows={4} className="mt-2 w-full resize-none rounded-lg border border-green-500/20 bg-dark/50 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/40" /></label>
+            <label className="block text-sm font-medium text-neutral-light">Name<input required name="name" value={formData.name} onChange={(event) => setFormData({ ...formData, name: event.target.value })} className="mt-3 w-full rounded-lg border border-green-500/20 bg-dark/50 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/40" autoComplete="name" /></label>
+            <label className="block text-sm font-medium text-neutral-light">Email or phone<input required name="contact" value={formData.contact} onChange={(event) => setFormData({ ...formData, contact: event.target.value })} className="mt-3 w-full rounded-lg border border-green-500/20 bg-dark/50 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/40" autoComplete="email" placeholder="you@example.com or (540) 760-2020" /></label>
+            <label className="block text-sm font-medium text-neutral-light">What do you need help with?<textarea required name="message" value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} rows={4} className="mt-3 w-full resize-none rounded-lg border border-green-500/20 bg-dark/50 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/40" /></label>
             <button type="submit" disabled={status === 'submitting'} className="w-full rounded-lg border-2 border-primary bg-primary px-6 py-3.5 font-bold text-dark shadow-lg shadow-green-500/30 transition-all hover:-translate-y-0.5 hover:bg-primary-dark hover:border-primary-dark disabled:cursor-not-allowed disabled:opacity-60">{status === 'submitting' ? 'Sending...' : 'Get Help Now'}</button>
           </form>
           {status === 'success' && <p className="mt-4 text-center text-primary" role="status">Thanks. Your message is on its way.</p>}
@@ -141,7 +141,7 @@ function GetStartedContent() {
         </div>
       </section>
 
-      <p className="px-4 pb-3 text-center text-sm text-neutral-muted">Also selling tech accessories and gear? <a href="https://shop.civicspanitgroup.com" className="text-primary hover:underline">Check out our shop →</a></p>
+      <p className="px-4 pb-3 text-center text-sm text-neutral-muted">Looking for tech accessories and gear? <a href="https://shop.civicspanitgroup.com" className="text-primary hover:underline">Check out our shop →</a></p>
     </>
   )
 }
