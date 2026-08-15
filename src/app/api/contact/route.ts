@@ -14,11 +14,14 @@ export async function POST(request: Request) {
       )
     }
 
-    // Email format validation
+    // Accept either an email address or phone number for low-friction inquiries.
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
+    const phoneRegex = /^[+\d][\d\s().-]{6,}$/
+    const isEmail = emailRegex.test(email)
+    const isPhone = phoneRegex.test(email)
+    if (!isEmail && !isPhone) {
       return NextResponse.json(
-        { success: false, error: 'Invalid email address format.' },
+        { success: false, error: 'Enter a valid email address or phone number.' },
         { status: 400 }
       )
     }
@@ -38,7 +41,7 @@ export async function POST(request: Request) {
             email: SENDGRID_FROM,
             name: 'CivicSpan Website',
           },
-          replyTo: email,
+          ...(isEmail ? { replyTo: email } : {}),
           subject: `Website Contact: ${subject}`,
           text: `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}`,
         })
