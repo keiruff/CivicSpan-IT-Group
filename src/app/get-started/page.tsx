@@ -68,9 +68,20 @@ function GetStartedContent() {
             From setting up your home office to fixing the tech headaches slowing your small business down, CivicSpan IT Group is a real person you can actually reach, not a ticket queue.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#get-help" className="px-7 py-3.5 rounded-lg bg-primary hover:bg-primary-dark text-dark font-bold transition-colors">Get Help Now</a>
-            <a href="#what-we-do" className="px-7 py-3.5 rounded-lg border border-primary/60 text-primary font-bold hover:bg-primary/10 transition-colors">See What We Do</a>
+            <a href="#get-help" className="px-7 py-3.5 rounded-lg bg-primary hover:bg-primary-dark text-dark font-bold shadow-lg shadow-green-500/25 transition-all hover:-translate-y-0.5">Get Help Now</a>
+            <a href="#what-we-do" className="px-7 py-3.5 rounded-lg border-2 border-white bg-dark-secondary/95 text-white font-bold shadow-lg shadow-black/30 hover:border-primary hover:bg-dark-secondary transition-all hover:-translate-y-0.5">See What We Do</a>
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-6 border-y border-white/10 bg-dark-secondary/90">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <p className="text-xs font-bold tracking-wider uppercase text-neutral-muted">Trusted credentials</p>
+          <span className="rounded-full border border-green-500/30 bg-dark px-4 py-2 text-sm font-semibold text-neutral-light">Woman-Owned Small Business</span>
+          <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/virginia-swam-certified-business-logo.jpg" alt="Virginia SWaM Certified" className="h-8 w-auto" /></span>
+          <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/dell-technologies-authorized-partner.svg" alt="Dell Technologies Authorized Partner" className="h-7 w-auto" /></span>
+          <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/epson-logo.svg" alt="Epson Authorized Partner" className="h-7 w-auto" /></span>
+          <span className="inline-flex items-center rounded-full border border-green-500/30 bg-dark px-3 py-1.5"><img src="/cisco-partner-logo.svg" alt="Cisco Partner" className="h-7 w-auto" /></span>
         </div>
       </section>
 
@@ -109,9 +120,7 @@ function GetStartedContent() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">Why CivicSpan</h2>
           <p className="text-neutral-light leading-relaxed">CivicSpan is a Virginia-based, woman-owned small business. We started because too many small businesses and individuals get stuck between figuring it out themselves and hiring an expensive enterprise IT firm. We are the option in between: real help, fast, without the runaround.</p>
-          <div className="flex flex-wrap justify-center gap-3 mt-7 text-sm font-semibold">
-            {['Woman-Owned Small Business', 'Virginia SWaM Certified', 'Authorized Dell, Epson & Cisco Partner'].map((item) => <span key={item} className="rounded-full border border-green-500/25 bg-dark-secondary px-4 py-2 text-neutral-light">{item}</span>)}
-          </div>
+          <p className="mt-6 text-sm font-semibold text-primary">Woman-Owned Small Business · Virginia SWaM Certified · Authorized Dell, Epson & Cisco Partner</p>
         </div>
       </section>
 
