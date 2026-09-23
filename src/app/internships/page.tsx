@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-const handshakeApplicationUrl = ''
+const handshakeApplicationUrl = 'https://umw.joinhandshake.com/recruit/jobs/11380242/details'
 const handshakeCompensationLanguage = ''
 
 export const metadata: Metadata = {
