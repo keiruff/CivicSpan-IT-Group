@@ -28,6 +28,7 @@ export default function Header() {
     { href: '/why-civicspan', label: 'Why CivicSpan' },
     { href: '/who-we-support', label: 'Who We Support' },
     { href: '/tools-and-utilities', label: 'Tools & Utilities' },
+    { href: '/internships', label: 'Internships' },
   ]
 
   const isActive = (href: string) => {
