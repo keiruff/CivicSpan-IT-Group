@@ -16,6 +16,7 @@ export default function Header() {
     { href: '/products', label: 'Shop' },
     { href: 'https://shop.civicspanitgroup.com', label: 'Shop Hardware', external: true },
     { href: '/topics', label: 'Resources' },
+    { href: '/internships', label: 'Internships' },
     { href: '/contact', label: 'Contact' },
   ]
 
@@ -28,7 +29,6 @@ export default function Header() {
     { href: '/why-civicspan', label: 'Why CivicSpan' },
     { href: '/who-we-support', label: 'Who We Support' },
     { href: '/tools-and-utilities', label: 'Tools & Utilities' },
-    { href: '/internships', label: 'Internships' },
   ]
 
   const isActive = (href: string) => {
