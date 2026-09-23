@@ -158,6 +158,20 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Internship Program */}
+      <section className="px-6 py-14 max-w-5xl mx-auto">
+        <div className="rounded-2xl border border-green-500/20 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.12),transparent_52%),rgba(15,23,42,0.8)] p-7 sm:p-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-primary font-bold text-xs tracking-wider uppercase mb-2">Spring 2027 Internship Program</p>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">Build practical technology experience with CivicSpan.</h2>
+            <p className="text-neutral-light text-sm sm:text-base leading-relaxed">CivicSpan is accepting applications for its Spring 2027 Technology Internship Program.</p>
+          </div>
+          <Link href="/internships" className="inline-flex shrink-0 items-center justify-center px-6 py-3 bg-primary hover:bg-primary-dark text-dark font-bold rounded-lg transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark">
+            Explore Internships
+          </Link>
+        </div>
+      </section>
+
       {/* Stats Row */}
       <section className="py-14 px-6 max-w-5xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
