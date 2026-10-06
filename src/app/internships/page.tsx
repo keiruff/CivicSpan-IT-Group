@@ -1,23 +1,11 @@
+import { pageMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
 const handshakeApplicationUrl = 'https://umw.joinhandshake.com/recruit/jobs/11380242/details'
 const handshakeCompensationLanguage = ''
 
-export const metadata: Metadata = {
-  title: 'Technology Internships | CivicSpan IT Group',
-  description:
-    'Explore technology internship opportunities with CivicSpan IT Group in IT, cloud, cybersecurity, software development, business analysis, technical documentation, and government technology.',
-  alternates: { canonical: '/internships' },
-  robots: { index: true, follow: true },
-  openGraph: {
-    title: 'Technology Internships | CivicSpan IT Group',
-    description:
-      'Explore technology internship opportunities with CivicSpan IT Group in IT, cloud, cybersecurity, software development, business analysis, technical documentation, and government technology.',
-    url: '/internships',
-    type: 'website',
-  },
-}
+export const metadata: Metadata = pageMetadata("Technology Internships | CivicSpan IT Group", "Explore technology internship opportunities with CivicSpan IT Group in IT, cloud, cybersecurity, software development, business analysis, technical documentation, and government technology.", "/internships")
 
 const supportAreas = [
   'Information Technology',

@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 
-export const metadata: Metadata = {
-  title: 'Why CivicSpan IT Group | Documented IT Operations Support',
-  description: 'See how CivicSpan IT Group delivers documented IT operations support for ProjectWise, Microsoft 365, Dell procurement, and infrastructure teams that need accountable help.',
-}
+export const metadata: Metadata = pageMetadata("Why CivicSpan IT Group | Documented IT Operations Support", "See how CivicSpan IT Group delivers documented IT operations support for ProjectWise, Microsoft 365, Dell procurement, and infrastructure teams that need accountable help.", "/why-civicspan")
 
 const principles = [
   {

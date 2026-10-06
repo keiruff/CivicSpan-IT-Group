@@ -1,10 +1,8 @@
+import { pageMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 
-export const metadata: Metadata = {
-  title: 'IT Support for Engineering and Government-Adjacent Teams | CivicSpan IT Group',
-  description: 'CivicSpan supports engineering environments, government-adjacent teams, nonprofits, and small businesses with ProjectWise, Microsoft 365, Dell deployment, and documented IT operations.',
-}
+export const metadata: Metadata = pageMetadata("IT Support for Engineering and Government-Adjacent Teams | CivicSpan IT Group", "CivicSpan supports engineering environments, government-adjacent teams, nonprofits, and small businesses with ProjectWise, Microsoft 365, Dell deployment, and documented IT operations.", "/who-we-support")
 
 const supportTypes = [
   {

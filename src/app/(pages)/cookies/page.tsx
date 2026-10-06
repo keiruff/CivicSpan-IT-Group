@@ -1,4 +1,8 @@
+import { pageMetadata } from '@/lib/seo'
+import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
+
+export const metadata: Metadata = pageMetadata("Cookie Policy | CivicSpan IT Group", "Understanding how we use cookies and similar technologies.", "/cookies")
 
 export default function CookiesPage() {
   return (

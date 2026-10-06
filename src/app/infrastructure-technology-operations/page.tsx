@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 
-export const metadata: Metadata = {
-  title: 'Infrastructure & Technology Operations | CivicSpan IT Group',
-  description: 'CivicSpan’s cornerstone philosophy page for operating, modernizing, securing, documenting, and supporting the technology that keeps organizations running.',
-}
+export const metadata: Metadata = pageMetadata("Infrastructure & Technology Operations | CivicSpan IT Group", "CivicSpan’s cornerstone philosophy page for operating, modernizing, securing, documenting, and supporting the technology that keeps organizations running.", "/infrastructure-technology-operations")
 
 const lifecycleSteps = [
   { step: 'Plan', body: 'Assess the environment, identify risk, and create practical roadmaps.' },

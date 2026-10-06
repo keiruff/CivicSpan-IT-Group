@@ -1,13 +1,10 @@
+import { pageMetadata } from '@/lib/seo'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Authorized Vendor Partnerships for Procurement | CivicSpan IT Group',
-  description:
-    'CivicSpan IT Group is an authorized partner across Dell, Epson, Cisco, Ergotron, and TD SYNNEX, giving engineering, government-adjacent, and small business clients procurement, deployment, and support under one accountable vendor of record.',
-}
+export const metadata: Metadata = pageMetadata("Authorized Vendor Partnerships for Procurement | CivicSpan IT Group", "CivicSpan IT Group is an authorized partner across Dell, Epson, Cisco, Ergotron, and TD SYNNEX, giving engineering, government-adjacent, and small business clients procurement, deployment, and support under one accountable vendor of record.", "/partners")
 
 type Partnership = {
   icon: string

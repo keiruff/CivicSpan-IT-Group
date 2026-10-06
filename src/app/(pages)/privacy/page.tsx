@@ -1,4 +1,8 @@
+import { pageMetadata } from '@/lib/seo'
+import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
+
+export const metadata: Metadata = pageMetadata("Privacy Policy | CivicSpan IT Group", "How we handle and protect your information.", "/privacy")
 
 export default function PrivacyPage() {
   return (

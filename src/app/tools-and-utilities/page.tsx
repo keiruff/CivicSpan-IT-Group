@@ -1,4 +1,8 @@
+import { pageMetadata } from '@/lib/seo'
+import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
+
+export const metadata: Metadata = pageMetadata("ProjectWise Tools & IT Utilities | CivicSpan IT Group", "Explore CivicSpan’s open-source ProjectWise Workspace Doctor and practical tools for Bentley workspace auditing, engineering IT support and troubleshooting.", "/tools-and-utilities")
 
 const tools = [
   {

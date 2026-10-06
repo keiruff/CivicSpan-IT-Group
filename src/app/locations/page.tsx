@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
 import ContentIndex from '@/components/ContentIndex'
 import { locationPages } from '@/data/seoContent'
 
-export const metadata: Metadata = {
-  title: 'IT Support Service Areas in Fredericksburg and the Mid-Atlantic | CivicSpan IT Group',
-  description: 'Find CivicSpan IT support service areas for Fredericksburg, Richmond, Northern Virginia, Maryland, and Pennsylvania. Contact us for ProjectWise, Microsoft 365, and Dell support.',
-}
+export const metadata: Metadata = pageMetadata("IT Support Service Areas in Fredericksburg and the Mid-Atlantic | CivicSpan IT Group", "Find CivicSpan IT support service areas for Fredericksburg, Richmond, Northern Virginia, Maryland, and Pennsylvania. Contact us for ProjectWise, Microsoft 365, and Dell support.", "/locations")
 
 export default function LocationsPage() {
   return (

@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'ProjectWise Health Check & Optimization | CivicSpan IT Group',
-  description: 'Bentley ProjectWise audit and optimization service for engineering firms. Fix local cache issues, workspace path errors, datasource connectivity, and log configuration.',
-}
+export const metadata: Metadata = pageMetadata("ProjectWise Health Check & Optimization | CivicSpan IT Group", "Bentley ProjectWise audit and optimization service for engineering firms. Fix local cache issues, workspace path errors, datasource connectivity, and log configuration.", "/solutions/projectwise-health-check")
 
 export default function ProjectWiseHealthCheckPackage() {
   const perfectFor = [

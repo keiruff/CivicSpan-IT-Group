@@ -1,12 +1,10 @@
+import { pageMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { topicPages } from '@/data/seoContent'
 import { pillarPages } from '@/data/pillarContent'
 
-export const metadata: Metadata = {
-  title: 'ProjectWise, Microsoft 365, and Dell Topic Clusters | CivicSpan IT Group',
-  description: 'Explore CivicSpan topic clusters for ProjectWise support, Microsoft 365 governance, Dell endpoint deployment, and infrastructure operations. Start with the pillar hubs.',
-}
+export const metadata: Metadata = pageMetadata("ProjectWise, Microsoft 365 & Engineering IT Resources | CivicSpan IT Group", "Explore CivicSpan topic clusters for ProjectWise support, Microsoft 365 governance, Dell endpoint deployment, and infrastructure operations. Start with the pillar hubs.", "/topics")
 
 const topicClusters = [
   {

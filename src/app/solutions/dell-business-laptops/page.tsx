@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Dell Business Laptop Setup & Deployment | CivicSpan IT Group',
-  description: 'Enterprise Dell laptop provisioning and deployment through our Dell Technologies Partner ecosystem. Security hardening, imaging, and business configuration.',
-}
+export const metadata: Metadata = pageMetadata("Dell Business Laptop Setup & Deployment | CivicSpan IT Group", "Enterprise Dell laptop provisioning and deployment through our Dell Technologies Partner ecosystem. Security hardening, imaging, and business configuration.", "/solutions/dell-business-laptops")
 
 export default function DellBusinessLaptopsPackage() {
   const perfectFor = [

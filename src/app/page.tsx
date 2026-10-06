@@ -1,5 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = pageMetadata("Engineering IT & Microsoft 365 Support in Virginia | CivicSpan IT Group", "Virginia SWaM-certified IT support for ProjectWise, Bentley, Microsoft 365, Entra ID governance and government procurement. Based in Fredericksburg, serving the Mid-Atlantic.", "/")
 
 const lifecycleSteps = [
   { step: 'Plan', service: 'Assessments & Roadmaps', href: '/services#infrastructure-technology-operations' },

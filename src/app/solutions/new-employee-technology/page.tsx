@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'New Employee Technology Package | CivicSpan IT Group',
-  description: 'Get new hires productive on Day One with a fully configured laptop, business email, Microsoft 365 accounts, security policies, and onboarding support.',
-}
+export const metadata: Metadata = pageMetadata("New Employee Technology Package | CivicSpan IT Group", "Get new hires productive on Day One with a fully configured laptop, business email, Microsoft 365 accounts, security policies, and onboarding support.", "/solutions/new-employee-technology")
 
 export default function NewEmployeeTechnologyPackage() {
   const perfectFor = [
