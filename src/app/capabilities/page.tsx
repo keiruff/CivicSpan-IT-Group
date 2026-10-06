@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
 
-export const metadata: Metadata = {
-  title: 'Capabilities Statement for IT Support, Security, and Procurement | CivicSpan IT Group',
-  description: 'Review CivicSpan IT Group capabilities for engineering technology support, cybersecurity, modernization, governance, and authorized procurement through Dell, Epson, Cisco, and TD SYNNEX.',
-}
+export const metadata: Metadata = pageMetadata("Capabilities Statement for IT Support, Security, and Procurement | CivicSpan IT Group", "Review CivicSpan IT Group capabilities for engineering technology support, cybersecurity, modernization, governance, and authorized procurement through Dell, Epson, Cisco, and TD SYNNEX.", "/capabilities")
 
 const companyHighlights = [
   {

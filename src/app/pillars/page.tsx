@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { pillarPages } from '@/data/pillarContent'
 
-export const metadata: Metadata = {
-  title: 'SEO Pillar Pages | CivicSpan IT Group',
-  description: 'Pillar pages connecting CivicSpan topics, blog posts, solutions, locations, FAQ, and services across infrastructure modernization, Microsoft 365, engineering technology, cloud operations, IT documentation, and lifecycle management.',
-}
+export const metadata: Metadata = pageMetadata("IT Expertise: Engineering, Cloud & Microsoft 365 | CivicSpan IT Group", "Explore CivicSpan expertise in infrastructure modernization, Microsoft 365, engineering technology, cloud operations, IT documentation and lifecycle management.", "/pillars")
 
 export default function PillarsPage() {
   return (

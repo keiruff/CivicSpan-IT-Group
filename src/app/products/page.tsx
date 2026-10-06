@@ -1,28 +1,10 @@
+import { pageMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import ProductCart from '@/components/ProductCart'
 import { products } from '@/data/products'
 
-export const metadata: Metadata = {
-  title: 'Shop Packages: SharePoint, Websites, Shopify & Hardware | CivicSpan IT Group',
-  description: 'Shop CivicSpan quote packages for SharePoint setup, website creation, Shopify store creation, partner hardware, licensing support, and deployment planning.',
-  keywords: ['SharePoint setup package', 'website creation package', 'Shopify store setup', 'business hardware quotes', 'partner procurement packages'],
-  alternates: { canonical: 'https://civicspanitgroup.com/products' },
-  openGraph: {
-    title: 'Shop Packages: SharePoint, Websites, Shopify & Hardware | CivicSpan IT Group',
-    description: 'Quote-ready packages for SharePoint setup, website creation, Shopify stores, partner hardware, licensing support, and deployment planning.',
-    url: 'https://civicspanitgroup.com/products',
-    siteName: 'CivicSpan IT Group',
-    images: [
-      {
-        url: 'https://civicspanitgroup.com/civicspan-logo-mark.svg',
-        width: 1024,
-        height: 1024,
-        alt: 'CivicSpan IT Group logo mark',
-      },
-    ],
-  },
-}
+export const metadata: Metadata = pageMetadata("Shop Packages: SharePoint, Websites, Shopify & Hardware | CivicSpan IT Group", "Shop CivicSpan quote packages for SharePoint setup, website creation, Shopify store creation, partner hardware, licensing support, and deployment planning.", "/products")
 
 const shopifyUrl = 'https://h1bg1p-j7.myshopify.com/'
 const quoteEmail = 'info@civicspanitgroup.com'

@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Microsoft 365 Migration Package | CivicSpan IT Group',
-  description: 'Seamless Microsoft 365 migration for businesses. Email migration, SharePoint setup, Teams configuration, OneDrive integration, and legacy server decommission.',
-}
+export const metadata: Metadata = pageMetadata("Microsoft 365 Migration Package | CivicSpan IT Group", "Seamless Microsoft 365 migration for businesses. Email migration, SharePoint setup, Teams configuration, OneDrive integration, and legacy server decommission.", "/solutions/microsoft-365-migration")
 
 export default function Microsoft365MigrationPackage() {
   const perfectFor = [

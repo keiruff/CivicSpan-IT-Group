@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'New Office IT Setup & Network Installation | CivicSpan IT Group',
-  description: 'Complete IT infrastructure setup for new offices, relocations, and expansions. Structured cabling, secure Wi-Fi, printer installation, and network configuration.',
-}
+export const metadata: Metadata = pageMetadata("New Office IT Setup & Network Installation | CivicSpan IT Group", "Complete IT infrastructure setup for new offices, relocations, and expansions. Structured cabling, secure Wi-Fi, printer installation, and network configuration.", "/solutions/new-office-it-setup")
 
 export default function NewOfficeITSetupPackage() {
   const perfectFor = [

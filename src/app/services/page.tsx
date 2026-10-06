@@ -1,12 +1,10 @@
+import { pageMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'ProjectWise and IT Support Services in Fredericksburg | CivicSpan IT Group',
-  description: 'Get ProjectWise support, Microsoft 365 consulting, Dell procurement, endpoint deployment, and documented IT operations support from CivicSpan IT Group. Start a service conversation today.',
-}
+export const metadata: Metadata = pageMetadata("ProjectWise and IT Support Services in Fredericksburg | CivicSpan IT Group", "Get ProjectWise support, Microsoft 365 consulting, Dell procurement, endpoint deployment, and documented IT operations support from CivicSpan IT Group. Start a service conversation today.", "/services")
 
 const operationsPillars = [
   {

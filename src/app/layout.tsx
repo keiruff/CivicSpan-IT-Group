@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/seo'
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -32,35 +33,12 @@ export const metadata: Metadata = {
     'Shopify store setup services',
     'small business website package',
   ],
-  alternates: {
-    canonical: 'https://civicspanitgroup.com',
-  },
   icons: {
     icon: [{ url: '/civicspan-logo-mark.svg', type: 'image/svg+xml' }],
     apple: '/civicspan-logo-mark.svg',
   },
-  openGraph: {
-    title: 'CivicSpan IT Group | Engineering Technology & Government IT Operations',
-    description: 'Accountable technical execution for organizations that cannot afford downtime. Specialized Bentley, ProjectWise, and infrastructure support.',
-    url: 'https://civicspanitgroup.com',
-    siteName: 'CivicSpan IT Group',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: 'https://civicspanitgroup.com/civicspan-logo-mark.svg',
-        width: 1024,
-        height: 1024,
-        alt: 'CivicSpan IT Group logo mark',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'CivicSpan IT Group | ProjectWise, SharePoint, Website & Shopify Support',
-    description: 'ProjectWise support, SharePoint setup, website creation, Shopify store setup, Microsoft 365 consulting, and multi-vendor procurement.',
-    images: ['https://civicspanitgroup.com/civicspan-logo-mark.svg'],
-  },
+  ...pageMetadata('Engineering IT & Microsoft 365 Support | CivicSpan IT Group', 'ProjectWise, Bentley, Microsoft 365 and identity governance support from a Virginia SWaM-certified IT provider in Fredericksburg.', '/'),
+  alternates: undefined,
   robots: {
     index: true,
     follow: true,
@@ -87,6 +65,14 @@ export default function RootLayout({
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
+      '@id': 'https://civicspanitgroup.com/#organization',
+      legalName: 'CivicSpan Technologies LLC',
+      alternateName: 'CivicSpan Technologies LLC dba CivicSpan IT Group',
+      identifier: [
+        { '@type': 'PropertyValue', propertyID: 'UEI', value: 'PMVWGHNEZYK4' },
+        { '@type': 'PropertyValue', propertyID: 'CAGE', value: '20NK8' },
+        { '@type': 'PropertyValue', propertyID: 'Virginia SWaM', value: '845315' },
+      ],
       name: 'CivicSpan IT Group',
       url: 'https://civicspanitgroup.com/',
       logo: 'https://civicspanitgroup.com/civicspan-logo-mark.svg',
@@ -113,6 +99,8 @@ export default function RootLayout({
       ],
       address: {
         '@type': 'PostalAddress',
+        streetAddress: '10320 Hillside Lane',
+        postalCode: '22408',
         addressLocality: 'Fredericksburg',
         addressRegion: 'VA',
         addressCountry: 'US',

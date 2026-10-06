@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -16,6 +17,7 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!page) return {}
 
   return {
+    ...pageMetadata(`${page.title} | CivicSpan IT Group`, page.description, `/pillars/${page.slug}`),
     title: `${page.title} | CivicSpan IT Group`,
     description: page.description,
     alternates: { canonical: `${siteUrl}/pillars/${page.slug}` },

@@ -1,10 +1,8 @@
+import { pageMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 
-export const metadata: Metadata = {
-  title: 'Terms and Conditions | CivicSpan IT Group',
-  description: 'Terms and Conditions for CivicSpan IT Group website, store, products, and services.',
-}
+export const metadata: Metadata = pageMetadata("Terms and Conditions | CivicSpan IT Group", "Terms and Conditions for CivicSpan IT Group website, store, products, and services.", "/terms")
 
 const sections = [
   {

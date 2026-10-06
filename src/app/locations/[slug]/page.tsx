@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import ContentPageTemplate from '@/components/ContentPageTemplate'
@@ -16,12 +17,14 @@ export function generateMetadata({ params }: Props): Metadata {
   const canonical = `${siteUrl}/locations/${page.slug}`
 
   return {
+    ...pageMetadata(page.metadata?.title ?? `${page.title} | CivicSpan IT Group`, page.metadata?.description ?? page.description, `/locations/${page.slug}`),
     title: page.metadata?.title ?? `${page.title} | CivicSpan IT Group`,
     description: page.metadata?.description ?? page.description,
     keywords: page.metadata?.keywords,
     alternates: { canonical },
     openGraph: page.metadata?.openGraph
       ? {
+          ...pageMetadata(page.title, page.description, `/locations/${page.slug}`).openGraph,
           title: page.metadata.openGraph.title,
           description: page.metadata.openGraph.description,
           url: page.metadata.openGraph.url ?? canonical,
@@ -29,7 +32,7 @@ export function generateMetadata({ params }: Props): Metadata {
           locale: 'en_US',
           type: 'website',
         }
-      : undefined,
+      : pageMetadata(page.title, page.description, `/locations/${page.slug}`).openGraph,
   }
 }
 

@@ -1,12 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { faqItems, siteUrl } from '@/data/seoContent'
 
-export const metadata: Metadata = {
-  title: 'IT Support FAQ | CivicSpan IT Group',
-  description: 'Answers to common questions about Microsoft 365 migration, ProjectWise, Dell laptop deployment, municipalities, and CivicSpan consulting services.',
-  alternates: { canonical: `${siteUrl}/faq` },
-}
+export const metadata: Metadata = pageMetadata("IT Support FAQ | CivicSpan IT Group", "Answers to common questions about Microsoft 365 migration, ProjectWise, Dell laptop deployment, municipalities, and CivicSpan consulting services.", "/faq")
 
 export default function FAQPage() {
   const faqJsonLd = {

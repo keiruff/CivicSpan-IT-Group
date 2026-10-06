@@ -1,11 +1,9 @@
+import { pageMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Engineering Workstation Package | CivicSpan IT Group',
-  description: 'High-performance Dell Precision workstation configuration for CAD, GIS, and engineering professionals. GPU optimization, dual monitors, Bentley software, and data migration.',
-}
+export const metadata: Metadata = pageMetadata("Engineering Workstation Package | CivicSpan IT Group", "High-performance Dell Precision workstation configuration for CAD, GIS, and engineering professionals. GPU optimization, dual monitors, Bentley software, and data migration.", "/solutions/engineering-workstation-package")
 
 export default function EngineeringWorkstationPackage() {
   const perfectFor = [
