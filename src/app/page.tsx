@@ -20,7 +20,8 @@ const outcomeCards = [
   },
   {
     title: 'Engineering Technology Operations',
-    body: 'ProjectWise, Bentley, CAD, GIS, workstations, permissions, and production engineering workflows.',
+    body: 'Specialized support for production engineering workflows.',
+    bullets: ['Bentley ProjectWise Datasource & User Permission Configuration', 'Managed ProjectWise Workspace Automation & Bentley Support', 'CADD Workstation Optimization & OpenRoads Designer Support', 'GIS Data Integration & Infrastructure Document Structuring'],
     href: '/topics/projectwise',
   },
   {
@@ -232,6 +233,11 @@ export default function HomePage() {
               <article className="h-full rounded-2xl border border-green-500/15 bg-dark-secondary/80 p-8 hover:border-primary hover:-translate-y-1 transition-all duration-300">
                 <h3 className="text-2xl font-extrabold text-white mb-3 group-hover:text-primary transition-colors">{card.title}</h3>
                 <p className="text-neutral-muted text-sm leading-6">{card.body}</p>
+                {'bullets' in card && card.bullets && (
+                  <ul className="mt-4 space-y-2 list-disc pl-5 text-neutral-light text-sm leading-6">
+                    {card.bullets.map((task) => <li key={task}>{task}</li>)}
+                  </ul>
+                )}
                 <span className="text-primary font-bold text-sm mt-5 inline-block">Explore outcome →</span>
               </article>
             </Link>
@@ -297,6 +303,16 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+          <div className="mt-10 pt-10 border-t border-green-500/20">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">Partner-Led Identity Governance Focus</h3>
+            <p className="text-neutral-light leading-relaxed mb-6">Enterprise AI deployment demands rigid data boundaries. CivicSpan bridges the gap between massive cloud licensing volume and exact, boots-on-the-ground endpoint security. We prepare your tenant environment so that advanced automated systems can be deployed without introducing operational or data exposure risks.</p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <li className="rounded-xl border border-green-500/15 bg-dark-secondary/80 p-5"><h4 className="text-primary font-bold mb-3">Microsoft Entra ID &amp; Lifecycle Governance</h4><p className="text-neutral-light text-sm leading-relaxed">Rigid management of user lifecycles, administrative roles, and external identities. We clean up over-privileged accounts and stale access permissions to guarantee a verified baseline before AI indexing begins.</p></li>
+              <li className="rounded-xl border border-green-500/15 bg-dark-secondary/80 p-5"><h4 className="text-primary font-bold mb-3">Advanced Tenant &amp; Workspace Auditing</h4><p className="text-neutral-light text-sm leading-relaxed">Deep-dive sweeps of Microsoft 365 environments, SharePoint structures, and data repositories. We map, restructure, and restrict access paths so corporate data remains segmented tightly by department and security tier.</p></li>
+              <li className="rounded-xl border border-green-500/15 bg-dark-secondary/80 p-5"><h4 className="text-primary font-bold mb-3">Multi-Factor Authentication (MFA) &amp; Conditional Access Reset</h4><p className="text-neutral-light text-sm leading-relaxed">Hardening authentication frameworks by eliminating legacy protocols, untangling complex tenant authentication paths, and establishing strict location-based conditional access baselines.</p></li>
+              <li className="rounded-xl border border-green-500/15 bg-dark-secondary/80 p-5"><h4 className="text-primary font-bold mb-3">Zero-Trust Account Management for Alliances</h4><p className="text-neutral-light text-sm leading-relaxed">Frictionless identity provisioning for joint-venture engineering teams, contractors, and public sector stakeholders needing secure, time-bound access to shared project resources.</p></li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -353,7 +369,7 @@ export default function HomePage() {
             <div className="p-10 sm:p-14 space-y-6">
               {[
                 { icon: '⚡', title: 'Fast, Direct Communication', body: 'No ticket maze. You reach a real person who understands your environment.' },
-                { icon: '🏛️', title: 'Government & Engineering Aware', body: 'We understand eVA, SAM.gov, Bentley tools, and infrastructure workflows.' },
+                { icon: '🏛️', title: 'Government & Engineering Aware', body: 'We bridge the gap between enterprise cloud infrastructure and specialized civil engineering workflows. We ensure your data permission tiers, software workspaces, and public sector compliance metrics align perfectly.' },
                 { icon: '📋', title: 'Documentation Included', body: 'Every engagement produces clear records your team actually keeps and uses.' },
                 { icon: '🛡️', title: 'A Vendor of Record, Not a Chatbot', body: 'SWaM-certified, accountable support that can work inside the systems AI can only describe.' },
               ].map((item) => (

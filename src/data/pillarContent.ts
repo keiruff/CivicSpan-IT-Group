@@ -62,7 +62,7 @@ export const pillarPages: PillarPage[] = [
     intro: 'Engineering technology operations keep ProjectWise, Bentley, CAD, GIS, workstations, and project data reliable enough for production work.',
     outcome: 'Fewer engineering workflow interruptions, cleaner support paths, better documentation, and technology standards that match real project delivery.',
     sections: [
-      { heading: 'What this pillar covers', body: 'This pillar connects ProjectWise support, Bentley workflows, CAD and GIS environments, workstation standards, permissions, cache issues, and engineering documentation.', bullets: ['ProjectWise troubleshooting', 'Bentley workspace support', 'CAD and GIS coordination', 'Dell Precision workstation planning', 'Cache and performance review', 'Engineering runbooks and checklists'] },
+      { heading: 'What this pillar covers', body: 'This pillar connects ProjectWise support, Bentley workflows, CAD and GIS environments, workstation standards, permissions, cache issues, and engineering documentation.', bullets: ['Bentley ProjectWise Datasource & User Permission Configuration', 'Managed ProjectWise Workspace Automation & Bentley Support', 'CADD Workstation Optimization & OpenRoads Designer Support', 'GIS Data Integration & Infrastructure Document Structuring'] },
       { heading: 'Why it matters', body: 'Generic IT support often misses the context behind engineering tools. CivicSpan focuses on the environment around the tools: access, configuration, standards, documentation, and operational continuity.' },
       { heading: 'Best starting point', body: 'Start with a ProjectWise Health Check or engineering workstation review to identify the patterns slowing teams down.' },
     ],

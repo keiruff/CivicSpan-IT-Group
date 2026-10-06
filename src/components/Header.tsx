@@ -12,6 +12,7 @@ export default function Header() {
   const primaryLinks = [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
+    { href: '/capabilities', label: 'Capabilities' },
     { href: '/partners', label: 'Partners' },
     { href: '/products', label: 'Shop' },
     { href: 'https://shop.civicspanitgroup.com', label: 'Shop Hardware', external: true },
@@ -25,7 +26,6 @@ export default function Header() {
     { href: '/locations', label: 'Locations' },
     { href: '/blog', label: 'Blog' },
     { href: '/faq', label: 'FAQ' },
-    { href: '/capabilities', label: 'Capabilities' },
     { href: '/why-civicspan', label: 'Why CivicSpan' },
     { href: '/who-we-support', label: 'Who We Support' },
     { href: '/tools-and-utilities', label: 'Tools & Utilities' },
@@ -49,9 +49,12 @@ export default function Header() {
   }
 
   return (
-    <header className="site-header relative z-40">
+    <header className="site-header sticky top-0 z-40">
+      <div className="bg-primary text-slate-950 px-4 py-2 text-center text-xs sm:text-sm font-semibold leading-relaxed">
+        Virginia SWaM Certified (#845315) <span aria-hidden="true">|</span> Active SAM.gov Registered <span aria-hidden="true">|</span> UEI: PMVWGHNEZYK4
+      </div>
       <nav
-        className="w-full md:fixed md:top-0 md:left-0 md:h-[72px] flex flex-col md:flex-row justify-between items-center px-4 py-3 md:px-10 md:py-2.5 bg-dark border-b border-green-500/15 backdrop-blur-md z-[1000] gap-3 md:gap-0"
+        className="w-full flex flex-col xl:flex-row justify-between items-center px-4 py-3 md:px-10 md:py-2.5 bg-dark border-b border-green-500/15 backdrop-blur-md z-[1000] gap-3 md:gap-0"
         aria-label="Primary navigation"
       >
         <div className="logo flex items-center justify-center w-full md:w-auto">
@@ -71,7 +74,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="nav-links flex justify-center flex-wrap gap-2 sm:gap-4 md:gap-6 items-center w-full md:w-auto text-[0.9rem] sm:text-base">
+        <div className="nav-links flex justify-center flex-wrap gap-2 sm:gap-4 md:gap-2 xl:gap-3 items-center w-full md:w-auto text-[0.9rem] sm:text-base">
           {primaryLinks.map((link) => (
             link.external ? (
               <a

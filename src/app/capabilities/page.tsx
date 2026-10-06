@@ -132,7 +132,8 @@ const shopifyUrl = 'https://h1bg1p-j7.myshopify.com/'
 const partnerLogoChips = ['Epson']
 
 const naics = [
-  { code: '541512', label: 'Computer systems design services' },
+  { code: '541512', label: 'Computer Systems Design Services' },
+  { code: '541513', label: 'Computer Facilities Management Services' },
   { code: '541511', label: 'Custom computer programming services' },
   { code: '541519', label: 'Other computer related services' },
   { code: '518210', label: 'Data processing, hosting, and related services' },
