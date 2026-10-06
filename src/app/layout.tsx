@@ -146,7 +146,7 @@ export default function RootLayout({
   `}
 </Script>
         <Header />
-        <main id="main-content" className="flex-grow mt-0 md:mt-[72px]">
+        <main id="main-content" className="flex-grow">
           {children}
         </main>
         <Footer />

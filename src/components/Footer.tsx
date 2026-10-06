@@ -30,6 +30,20 @@ export default function Footer() {
             </p>
           </div>
 
+          <section aria-labelledby="corporate-data-heading" className="max-w-md rounded-xl border border-green-500/20 bg-dark/60 p-4">
+            <h2 id="corporate-data-heading" className="text-white font-bold mb-3">Corporate Data</h2>
+            <dl className="space-y-2 text-neutral-light text-xs leading-relaxed">
+              {[
+                ['Legal Name', 'CivicSpan Technologies LLC dba CivicSpan IT Group'],
+                ['Virginia SWaM Certification', '#845315'],
+                ['UEI', 'PMVWGHNEZYK4'],
+                ['CAGE Code', '20NK8'],
+              ].map(([label, value]) => (
+                <div key={label}><dt className="inline font-semibold">{label}: </dt><dd className="inline">{value}</dd></div>
+              ))}
+            </dl>
+          </section>
+
           {/* Quick Nav Links */}
           <nav className="flex flex-wrap items-center gap-4 text-xs font-medium text-white/80">
             <Link href="/services" className="hover:text-primary transition-colors">
