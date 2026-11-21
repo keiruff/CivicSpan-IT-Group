@@ -66,4 +66,8 @@ if (-not $SendTestQuote -and $result.error -notlike 'Complete the required quote
     throw 'The endpoint did not return the expected quote validation error.'
 }
 
+if ($SendTestQuote -and $result.confirmationAccepted -ne $true) {
+    throw 'The quote was accepted, but the provider did not accept the customer confirmation.'
+}
+
 Write-Host "PASS: HTTP $($response.StatusCode), JSON response, $($timer.ElapsedMilliseconds) ms."

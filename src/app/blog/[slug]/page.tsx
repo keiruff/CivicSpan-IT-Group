@@ -4,14 +4,14 @@ import { notFound } from 'next/navigation'
 import ContentPageTemplate from '@/components/ContentPageTemplate'
 import { blogPages, findBlog, siteUrl } from '@/data/seoContent'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
   return blogPages.map((page) => ({ slug: page.slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const page = findBlog(params.slug)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const page = findBlog((await params).slug)
   if (!page) return {}
 
   const canonical = `${siteUrl}/blog/${page.slug}`
@@ -35,8 +35,8 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const page = findBlog(params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  const page = findBlog((await params).slug)
   if (!page) notFound()
 
   const canonical = `${siteUrl}/blog/${page.slug}`

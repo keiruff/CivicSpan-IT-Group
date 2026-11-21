@@ -96,7 +96,11 @@ npm run type-check  # Run the TypeScript compiler without emitting output
 
 This website is deployed using GitHub and Vercel. Changes pushed to the default branch trigger automated deployments.
 
-If you need to update environment variables or Vercel settings, use the Vercel dashboard for the project.
+The Vercel project and GitHub readiness workflow use Node.js 24. The workflow builds the site and exercises both quote email paths with a mocked SendGrid client.
+
+Set `SENDGRID_API_KEY`, `SENDGRID_FROM`, and `SENDGRID_TO` in each Vercel environment where forms should send email. Use a verified sender and a controlled test inbox in Preview. Create a new deployment after changing environment variables.
+
+Before promoting a form change, run `scripts/test-form-backend.ps1` against the preview endpoint. The default check sends no email. For a delivery check, use `-SendTestQuote -TestEmail <controlled-recipient>` with a preview configured for test delivery, then verify the internal quote and customer confirmation both arrive in their respective inboxes. On a protected preview, use an authorized session for the same checks.
 
 ---
 

@@ -6,14 +6,14 @@ import { findPillar, pillarPages } from '@/data/pillarContent'
 
 const siteUrl = 'https://civicspanitgroup.com'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
   return pillarPages.map((page) => ({ slug: page.slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const page = findPillar(params.slug)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const page = findPillar((await params).slug)
   if (!page) return {}
 
   return {
@@ -24,8 +24,8 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function PillarPage({ params }: Props) {
-  const page = findPillar(params.slug)
+export default async function PillarPage({ params }: Props) {
+  const page = findPillar((await params).slug)
   if (!page) notFound()
 
   const breadcrumb = {

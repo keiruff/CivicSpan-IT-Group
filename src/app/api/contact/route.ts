@@ -33,69 +33,49 @@ export async function POST(request: Request) {
       )
     }
 
-    // If SENDGRID is configured, send via SendGrid. Otherwise fallback to console logging.
-    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
-    const SENDGRID_FROM = process.env.SENDGRID_FROM
-    const SENDGRID_TO = process.env.SENDGRID_TO || process.env.SENDGRID_FROM
-
-    if (SENDGRID_API_KEY && SENDGRID_FROM && SENDGRID_TO) {
-      try {
-        sgMail.setApiKey(SENDGRID_API_KEY)
-
-        await sgMail.send({
-          to: SENDGRID_TO,
-          from: {
-            email: SENDGRID_FROM,
-            name: 'CivicSpan Website',
-          },
-          ...(isEmail ? { replyTo: email } : {}),
-          subject: `Website Contact: ${subject}`,
-          text: `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}`,
-        })
-      } catch (err) {
-        console.error('Error sending via SendGrid:', err instanceof Error ? err.message : 'Unknown provider error')
-        return NextResponse.json(
-          { success: false, error: 'Failed to send message via email provider.' },
-          { status: 502 }
-        )
-      }
-
-      if (isQuote) {
-        try {
-          await sgMail.send({
-            to: email,
-            from: { email: SENDGRID_FROM, name: 'CivicSpan IT Group' },
-            replyTo: SENDGRID_TO,
-            ...hardwareQuoteConfirmation,
-          })
-        } catch {
-          // The procurement inbox already received the quote request.
-          console.error('SendGrid could not send the hardware quote confirmation.')
-        }
-      }
-    } else if (isQuote) {
+    const { SENDGRID_API_KEY, SENDGRID_FROM, SENDGRID_TO } = process.env
+    if (!SENDGRID_API_KEY?.trim() || !SENDGRID_FROM?.trim() || !SENDGRID_TO?.trim()) {
+      console.error('Contact email delivery is not configured.')
       return NextResponse.json(
-        { success: false, error: 'Online quote delivery is unavailable. Email info@civicspanitgroup.com to request a quote.' },
-        { status: 503 },
+        { success: false, error: 'Online delivery is unavailable. Please email info@civicspanitgroup.com.' },
+        { status: 503 }
       )
-    } else {
-      // Fallback: log to server console (existing behavior)
-      console.log('--- NEW CONTACT INQUIRY (logged only) ---')
-      console.log(`Date: ${new Date().toISOString()}`)
-      console.log(`Name: ${name}`)
-      console.log(`Email: ${email}`)
-      console.log(`Company: ${company || 'N/A'}`)
-      console.log(`Subject: ${subject}`)
-      console.log(`Message: ${message}`)
-      console.log('------------------------------------------')
     }
 
-    return NextResponse.json(
-      { success: true, message: 'Message received successfully!' },
-      { status: 200 }
-    )
-  } catch (error) {
-    console.error('Error handling contact submission:', error)
+    try {
+      sgMail.setApiKey(SENDGRID_API_KEY)
+      await sgMail.send({
+        to: SENDGRID_TO,
+        from: { email: SENDGRID_FROM, name: 'CivicSpan Website' },
+        ...(isEmail ? { replyTo: email } : {}),
+        subject: `Website Contact: ${subject}`,
+        text: `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}`,
+      })
+    } catch {
+      console.error('SendGrid could not accept the website inquiry.')
+      return NextResponse.json(
+        { success: false, error: 'Failed to send message via email provider.' },
+        { status: 502 }
+      )
+    }
+
+    const response = { success: true, message: 'Message received successfully!' }
+    if (!isQuote) return NextResponse.json(response)
+
+    try {
+      await sgMail.send({
+        to: email,
+        from: { email: SENDGRID_FROM, name: 'CivicSpan IT Group' },
+        replyTo: SENDGRID_TO,
+        ...hardwareQuoteConfirmation,
+      })
+      return NextResponse.json({ ...response, confirmationAccepted: true })
+    } catch {
+      console.error('SendGrid could not accept the hardware quote confirmation.')
+      return NextResponse.json({ ...response, confirmationAccepted: false })
+    }
+  } catch {
+    console.error('Error handling contact submission.')
     return NextResponse.json(
       { success: false, error: 'Failed to process submission. Please try again later.' },
       { status: 500 }

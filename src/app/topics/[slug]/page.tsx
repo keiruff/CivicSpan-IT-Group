@@ -4,14 +4,14 @@ import { notFound } from 'next/navigation'
 import ContentPageTemplate from '@/components/ContentPageTemplate'
 import { findTopic, siteUrl, topicPages } from '@/data/seoContent'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
   return topicPages.map((page) => ({ slug: page.slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const page = findTopic(params.slug)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const page = findTopic((await params).slug)
   if (!page) return {}
 
   return {
@@ -22,8 +22,8 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function TopicPage({ params }: Props) {
-  const page = findTopic(params.slug)
+export default async function TopicPage({ params }: Props) {
+  const page = findTopic((await params).slug)
   if (!page) notFound()
 
   const breadcrumb = {

@@ -17,7 +17,7 @@ const legendClass = 'mb-4 text-lg font-bold text-white'
 
 export default function HardwareQuoteForm() {
   const [submitting, setSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState<{ confirmationAccepted: boolean } | null>(null)
   const [error, setError] = useState('')
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -38,7 +38,7 @@ export default function HardwareQuoteForm() {
         setError(result.error || 'The request could not be sent. Please try again.')
         return
       }
-      setSubmitted(true)
+      setSubmitted({ confirmationAccepted: result.confirmationAccepted === true })
     } catch {
       setError('The request could not be sent. Please try again.')
     } finally {
@@ -51,6 +51,7 @@ export default function HardwareQuoteForm() {
       <div role="status">
         {submitted && <p className="rounded-xl border border-primary/30 bg-primary/10 p-6 text-white">
           <strong>Quote request received.</strong> CivicSpan will review your specifications and follow up at your work email.
+          {!submitted.confirmationAccepted && ' We couldn’t send the automatic confirmation email.'}
         </p>}
       </div>
       {!submitted && <form onSubmit={handleSubmit} aria-busy={submitting} className="space-y-8 rounded-2xl border border-white/15 bg-dark-secondary p-5 text-neutral-light sm:p-8">
