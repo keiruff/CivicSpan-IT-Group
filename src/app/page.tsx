@@ -72,7 +72,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="/contact#inquiry-form"
+              href="/hardware-quote"
               className="px-8 py-3.5 bg-primary hover:bg-primary-dark text-dark font-bold rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/25 w-full sm:w-auto text-center"
             >
               Request a Business Hardware Quote

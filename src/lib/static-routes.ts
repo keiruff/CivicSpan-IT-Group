@@ -9,6 +9,7 @@ export const staticRoutes = [
   "/contact",
   "/faq",
   "/get-started",
+  "/hardware-quote",
   "/infrastructure-technology-operations",
   "/internships",
   "/locations",

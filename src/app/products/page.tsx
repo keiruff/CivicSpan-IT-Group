@@ -8,17 +8,6 @@ export const metadata: Metadata = pageMetadata("Shop Packages: SharePoint, Websi
 
 const shopifyUrl = 'https://h1bg1p-j7.myshopify.com/'
 const quoteEmail = 'info@civicspanitgroup.com'
-const generalQuoteHref = `mailto:${quoteEmail}?subject=${encodeURIComponent('Hardware quote request')}&body=${encodeURIComponent([
-  'I would like a quote for recommended business hardware.',
-  '',
-  'Products or categories:',
-  'Quantity:',
-  'Timeline:',
-  'Organization:',
-  'Deployment/support needs:',
-  'Notes:',
-].join('\n'))}`
-
 const workstationBundle = [
   'Dell Precision workstation',
   'Business laptop or desktop requirements',
@@ -179,7 +168,7 @@ export default function ProductsPage() {
               >
                 Browse Recommended Products ↗
               </a>
-              <a href={generalQuoteHref} className="px-8 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300 text-center">
+              <a href="/hardware-quote" className="px-8 py-3 border border-primary/40 text-primary hover:bg-primary/10 font-bold rounded-lg transition-all duration-300 text-center">
                 Request a Custom Quote
               </a>
             </div>
@@ -392,7 +381,7 @@ export default function ProductsPage() {
                 Use a product-specific quote button below, or send one general quote request for a larger bundle.
               </p>
             </div>
-            <a href={generalQuoteHref} className="btn shrink-0">
+            <a href="/hardware-quote" className="btn shrink-0">
               Request a Custom Quote
             </a>
           </div>
