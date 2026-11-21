@@ -8,13 +8,13 @@ email provider. The provider may deliver it to the configured quote inbox.
 .EXAMPLE
 ./scripts/test-form-backend.ps1
 .EXAMPLE
-./scripts/test-form-backend.ps1 -TargetUrl 'http://localhost:3000/api/contact' -SendTestQuote
+./scripts/test-form-backend.ps1 -TargetUrl 'http://localhost:3000/api/hardware-quote' -SendTestQuote
 #>
 #Requires -Version 7.0
 
 [CmdletBinding()]
 param (
-    [uri]$TargetUrl = 'http://localhost:3000/api/contact',
+    [uri]$TargetUrl = 'http://localhost:3000/api/hardware-quote',
     [string]$TestEmail = 'procurement-test@civicspanitgroup.com',
     [switch]$SendTestQuote
 )
