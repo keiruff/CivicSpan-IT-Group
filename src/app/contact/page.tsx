@@ -98,7 +98,7 @@ export default function ContactPage() {
             <div className="bg-dark-secondary border border-green-500/15 rounded-xl p-8">
               <h2 className="text-2xl font-bold text-primary mb-6">Send us a Message</h2>
               
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form id="inquiry-form" onSubmit={handleSubmit} className="scroll-mt-48 space-y-4">
                 <div>
                   <label className="block text-neutral-light font-medium mb-2">Name *</label>
                   <input

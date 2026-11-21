@@ -63,31 +63,30 @@ export default function HomePage() {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight max-w-5xl tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.45)]">
-            Technology Operations for Organizations That Can&apos;t Afford Downtime
+            Smart IT Operations &amp; Specialized Infrastructure Tech
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-primary font-extrabold max-w-3xl leading-relaxed mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-            Build. Modernize. Secure. Document. Support.
-          </p>
-
           <p className="text-base sm:text-lg md:text-xl text-neutral-light max-w-3xl leading-relaxed mb-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-            CivicSpan helps infrastructure, engineering, government, nonprofit, and small business teams improve the technology they rely on every day, from deployment and modernization to documentation and long-term operational support.
+            CivicSpan is a Virginia SWaM-certified IT partner for engineering firms, prime contractors, and public-sector teams. We administer Bentley ProjectWise, modernize IT systems, and offer editable IT SOP bundles for instant download.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="/contact"
+              href="/contact#inquiry-form"
               className="px-8 py-3.5 bg-primary hover:bg-primary-dark text-dark font-bold rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/25 w-full sm:w-auto text-center"
             >
-              Discuss Your Needs
+              Request a Business Hardware Quote
             </Link>
             <Link
-              href="/infrastructure-technology-operations"
+              href="https://shop.civicspanitgroup.com/collections/digital-it-templates"
               className="px-8 py-3.5 bg-transparent border-2 border-primary hover:bg-primary/10 text-primary rounded-lg font-bold transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto text-center"
             >
-              Explore the Framework
+              Browse IT SOP Templates
             </Link>
           </div>
+          <Link href="/capabilities" className="mt-6 text-sm font-semibold text-primary hover:underline">
+            View Capabilities &amp; Teaming Information
+          </Link>
         </div>
       </section>
 

@@ -35,9 +35,10 @@ export default function Footer() {
             <dl className="space-y-2 text-neutral-light text-xs leading-relaxed">
               {[
                 ['Legal Name', 'CivicSpan Technologies LLC dba CivicSpan IT Group'],
-                ['Virginia SWaM Certification', '#845315'],
+                ['Virginia SWaM Certification', 'Certified Woman-Owned Small Business (#845315)'],
                 ['UEI', 'PMVWGHNEZYK4'],
                 ['CAGE Code', '20NK8'],
+                ['Federal Teaming', 'Available for prime contractor teaming and subcontracting'],
               ].map(([label, value]) => (
                 <div key={label}><dt className="inline font-semibold">{label}: </dt><dd className="inline">{value}</dd></div>
               ))}
