@@ -4,14 +4,14 @@ import { notFound } from 'next/navigation'
 import ContentPageTemplate from '@/components/ContentPageTemplate'
 import { findLocation, locationPages, siteUrl } from '@/data/seoContent'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
   return locationPages.map((page) => ({ slug: page.slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const page = findLocation(params.slug)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const page = findLocation((await params).slug)
   if (!page) return {}
 
   const canonical = `${siteUrl}/locations/${page.slug}`
@@ -36,8 +36,8 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function LocationPage({ params }: Props) {
-  const page = findLocation(params.slug)
+export default async function LocationPage({ params }: Props) {
+  const page = findLocation((await params).slug)
   if (!page) notFound()
 
   const breadcrumb = {
