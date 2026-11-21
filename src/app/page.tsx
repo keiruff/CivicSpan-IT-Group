@@ -53,6 +53,22 @@ const outcomeCards = [
 export default function HomePage() {
   return (
     <>
+      <section aria-labelledby="procurement-banner-heading" className="border-b border-slate-700 bg-slate-900 text-white">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-5 text-center md:flex-row md:text-left">
+          <div>
+            <h2 id="procurement-banner-heading" className="font-bold text-white">
+              Bidding on Infrastructure or Public-Sector Contracts?
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-slate-200">
+              Request itemized quotes for Dell, Cisco, Epson, and Ergotron hardware. Share your project specifications, delivery timeline, and any Virginia SWaM participation goals.
+            </p>
+          </div>
+          <Link href="/hardware-quote" className="w-full shrink-0 rounded-lg bg-blue-700 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto">
+            Get a Custom Hardware Quote <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative min-h-[560px] flex flex-col justify-center items-center text-center px-4 py-20 md:py-36 bg-transparent overflow-hidden">
         {/* Radial glow behind hero text */}
