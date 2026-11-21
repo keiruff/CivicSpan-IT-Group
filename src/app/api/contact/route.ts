@@ -1,3 +1,4 @@
+import { hardwareQuoteConfirmation } from '@/lib/hardware-quote-confirmation'
 import { deploymentOptions, hardwareVendors, procurementOptions } from '@/lib/hardware-quote'
 import sgMail from '@sendgrid/mail'
 import { NextResponse } from 'next/server'
@@ -57,6 +58,20 @@ export async function POST(request: Request) {
           { success: false, error: 'Failed to send message via email provider.' },
           { status: 502 }
         )
+      }
+
+      if (isQuote) {
+        try {
+          await sgMail.send({
+            to: email,
+            from: { email: SENDGRID_FROM, name: 'CivicSpan IT Group' },
+            replyTo: SENDGRID_TO,
+            ...hardwareQuoteConfirmation,
+          })
+        } catch {
+          // The procurement inbox already received the quote request.
+          console.error('SendGrid could not send the hardware quote confirmation.')
+        }
       }
     } else if (isQuote) {
       return NextResponse.json(
