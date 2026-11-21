@@ -28,7 +28,7 @@ export default function HardwareQuoteForm() {
     const payload = { ...Object.fromEntries(form), vendors: form.getAll('vendors'), kind: 'hardware-quote' }
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/hardware-quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
