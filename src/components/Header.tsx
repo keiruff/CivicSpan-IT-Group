@@ -15,7 +15,7 @@ export default function Header() {
     { href: '/capabilities', label: 'Capabilities' },
     { href: '/partners', label: 'Partners' },
     { href: '/products', label: 'Shop' },
-    { href: 'https://shop.civicspanitgroup.com', label: 'Shop Hardware', external: true },
+    { href: 'https://shop.civicspanitgroup.com/collections/digital-it-templates', label: 'Shop IT SOP Templates', external: true },
     { href: '/topics', label: 'Resources' },
     { href: '/internships', label: 'Internships' },
     { href: '/contact', label: 'Contact' },
@@ -23,7 +23,7 @@ export default function Header() {
 
   const menuLinks = [
     { href: '/infrastructure-technology-operations', label: 'Operations' },
-    { href: '/locations', label: 'Locations' },
+    { href: '/locations', label: 'Regional Services' },
     { href: '/blog', label: 'Blog' },
     { href: '/faq', label: 'FAQ' },
     { href: '/why-civicspan', label: 'Why CivicSpan' },
@@ -51,7 +51,7 @@ export default function Header() {
   return (
     <header className="site-header sticky top-0 z-40">
       <div className="bg-primary text-slate-950 px-4 py-2 text-center text-xs sm:text-sm font-semibold leading-relaxed">
-        Virginia SWaM Certified (#845315) <span aria-hidden="true">|</span> Active SAM.gov Registered <span aria-hidden="true">|</span> UEI: PMVWGHNEZYK4
+        Virginia SWaM Certified (#845315) <span aria-hidden="true">|</span> SAM.gov Registered <span aria-hidden="true">|</span> UEI: PMVWGHNEZYK4 <span aria-hidden="true">|</span> CAGE: 20NK8
       </div>
       <nav
         className="w-full flex flex-col xl:flex-row justify-between items-center px-4 py-3 md:px-10 md:py-2.5 bg-dark border-b border-green-500/15 backdrop-blur-md z-[1000] gap-3 md:gap-0"

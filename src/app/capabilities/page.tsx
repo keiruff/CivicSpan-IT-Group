@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 import Image from 'next/image'
 
-export const metadata: Metadata = pageMetadata("Capabilities Statement for IT Support, Security, and Procurement | CivicSpan IT Group", "Review CivicSpan IT Group capabilities for engineering technology support, cybersecurity, modernization, governance, and authorized procurement through Dell, Epson, Cisco, and TD SYNNEX.", "/capabilities")
+export const metadata: Metadata = pageMetadata("Capabilities Statement for IT Support, Security, and Procurement | CivicSpan IT Group", "Review CivicSpan IT Group capabilities for engineering technology support, cybersecurity, modernization, governance, and authorized procurement through Dell, Cisco, Epson, Ergotron, and TD SYNNEX.", "/capabilities")
 
 const companyHighlights = [
   {
@@ -91,13 +91,13 @@ const coreCapabilities = [
     number: '01',
     title: 'Engineering Technology Operations',
     description:
-      'ProjectWise, Bentley, CAD, GIS, permissions, onboarding, and production workflow support for teams that cannot afford tool downtime.',
+      'Bentley ProjectWise administration, workspace and permissions management, MicroStation and DGN configuration, and CAD/GIS production support.',
   },
   {
     number: '02',
-    title: 'Cybersecurity & Identity Controls',
+    title: 'Modern Workplace Identity & Security',
     description:
-      'Security hardening, access review, zero-trust planning, and data-loss prevention around engineering files and collaboration spaces.',
+      'Microsoft Entra ID, MFA rollout, access reviews, and security baselines for engineering files and Microsoft 365 collaboration.',
   },
   {
     number: '03',
@@ -113,7 +113,7 @@ const coreCapabilities = [
   },
   {
     number: '05',
-    title: 'Governance, Documentation & Continuity',
+    title: 'Technical Knowledge Management & Continuity',
     description:
       'SOPs, runbooks, CMDB planning, audit trails, backup readiness, and business-continuity documentation that survives turnover.',
   },
@@ -121,11 +121,11 @@ const coreCapabilities = [
     number: '06',
     title: 'Authorized Procurement & Deployment',
     description:
-      'Dell, Epson, Cisco, and TD SYNNEX sourcing with deployment, asset records, and support kept under one accountable vendor of record.',
+      'Dell, Cisco, Epson, Ergotron, and TD SYNNEX sourcing with deployment, asset records, and support kept under one accountable vendor of record.',
   },
 ]
 
-const shopifyUrl = 'https://h1bg1p-j7.myshopify.com/'
+const shopifyUrl = 'https://shop.civicspanitgroup.com/collections/bulk-hardware-licensing'
 
 const partnerLogoChips = ['Epson']
 
@@ -199,7 +199,7 @@ export default function CapabilitiesPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
                 <a href="/contact" className="btn">
-                  Discuss Your Needs
+                  Discuss Prime Teaming or Subcontracting
                 </a>
 
                 <a
@@ -251,7 +251,7 @@ export default function CapabilitiesPage() {
                 {[
                   ['Engineering', 'ProjectWise, CAD, and data workflows'],
                   ['Security', 'Identity, governance, and continuity'],
-                  ['Procurement', 'Dell, Epson, Cisco, and TD SYNNEX'],
+                  ['Procurement', 'Dell, Cisco, Epson, Ergotron, and TD SYNNEX'],
                 ].map(([title, text]) => (
                   <div
                     key={title}
@@ -531,7 +531,7 @@ export default function CapabilitiesPage() {
                   'Ability to connect technical support, systems assistance, and documentation',
                   'Focused support for infrastructure and engineering organizations',
                   'SBA Certified WOSB & EDWOSB with personalized, responsive support',
-                  'Authorized procurement access through Dell, Epson, Cisco, and TD SYNNEX',
+                  'Authorized procurement access through Dell, Cisco, Epson, Ergotron, and TD SYNNEX',
                 ].map((item) => (
                   <li
                     key={item}
@@ -629,7 +629,7 @@ export default function CapabilitiesPage() {
                   <ul className="text-slate-300 leading-7">
                     <li>Engineering Technology Support</li>
                     <li>Bentley ProjectWise Support</li>
-                    <li>Cybersecurity & Identity Controls</li>
+                    <li>Modern Workplace Identity & Security</li>
                     <li>Network & Infrastructure Architecture</li>
                     <li>Microsoft 365 & SharePoint</li>
                     <li>Technical Documentation</li>
